@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NBXUdUEi34p4ZZm4IDxZrDWNeCWGBO0NW5CFsZP+AWs7tMf7D9+JKeFFFsFMud2Y84NrVFUlyfW2eD2BhYOPxA==",
+  "dgSpecHash": "/mxAmwB6LIongJldcaZdfkQULWrVTTtGljsAx3A68Exi3acWSo88bSs42ss7YnOvqY2BGMJytzh782lf8S3mOA==",
   "success": true,
   "projectFilePath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }
