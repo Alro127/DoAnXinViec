@@ -1,0 +1,71 @@
+﻿<Window x:Class="DoAnXinViec.WDonChiTiet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnXinViec"
+        mc:Ignorable="d"
+        Title="WDonChiTiet" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Left" Height="414" Margin="251,0,0,0" VerticalAlignment="Center" Width="535">
+            <Border CornerRadius="10" Margin="10,10,10,10">
+                <Border.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.5"/>
+                </Border.Background>
+                <StackPanel Height="365" Width="473">
+                    <Expander Header="Mô tả công việc" HeaderStringFormat="" Foreground="#FFFCFAFA" FontSize="14">
+                        <Grid>
+                            <Grid.Background>
+                                <SolidColorBrush Color="Transparent"/>
+                            </Grid.Background>
+                            <RichTextBox>
+                                <FlowDocument>
+                                    <Paragraph FontSize="20">Hello, world!</Paragraph>
+                                    <Paragraph FontStyle="Italic" TextAlignment="Left" FontSize="14" Foreground="Gray">Thanks to the RichTextBox control, this FlowDocument is completely editable!</Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                        </Grid>
+                    </Expander>
+                    <Expander Header="Yêu cầu ứng viên" HeaderStringFormat="" Foreground="#FFFCFAFA" FontSize="14">
+                        <Grid>
+                            <Grid.Background>
+                                <SolidColorBrush Color="Transparent"/>
+                            </Grid.Background>
+                            <RichTextBox>
+                                <FlowDocument>
+                                    <Paragraph FontSize="20">Hello, world!</Paragraph>
+                                    <Paragraph FontStyle="Italic" TextAlignment="Left" FontSize="14" Foreground="Gray">Thanks to the RichTextBox control, this FlowDocument is completely editable!</Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                        </Grid>
+                    </Expander>
+                    <Expander Header="Địa điểm và thời gian" HeaderStringFormat="" Foreground="#FFFCFAFA" FontSize="14">
+                        <Grid>
+                            <Grid.Background>
+                                <SolidColorBrush Color="Transparent"/>
+                            </Grid.Background>
+                            <RichTextBox>
+                                <FlowDocument>
+                                    <Paragraph FontSize="20">Hello, world!</Paragraph>
+                                    <Paragraph FontStyle="Italic" TextAlignment="Left" FontSize="14" Foreground="Gray">Thanks to the RichTextBox control, this FlowDocument is completely editable!</Paragraph>
+                                </FlowDocument>
+                            </RichTextBox>
+                        </Grid>
+                    </Expander>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" VerticalAlignment="Center" Width="236">
+            <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Center" Height="394" VerticalAlignment="Center" Width="216">
+                <Border.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.5"/>
+                </Border.Background>
+            </Border>
+        </Grid>
+
+
+    </Grid>
+</Window>

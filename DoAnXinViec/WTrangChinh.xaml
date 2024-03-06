@@ -1,0 +1,25 @@
+﻿<Window x:Class="DoAnXinViec.WTrangChinh"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnXinViec"
+        mc:Ignorable="d"
+        Title="WTrangChinh" Width="1550" Height="830"
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    <Window.Resources>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
+        </Grid.Background>
+        <local:UCTrangTimViec Margin="182,0,0,0"/>
+        <Border Margin="10,150,1373,50">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.29"/>
+            </Border.Background>
+
+        </Border>
+    </Grid>
+</Window>

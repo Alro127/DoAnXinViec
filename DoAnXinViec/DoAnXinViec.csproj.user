@@ -7,7 +7,48 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="UCDon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCTrangTimViec.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WDangNhap.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WDonChiTiet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WTrangChinh.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ButtonBoGoc.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PasswordBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCDon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCTrangTimViec.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WDangNhap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WDonChiTiet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WTrangChinh.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

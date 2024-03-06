@@ -7,4 +7,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Create Online Surveys - Qualtrics.jpg" />
+    <None Remove="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
+    <None Remove="homepage.jpg" />
+    <None Remove="mau-don-xin-viec-moi-.jpg" />
+    <None Remove="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
+    <None Remove="—Pngtree—starry sky galaxy space background_2269978.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Create Online Surveys - Qualtrics.jpg" />
+    <Resource Include="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
+    <Resource Include="homepage.jpg" />
+    <Resource Include="mau-don-xin-viec-moi-.jpg" />
+    <Resource Include="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
+    <Resource Include="—Pngtree—starry sky galaxy space background_2269978.png" />
+  </ItemGroup>
+
 </Project>
