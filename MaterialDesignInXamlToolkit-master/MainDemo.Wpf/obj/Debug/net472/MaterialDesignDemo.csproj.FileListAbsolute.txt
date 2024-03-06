@@ -1,0 +1,14 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\MaterialDesignDemo.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\MaterialDesignDemo.csproj.SuggestedBindingRedirects.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\MaterialDesignDemo.exe.config
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\Domain\SampleProgressDialog.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\Palette.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\Typography.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\Domain\SampleProgressDialog.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\Palette.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\Transitions.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\TransitionsDemo\Slide8_Details.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\Typography.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\GeneratedInternalTypeHelper.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\MaterialDesignDemo_MarkupCompile.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net472\MaterialDesignDemo_MarkupCompile.lref

@@ -1,0 +1,16 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\MaterialDesignThemes.Wpf.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\Internal\MaterialDesignTheme.BaseThemeColors.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesign2.Defaults.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesign3.Defaults.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesign3.Font.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesign3.TextBlock.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesignTheme.Font.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesignTheme.GridSplitter.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesignTheme.Hyperlink.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesignTheme.Label.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesignTheme.Shadows.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesignTheme.TextBlock.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\Themes\MaterialDesignTheme.ToolBarTray.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\GeneratedInternalTypeHelper.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\MaterialDesignThemes.Wpf_MarkupCompile.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.Wpf\obj\Debug\net462\MaterialDesignThemes.Wpf_MarkupCompile.lref

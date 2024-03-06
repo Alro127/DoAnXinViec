@@ -1,0 +1,6 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net6.0-windows\MahAppsDragablzDemo.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net6.0-windows\MahAppsDragablzDemo.csproj.SuggestedBindingRedirects.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net6.0-windows\MahAppsDragablzDemo.dll.config
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net6.0-windows\Dialogs.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net6.0-windows\MahAppsDragablzDemo_MarkupCompile.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net6.0-windows\MahAppsDragablzDemo_MarkupCompile.lref

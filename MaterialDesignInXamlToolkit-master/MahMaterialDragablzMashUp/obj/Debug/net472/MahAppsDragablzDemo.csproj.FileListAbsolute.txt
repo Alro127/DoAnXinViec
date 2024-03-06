@@ -1,0 +1,4 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net472\MahAppsDragablzDemo.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net472\Dialogs.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net472\MahAppsDragablzDemo_MarkupCompile.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MahMaterialDragablzMashUp\obj\Debug\net472\MahAppsDragablzDemo_MarkupCompile.lref

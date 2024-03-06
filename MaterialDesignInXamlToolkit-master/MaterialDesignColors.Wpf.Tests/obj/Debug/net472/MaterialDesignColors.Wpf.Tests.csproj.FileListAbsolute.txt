@@ -1,0 +1,6 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignColors.Wpf.Tests\obj\Debug\net472\MaterialDesignColors.Wpf.Tests.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignColors.Wpf.Tests\obj\Debug\net472\MaterialDesignColors.Wpf.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignColors.Wpf.Tests\obj\Debug\net472\MaterialDesignColors.Wpf.Tests.AssemblyInfoInputs.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignColors.Wpf.Tests\obj\Debug\net472\MaterialDesignColors.Wpf.Tests.AssemblyInfo.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignColors.Wpf.Tests\obj\Debug\net472\MaterialDesignColors.Wpf.Tests.csproj.CoreCompileInputs.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignColors.Wpf.Tests\obj\Debug\net472\MaterialDesignColors.Wpf.Tests.sourcelink.json

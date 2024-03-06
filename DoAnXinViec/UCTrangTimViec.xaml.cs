@@ -24,5 +24,10 @@ namespace DoAnXinViec
         {
             InitializeComponent();
         }
+        private void btnXem_Click(object sender, RoutedEventArgs e)
+        {
+            WDonChiTiet wDonChiTiet = new WDonChiTiet();
+            wDonChiTiet.ShowDialog();
+        }
     }
 }

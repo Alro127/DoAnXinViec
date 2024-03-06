@@ -1,0 +1,7 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.MahApps\obj\Debug\net462\MaterialDesignThemes.MahApps.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.MahApps\obj\Debug\net462\Themes\MaterialDesignTheme.MahApps.Defaults.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.MahApps\obj\Debug\net462\Themes\MaterialDesignTheme.MahApps.Dialogs.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.MahApps\obj\Debug\net462\Themes\MaterialDesignTheme.MahApps.Fonts.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.MahApps\obj\Debug\net462\Themes\MaterialDesignTheme.MahApps.PasswordBox.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.MahApps\obj\Debug\net462\Themes\MaterialDesignTheme.MahApps.TextBox.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.MahApps\obj\Debug\net462\MaterialDesignThemes.MahApps_MarkupCompile.cache

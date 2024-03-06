@@ -1,0 +1,229 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignColors.Wpf\\MaterialDesignColors.Wpf.csproj": {}
+  },
+  "projects": {
+    "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignColors.Wpf\\MaterialDesignColors.Wpf.csproj": {
+      "version": "1.0.1",
+      "restore": {
+        "projectUniqueName": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignColors.Wpf\\MaterialDesignColors.Wpf.csproj",
+        "projectName": "MaterialDesignColors",
+        "projectPath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignColors.Wpf\\MaterialDesignColors.Wpf.csproj",
+        "packagesPath": "C:\\Users\\Chi Lua\\.nuget\\packages\\",
+        "outputPath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignColors.Wpf\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\NuGet.Config",
+          "C:\\Users\\Chi Lua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462",
+          "net6.0-windows",
+          "net7.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          },
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
+            "projectReferences": {}
+          },
+          "net462": {
+            "targetAlias": "net462",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "centralPackageVersions": {
+            "BluwolfIcons": "[1.0.1, )",
+            "CommunityToolkit.Mvvm": "[8.2.2, )",
+            "Dragablz": "[0.0.3.234, )",
+            "GitHubActionsTestLogger": "[2.3.3, )",
+            "Humanizer": "[2.14.1, )",
+            "MahApps.Metro": "[2.4.10, )",
+            "MaterialDesignColors": "[3.0.0, )",
+            "MaterialDesignThemes": "[5.0.0, )",
+            "Microsoft.CodeAnalysis.Analyzers": "[3.3.4, )",
+            "Microsoft.CodeAnalysis.Common": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.CSharp": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.CSharp.Workspaces": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.Workspaces.Common": "[4.8.0, )",
+            "Microsoft.Composition": "[1.0.31, )",
+            "Microsoft.CSharp": "[4.7.0, )",
+            "Microsoft.NET.Test.Sdk": "[17.8.0, )",
+            "Microsoft.NETCore.Platforms": "[7.0.4, )",
+            "Microsoft.Toolkit.MVVM": "[7.1.2, )",
+            "Microsoft.Xaml.Behaviors.Wpf": "[1.1.77, )",
+            "Newtonsoft.Json": "[13.0.3, )",
+            "Shouldly": "[4.2.1, )",
+            "ShowMeTheXAML": "[2.0.0, )",
+            "ShowMeTheXAML.AvalonEdit": "[2.0.0, )",
+            "ShowMeTheXAML.MSBuild": "[2.0.0, )",
+            "System.CommandLine": "[2.0.0-beta4.22272.1, )",
+            "System.Net.Http": "[4.3.4, )",
+            "System.Text.RegularExpressions": "[4.3.1, )",
+            "VirtualizingWrapPanel": "[1.5.8, )",
+            "XAMLTest": "[1.2.1, )",
+            "xunit": "[2.6.2, )",
+            "xunit.runner.visualstudio": "[2.5.4, )",
+            "Xunit.StaFact": "[1.1.11, )"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+        },
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "centralPackageVersions": {
+            "BluwolfIcons": "[1.0.1, )",
+            "CommunityToolkit.Mvvm": "[8.2.2, )",
+            "Dragablz": "[0.0.3.234, )",
+            "GitHubActionsTestLogger": "[2.3.3, )",
+            "Humanizer": "[2.14.1, )",
+            "MahApps.Metro": "[2.4.10, )",
+            "MaterialDesignColors": "[3.0.0, )",
+            "MaterialDesignThemes": "[5.0.0, )",
+            "Microsoft.CodeAnalysis.Analyzers": "[3.3.4, )",
+            "Microsoft.CodeAnalysis.Common": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.CSharp": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.CSharp.Workspaces": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.Workspaces.Common": "[4.8.0, )",
+            "Microsoft.Composition": "[1.0.31, )",
+            "Microsoft.CSharp": "[4.7.0, )",
+            "Microsoft.NET.Test.Sdk": "[17.8.0, )",
+            "Microsoft.NETCore.Platforms": "[7.0.4, )",
+            "Microsoft.Toolkit.MVVM": "[7.1.2, )",
+            "Microsoft.Xaml.Behaviors.Wpf": "[1.1.77, )",
+            "Newtonsoft.Json": "[13.0.3, )",
+            "Shouldly": "[4.2.1, )",
+            "ShowMeTheXAML": "[2.0.0, )",
+            "ShowMeTheXAML.AvalonEdit": "[2.0.0, )",
+            "ShowMeTheXAML.MSBuild": "[2.0.0, )",
+            "System.CommandLine": "[2.0.0-beta4.22272.1, )",
+            "System.Net.Http": "[4.3.4, )",
+            "System.Text.RegularExpressions": "[4.3.1, )",
+            "VirtualizingWrapPanel": "[1.5.8, )",
+            "XAMLTest": "[1.2.1, )",
+            "xunit": "[2.6.2, )",
+            "xunit.runner.visualstudio": "[2.5.4, )",
+            "Xunit.StaFact": "[1.1.11, )"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+        },
+        "net462": {
+          "targetAlias": "net462",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "centralPackageVersions": {
+            "BluwolfIcons": "[1.0.1, )",
+            "CommunityToolkit.Mvvm": "[8.2.2, )",
+            "Dragablz": "[0.0.3.234, )",
+            "GitHubActionsTestLogger": "[2.3.3, )",
+            "Humanizer": "[2.14.1, )",
+            "MahApps.Metro": "[2.4.10, )",
+            "MaterialDesignColors": "[3.0.0, )",
+            "MaterialDesignThemes": "[5.0.0, )",
+            "Microsoft.CodeAnalysis.Analyzers": "[3.3.4, )",
+            "Microsoft.CodeAnalysis.Common": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.CSharp": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.CSharp.Workspaces": "[4.8.0, )",
+            "Microsoft.CodeAnalysis.Workspaces.Common": "[4.8.0, )",
+            "Microsoft.Composition": "[1.0.31, )",
+            "Microsoft.CSharp": "[4.7.0, )",
+            "Microsoft.NET.Test.Sdk": "[17.8.0, )",
+            "Microsoft.NETCore.Platforms": "[7.0.4, )",
+            "Microsoft.Toolkit.MVVM": "[7.1.2, )",
+            "Microsoft.Xaml.Behaviors.Wpf": "[1.1.77, )",
+            "Newtonsoft.Json": "[13.0.3, )",
+            "Shouldly": "[4.2.1, )",
+            "ShowMeTheXAML": "[2.0.0, )",
+            "ShowMeTheXAML.AvalonEdit": "[2.0.0, )",
+            "ShowMeTheXAML.MSBuild": "[2.0.0, )",
+            "System.CommandLine": "[2.0.0-beta4.22272.1, )",
+            "System.Net.Http": "[4.3.4, )",
+            "System.Text.RegularExpressions": "[4.3.1, )",
+            "VirtualizingWrapPanel": "[1.5.8, )",
+            "XAMLTest": "[1.2.1, )",
+            "xunit": "[2.6.2, )",
+            "xunit.runner.visualstudio": "[2.5.4, )",
+            "Xunit.StaFact": "[1.1.11, )"
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

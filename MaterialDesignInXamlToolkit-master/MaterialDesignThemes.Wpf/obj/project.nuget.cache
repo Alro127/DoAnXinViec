@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "OJPCmQYUX+6z71zfXdPjZfP1QXEwqbfPI94AYFhp2EXZoA+L+xzv1i4CJ2VXdI4lnlUwy0KGNv39EEgCJU5SbA==",
+  "success": true,
+  "projectFilePath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.Wpf\\MaterialDesignThemes.Wpf.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net462\\1.0.3\\microsoft.netframework.referenceassemblies.net462.1.0.3.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}

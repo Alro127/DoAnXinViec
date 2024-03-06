@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "MaterialDesignColors/1.0.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/MaterialDesignColors.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MaterialDesignColors.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "MaterialDesignThemes.Wpf/1.0.1": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MaterialDesignColors": "1.0.1",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77"
+        },
+        "compile": {
+          "bin/placeholder/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
+      "sha512": "MCu674ZETgU18EbxfwIlRpUPJ02YbZenLsMCXTkpeA7KUBpXfFaOUDlEO+7UWu5AFnUoydg+aQENJkuaZPheMQ==",
+      "type": "package",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.77",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.Design.dll",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net462/Microsoft.Xaml.Behaviors.xml",
+        "lib/net6.0-windows7.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.xml",
+        "microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512",
+        "microsoft.xaml.behaviors.wpf.nuspec",
+        "tools/Install.ps1"
+      ]
+    },
+    "MaterialDesignColors/1.0.1": {
+      "type": "project",
+      "path": "../MaterialDesignColors.Wpf/MaterialDesignColors.Wpf.csproj",
+      "msbuildProject": "../MaterialDesignColors.Wpf/MaterialDesignColors.Wpf.csproj"
+    },
+    "MaterialDesignThemes.Wpf/1.0.1": {
+      "type": "project",
+      "path": "../MaterialDesignThemes.Wpf/MaterialDesignThemes.Wpf.csproj",
+      "msbuildProject": "../MaterialDesignThemes.Wpf/MaterialDesignThemes.Wpf.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "MaterialDesignThemes.Wpf >= 1.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.UITests\\MaterialDesignThemes.UITests.csproj",
+      "projectName": "MaterialDesignThemes.UITests",
+      "projectPath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.UITests\\MaterialDesignThemes.UITests.csproj",
+      "packagesPath": "C:\\Users\\Chi Lua\\.nuget\\packages\\",
+      "outputPath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.UITests\\obj\\",
+      "projectStyle": "PackageReference",
+      "centralPackageVersionsManagementEnabled": true,
+      "configFilePaths": [
+        "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\NuGet.Config",
+        "C:\\Users\\Chi Lua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows7"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7",
+          "projectReferences": {
+            "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.Wpf\\MaterialDesignThemes.Wpf.csproj": {
+              "projectPath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.Wpf\\MaterialDesignThemes.Wpf.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows7",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

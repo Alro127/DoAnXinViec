@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "sf8yG9ntYz7+D39/Xjk+oQ0xj18P38iBEx70d7P/vSd7vLiQsGFjEf6O66QCmVxkmgSxqsH17Nii8rrPtSh0/Q==",
+  "success": true,
+  "projectFilePath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.MahApps\\MaterialDesignThemes.MahApps.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\controlzex\\4.4.0\\controlzex.4.4.0.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\mahapps.metro\\2.4.10\\mahapps.metro.2.4.10.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net462\\1.0.3\\microsoft.netframework.referenceassemblies.net462.1.0.3.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}

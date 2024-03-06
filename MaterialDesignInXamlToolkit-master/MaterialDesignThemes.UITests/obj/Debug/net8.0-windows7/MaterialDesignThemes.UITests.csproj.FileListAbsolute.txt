@@ -1,0 +1,9 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\MaterialDesignThemes.UITests.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\Samples\Theme\ColorAdjustWindow.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\Samples\Validation\ValidationUpdates.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\Samples\SplitButton\SplitButtonWithCommandBindingWindow.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\Samples\Theme\ColorAdjustWindow.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\Samples\Validation\ValidationUpdates.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\GeneratedInternalTypeHelper.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\MaterialDesignThemes.UITests_MarkupCompile.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesignThemes.UITests\obj\Debug\net8.0-windows7\MaterialDesignThemes.UITests_MarkupCompile.lref

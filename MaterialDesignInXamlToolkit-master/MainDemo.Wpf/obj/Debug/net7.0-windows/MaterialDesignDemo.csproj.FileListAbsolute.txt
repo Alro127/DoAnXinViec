@@ -1,0 +1,14 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\MaterialDesignDemo.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\MaterialDesignDemo.csproj.SuggestedBindingRedirects.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\MaterialDesignDemo.dll.config
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\Domain\SampleProgressDialog.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\Palette.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\Typography.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\Domain\SampleProgressDialog.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\Palette.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\Transitions.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\TransitionsDemo\Slide8_Details.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\Typography.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\MaterialDesignDemo_MarkupCompile.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MainDemo.Wpf\obj\Debug\net7.0-windows\MaterialDesignDemo_MarkupCompile.lref
