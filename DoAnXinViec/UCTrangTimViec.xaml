@@ -1,9 +1,10 @@
-﻿<UserControl x:Class="DoAnXinViec.UCTrangTimViec"
+﻿<UserControl x:Name="ucTrangTimViec" x:Class="DoAnXinViec.UCTrangTimViec"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoAnXinViec"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1350">
     <Grid>
@@ -11,11 +12,116 @@
             <Button Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng Nhập" Margin="1197,26,10,73" FontSize="16" FontFamily="Segoe UI Black" Background="#FF560C81" Foreground="#FFF6F0F0" BorderBrush="{x:Null}"/>
             <Button Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng Ký" Margin="1051,26,156,73" FontSize="16" FontFamily="Segoe UI Black" Background="White" Foreground="#FF080E14" BorderBrush="{x:Null}"/>
             <TextBox Style="{DynamicResource TBstyle}" Height="32" TextWrapping="Wrap" 
-             Tag="Tìm kiếm" Width="1001" BorderBrush="Black" RenderTransformOrigin="0,0.5" Margin="10,34,0,0" VerticalAlignment="Top">
+             Tag="Tìm kiếm" Width="979" BorderBrush="Black" RenderTransformOrigin="0,0.5" Margin="19,34,0,0" VerticalAlignment="Top" Padding="0,5,0,0" VerticalContentAlignment="Center">
                 <TextBox.Background>
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </TextBox.Background>
             </TextBox>
+            <ComboBox
+                    MinWidth="72"
+                    IsEditable="True"
+                    materialDesign:ColorZoneAssist.Mode ="Dark" 
+                    materialDesign:ComboBoxAssist.MaxLength="30"
+                    materialDesign:HintAssist.FontFamily="Verdana"
+                    materialDesign:HintAssist.Hint="Địa điểm"
+                    Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="14,78,1074,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249">
+
+                <Label Content="An Giang" Foreground="White" FontSize="14"/>
+                <Label Content="Bà Rịa - Vũng Tàu" Foreground="White" FontSize="14"/>
+                <Label Content="Bắc Giang" Foreground="White" FontSize="14"/>
+                <Label Content="Bắc Kạn" Foreground="White" FontSize="14"/>
+                <Label Content="Bạc Liêu" Foreground="White" FontSize="14"/>
+                <Label Content="Bắc Ninh" Foreground="White" FontSize="14"/>
+                <Label Content="Bến Tre" Foreground="White" FontSize="14"/>
+                <Label Content="Bình Định" Foreground="White" FontSize="14"/>
+                <Label Content="Bình Dương" Foreground="White" FontSize="14"/>
+                <Label Content="Bình Phước" Foreground="White" FontSize="14"/>
+                <Label Content="Bình Thuận" Foreground="White" FontSize="14"/>
+                <Label Content="Cà Mau" Foreground="White" FontSize="14"/>
+                <Label Content="Cần Thơ" Foreground="White" FontSize="14"/>
+                <Label Content="Cao Bằng" Foreground="White" FontSize="14"/>
+                <Label Content="Đà Nẵng" Foreground="White" FontSize="14"/>
+                <Label Content="Đắk Lắk" Foreground="White" FontSize="14"/>
+                <Label Content="Đắk Nông" Foreground="White" FontSize="14"/>
+                <Label Content="Điện Biên" Foreground="White" FontSize="14"/>
+                <Label Content="Đồng Nai" Foreground="White" FontSize="14"/>
+                <Label Content="Đồng Tháp" Foreground="White" FontSize="14"/>
+                <Label Content="Gia Lai" Foreground="White" FontSize="14"/>
+                <Label Content="Hà Giang" Foreground="White" FontSize="14"/>
+                <Label Content="Hà Nam" Foreground="White" FontSize="14"/>
+                <Label Content="Hà Nội" Foreground="White" FontSize="14"/>
+                <Label Content="Hà Tĩnh" Foreground="White" FontSize="14"/>
+                <Label Content="Hải Dương" Foreground="White" FontSize="14"/>
+                <Label Content="Hải Phòng" Foreground="White" FontSize="14"/>
+                <Label Content="Hậu Giang" Foreground="White" FontSize="14"/>
+                <Label Content="TP. Hồ CHí Minh" Foreground="White" FontSize="14"/>
+                <Label Content="Hòa Bình" Foreground="White" FontSize="14"/>
+                <Label Content="Hưng Yên" Foreground="White" FontSize="14"/>
+                <Label Content="Khánh Hòa" Foreground="White" FontSize="14"/>
+                <Label Content="Kiên Giang" Foreground="White" FontSize="14"/>
+                <Label Content="Kon Tum" Foreground="White" FontSize="14"/>
+                <Label Content="Lai Châu" Foreground="White" FontSize="14"/>
+                <Label Content="Lâm Đồng" Foreground="White" FontSize="14"/>
+                <Label Content="Lạng Sơn" Foreground="White" FontSize="14"/>
+                <Label Content="Lào Cai" Foreground="White" FontSize="14"/>
+                <Label Content="Long An" Foreground="White" FontSize="14"/>
+                <Label Content="Nam Định" Foreground="White" FontSize="14"/>
+                <Label Content="Nghệ An" Foreground="White" FontSize="14"/>
+                <Label Content="Ninh Bình" Foreground="White" FontSize="14"/>
+                <Label Content="Ninh Thuận" Foreground="White" FontSize="14"/>
+                <Label Content="Phú Thọ" Foreground="White" FontSize="14"/>
+                <Label Content="Phú Yên" Foreground="White" FontSize="14"/>
+                <Label Content="Quảng Bình" Foreground="White" FontSize="14"/>
+                <Label Content="Quảng Nam" Foreground="White" FontSize="14"/>
+                <Label Content="Quảng Ngãi" Foreground="White" FontSize="14"/>
+                <Label Content="Quảng Trị" Foreground="White" FontSize="14"/>
+                <Label Content="Sóc Trăng" Foreground="White" FontSize="14"/>
+                <Label Content="Sơn La" Foreground="White" FontSize="14"/>
+                <Label Content="Tây Ninh" Foreground="White" FontSize="14"/>
+                <Label Content="Thái Bình" Foreground="White" FontSize="14"/>
+                <Label Content="Thái Nguyên" Foreground="White" FontSize="14"/>
+                <Label Content="Thanh Hóa" Foreground="White" FontSize="14"/>
+                <Label Content="Thừa Thiên Huế" Foreground="White" FontSize="14"/>
+                <Label Content="Tiền Giang" Foreground="White" FontSize="14"/>
+                <Label Content="Trà Vinh" Foreground="White" FontSize="14"/>
+                <Label Content="Tuyên Quang" Foreground="White" FontSize="14"/>
+                <Label Content="Vĩnh Long" Foreground="White" FontSize="14"/>
+                <Label Content="Vĩnh Phúc" Foreground="White" FontSize="14"/>
+                <Label Content="Yên Bái" Foreground="White" FontSize="14"/>
+            </ComboBox>
+            <ComboBox
+                MinWidth="72"
+                IsEditable="True"
+                materialDesign:ColorZoneAssist.Mode ="Dark" 
+                materialDesign:ComboBoxAssist.MaxLength="30"
+                materialDesign:HintAssist.FontFamily="Verdana"
+                materialDesign:HintAssist.Hint="Ngành nghề"
+                Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="274,78,826,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249">
+                <Label Content="Sản xuất và chế biến" Foreground="White" FontSize="14"/>
+                <Label Content="Kiến trúc và xây dựng" Foreground="White" FontSize="14"/>
+                <Label Content="Kinh doanh" Foreground="White" FontSize="14"/>
+                <Label Content="Công nghệ thông tin" Foreground="White" FontSize="14"/>
+                <Label Content="Luật - Nhân văn" Foreground="White" FontSize="14"/>
+                <Label Content="Nghệ thuật - Thẩm mỹ - Đồ họa" Foreground="White" FontSize="14"/>
+                <Label Content="Báo chí - Khoa học xã hội" Foreground="White" FontSize="14"/>
+                <Label Content="Khoa học cơ bản" Foreground="White" FontSize="14"/>
+                <Label Content="Sư phạm" Foreground="White" FontSize="14"/>
+                <Label Content="Nông - Lâm - Ngư nghiệp" Foreground="White" FontSize="14"/>
+            </ComboBox>
+            <ComboBox
+                MinWidth="72"
+                IsEditable="True"
+                materialDesign:ColorZoneAssist.Mode ="Dark" 
+                materialDesign:ComboBoxAssist.MaxLength="30"
+                materialDesign:HintAssist.FontFamily="Verdana"
+                materialDesign:HintAssist.Hint="Kinh nghiệm"
+                Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="528,78,571,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249">
+                <Label Content="Chưa có kinh nghiệm" Foreground="White" FontSize="14"/>
+                <Label Content="1 - 2 năm" Foreground="White" FontSize="14"/>
+                <Label Content="2 - 5 năm" Foreground="White" FontSize="14"/>
+                <Label Content="5 - 10 năm" Foreground="White" FontSize="14"/>
+                <Label Content="Hơn 10 năm" Foreground="White" FontSize="14"/>
+            </ComboBox>
         </Grid>
         <Grid Margin="0,150,0,50">
             <Border CornerRadius="10" BorderBrush="Black">
@@ -23,11 +129,12 @@
                     <SolidColorBrush Color="Black" Opacity="0.3"/>
                 </Border.Background>
                 <WrapPanel HorizontalAlignment="Center" Height="584" VerticalAlignment="Center" Width="1328">
-                    <local:UCDon/>
+                    <local:UCDon x:Name="ucDon1"/>
                     <local:UCDon/>
                     <local:UCDon/>
                 </WrapPanel>
             </Border>
         </Grid>
+        <Grid HorizontalAlignment="Center" Height="30" Margin="0,757,0,0" VerticalAlignment="Top" Width="1330"/>
     </Grid>
 </UserControl>

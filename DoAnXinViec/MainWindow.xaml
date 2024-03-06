@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:DoAnXinViec"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1800">
-    <Grid/>
+    <Grid Background="Black"/>
 </Window>

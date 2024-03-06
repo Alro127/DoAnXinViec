@@ -15,12 +15,18 @@
         <Grid.Background>
             <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
         </Grid.Background>
-        <local:UCTrangTimViec Margin="182,0,0,0"/>
-        <Border Margin="10,150,1373,50">
-            <Border.Background>
-                <SolidColorBrush Color="Black" Opacity="0.29"/>
-            </Border.Background>
-
-        </Border>
+        <local:UCTrangTimViec x:Name="ucTrangTimViec" Margin="182,0,10,0"/>
+        <Grid Margin="10,150,1368,50">
+            
+            <Button Content="Việc làm" HorizontalAlignment="Center" Height="62" VerticalAlignment="Top" Width="142" Background="{x:Null}" BorderBrush="#FF560C81" Foreground="#FFFCFCFC" FontFamily="Segoe UI" FontSize="18" OpacityMask="#FF673AB7" Margin="0,10,0,0"/>
+            <Button Content="Chỉnh CV" HorizontalAlignment="Center" Height="62" VerticalAlignment="Top" Width="142" Background="{x:Null}" BorderBrush="#FF560C81" Foreground="#FFFCFCFC" FontFamily="Segoe UI" FontSize="18" OpacityMask="#FF673AB7" Margin="0,82,0,0"/>
+            <Button Content="Yêu thích" HorizontalAlignment="Center" Height="62" VerticalAlignment="Top" Width="142" Background="{x:Null}" BorderBrush="#FF560C81" Foreground="#FFFCFCFC" FontFamily="Segoe UI" FontSize="18" OpacityMask="#FF673AB7" Margin="0,154,0,0"/>
+            <Button HorizontalAlignment="Center" Height="62" VerticalAlignment="Top" Width="142" Background="{x:Null}" BorderBrush="#FF560C81" Foreground="#FF560C81" FontFamily="Segoe UI" FontSize="18" OpacityMask="#FF673AB7" Margin="0,226,0,0" TextBlock.Foreground="#FFFCFCFC">
+                <TextBlock Text="Đơn ứng tuyển" TextWrapping="Wrap" TextAlignment="Center"/> 
+            </Button>
+            <Button HorizontalAlignment="Center" Height="62" VerticalAlignment="Top" Width="142" Background="{x:Null}" BorderBrush="#FF560C81" Foreground="#FFFCFCFC" FontFamily="Segoe UI" FontSize="18" OpacityMask="#FF673AB7" Margin="0,298,0,0">
+                <TextBlock Text="Chỉnh sửa thông tin" TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+        </Grid>
     </Grid>
 </Window>

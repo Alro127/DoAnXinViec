@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="DoAnXinViec.UCDon"
+﻿<UserControl x:Name="ucDon" x:Class="DoAnXinViec.UCDon" x:ClassModifier="public"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -135,7 +135,7 @@
             </Border.Background>
         </Border>
         <Image HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Source="/Create Online Surveys - Qualtrics.jpg" Stretch="UniformToFill"/>
-        <Button Style="{DynamicResource ButtonStyleBoGoc}" Content="Xem" HorizontalAlignment="Left" Margin="358,78,0,0" VerticalAlignment="Top" Background="#FF560C81" FontSize="16" FontFamily="Segoe UI Black" Foreground="White" Width="69" Height="30" BorderBrush="{x:Null}"/>
+        <Button x:Name="btnXem" x:FieldModifier="public" Style="{DynamicResource ButtonStyleBoGoc}" Content="Xem" HorizontalAlignment="Left" Margin="358,78,0,0" VerticalAlignment="Top" Background="#FF560C81" FontSize="16" FontFamily="Segoe UI Black" Foreground="White" Width="69" Height="30" BorderBrush="{x:Null}" AutomationProperties.Name="btnXem" Click="btnXem_Click"/>
         <GroupBox Style="{DynamicResource GroupBoxStyle}" HorizontalAlignment="Left" Height="60" Header="Tên Công Việccccccccccccccccc" Margin="81,10,0,0" VerticalAlignment="Top" Width="346" FontFamily="Segoe UI Black" FontSize="18" Foreground="White">
             <Label Content="Tên công ty" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="266" FontSize="14" Foreground="#FF897C7C" Height="31"/>
         </GroupBox>

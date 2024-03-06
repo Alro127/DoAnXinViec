@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/mxAmwB6LIongJldcaZdfkQULWrVTTtGljsAx3A68Exi3acWSo88bSs42ss7YnOvqY2BGMJytzh782lf8S3mOA==",
+  "dgSpecHash": "tkhxRjhi2lYnJVFxptTF7AY2bhVkJkwyWRPkZqgZdfS4hE1FFA+5NfP/YF73CCT7CbvZXZkpo/FKAexHxy8bUQ==",
   "success": true,
   "projectFilePath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec.csproj",
   "expectedPackageFiles": [
@@ -8,12 +8,5 @@
     "C:\\Users\\Chi Lua\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
     "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\DoAnXinViec\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
