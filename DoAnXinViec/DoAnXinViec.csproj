@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Create Online Surveys - Qualtrics.jpg" />
     <Resource Include="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
     <Resource Include="homepage.jpg" />

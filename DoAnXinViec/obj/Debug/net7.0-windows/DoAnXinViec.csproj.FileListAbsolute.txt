@@ -33,3 +33,8 @@ D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-win
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDonChiTiet.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCTrangTimViec.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCTrangTimViec.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignColors.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.csproj.CopyComplete
