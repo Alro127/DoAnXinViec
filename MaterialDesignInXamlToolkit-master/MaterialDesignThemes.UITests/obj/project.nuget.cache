@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tApF7pbwB+IpXvgulYpwZi4S8i2VB1Z468nYqvDErl8JpPdF3UkG+kmJbJCepGF3zbdQqMcwZM2Tk6nPbwvcEA==",
+  "success": true,
+  "projectFilePath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesignThemes.UITests\\MaterialDesignThemes.UITests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512"
+  ],
+  "logs": []
+}

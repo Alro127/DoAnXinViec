@@ -1,0 +1,6 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\mdresgen\obj\Debug\net7-windows\mdresgen.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\mdresgen\obj\Debug\net7-windows\mdresgen.GeneratedMSBuildEditorConfig.editorconfig
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\mdresgen\obj\Debug\net7-windows\mdresgen.AssemblyInfoInputs.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\mdresgen\obj\Debug\net7-windows\mdresgen.AssemblyInfo.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\mdresgen\obj\Debug\net7-windows\mdresgen.csproj.CoreCompileInputs.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\mdresgen\obj\Debug\net7-windows\mdresgen.sourcelink.json

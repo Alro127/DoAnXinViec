@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "UIQGKCjpmrBqMIfmsOpG5XnIb3cdxiG6sdaPh1OYALUQfyeQYBu+sxl+dRznZF+hj3ZWg6OD9uYmB6fsPbLssA==",
+  "success": true,
+  "projectFilePath": "D:\\HK2 - Năm 2\\Lập Trình Window\\DoAnXinViec\\MaterialDesignInXamlToolkit-master\\MaterialDesign3.Demo.Wpf\\MaterialDesign3Demo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\bluwolficons\\1.0.1\\bluwolficons.1.0.1.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\showmethexaml.avalonedit\\2.0.0\\showmethexaml.avalonedit.2.0.0.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\showmethexaml.msbuild\\2.0.0\\showmethexaml.msbuild.2.0.0.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\system.commandline\\2.0.0-beta4.22272.1\\system.commandline.2.0.0-beta4.22272.1.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\virtualizingwrappanel\\1.5.8\\virtualizingwrappanel.1.5.8.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Chi Lua\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}

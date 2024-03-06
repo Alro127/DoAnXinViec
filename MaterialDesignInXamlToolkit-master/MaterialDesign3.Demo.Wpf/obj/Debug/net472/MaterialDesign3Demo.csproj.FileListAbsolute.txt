@@ -1,0 +1,10 @@
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\MaterialDesign3Demo.csproj.AssemblyReference.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\Domain\SampleProgressDialog.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\Palette.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\Domain\SampleProgressDialog.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\Palette.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\Transitions.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\TransitionsDemo\Slide8_Details.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\GeneratedInternalTypeHelper.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\MaterialDesign3Demo_MarkupCompile.cache
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\MaterialDesignInXamlToolkit-master\MaterialDesign3.Demo.Wpf\obj\Debug\net472\MaterialDesign3Demo_MarkupCompile.lref
