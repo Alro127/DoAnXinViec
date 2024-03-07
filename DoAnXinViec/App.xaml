@@ -2,17 +2,18 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:DoAnXinViec"
-             StartupUri="WTrangChinh.xaml">
+             StartupUri="WTrangChinhUngVien.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="TextBoxStyle.xaml"/>
-                <ResourceDictionary Source="ButtonBoGoc.xaml"/>
-                <ResourceDictionary Source="PasswordBoxStyle.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Secondary/MaterialDesignColor.Lime.xaml" />
+                <ResourceDictionary Source="TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="ButtonBoGoc.xaml"/>
+                <ResourceDictionary Source="ButtonStyleKeepColor.xaml"/>
+                <ResourceDictionary Source="PasswordBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

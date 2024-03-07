@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoAnXinViec"
              mc:Ignorable="d" Height="120" Width="440">
+    
     <UserControl.Resources>
         <Style x:Key="GridBoGoc" TargetType="{x:Type Grid}"/>
         <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>

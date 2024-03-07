@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="DoAnXinViec.UCHoSoUngTuyen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoAnXinViec"
+             mc:Ignorable="d" 
+             d:DesignHeight="815" d:DesignWidth="1290">
+    <Grid HorizontalAlignment="Left" Height="815" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="white">
+        <ListView x:Name="lvDonTuyen" ItemsSource="{Binding list}"  Margin="20,200,20,20" Foreground="Black" Background="white" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Tên hồ sơ" Width="350" DisplayMemberBinding="{Binding Ten}"/>
+                    <GridViewColumn Header="Vị trí ứng tuyển" Width="200" DisplayMemberBinding="{Binding Ngaydang}"/>
+                    <GridViewColumn Header="Thời gian nộp" Width="200" DisplayMemberBinding="{Binding Toihan}">
+
+                    </GridViewColumn>
+                    <GridViewColumn Header="Loại hồ sơ" Width="200" DisplayMemberBinding="{Binding Luotnop}"/>
+                    <GridViewColumn Header="Trạng thái" Width="300" DisplayMemberBinding="{Binding Luotxem}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

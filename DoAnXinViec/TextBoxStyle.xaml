@@ -40,7 +40,7 @@
                                    Foreground="{TemplateBinding Foreground}"
                                    Padding="{TemplateBinding Padding}"/>
                         </Grid>
-                        
+
                     </Border>
                     <ControlTemplate.Triggers>
                         <MultiTrigger>
@@ -62,5 +62,4 @@
             </Setter.Value>
         </Setter>
     </Style>
-
 </ResourceDictionary>
