@@ -1,0 +1,44 @@
+﻿<Window x:Class="DoAnXinViec.WTrangChinhUngVien"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DoAnXinViec"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="WTrangChinhCty" Height="830" Width="1550">
+    <Grid Background="#FFE8E8E8">
+
+        <StackPanel x:Name="stMain" Margin="260,0,0,0">
+            
+        </StackPanel>
+        <Grid HorizontalAlignment="Left" Height="815" VerticalAlignment="Center" Width="225" Background="White">
+            <StackPanel Margin="0,200,0,0">
+                <Expander Header="Quản lý tài khoản" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <StackPanel>
+                        <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Chỉnh sửa thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81"/>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Quản lý hồ sơ" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White"  FontSize="14" >
+                    <StackPanel>
+                        <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ của bạn" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81"/>
+                        <Button x:Name="btnDanhSachTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Chỉnh sửa CV" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81"/>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Quản lý việc làm" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <StackPanel>
+                        <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Việc đã ứng tuyển" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81"/>
+                        <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Thông báo việc làm" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81"/>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Cài đặt chung" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <StackPanel>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </Grid>
+        <local:UCChinhSuaThongTinCaNhan Width="1290" Height="815" Margin="260,-1,0,0"/>
+
+    </Grid>
+</Window>

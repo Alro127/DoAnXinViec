@@ -13,13 +13,14 @@
     <None Remove="Create Online Surveys - Qualtrics.jpg" />
     <None Remove="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
     <None Remove="homepage.jpg" />
-    <None Remove="image %281%29.png" />
     <None Remove="mau-don-xin-viec-moi-.jpg" />
     <None Remove="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
     <None Remove="—Pngtree—starry sky galaxy space background_2269978.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
     <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
   </ItemGroup>
 
@@ -28,10 +29,18 @@
     <Resource Include="Create Online Surveys - Qualtrics.jpg" />
     <Resource Include="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
     <Resource Include="homepage.jpg" />
-    <Resource Include="image (1).png" />
     <Resource Include="mau-don-xin-viec-moi-.jpg" />
     <Resource Include="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
     <Resource Include="—Pngtree—starry sky galaxy space background_2269978.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="WTrangXemDon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WTrangChinhUngVien.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>
