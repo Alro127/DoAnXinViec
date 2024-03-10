@@ -22,7 +22,19 @@
     <Compile Update="UCTrangTimViec.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WDangKy.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WDangNhap.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WDonChiTiet.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WThongTinCongTy.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WThongTinUngVien.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WTrangChinh.xaml.cs">
@@ -66,7 +78,19 @@
     <Page Update="UCTrangTimViec.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="WDangKy.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WDangNhap.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="WDonChiTiet.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WThongTinCongTy.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WThongTinUngVien.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WTrangXemDon.xaml">

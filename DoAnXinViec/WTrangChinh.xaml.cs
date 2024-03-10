@@ -25,5 +25,11 @@ namespace DoAnXinViec
         {
             InitializeComponent();
         }
+
+        private void btnDangKy_Click(object sender, RoutedEventArgs e)
+        {
+            WDangKy wDangKy = new WDangKy();
+            wDangKy.ShowDialog();
+        }
     }
 }

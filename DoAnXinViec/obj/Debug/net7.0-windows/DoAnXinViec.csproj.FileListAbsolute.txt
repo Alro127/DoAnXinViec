@@ -1,11 +1,3 @@
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.exe
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.deps.json
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.runtimeconfig.json
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.dll
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.pdb
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignColors.dll
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.csproj.AssemblyReference.cache
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\ButtonBoGoc.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\ButtonStyleKeepColor.baml
@@ -17,7 +9,7 @@ D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-win
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDon.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCHoSoUngTuyen.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCTrangTimViec.g.cs
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDonChiTiet.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangKy.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinh.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinhCty.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinhUngVien.g.cs
@@ -27,6 +19,15 @@ D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-win
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec_MarkupCompile.cache
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec_MarkupCompile.lref
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.exe
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.deps.json
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.runtimeconfig.json
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.pdb
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignColors.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDonChiTiet.g.cs
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\App.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\MainWindow.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCChinhSuaThongTinCaNhan.baml
@@ -34,6 +35,7 @@ D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-win
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDon.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCHoSoUngTuyen.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCTrangTimViec.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangKy.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDonChiTiet.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinh.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinhCty.baml
@@ -52,3 +54,9 @@ D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-win
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.pdb
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.genruntimeconfig.cache
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\ref\DoAnXinViec.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangNhap.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangNhap.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinUngVien.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinUngVien.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinCongTy.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinCongTy.baml

@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:DoAnXinViec"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="815" d:DesignWidth="1290">
-    <Border Background="White" CornerRadius="30" Width="1290" Height="815">
-        <Grid>
+             d:DesignHeight="780" d:DesignWidth="1290">
+    <Border Background="White" CornerRadius="30" Width="1290" Height="770" Margin="0,10,0,0" VerticalAlignment="Top">
+        <Grid >
             <Grid.Background>
                 <ImageBrush/>
             </Grid.Background>
@@ -20,24 +20,67 @@
             <Label Content="Thông tin cá nhân" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Label Content="Ảnh đại diện" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" FontSize="16" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1290"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="20,280,0,0" VerticalAlignment="Top" Width="1250"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,260,0,0" VerticalAlignment="Top" Width="1290"/>
             <Button Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="180,140,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}">
                 <Button.Background>
                     <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
                 </Button.Background>
             </Button>
-            <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="180,185,0,0" VerticalAlignment="Top" Width="598"/>
+            <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="180,185,0,0" VerticalAlignment="Top" Width="244"/>
+            <TextBox
+                    materialDesign:HintAssist.Background="White"
+                    VerticalAlignment="Top"
+                    materialDesign:HintAssist.Hint="Họ và tên"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,280,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <TextBox
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
-                  materialDesign:HintAssist.Hint="Họ và tên"
-                  Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,300,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}"/>
+                materialDesign:HintAssist.Hint="Địa chỉ"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Right" Margin="0,520,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <ComboBox HorizontalAlignment="Left" Height="40" Margin="40,400,0,0" Width="585"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      materialDesign:HintAssist.Background="White"
+                      materialDesign:HintAssist.Hint="Giới Tính" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
+            <DatePicker HorizontalAlignment="Left" Height="40" Margin="40,340,0,0" VerticalAlignment="Top" Width="585"
+                        Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                        materialDesign:HintAssist.Background="White"
+                        materialDesign:HintAssist.Hint="Ngày sinh" Padding="10,10,10,10" FontSize="14"/>
+            <ComboBox HorizontalAlignment="Right" Height="40" Margin="0,460,665,0" VerticalAlignment="Top" Width="585"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                materialDesign:HintAssist.Background="White"
+                materialDesign:HintAssist.Hint="Tỉnh/ Thành Phố" Padding="10,10,10,10" FontSize="14"/>
             <TextBox
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
-                materialDesign:HintAssist.Hint="Họ và tên"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,300,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}"/>
+                materialDesign:HintAssist.Hint="Số điện thoại"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,580,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <TextBox
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Email"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,640,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <Button Content="Lưu" Height="40" Margin="0,700,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button Content="Hủy" Margin="0,700,220,30" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF560C81" Opacity="0.3"/>
+                </Button.Background>
+            </Button>
+            <TextBox
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Tên đăng nhập"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="399" Height="40" HorizontalAlignment="Left" Margin="665,110,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <Button Content="Sửa" Height="40" Margin="0,110,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <PasswordBox 
+                Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" materialDesign:HintAssist.Hint="Mật khẩu"
+                HorizontalAlignment="Left" Height="40" Margin="665,170,0,0" VerticalAlignment="Top" Width="399" Padding="10,10,10,10" FontSize="14"/>
+            <TextBox
+                TextWrapping="Wrap"
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Giới thiệu chung"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="400" HorizontalAlignment="Right" Margin="0,280,40,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
         </Grid>
     </Border>
-
 </UserControl>

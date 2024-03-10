@@ -10,12 +10,12 @@
         Title="WTrangChinhCty" Height="830" Width="1550">
     <Grid Background="#FFE8E8E8">
 
-        <StackPanel x:Name="stMain" Margin="260,0,0,0">
+        <StackPanel x:Name="stMain" Margin="240,0,0,0">
             <local:UCChinhSuaThongTinCaNhan/>
         </StackPanel>
-        <Border HorizontalAlignment="Left" Height="815" VerticalAlignment="Center" Width="225" Background="White" CornerRadius="30">
-            <Grid HorizontalAlignment="Left" Height="815" VerticalAlignment="Center" Width="225" Background="Transparent">
-                <StackPanel Margin="0,200,0,0">
+        <Border HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="White" CornerRadius="30">
+            <Grid HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="Transparent">
+                <StackPanel Margin="0,260,0,0">
                     <Expander Header="Quản lý tài khoản" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="16" >
                         <StackPanel>
                             <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Chỉnh sửa thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
@@ -38,9 +38,15 @@
                         </StackPanel>
                     </Expander>
                 </StackPanel>
+                <Ellipse Width="150" Height="150" Margin="0,38,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="/eb0ffac4c3043f5fceb42d66450b5880.jpg"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Label Content="Họ Tên" HorizontalAlignment="Center" Height="30" Margin="0,200,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="16"/>
 
             </Grid>
         </Border>
-        
+
     </Grid>
 </Window>
