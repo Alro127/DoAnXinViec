@@ -54,7 +54,7 @@ namespace DoAnXinViec {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DoAnXinViec;component/wtrangdangdon.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DoAnXinViec;V1.0.0.0;component/wtrangdangdon.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\WTrangDangDon.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
