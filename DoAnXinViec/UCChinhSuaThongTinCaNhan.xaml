@@ -7,65 +7,37 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="815" d:DesignWidth="1290">
-    <Grid Background="White">
-        <DatePicker
-              HorizontalAlignment="Left"
-              Width="157"
-              materialDesign:HintAssist.Hint="Custom" Foreground="black" Margin="534,172,0,0" VerticalAlignment="Top">
-            <DatePicker.Resources>
-                <Style
-              x:Key="CustomCalendarDayButton"
-              TargetType="CalendarDayButton"
-              BasedOn="{StaticResource MaterialDesignCalendarDayButton}">
-                    <Setter
-                Property="materialDesign:CalendarAssist.SelectionColor"
-                Value="White" />
-                    <Setter
-                Property="materialDesign:CalendarAssist.SelectionForegroundColor"
-                Value="White" />
-                </Style>
-                <Style
-              x:Key="CustomCalendarButton"
-              TargetType="CalendarButton"
-              BasedOn="{StaticResource MaterialDesignCalendarButton}">
-                    <Setter
-                Property="materialDesign:CalendarAssist.SelectionColor"
-                Value="AliceBlue" />
-                    <Setter
-                Property="materialDesign:CalendarAssist.SelectionForegroundColor"
-                Value="Black" />
-                </Style>
-                <Style
-              x:Key="CustomCalendar"
-              TargetType="{x:Type Calendar}"
-              BasedOn="{StaticResource MaterialDesignDatePickerCalendarPortrait}">
-                    <Setter
-                Property="Background"
-                Value="#343C3F" />
-                    <Setter
-                Property="CalendarButtonStyle"
-                Value="{StaticResource CustomCalendarButton}" />
-                    <Setter
-                Property="CalendarDayButtonStyle"
-                Value="{StaticResource CustomCalendarDayButton}" />
-                    <Setter
-                Property="Foreground"
-                Value="White" />
-                    <Setter
-                Property="materialDesign:CalendarAssist.HeaderBackground"
-                Value="Purple" />
-                    <Setter
-                Property="materialDesign:CalendarAssist.HeaderForeground"
-                Value="White" />
-                </Style>
-                <Style
-              TargetType="DatePicker"
-              BasedOn="{StaticResource MaterialDesignFloatingHintDatePicker}">
-                    <Setter
-                Property="CalendarStyle"
-                Value="{StaticResource CustomCalendar}" />
-                </Style>
-            </DatePicker.Resources>
-        </DatePicker>
-    </Grid>
+    <Border Background="White" CornerRadius="30" Width="1290" Height="815">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush/>
+            </Grid.Background>
+            <Ellipse Width="120" Height="120" Margin="40,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/eb0ffac4c3043f5fceb42d66450b5880.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Label Content="Thông tin cá nhân" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
+            <Label Content="Ảnh đại diện" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" FontSize="16" FontFamily="Segoe UI Black" Height="40"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1290"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="20,280,0,0" VerticalAlignment="Top" Width="1250"/>
+            <Button Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="180,140,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="180,185,0,0" VerticalAlignment="Top" Width="598"/>
+            <TextBox
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                  materialDesign:HintAssist.Hint="Họ và tên"
+                  Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,300,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}"/>
+            <TextBox
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Họ và tên"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,300,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}"/>
+        </Grid>
+    </Border>
+
 </UserControl>
