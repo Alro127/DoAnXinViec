@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,6 @@ namespace DoAnXinViec
         public UCTrangTimViec()
         {
             InitializeComponent();
-        }
-        private void btnXem_Click(object sender, RoutedEventArgs e)
-        {
-            WDonChiTiet wDonChiTiet = new WDonChiTiet();
-            wDonChiTiet.ShowDialog();
         }
     }
 }

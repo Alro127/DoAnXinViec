@@ -142,23 +142,8 @@
                 <Border.Background>
                     <SolidColorBrush Color="Black" Opacity="0.3"/>
                 </Border.Background>
-                <WrapPanel Width="1330" HorizontalAlignment="Center">
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    <local:UCDon/>
-                    
+                <WrapPanel x:Name="wpDon" Width="1330" HorizontalAlignment="Center">
+                                       
                 </WrapPanel>
             </Border>
         </Grid>

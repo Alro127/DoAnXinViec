@@ -24,5 +24,15 @@ namespace DoAnXinViec
         {
             InitializeComponent();
         }
+
+        private void cbTrangThai_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

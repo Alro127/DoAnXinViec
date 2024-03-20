@@ -20,7 +20,7 @@
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </Border.Background>
             </Border>
-            <PasswordBox
+            <PasswordBox x:Name="txtMatKhau"
                 FontSize="14"
                 Width="274"
                 Height="34"
@@ -32,9 +32,9 @@
                 materialDesign:PasswordBoxAssist.Password="{Binding Password2, Mode=TwoWay}"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 IsEnabled="{Binding IsChecked, ElementName=RevealPasswordFloatingEnabled}"
-                Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}" Margin="0,166,0,0" />
+                Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}" Margin="0,155,0,0" />
 
-            <TextBox
+            <TextBox x:Name="txtTenDangNhap"
                  FontSize="14"
                  Width="274"
                  Height="34"
@@ -43,8 +43,8 @@
                  Foreground="White"
                  Padding="10,0,0,0"
                  materialDesign:HintAssist.Hint="Tên đăng nhập"
-                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,128,0,0" />
-            <Button Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng nhập" HorizontalAlignment="Center" Height="36" Margin="0,236,0,0" VerticalAlignment="Top" Width="276" Foreground="#FFFCFCFC" FontFamily="Segoe UI Black" FontSize="18">
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,117,0,0" />
+            <Button x:Name="btnDangNhap" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng nhập" HorizontalAlignment="Center" Height="36" Margin="0,236,0,0" VerticalAlignment="Top" Width="276" Foreground="#FFFCFCFC" FontFamily="Segoe UI Black" FontSize="18" Click="btnDangNhap_Click">
                 <Button.Background>
                     <SolidColorBrush Color="#FF560C81" Opacity="0.7"/>
                 </Button.Background>
@@ -52,6 +52,8 @@
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </Button.BorderBrush>
             </Button>
+            <RadioButton x:Name="rdoCongTy"  Content="Công ty" Height="30" Margin="58,0,0,101" HorizontalAlignment="Left" Width="100" VerticalAlignment="Bottom" Foreground="#FFFCFCFC" />
+            <RadioButton x:Name="rdoUngVien"  Content="Ứng viên" Height="30" Margin="163,194,0,0" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top" Foreground="#FFFCFCFC" />
         </Grid>
 
     </Grid>
