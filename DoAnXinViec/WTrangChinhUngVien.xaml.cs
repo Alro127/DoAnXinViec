@@ -27,5 +27,12 @@ namespace DoAnXinViec
             InitializeComponent();
 
         }
+
+        private void btnHoSoCuaBan_Click(object sender, RoutedEventArgs e)
+        {
+            UCHoSoCuaBan uCHoSoCuaBan = new UCHoSoCuaBan(); 
+            stMain.Children.Clear();
+            stMain.Children.Add(uCHoSoCuaBan);
+        }
     } 
 }

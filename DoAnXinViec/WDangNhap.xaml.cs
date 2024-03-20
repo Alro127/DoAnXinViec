@@ -23,5 +23,13 @@ namespace DoAnXinViec
         {
             InitializeComponent();
         }
+
+        private void btnDangNhap_Click(object sender, RoutedEventArgs e)
+        {
+            if (rdoCongTy.IsChecked == true)
+            {
+
+            }
+        }
     }
 }

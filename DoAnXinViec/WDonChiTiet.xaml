@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DoAnXinViec"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="WDonChiTiet" Height="586" Width="995">
+        Title="WDonChiTiet" Height="586" Width="995" Loaded="WDonChiTiet_Load">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
@@ -22,22 +22,22 @@
                     <StackPanel>
                         <Expander Header="Giới thiệu công ty" Background="{x:Null}" BorderBrush="Black" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock Text="Your Content" TextWrapping="Wrap" Foreground="White" />
+                                <TextBlock x:Name="tbGioiThieuCT" Text="Your Content" TextWrapping="Wrap" Foreground="White" />
                             </StackPanel>
                         </Expander>
                         <Expander Header="Mô tả công việc" Background="{x:Null}" BorderBrush="Black" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock Text="Your Content" TextWrapping="Wrap" Foreground="White" />
+                                <TextBlock x:Name="tbMoTaCV" Text="Your Content" TextWrapping="Wrap" Foreground="White" />
                             </StackPanel>
                         </Expander>
                         <Expander HorizontalAlignment="Stretch" Header="Quyền lợi" Background="{x:Null}" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock Text="Your Content" Foreground="White" />
+                                <TextBlock x:Name="tbQuyenLoi" Text="Your Content" Foreground="White" />
                             </StackPanel>
                         </Expander>
                         <Expander HorizontalAlignment="Stretch" Header="Yêu cầu" Background="{x:Null}" BorderBrush="Black" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock Text="Your Content" Foreground="White" />
+                                <TextBlock x:Name="tbYeuCau" Text="Your Content" Foreground="White" />
                             </StackPanel>
                         </Expander>
                     </StackPanel>
@@ -46,43 +46,16 @@
 
         </Grid>
         <Grid HorizontalAlignment="Left" Height="550" VerticalAlignment="Center" Width="236">
-            
+
             <Ellipse Margin="0,22,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg"/>
                 </Ellipse.Fill>
 
             </Ellipse>
-            <Border Margin="21,221,21,143" CornerRadius="30" Height="50">
-                <Border.Background>
-                    <SolidColorBrush Color="#FF0D296A" Opacity="0.7"/>
-                </Border.Background>
-                <TextBlock Text="Ứng tuyển ngay" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
-
-            </Border>
-            <Border Margin="21,281,21,83" CornerRadius="30" Height="50">
-                <Border.Background>
-                    <SolidColorBrush Color="#FF0D296A" Opacity="0.7"/>
-                </Border.Background>
-                <TextBlock Text="Thêm vào yêu thíc" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
-
-            </Border>
-            <Border Margin="21,409,21,91" CornerRadius="30" Height="50">
-                <Border.Background>
-                    <SolidColorBrush Color="#FF0D296A" Opacity="0.7"/>
-                </Border.Background>
-                <TextBlock Text="Xem công việc khác" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
-
-            </Border>
-            <Border Margin="21,472,21,28" CornerRadius="30" Height="50">
-                <Border.Background>
-                    <SolidColorBrush Color="#FF0D296A" Opacity="0.7"/>
-                </Border.Background>
-                <TextBlock Text="Xem thêm về công ty" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
-            </Border>
 
         </Grid>
-
-
+        <Button x:Name="btnUngTuyenNgay" Content="Ứng tuyển ngay" Margin="20,304,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top" Click="btnUngTuyenNgay_Click"/>
+        <Button Content="Button" Margin="20,350,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top"/>
     </Grid>
 </Window>

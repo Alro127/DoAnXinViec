@@ -137,15 +137,13 @@
                 <Label Content="Hơn 10 năm" Foreground="White" FontSize="14"/>
             </ComboBox>
         </Grid>
-        <Grid Margin="0,150,0,50">
+        <Grid Margin="0,0,0,40" Height="610" VerticalAlignment="Bottom">
             <Border CornerRadius="10" BorderBrush="Black">
                 <Border.Background>
                     <SolidColorBrush Color="Black" Opacity="0.3"/>
                 </Border.Background>
-                <WrapPanel HorizontalAlignment="Center" Height="584" VerticalAlignment="Center" Width="1328">
-                    <local:UCDon x:Name="ucDon1"/>
-                    <local:UCDon/>
-                    <local:UCDon/>
+                <WrapPanel x:Name="wpDon" Width="1330" HorizontalAlignment="Center">
+                                       
                 </WrapPanel>
             </Border>
         </Grid>

@@ -9,38 +9,41 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="53128ba70ca9d2f78bb8.jpg" />
-    <None Remove="Create Online Surveys - Qualtrics.jpg" />
-    <None Remove="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
-    <None Remove="homepage.jpg" />
-    <None Remove="mau-don-xin-viec-moi-.jpg" />
+    <None Remove="eb0ffac4c3043f5fceb42d66450b5880.jpg" />
     <None Remove="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
     <None Remove="—Pngtree—starry sky galaxy space background_2269978.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
-    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
     <PackageReference Include="MaterialDesignThemes" Version="5.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="53128ba70ca9d2f78bb8.jpg" />
-    <Resource Include="Create Online Surveys - Qualtrics.jpg" />
-    <Resource Include="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
-    <Resource Include="homepage.jpg" />
-    <Resource Include="mau-don-xin-viec-moi-.jpg" />
+    <Resource Include="eb0ffac4c3043f5fceb42d66450b5880.jpg" />
     <Resource Include="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
     <Resource Include="—Pngtree—starry sky galaxy space background_2269978.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Update="WTrangXemDon.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WTrangChinhUngVien.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

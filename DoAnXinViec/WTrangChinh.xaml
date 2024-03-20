@@ -16,7 +16,7 @@
         </Grid.Background>
         <local:UCTrangTimViec x:Name="ucTrangTimViec" Margin="96,0,96,0"/>
         <Button Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng Nhập" FontSize="16" FontFamily="Segoe UI Black" Background="#FF560C81" Foreground="#FFF6F0F0" BorderBrush="{x:Null}" Height="50" Width="140" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,96,0"/>
-        <Button Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng Ký" Margin="0,30,241,0" FontSize="16" FontFamily="Segoe UI Black" Background="White" Foreground="#FF080E14" BorderBrush="{x:Null}" Width="140" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Button x:Name="btnDangKy" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng Ký" Margin="0,30,241,0" FontSize="16" FontFamily="Segoe UI Black" Background="White" Foreground="#FF080E14" BorderBrush="{x:Null}" Width="140" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnDangKy_Click"/>
 
     </Grid>
 </Window>

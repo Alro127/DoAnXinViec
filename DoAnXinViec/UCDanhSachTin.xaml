@@ -4,22 +4,56 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoAnXinViec"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="815" d:DesignWidth="1290">
-    <Grid HorizontalAlignment="Left" Height="815" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="White">
-        <ListView x:Name="lvDonTuyen" ItemsSource="{Binding list}"  Margin="20,200,20,20" Foreground="Black" Background="white" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Tên đơn" Width="350" DisplayMemberBinding="{Binding Ten}"/>
-                    <GridViewColumn Header="Ngày đăng" Width="200" DisplayMemberBinding="{Binding Ngaydang}"/>
-                    <GridViewColumn Header="Tới hạn" Width="200" DisplayMemberBinding="{Binding Toihan}">
+             d:DesignHeight="770" d:DesignWidth="1290">
+    <Border Background="White" CornerRadius="30" Margin="0,10,0,0" Height="770" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
+            <Label Content="Danh Sách Tin" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1290"/>
 
-                    </GridViewColumn>
-                    <GridViewColumn Header="Lượt nộp" Width="200" DisplayMemberBinding="{Binding Luotnop}"/>
-                    <GridViewColumn Header="Lượt xem" Width="200" DisplayMemberBinding="{Binding Luotxem}"/>
-                    <GridViewColumn Header="Khác" Width="100" DisplayMemberBinding="{Binding Luotxem}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-    </Grid>
+            <ListView x:Name="lvDonTuyen" ItemsSource="{Binding list}"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" BorderBrush="black" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="300" DisplayMemberBinding="{Binding Ten}">
+                            <TextBlock Text="Tên đơn đăng tuyển" FontSize="16" FontFamily="Segoe UI Black"/>
+                        </GridViewColumn>
+                        <GridViewColumn Width="250" DisplayMemberBinding="{Binding Ngaydang}">
+                            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Ngày đăng" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}"/>
+                        </GridViewColumn>
+                        <GridViewColumn Width="250" DisplayMemberBinding="{Binding Toihan}">
+                            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Tới hạn" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}"/>
+                        </GridViewColumn>
+                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Luotnop}">
+                            <TextBlock Text="Lượt nộp" FontSize="16" FontFamily="Segoe UI Black"/>
+                        </GridViewColumn>
+                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Luotxem}">
+                            <TextBlock Text="Lượt xem" FontSize="16" FontFamily="Segoe UI Black"/>
+                        </GridViewColumn>
+                        <GridViewColumn Width="100">
+                            <TextBlock Text="Khác" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Button Content="Chi tiết" 
+                                           Command="{Binding 
+                                           Path=DataContext.RunCommand, 
+                                           RelativeSource=
+                                           {RelativeSource FindAncestor, 
+                                           AncestorType={x:Type ItemsControl}}}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" Width="60" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
+            <ComboBox HorizontalAlignment="Left" Height="40" Margin="120,160,0,0" Width="499"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                materialDesign:HintAssist.Background="White"
+                materialDesign:HintAssist.Hint="Tất cả tin đăng" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
+        </Grid>
+    </Border>
+
 </UserControl>
