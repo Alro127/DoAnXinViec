@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Windows.Media;
 
 namespace DoAnXinViec
 {
-    class HoSo
+    class HoSo: INotifyPropertyChanged
     {
         int idCV;
         string idUV;
@@ -14,9 +17,9 @@ namespace DoAnXinViec
         string viTriUngTuyen;
         string loaiHoSo;
         DateTime ngayNop;
-        int trangThai;
+        string trangThai;
 
-        public HoSo(int idCV, string idUV, string loaiHoSo, DateTime ngayNop, int trangThai)
+        public HoSo(int idCV, string idUV, string loaiHoSo, DateTime ngayNop, string trangThai)
         {
             this.idCV = idCV;
             this.idUV = idUV;
@@ -25,7 +28,7 @@ namespace DoAnXinViec
             this.trangThai = trangThai;
         }
 
-        public HoSo(int idCV, string idUV, string tenHoSo, string viTriUngTuyen, string loaiHoSo, DateTime ngayNop, int trangThai)
+        public HoSo(int idCV, string idUV, string tenHoSo, string viTriUngTuyen, string loaiHoSo, DateTime ngayNop, string trangThai)
         {
             this.idCV = idCV;
             this.idUV = idUV;
@@ -42,6 +45,39 @@ namespace DoAnXinViec
         public string ViTriUngTuyen { get => viTriUngTuyen; set => viTriUngTuyen = value; }
         public string LoaiHoSo { get => loaiHoSo; set => loaiHoSo = value; }
         public DateTime NgayNop { get => ngayNop; set => ngayNop = value; }
-        public int TrangThai { get => trangThai; set => trangThai = value; }
+        public string TrangThai
+        {
+            get => trangThai;
+            set
+            {
+                if (trangThai != value)
+                {
+                    trangThai = value;
+                    OnPropertyChanged("TrangThai");
+                }
+            }
+        }
+        public Brush LabelBackground
+        {
+            get
+            {
+                switch (TrangThai)
+                {
+                    case "Từ chối":
+                        return Brushes.IndianRed;
+                    case "Đợi":
+                        return Brushes.Orange;
+                    default:
+                        return Brushes.LightGreen;
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

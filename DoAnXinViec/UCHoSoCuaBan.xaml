@@ -15,17 +15,17 @@
                 <TabItem Header="Thông tin cá nhân">
                     <Grid Background="White">
                         <Border BorderBrush="Black" BorderThickness="1,1,1,1"/>
-                        <Ellipse Width="400" Height="400" Margin="40,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Ellipse Width="400" Height="400" Margin="120,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                             <Ellipse.Fill>
                                 <ImageBrush ImageSource="/eb0ffac4c3043f5fceb42d66450b5880.jpg"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Button Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="165,470,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}">
+                        <Button Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="245,470,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}">
                             <Button.Background>
                                 <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
                             </Button.Background>
                         </Button>
-                        <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="165,510,0,0" VerticalAlignment="Top" Width="244"/>
+                        <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="245,515,0,0" VerticalAlignment="Top" Width="244"/>
                         <TextBox
                                 materialDesign:HintAssist.Background="White"
                                 VerticalAlignment="Top"

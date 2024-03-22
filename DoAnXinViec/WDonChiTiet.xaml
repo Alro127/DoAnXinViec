@@ -22,22 +22,22 @@
                     <StackPanel>
                         <Expander Header="Giới thiệu công ty" Background="{x:Null}" BorderBrush="Black" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbGioiThieuCT" Text="Your Content" TextWrapping="Wrap" Foreground="White" />
+                                <TextBlock x:Name="tbGioiThieuCT" Text="Content" TextWrapping="Wrap" Foreground="White" />
                             </StackPanel>
                         </Expander>
                         <Expander Header="Mô tả công việc" Background="{x:Null}" BorderBrush="Black" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbMoTaCV" Text="Your Content" TextWrapping="Wrap" Foreground="White" />
+                                <TextBlock x:Name="tbMoTaCV" Text="{Binding Path=MoTaCV}" TextWrapping="Wrap" Foreground="White" />
                             </StackPanel>
                         </Expander>
                         <Expander HorizontalAlignment="Stretch" Header="Quyền lợi" Background="{x:Null}" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbQuyenLoi" Text="Your Content" Foreground="White" />
+                                <TextBlock x:Name="tbQuyenLoi" Text="{Binding Path=QuyenLoi}" Foreground="White" />
                             </StackPanel>
                         </Expander>
                         <Expander HorizontalAlignment="Stretch" Header="Yêu cầu" Background="{x:Null}" BorderBrush="Black" Foreground="White">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbYeuCau" Text="Your Content" Foreground="White" />
+                                <TextBlock x:Name="tbYeuCau" Text="{Binding Path=YeuCau}" Foreground="White" />
                             </StackPanel>
                         </Expander>
                     </StackPanel>
@@ -47,9 +47,9 @@
         </Grid>
         <Grid HorizontalAlignment="Left" Height="550" VerticalAlignment="Center" Width="236">
 
-            <Ellipse Margin="0,22,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
+            <Ellipse x:Name="elpAnh" Margin="0,22,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="/Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg"/>
+                    <ImageBrush ImageSource="{Binding Path = Anh}"/>
                 </Ellipse.Fill>
 
             </Ellipse>
@@ -57,5 +57,7 @@
         </Grid>
         <Button x:Name="btnUngTuyenNgay" Content="Ứng tuyển ngay" Margin="20,304,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top" Click="btnUngTuyenNgay_Click"/>
         <Button Content="Button" Margin="20,350,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=TenCV}" Margin="20,230,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="196" Height="auto" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe UI Black" Foreground="White"/>
+
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoAnXinViec"
              mc:Ignorable="d" Height="120" Width="440">
-    
+
     <UserControl.Resources>
         <Style x:Key="GridBoGoc" TargetType="{x:Type Grid}"/>
         <Style x:Key="GridStyle1" TargetType="{x:Type Grid}"/>
@@ -94,22 +94,16 @@
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </Border.Background>
         </Border>
-        <Image HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Source="/Create Online Surveys - Qualtrics.jpg" Stretch="UniformToFill"/>
+        <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Source="/Create Online Surveys - Qualtrics.jpg" Stretch="UniformToFill"/>
         <Button x:Name="btnXem" x:FieldModifier="public" Style="{DynamicResource ButtonStyleBoGoc}" Content="Xem" HorizontalAlignment="Left" Margin="358,78,0,0" VerticalAlignment="Top" Background="#FF560C81" FontSize="16" FontFamily="Segoe UI Black" Foreground="White" Width="69" Height="30" BorderBrush="{x:Null}" AutomationProperties.Name="btnXem"/>
         <GroupBox x:Name="grbTenCV" Style="{DynamicResource GroupBox}" HorizontalAlignment="Left" Height="60" Header="Tên Công Việc" Margin="81,10,0,0" VerticalAlignment="Top" Width="346" FontFamily="Segoe UI Black" FontSize="18" Foreground="White">
             <Label x:Name="lblTenCT" Content="Tên công ty" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="266" FontSize="14" Foreground="#FF897C7C" Height="31"/>
         </GroupBox>
         <Grid HorizontalAlignment="Left" Height="32" Margin="10,80,0,0" VerticalAlignment="Top" Width="306">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="233*"/>
-                <ColumnDefinition Width="225*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="41*"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
-            <Label x:Name="lblDiaDiem" Style="{DynamicResource LabelStyleBoGoc}" Content="TP. HCM" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFDCACF9" FontWeight="Bold" FontSize="10" Foreground="Black"/>
-            <Label x:Name="lblLuong" Style="{DynamicResource LabelStyleBoGoc}" Content="TP. HCM" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFDCACF9" FontWeight="Bold" FontSize="10" Foreground="Black" Margin="60,0,0,0"/>
+            <WrapPanel>
+                <Label x:Name="lblDiaDiem" Style="{DynamicResource LabelStyleBoGoc}" Content="TP. HCM" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FFDCACF9" FontWeight="Bold" FontSize="10" Foreground="Black" Margin="10,5"/>
+                <Label x:Name="lblLuong" Style="{DynamicResource LabelStyleBoGoc}" Content="Luong" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FFDCACF9" FontWeight="Bold" FontSize="10" Foreground="Black" Margin="0,5,0,0"/>
+            </WrapPanel>
         </Grid>
     </Grid>
 </UserControl>

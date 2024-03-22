@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,19 +35,22 @@ namespace DoAnXinViec
         public WTrangChinhCty()
         {
             InitializeComponent();
-            uCHoSoUngTuyen.btnLuu.Click += new System.Windows.RoutedEventHandler(this.btnLuu_Click);
+            uCHoSoUngTuyen.btnLuu.Click += new RoutedEventHandler(this.btnLuu_Click);
         }
 
         private void btnDanhSachTin_Click(object sender, RoutedEventArgs e)
         {
             stMain.Children.Clear();
             stMain.Children.Add(uCDanhSachTin);
-            List<ThongTinDonTuyen> list = new List<ThongTinDonTuyen>();
-            ThongTinDonTuyen a = new ThongTinDonTuyen() { Ten = "IT", Ngaydang = DateTime.Now, Toihan = DateTime.Now, Luotnop = 1, Luotxem = 10 };
-            list.Add(a);
-            uCDanhSachTin.lvDonTuyen.Items.Clear();
-            uCDanhSachTin.lvDonTuyen.ItemsSource = list;
-
+            DataTable dt = donDAO.Load();
+            List<Don> listDon = new List<Don>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                Don don = new Don((int)dr["IdCV"], (string)dr["TenCV"], (string)dr["IdCT"], (string)dr["DiaDiem"], (int)dr["Luong"], DateTime.ParseExact((string)dr["NgayDang"], "dd/MM/yyyy", null).Date, 
+                    DateTime.ParseExact((string)dr["NgayToiHan"], "dd/MM/yyyy", null).Date, (string)dr["Anh"], (string)dr["MoTaCV"], (string)dr["YeuCau"], (string)dr["QuyenLoi"], (int)dr["LuotXem"], (int)dr["LuotNop"]);                
+                listDon.Add(don);
+            }
+            uCDanhSachTin.lvDonTuyen.ItemsSource = listDon;
         }
 
         private void btnTaoTinDangTuyen_Click(object sender, RoutedEventArgs e)
@@ -54,10 +59,10 @@ namespace DoAnXinViec
             stMain.Children.Add(uCDangDon);
             uCDangDon.btnDang.Click += new System.Windows.RoutedEventHandler(this.btnDang_Click);
         }
-       
         private void btnDang_Click(object sender, RoutedEventArgs e)
         {
-            Don don = new Don(0,uCDangDon.tbTenCV.Text, tenCT, uCDangDon.cbDiaDiem.Text, int.Parse(uCDangDon.cbLuong.Text), "", new Image(), uCDangDon.tbMoTaCV.Text, uCDangDon.tbYeuCau.Text, uCDangDon.tbQuyenLoi.Text);
+            
+            Don don = new Don(0,uCDangDon.txtTenCV.Text, id, uCDangDon.cbDiaDiem.Text, int.Parse(uCDangDon.cbLuong.Text), DateTime.Now.Date, DateTime.ParseExact(uCDangDon.dtpNgayToiHan.Text, "dd/MM/yyyy", null).Date, uCDangDon.imgAnh.Source.ToString(), uCDangDon.txtMoTaCV.Text, uCDangDon.txtYeuCau.Text, uCDangDon.txtQuyenLoi.Text,0,0);
             donDAO.Them(don);
         }
 
@@ -65,11 +70,11 @@ namespace DoAnXinViec
         {
             stMain.Children.Clear();
             stMain.Children.Add(uCHoSoUngTuyen);
-            DataTable dt = hoSoDAO.Show(id);
+            DataTable dt = hoSoDAO.LoadForCT(id);
             List <HoSo> listHoSo = new List <HoSo>();
             foreach (DataRow dr in dt.Rows)
             {
-                HoSo hoSo = new HoSo((int)dr["IdCV"], (string)dr["IdUV"], (string)dr["HoTen"], (string)dr["TenCV"], (string)dr["LoaiHoSo"], DateTime.ParseExact((string)dr["NgayNop"], "dd/MM/yyyy", null).Date, (int)dr["TrangThai"]);
+                HoSo hoSo = new HoSo((int)dr["IdCV"], (string)dr["IdUV"], (string)dr["HoTen"], (string)dr["TenCV"], (string)dr["LoaiHoSo"], DateTime.ParseExact((string)dr["NgayNop"], "dd/MM/yyyy", null).Date, (string)dr["TrangThai"]);
                 listHoSo.Add(hoSo);
             }
             uCHoSoUngTuyen.lvHoSoUngTuyen.ItemsSource = listHoSo;

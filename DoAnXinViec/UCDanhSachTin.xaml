@@ -12,35 +12,55 @@
             <Label Content="Danh Sách Tin" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1290"/>
 
-            <ListView x:Name="lvDonTuyen" ItemsSource="{Binding list}"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" BorderBrush="black" >
+            <ListView x:Name="lvDonTuyen" Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" BorderBrush="black" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Width="300" DisplayMemberBinding="{Binding Ten}">
+                        <GridViewColumn Width="300">
                             <TextBlock Text="Tên đơn đăng tuyển" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding TenCV}" Margin="18,0,0,0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="250" DisplayMemberBinding="{Binding Ngaydang}">
+                        <GridViewColumn Width="250">
                             <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Ngày đăng" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding NgayDang}" Margin="18,0,0,0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="250" DisplayMemberBinding="{Binding Toihan}">
+                        <GridViewColumn Width="250">
                             <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Tới hạn" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding NgayToiHan}" Margin="18,0,0,0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Luotnop}">
+                        <GridViewColumn Width="150">
                             <TextBlock Text="Lượt nộp" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding LuotNop}" Margin="18,0,0,0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Luotxem}">
+                        <GridViewColumn Width="150">
                             <TextBlock Text="Lượt xem" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding LuotXem}" Margin="18,0,0,0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Width="100">
                             <TextBlock Text="Khác" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <Button Content="Chi tiết" 
-                                           Command="{Binding 
-                                           Path=DataContext.RunCommand, 
-                                           RelativeSource=
-                                           {RelativeSource FindAncestor, 
-                                           AncestorType={x:Type ItemsControl}}}"/>
+                                        <Button Content="Chi tiết"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
