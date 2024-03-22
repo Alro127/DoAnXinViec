@@ -9,9 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
     <None Remove="eb0ffac4c3043f5fceb42d66450b5880.jpg" />
     <None Remove="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
+    <None Remove="search.png" />
     <None Remove="—Pngtree—starry sky galaxy space background_2269978.png" />
+    <None Remove="—Pngtree—vector add icon_4232619.png" />
+    <None Remove="—Pngtree—vector find icon_4143917.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,9 +24,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
     <Resource Include="eb0ffac4c3043f5fceb42d66450b5880.jpg" />
     <Resource Include="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
+    <Resource Include="search.png" />
     <Resource Include="—Pngtree—starry sky galaxy space background_2269978.png" />
+    <Resource Include="—Pngtree—vector add icon_4232619.png" />
+    <Resource Include="—Pngtree—vector find icon_4143917.png" />
   </ItemGroup>
 
   <ItemGroup>

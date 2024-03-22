@@ -12,20 +12,21 @@ namespace DoAnXinViec
     class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public void ThucThi(string sqlStr)
+        public bool ThucThi(string sqlStr)
         {
             try
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
                 if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thanh Cong");
+                    return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             finally { conn.Close(); }
+            return false;
         }
 
         public DataTable Load(string sqlStr)
@@ -47,6 +48,28 @@ namespace DoAnXinViec
                 conn.Close();
             }
             return datatable;
+        }
+
+        public bool CheckExist(string sqlStr)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(sqlStr, conn);
+
+                int count = (int)command.ExecuteScalar();
+
+                if (count > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { conn.Close(); }
+            return false;
         }
     }
 }

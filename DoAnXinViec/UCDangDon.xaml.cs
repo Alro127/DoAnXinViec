@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace DoAnXinViec
 {
@@ -23,9 +24,44 @@ namespace DoAnXinViec
         public UCDangDon()
         {
             InitializeComponent();
+            ucDon.lblTenCT.Content = "TenCT";
         }
-        private void btnDang_Click(object sender, RoutedEventArgs e)
+
+        private void txtTenCV_KeyUp(object sender, KeyEventArgs e)
         {
+            ucDon.grbTenCV.Header = txtTenCV.Text;
+        }
+
+        private void cbLuong_KeyUp(object sender, KeyEventArgs e)
+        {
+            ucDon.lblLuong.Content = cbLuong.Text;
+        }
+
+        private void cbDiaDiem_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ucDon.lblDiaDiem.Content =((Label)cbDiaDiem.SelectedValue).Content;
+        }
+
+        private void cbLuong_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ucDon.lblLuong.Content = ((Label)cbLuong.SelectedValue).Content;
+        }
+
+        private void imgAnh_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.png;*.jpg;*.gif)|*.png;*.jpg;*.gif|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                try
+                {
+                    imgAnh.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading image: {ex.Message}");
+                }
+            }
         }
     }
 }
