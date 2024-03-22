@@ -73,7 +73,7 @@ namespace DoAnXinViec {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/DoAnXinViec;component/uctrangtimviec.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/DoAnXinViec;V1.0.0.0;component/uctrangtimviec.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UCTrangTimViec.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
