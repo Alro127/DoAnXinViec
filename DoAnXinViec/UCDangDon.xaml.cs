@@ -46,22 +46,5 @@ namespace DoAnXinViec
         {
             ucDon.lblLuong.Content = ((Label)cbLuong.SelectedValue).Content;
         }
-
-        private void imgAnh_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.png;*.jpg;*.gif)|*.png;*.jpg;*.gif|All files (*.*)|*.*";
-            if (openFileDialog.ShowDialog() == true)
-            {
-                try
-                {
-                    imgAnh.Source = new BitmapImage(new Uri(openFileDialog.FileName));
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error loading image: {ex.Message}");
-                }
-            }
-        }
     }
 }

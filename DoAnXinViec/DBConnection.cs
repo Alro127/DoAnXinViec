@@ -12,12 +12,13 @@ namespace DoAnXinViec
     class DBConnection
     {
         SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr);
-        public bool ThucThi(string sqlStr)
+        public bool ThucThi(string sqlStr, List<SqlParameter> parameters)
         {
             try
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                cmd.Parameters.AddRange(parameters.ToArray());
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -28,7 +29,6 @@ namespace DoAnXinViec
             finally { conn.Close(); }
             return false;
         }
-
         public DataTable Load(string sqlStr)
         {
             DataTable datatable = new DataTable();

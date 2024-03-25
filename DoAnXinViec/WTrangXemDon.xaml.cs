@@ -31,15 +31,9 @@ namespace DoAnXinViec
         }
         void DangUCDon(DataRow dr)
         {
-            Don don = new Don((int)dr["IdCV"], (string)dr["TenCV"], (string)dr["IdCT"], (string)dr["DiaDiem"], (int)dr["Luong"], DateTime.ParseExact((string)dr["NgayDang"], "dd/MM/yyyy", null), DateTime.ParseExact((string)dr["NgayToiHan"], "dd/MM/yyyy", null).Date,
-                    (string)dr["Anh"], (string)dr["MoTaCV"], (string)dr["YeuCau"], (string)dr["QuyenLoi"], (int)dr["LuotXem"], (int)dr["LuotNop"]);
-            UCDon uCDon = new UCDon();
-            uCDon.grbTenCV.Header = don.TenCV;
-            uCDon.lblTenCT.Content = (string)dr["TenCT"];
-            uCDon.lblDiaDiem.Content = don.DiaDiem;
-            uCDon.lblLuong.Content = don.Luong;
-            uCDon.imgAnh.Source = new BitmapImage(new System.Uri(don.Anh));
-            uCDon.btnXem.Tag = don;
+            Don don = new Don();
+            Utility.SetItemFromRow(don, dr);
+            UCDon uCDon = new UCDon(don);
             ucTrangTimViec.wpDon.Children.Add(uCDon);
             uCDon.btnXem.Click += new RoutedEventHandler(this.btnXem_Click);
         }
@@ -53,9 +47,7 @@ namespace DoAnXinViec
         }
         private void btnXem_Click(object sender, RoutedEventArgs e)
         {
-            WDonChiTiet wDonChiTiet = new WDonChiTiet();
-            wDonChiTiet.Don = (Don)(sender as Button).Tag;
-            wDonChiTiet.IdUV = id;
+            WDonChiTiet wDonChiTiet = new WDonChiTiet((Don)(sender as Button).Tag, id);
             donDAO.TangLuotXem(wDonChiTiet.Don);
             wDonChiTiet.ShowDialog();
         }

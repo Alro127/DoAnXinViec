@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace DoAnXinViec
 {
-    class Don
+    public class Don
     {
         int idCV;
         string tenCV;
@@ -16,7 +20,6 @@ namespace DoAnXinViec
         int luong;
         DateTime ngayDang;
         DateTime ngayToiHan;
-        string anh;
         string moTaCV;
         string yeuCau;
         string quyenLoi;
@@ -24,7 +27,7 @@ namespace DoAnXinViec
         int luotNop;
         public Don() { }
 
-        public Don(int idCV, string tenCV, string idCT, string diaDiem, int luong, DateTime ngayDang, DateTime ngayToiHan, string anh, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop)
+        public Don(int idCV, string tenCV, string idCT, string diaDiem, int luong, DateTime ngayDang, DateTime ngayToiHan, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop)
         {
             this.idCV = idCV;
             this.tenCV = tenCV;
@@ -33,7 +36,6 @@ namespace DoAnXinViec
             this.luong = luong;
             this.NgayDang = ngayDang;
             this.ngayToiHan = ngayToiHan;
-            this.anh = anh;
             this.moTaCV = moTaCV;
             this.yeuCau = yeuCau;
             this.quyenLoi = quyenLoi;
@@ -46,7 +48,6 @@ namespace DoAnXinViec
         public string DiaDiem { get => diaDiem; set => diaDiem = value; }
         public int Luong { get => luong; set => luong = value; }
         public DateTime NgayToiHan { get => ngayToiHan; set => ngayToiHan = value; }
-        public string Anh { get => anh; set => anh = value; }
         public string MoTaCV { get => moTaCV; set => moTaCV = value; }
         public string YeuCau { get => yeuCau; set => yeuCau = value; }
         public string QuyenLoi { get => quyenLoi; set => quyenLoi = value; }

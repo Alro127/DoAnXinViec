@@ -7,6 +7,12 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="770" d:DesignWidth="1290">
+    <UserControl.Resources>
+        <local:MyValueToBackgroundConverter x:Key="ValueToBackgroundConverter" />
+        <Style TargetType="Border" x:Key="CustomBorderStyle">
+            <Setter Property="Background" Value="{Binding TrangThai, Converter={StaticResource ValueToBackgroundConverter}}" />
+        </Style>
+    </UserControl.Resources>
     <Border Background="White" CornerRadius="30" Margin="0,10,0,0">
         <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
             <Label Content="Hồ Sơ Ứng Tuyển" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1040" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
@@ -52,7 +58,7 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <Border Background="{Binding LabelBackground}" CornerRadius="10" Width="100" Height="30" Margin="20,0,0,0">
+                                        <Border Style="{StaticResource CustomBorderStyle}" CornerRadius="10" Width="100" Height="30" Margin="20,0,0,0">
                                             <Label Width="auto" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{Binding TrangThai, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                                         </Border>
                                     </StackPanel>

@@ -52,7 +52,7 @@
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </Button.BorderBrush>
             </Button>
-            <RadioButton x:Name="rdoCongTy"  Content="Công ty" Height="30" Margin="58,0,0,101" HorizontalAlignment="Left" Width="100" VerticalAlignment="Bottom" Foreground="#FFFCFCFC" />
+            <RadioButton x:Name="rdoCongTy" IsChecked="True" Content="Công ty" Height="30" Margin="58,0,0,101" HorizontalAlignment="Left" Width="100" VerticalAlignment="Bottom" Foreground="#FFFCFCFC" />
             <RadioButton x:Name="rdoUngVien"  Content="Ứng viên" Height="30" Margin="163,194,0,0" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top" Foreground="#FFFCFCFC" />
         </Grid>
 

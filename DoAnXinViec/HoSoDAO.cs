@@ -18,14 +18,16 @@ namespace DoAnXinViec
             string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT");
             return Dbconnection.Load(sqlStr);
         }
-        public bool Them(HoSo hoSo)
+        public void Them(HoSo hoSo)
         {
-            string sqlStr = string.Format("INSERT INTO HoSo (IdCV, IdUV, LoaiHoSo, NgayNop, TrangThai) VALUES ('{0}','{1}', N'{2}', '{3}', N'{4}')", hoSo.IdCV, hoSo.IdUV, hoSo.LoaiHoSo, hoSo.NgayNop.ToShortDateString(), hoSo.TrangThai);
-            return Dbconnection.ThucThi(sqlStr);
+            List<SqlParameter> parameters = Utility.GetParameters(hoSo, new string[2] {"ViTriUngTuyen", "TenHoSo"});
+            string sqlStr = Utility.GenerateInsertSql("HoSo", parameters);
+            if (dbconnection.ThucThi(sqlStr, parameters))
+                MessageBox.Show("Thanh Cong");
         }
         public DataTable LoadForCT(string id)
         {
-            string sqlStr = string.Format("SELECT * FROM UngVien, Don, HoSo WHERE HoSo.IdUV = UngVien.IdUV AND HoSo.IdCV = Don.IdCV and Don.IdCT = '{0}'", id);
+            string sqlStr = string.Format("SELECT HoSo.IdCV, HoSo.IdUV, HoTen AS TenHoSo, TenCV AS ViTriUngTuyen, LoaiHoSo, NgayNop FROM UngVien, Don, HoSo WHERE HoSo.IdUV = UngVien.IdUV AND HoSo.IdCV = Don.IdCV and Don.IdCT = '{0}'", id);
             return Dbconnection.Load(sqlStr);
         }
 

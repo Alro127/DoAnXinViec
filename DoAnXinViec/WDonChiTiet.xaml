@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="WDonChiTiet" Height="586" Width="995" Loaded="WDonChiTiet_Load">
     <Grid>
-        <Grid.Background>
+         <Grid.Background>
             <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Height="550" Margin="230,0,0,0" VerticalAlignment="Center" Width="749">

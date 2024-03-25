@@ -29,7 +29,14 @@ namespace DoAnXinViec
             InitializeComponent();
         }
 
-        internal Don Don { get => don; set => don = value; }
+        public WDonChiTiet(Don don, string idUV)
+        {
+            InitializeComponent();
+            this.don = don;
+            this.idUV = idUV;
+        }
+
+        public Don Don { get => don; set => don = value; }
         public string IdUV { get => idUV; set => idUV = value; }
 
         void Check()
