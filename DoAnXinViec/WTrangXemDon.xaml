@@ -21,6 +21,5 @@
         </Grid.Background>
         <local:UCTrangTimViec x:Name="ucTrangTimViec" Margin="0,0,96,0" HorizontalAlignment="Right" Width="1358"/>
         <Button x:Name="btnQuanLyTaiKhoan" Style="{DynamicResource ButtonStyleBoGoc}" Content="Quản lý tài khoản" Margin="0,30,96,0" FontSize="16" FontFamily="Segoe UI Black" Background="#FF560C81" Foreground="#FFF6F0F0" BorderBrush="{x:Null}" Height="50" Width="228" HorizontalAlignment="Right" VerticalAlignment="Top" Click="btnQuanLyTaiKhoan_Click"/>
-
     </Grid>
 </Window>

@@ -21,9 +21,22 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCDon : UserControl
     {
+        Don don;
         public UCDon()
         {
             InitializeComponent();
         }
+        public UCDon(Don don)
+        {
+            InitializeComponent();
+            this.Don = don;
+            grbTenCV.Header = don.TenCV;
+            lblTenCT.Content = don.IdCT; //cho sua thanh ten cong ty
+            lblDiaDiem.Content = don.DiaDiem;
+            lblLuong.Content = don.Luong;
+            btnXem.Tag = don;
+        }
+
+        public Don Don { get => don; set => don = value; }
     }
 }

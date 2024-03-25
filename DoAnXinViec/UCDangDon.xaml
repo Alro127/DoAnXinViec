@@ -122,7 +122,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="180" HorizontalAlignment="Left" Margin="665,0,0,40" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <local:UCDon x:Name="ucDon" HorizontalAlignment="Right" Margin="0,140,112.5,0" VerticalAlignment="Top" IsEnabled="False"/>
             <Button x:Name="btnDang" Content="Đăng" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140"/>
-            <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="52" Margin="759,160,0,0" VerticalAlignment="Top" Width="54" Source="/—Pngtree—vector add icon_4232619.png" Stretch="UniformToFill" OpacityMask="Black" MouseLeftButtonDown="imgAnh_MouseLeftButtonDown"/>
+            <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="52" Margin="759,160,0,0" VerticalAlignment="Top" Width="54" Stretch="UniformToFill" OpacityMask="Black"/>
 
         </Grid>
     </Border>

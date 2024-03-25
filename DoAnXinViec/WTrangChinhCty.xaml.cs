@@ -46,8 +46,8 @@ namespace DoAnXinViec
             List<Don> listDon = new List<Don>();
             foreach (DataRow dr in dt.Rows)
             {
-                Don don = new Don((int)dr["IdCV"], (string)dr["TenCV"], (string)dr["IdCT"], (string)dr["DiaDiem"], (int)dr["Luong"], DateTime.ParseExact((string)dr["NgayDang"], "dd/MM/yyyy", null).Date, 
-                    DateTime.ParseExact((string)dr["NgayToiHan"], "dd/MM/yyyy", null).Date, (string)dr["Anh"], (string)dr["MoTaCV"], (string)dr["YeuCau"], (string)dr["QuyenLoi"], (int)dr["LuotXem"], (int)dr["LuotNop"]);                
+                Don don = new Don();
+                Utility.SetItemFromRow(don,dr);             
                 listDon.Add(don);
             }
             uCDanhSachTin.lvDonTuyen.ItemsSource = listDon;
@@ -62,7 +62,7 @@ namespace DoAnXinViec
         private void btnDang_Click(object sender, RoutedEventArgs e)
         {
             
-            Don don = new Don(0,uCDangDon.txtTenCV.Text, id, uCDangDon.cbDiaDiem.Text, int.Parse(uCDangDon.cbLuong.Text), DateTime.Now.Date, DateTime.ParseExact(uCDangDon.dtpNgayToiHan.Text, "dd/MM/yyyy", null).Date, uCDangDon.imgAnh.Source.ToString(), uCDangDon.txtMoTaCV.Text, uCDangDon.txtYeuCau.Text, uCDangDon.txtQuyenLoi.Text,0,0);
+            Don don = new Don(0,uCDangDon.txtTenCV.Text, id, uCDangDon.cbDiaDiem.Text, int.Parse(uCDangDon.cbLuong.Text), DateTime.Now.Date, DateTime.ParseExact(uCDangDon.dtpNgayToiHan.Text, "dd/MM/yyyy", null).Date, uCDangDon.txtMoTaCV.Text, uCDangDon.txtYeuCau.Text, uCDangDon.txtQuyenLoi.Text,0,0);
             donDAO.Them(don);
         }
 
@@ -74,7 +74,8 @@ namespace DoAnXinViec
             List <HoSo> listHoSo = new List <HoSo>();
             foreach (DataRow dr in dt.Rows)
             {
-                HoSo hoSo = new HoSo((int)dr["IdCV"], (string)dr["IdUV"], (string)dr["HoTen"], (string)dr["TenCV"], (string)dr["LoaiHoSo"], DateTime.ParseExact((string)dr["NgayNop"], "dd/MM/yyyy", null).Date, (string)dr["TrangThai"]);
+                HoSo hoSo = new HoSo();
+                Utility.SetItemFromRow(hoSo, dr);
                 listHoSo.Add(hoSo);
             }
             uCHoSoUngTuyen.lvHoSoUngTuyen.ItemsSource = listHoSo;

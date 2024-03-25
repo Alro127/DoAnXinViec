@@ -19,6 +19,7 @@ namespace DoAnXinViec
         DateTime ngayNop;
         string trangThai;
 
+        public HoSo() { }
         public HoSo(int idCV, string idUV, string loaiHoSo, DateTime ngayNop, string trangThai)
         {
             this.idCV = idCV;
