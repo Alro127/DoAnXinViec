@@ -58,21 +58,6 @@ namespace DoAnXinViec
                 }
             }
         }
-        public Brush LabelBackground
-        {
-            get
-            {
-                switch (TrangThai)
-                {
-                    case "Từ chối":
-                        return Brushes.IndianRed;
-                    case "Đợi":
-                        return Brushes.Orange;
-                    default:
-                        return Brushes.LightGreen;
-                }
-            }
-        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

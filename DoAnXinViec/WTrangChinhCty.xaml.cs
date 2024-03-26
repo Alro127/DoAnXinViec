@@ -30,6 +30,7 @@ namespace DoAnXinViec
         UCDangDon uCDangDon = new UCDangDon();
         UCDanhSachTin uCDanhSachTin = new UCDanhSachTin();
         UCHoSoUngTuyen uCHoSoUngTuyen = new UCHoSoUngTuyen();
+        CongTy congTy = new CongTy();
         DonDAO donDAO = new DonDAO();
         HoSoDAO hoSoDAO = new HoSoDAO();
         public WTrangChinhCty()

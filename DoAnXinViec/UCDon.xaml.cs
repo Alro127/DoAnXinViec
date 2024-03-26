@@ -22,6 +22,7 @@ namespace DoAnXinViec
     public partial class UCDon : UserControl
     {
         Don don;
+        CongTy congty;
         public UCDon()
         {
             InitializeComponent();

@@ -42,7 +42,6 @@ namespace DoAnXinViec
             {
                 MessageBox.Show(exe.Message);
             }
-
             finally
             {
                 conn.Close();
@@ -56,9 +55,7 @@ namespace DoAnXinViec
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand(sqlStr, conn);
-
                 int count = (int)command.ExecuteScalar();
-
                 if (count > 0)
                 {
                     return true;

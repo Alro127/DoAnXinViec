@@ -20,7 +20,7 @@ namespace DoAnXinViec
         }
         public void Them(HoSo hoSo)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(hoSo, new string[2] {"ViTriUngTuyen", "TenHoSo"});
+            List<SqlParameter> parameters = Utility.GetParameters(hoSo, new string[2] {nameof(hoSo.ViTriUngTuyen), nameof(hoSo.TenHoSo)});
             string sqlStr = Utility.GenerateInsertSql("HoSo", parameters);
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("Thanh Cong");

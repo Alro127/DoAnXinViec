@@ -67,9 +67,10 @@ namespace DoAnXinViec
         {
             ucTrangTimViec.wpDon.Children.Clear();
             DataTable dt = donDAO.Load();
+            Don don;
             foreach (DataRow dr in dt.Rows)
             {
-                if (((string)dr["TenCV"]).Contains(ucTrangTimViec.txtTimKiem.Text))
+                if (((string)dr[nameof(don.TenCV)]).Contains(ucTrangTimViec.txtTimKiem.Text))
                     DangUCDon(dr);
             }
         }

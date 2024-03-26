@@ -13,7 +13,6 @@ namespace DoAnXinViec
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            // Kiểm tra xem giá trị có phù hợp không
             if (value != null)
             {
                 switch (value)

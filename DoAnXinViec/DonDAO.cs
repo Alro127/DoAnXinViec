@@ -16,12 +16,12 @@ namespace DoAnXinViec
         internal DBConnection Dbconnection { get => dbconnection; set => dbconnection = value; }
         public DataTable Load()
         {
-            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT");
+            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT WHERE Don.NgayToiHan >= GETDATE()");
             return Dbconnection.Load(sqlStr);
         }
         public void Them(Don don)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(don, new string[1] {"IdCV"});
+            List<SqlParameter> parameters = Utility.GetParameters(don, new string[1] {nameof(don.IdCV)});
             string sqlStr = Utility.GenerateInsertSql("Don", parameters);
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("Thanh Cong");

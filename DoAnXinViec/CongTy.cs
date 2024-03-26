@@ -24,6 +24,7 @@ namespace DoAnXinViec
         string gTCT;
         string anh;
 
+        public CongTy() { }
         public CongTy(string idCT, string hoTen, string sdt, string email, string tenCT, string maSoThue, string gPKD, string lingVuc, int quyMoNhanSu, string tinhThanh, string diaChi, string link, string gTCT, string anh)
         {
             this.idCT = idCT;
