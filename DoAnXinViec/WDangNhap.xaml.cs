@@ -19,6 +19,8 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WDangNhap : Window
     {
+        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
+        TaiKhoan taiKhoan;
         public WDangNhap()
         {
             InitializeComponent();
@@ -26,9 +28,27 @@ namespace DoAnXinViec
 
         private void btnDangNhap_Click(object sender, RoutedEventArgs e)
         {
-            if (rdoCongTy.IsChecked == true)
+            taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
+            if (rdoUngVien.IsChecked == true)
             {
-
+                taiKhoan.Quyen = "uv";
+            }
+            string getuser = taiKhoanDAO.Checklogin(taiKhoan);
+            if (getuser == "Tài khoản hoặc mật khẩu không đúng!")
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
+                return;
+            }
+            MessageBox.Show("Xin chúc mừng bạn đã đăng nhập thành công");
+            if (taiKhoan.Quyen == "uv")
+            {
+                WTrangXemDon wTrangXemDon = new WTrangXemDon(taiKhoan.TenTK);
+                wTrangXemDon.ShowDialog();
+            }
+            else
+            {
+                WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(taiKhoan.TenTK);
+                wTrangChinhCty.ShowDialog();
             }
         }
     }

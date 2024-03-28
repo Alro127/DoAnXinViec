@@ -49,14 +49,7 @@ namespace DoAnXinViec
         public string TrangThai
         {
             get => trangThai;
-            set
-            {
-                if (trangThai != value)
-                {
-                    trangThai = value;
-                    OnPropertyChanged("TrangThai");
-                }
-            }
+            set => trangThai = value;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

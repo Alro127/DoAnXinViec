@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="DoAnXinViec.UCLichSuDangDon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoAnXinViec"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1290">
+    <Border Background="White" CornerRadius="30" Margin="0,10,0,0">
+        <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
+            <Label Content="Lịch Sử Đăng Đơn" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1290"/>
+            <materialDesign:Card Background="{x:Null}" Margin="20,140,20,20">
+                <ScrollViewer VerticalScrollBarVisibility="Visible" >
+                    <StackPanel x:Name="stLichSuDangDon"/>
+                </ScrollViewer>
+            </materialDesign:Card>
+            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="60" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
+            <ComboBox HorizontalAlignment="Left" Height="40" Margin="120,80,0,0" Width="499"
+            Style="{StaticResource MaterialDesignOutlinedComboBox}"
+            materialDesign:HintAssist.Background="White"
+            materialDesign:HintAssist.Hint="Tất cả tin đăng" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
+            </ComboBox>
+
+        </Grid>
+    </Border>
+</UserControl>

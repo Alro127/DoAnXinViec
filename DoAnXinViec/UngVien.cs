@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,36 +8,156 @@ using System.Windows.Controls;
 
 namespace DoAnXinViec
 {
-    class UngVien
+    public class UngVien: INotifyPropertyChanged
     {
+        string idUV;
         string hoTen;
         string gioiTinh;
         DateTime ngaySinh;
         string tinhThanh;
         string diaChi;
-        string sdt;
+        string sDT;
         string email;
-        Image anh;
+        string anh;
 
-        public UngVien(string hoTen, string gioiTinh, DateTime ngaySinh, string tinhThanh, string diaChi, string sdt, string email, Image anh)
+        public UngVien() { }
+
+        public UngVien(string idUV, string hoTen, string gioiTinh, DateTime ngaySinh, string tinhThanh, string diaChi, string sDT, string email, string anh)
         {
+            this.idUV = idUV;
             this.hoTen = hoTen;
             this.gioiTinh = gioiTinh;
             this.ngaySinh = ngaySinh;
             this.tinhThanh = tinhThanh;
             this.diaChi = diaChi;
-            this.sdt = sdt;
+            this.sDT = sDT;
             this.email = email;
             this.anh = anh;
         }
 
-        public string HoTen { get => hoTen; set => hoTen = value; }
-        public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
-        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
-        public string TinhThanh { get => tinhThanh; set => tinhThanh = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string Sdt { get => sdt; set => sdt = value; }
-        public string Email { get => email; set => email = value; }
-        public Image Anh { get => anh; set => anh = value; }
+        public string IdUV
+        {
+            get { return idUV; }
+            set
+            {
+                if (idUV != value)
+                {
+                    idUV = value;
+                    OnPropertyChanged(nameof(IdUV));
+                }
+            }
+        }
+
+        public string HoTen
+        {
+            get { return hoTen; }
+            set
+            {
+                if (hoTen != value)
+                {
+                    hoTen = value;
+                    OnPropertyChanged(nameof(HoTen));
+                }
+            }
+        }
+
+        public string GioiTinh
+        {
+            get { return gioiTinh; }
+            set
+            {
+                if (gioiTinh != value)
+                {
+                    gioiTinh = value;
+                    OnPropertyChanged(nameof(GioiTinh));
+                }
+            }
+        }
+
+        public DateTime NgaySinh
+        {
+            get { return ngaySinh; }
+            set
+            {
+                if (ngaySinh != value)
+                {
+                    ngaySinh = value;
+                    OnPropertyChanged(nameof(NgaySinh));
+                }
+            }
+        }
+
+        public string TinhThanh
+        {
+            get { return tinhThanh; }
+            set
+            {
+                if (tinhThanh != value)
+                {
+                    tinhThanh = value;
+                    OnPropertyChanged(nameof(TinhThanh));
+                }
+            }
+        }
+
+        public string DiaChi
+        {
+            get { return diaChi; }
+            set
+            {
+                if (diaChi != value)
+                {
+                    diaChi = value;
+                    OnPropertyChanged(nameof(DiaChi));
+                }
+            }
+        }
+
+        public string SDT
+        {
+            get { return sDT; }
+            set
+            {
+                if (sDT != value)
+                {
+                    sDT = value;
+                    OnPropertyChanged(nameof(SDT));
+                }
+            }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set
+            {
+                if (email != value)
+                {
+                    email = value;
+                    OnPropertyChanged(nameof(Email));
+                }
+            }
+        }
+
+        public string Anh
+        {
+            get { return anh; }
+            set
+            {
+                if (anh != value)
+                {
+                    anh = value;
+                    OnPropertyChanged(nameof(Anh));
+                }
+            }
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

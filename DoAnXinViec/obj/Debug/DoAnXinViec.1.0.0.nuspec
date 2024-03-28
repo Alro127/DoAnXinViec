@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <authors>DoAnXinViec</authors>
     <description>Package Description</description>
-    <repository type="git" commit="95ba36f3406a33fac3fa85b528f62889b6beff4b" />
+    <repository type="git" commit="fa3577dde66830a57ba28a403eab0614fcb39aa3" />
     <dependencies>
       <group targetFramework="net7.0-windows7.0">
         <dependency id="MaterialDesignThemes" version="5.0.0" exclude="Build,Analyzers" />

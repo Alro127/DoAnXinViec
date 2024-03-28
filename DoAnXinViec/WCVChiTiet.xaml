@@ -1,0 +1,59 @@
+﻿<Window x:Class="DoAnXinViec.WCVChiTiet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnXinViec"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="WCVChiTiet" Height="800" Width="830">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="800" Margin="330,0,0,0" VerticalAlignment="Center" Width="500">
+            <materialDesign:PackIcon Kind="BriefcaseVariant" Margin="11,30,0,0" Height="40" Width="29" Grid.RowSpan="2" />
+            <Label Content="KINH NGHIỆM LÀM VIỆC" Margin="40,35,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="210" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16"/>
+            <ProgressBar VerticalAlignment="Top" Margin="3,65,0,0" Width ="250" Height ="4" Value="25" HorizontalAlignment="Left" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,80,0,0" TextWrapping="Wrap" Text="Việc ứng viên định rõ hướng đi trong tương lai cũng góp phần giúp nhà tuyển dụng nhìn ra phần nào kế hoạch cho công việc của bạn. Bạn xác định trong khoảng thời gian này, mình thực hiện được gì và tiến tới đâu, làm gì và lập kế hoạch thế nào cho mục tiêu" VerticalAlignment="Top" Height="162" Width="480"/>
+            <materialDesign:PackIcon Kind="SchoolOutline" Margin="11,250,0,0" Height="40" Width="29" />
+            <Label Content="HỌC VẤN" Margin="40,255,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="88" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16"/>
+            <ProgressBar VerticalAlignment="Top" Margin="3,285,0,0" Width ="250" Height ="4" Value="25" HorizontalAlignment="Left" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,300,0,0" TextWrapping="Wrap" Text="- Đại học sư pham kĩ thuật Thành phố Hồ Chí Minh(2022 - 2024)" VerticalAlignment="Top" Height="167" Width="480" FontSize="14" Foreground="#FF4E3838"/>
+            <materialDesign:PackIcon Kind="CertificateOutline" Margin="11,480,0,0" Height="40" Width="29" />
+            <Label Content="CHỨNG CHỈ" Margin="40,485,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="105" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16"/>
+            <ProgressBar VerticalAlignment="Top" Margin="3,515,0,0" Width ="250" Height ="4" Value="25" HorizontalAlignment="Left" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,530,0,0" TextWrapping="Wrap" Text="- Chứng chỉ Toeic và MOS 2023" VerticalAlignment="Top" Height="64" Width="480" Foreground="#FF4E3838" FontSize="14"/>
+            <materialDesign:PackIcon Kind="TargetAccount" Margin="11,600,0,0" Height="40" Width="29" />
+            <Label Content="KỸ NĂNG" Margin="45,605,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="83" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16"/>
+            <ProgressBar VerticalAlignment="Top" Margin="3,635,0,0" Width ="250" Height ="4" Value="25" HorizontalAlignment="Left" />
+            <TextBlock HorizontalAlignment="Center" Margin="0,650,0,0" TextWrapping="Wrap" Text="- Giao tiếp tốt- Kĩ năng làm việc nhóm tốt" VerticalAlignment="Top" Height="64" Width="480" Foreground="#FF4E3838" FontSize="14">
+            </TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="800" VerticalAlignment="Center" Width="330" Background="#FFF1F1F1">
+
+            <Ellipse x:Name="elpAnh" Margin="0,30,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/eb0ffac4c3043f5fceb42d66450b5880.jpg"/>
+                </Ellipse.Fill>
+
+            </Ellipse>
+            <Label Content="{Binding HoTen, ElementName=Cv.UngVien}" Margin="0,230,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="282" Height="40" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe UI Black" Foreground="#FF07177C"/>
+            <Label Content="NHÂN VIÊN KINH DOANH" Margin="0,266,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="310" Height="32" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Black" Foreground="Black"/>
+            <materialDesign:PackIcon Kind="CardAccountPhone" Margin="11,294,0,0" Height="40" Width="29" Grid.RowSpan="2" />
+            <Label Content="THÔNG TIN CÁ NHÂN" Margin="40,298,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="194" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16" Grid.RowSpan="2"/>
+            <ProgressBar VerticalAlignment="Top" Margin="3,330,77,0" Width ="250" Height ="4" Value="25" />
+            <materialDesign:PackIcon Margin="11,335,0,0" Height="40" Width="20" Kind="GenderMaleFemale" />
+            <Label Content="GIới tính" Margin="35,345,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
+            <materialDesign:PackIcon Kind="Cake" Margin="11,360,0,0" Height="40" Width="20" />
+            <Label Content="31/08/2004" Margin="35,370,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
+            <materialDesign:PackIcon Kind="EmailOutline" Margin="11,385,0,0" Height="40" Width="20" />
+            <Label Content="huynhtuankiet31804@gmail.com" Margin="35,393,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
+            <materialDesign:PackIcon Kind="PhoneOutline" Margin="11,410,0,0" Height="40" Width="20" />
+            <Label Content="0384902926" Margin="35,417,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
+            <materialDesign:PackIcon Kind="MapMarker" Margin="11,435,0,0" Height="40" Width="20" />
+            <Label Content="23 Trần Cao Vân,Quận 1" Margin="35,442,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
+            <materialDesign:PackIcon Kind="BullseyeArrow" Margin="11,470,0,0" Height="40" Width="29" Grid.RowSpan="2" />
+            <Label Content="MỤC TIÊU NGHỀ NGHIỆP" Margin="40,475,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="213" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16"/>
+            <ProgressBar VerticalAlignment="Top" Margin="3,505,0,0" Width ="250" Height ="4" Value="25" HorizontalAlignment="Left" />
+            <TextBlock HorizontalAlignment="Left" Margin="11,515,0,0" TextWrapping="Wrap" Text="Việc ứng viên định rõ hướng đi trong tương lai cũng góp phần giúp nhà tuyển dụng nhìn ra phần nào kế hoạch cho công việc của bạn. Bạn xác định trong khoảng thời gian này, mình thực hiện được gì và tiến tới đâu, làm gì và lập kế hoạch thế nào cho mục tiêu" VerticalAlignment="Top" Height="119" Width="282" FontSize="14" Foreground="#FF4E3838"/>
+        </Grid>
+    </Grid>
+</Window>   

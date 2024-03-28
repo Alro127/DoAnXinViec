@@ -22,12 +22,24 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WTrangXemDon : Window
     {
-        string id = "UV1";
+        UngVien ungVien = new UngVien();
+        UngVienDAO ungVienDAO = new UngVienDAO();
         DonDAO donDAO = new DonDAO();
         public WTrangXemDon()
         {
             InitializeComponent();
             ucTrangTimViec.btnTimKiem.Click += new RoutedEventHandler(this.btnTimKiem_Click);
+        }
+        public WTrangXemDon(string id)
+        {
+            InitializeComponent();
+            ucTrangTimViec.btnTimKiem.Click += new RoutedEventHandler(this.btnTimKiem_Click);
+            DataTable dt = ungVienDAO.Get(id);
+            if (dt.Rows.Count > 0)
+            {
+                Utility.SetItemFromRow(ungVien, dt.Rows[0]);
+            }
+            else MessageBox.Show("Lỗi");
         }
         void DangUCDon(DataRow dr)
         {
@@ -47,13 +59,13 @@ namespace DoAnXinViec
         }
         private void btnXem_Click(object sender, RoutedEventArgs e)
         {
-            WDonChiTiet wDonChiTiet = new WDonChiTiet((Don)(sender as Button).Tag, id);
+            WDonChiTiet wDonChiTiet = new WDonChiTiet((Don)(sender as Button).Tag, ungVien.IdUV);
             donDAO.TangLuotXem(wDonChiTiet.Don);
             wDonChiTiet.ShowDialog();
         }
         private void btnQuanLyTaiKhoan_Click(object sender, RoutedEventArgs e)
         {
-            WTrangChinhUngVien wTrangChinhUngVien = new WTrangChinhUngVien();
+            WTrangChinhUngVien wTrangChinhUngVien = new WTrangChinhUngVien(ungVien);
             this.Close();
             wTrangChinhUngVien.ShowDialog();
         }

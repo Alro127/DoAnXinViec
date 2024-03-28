@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using System.Windows.Controls;
 
 namespace DoAnXinViec
 {
-    class CongTy
+    public class CongTy : INotifyPropertyChanged
     {
         string idCT;
         string hoTen;
@@ -43,19 +44,193 @@ namespace DoAnXinViec
             this.anh = anh;
         }
 
-        public string HoTen { get => hoTen; set => hoTen = value; }
-        public string Sdt { get => sdt; set => sdt = value; }
-        public string Email { get => email; set => email = value; }
-        public string TenCT { get => tenCT; set => tenCT = value; }
-        public string LingVuc { get => lingVuc; set => lingVuc = value; }
-        public int QuyMoNhanSu { get => quyMoNhanSu; set => quyMoNhanSu = value; }
-        public string TinhThanh { get => tinhThanh; set => tinhThanh = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string Link { get => link; set => link = value; }
-        public string GTCT { get => gTCT; set => gTCT = value; }
-        public string Anh { get => anh; set => anh = value; }
-        public string MaSoThue { get => maSoThue; set => maSoThue = value; }
-        public string GPKD { get => gPKD; set => gPKD = value; }
-        public string IdCT { get => idCT; set => idCT = value; }
+        public string HoTen
+        {
+            get { return hoTen; }
+            set
+            {
+                if (hoTen != value)
+                {
+                    hoTen = value;
+                    OnPropertyChanged(nameof(HoTen));
+                }
+            }
+        }
+
+        public string Sdt
+        {
+            get { return sdt; }
+            set
+            {
+                if (sdt != value)
+                {
+                    sdt = value;
+                    OnPropertyChanged(nameof(Sdt));
+                }
+            }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set
+            {
+                if (email != value)
+                {
+                    email = value;
+                    OnPropertyChanged(nameof(Email));
+                }
+            }
+        }
+
+        public string TenCT
+        {
+            get { return tenCT; }
+            set
+            {
+                if (tenCT != value)
+                {
+                    tenCT = value;
+                    OnPropertyChanged(nameof(TenCT));
+                }
+            }
+        }
+
+        public string LingVuc
+        {
+            get { return lingVuc; }
+            set
+            {
+                if (lingVuc != value)
+                {
+                    lingVuc = value;
+                    OnPropertyChanged(nameof(LingVuc));
+                }
+            }
+        }
+
+        public int QuyMoNhanSu
+        {
+            get { return quyMoNhanSu; }
+            set
+            {
+                if (quyMoNhanSu != value)
+                {
+                    quyMoNhanSu = value;
+                    OnPropertyChanged(nameof(QuyMoNhanSu));
+                }
+            }
+        }
+
+        public string TinhThanh
+        {
+            get { return tinhThanh; }
+            set
+            {
+                if (tinhThanh != value)
+                {
+                    tinhThanh = value;
+                    OnPropertyChanged(nameof(TinhThanh));
+                }
+            }
+        }
+
+        public string DiaChi
+        {
+            get { return diaChi; }
+            set
+            {
+                if (diaChi != value)
+                {
+                    diaChi = value;
+                    OnPropertyChanged(nameof(DiaChi));
+                }
+            }
+        }
+
+        public string Link
+        {
+            get { return link; }
+            set
+            {
+                if (link != value)
+                {
+                    link = value;
+                    OnPropertyChanged(nameof(Link));
+                }
+            }
+        }
+
+        public string GTCT
+        {
+            get { return gTCT; }
+            set
+            {
+                if (gTCT != value)
+                {
+                    gTCT = value;
+                    OnPropertyChanged(nameof(GTCT));
+                }
+            }
+        }
+
+        public string Anh
+        {
+            get { return anh; }
+            set
+            {
+                if (anh != value)
+                {
+                    anh = value;
+                    OnPropertyChanged(nameof(Anh));
+                }
+            }
+        }
+
+        public string MaSoThue
+        {
+            get { return maSoThue; }
+            set
+            {
+                if (maSoThue != value)
+                {
+                    maSoThue = value;
+                    OnPropertyChanged(nameof(MaSoThue));
+                }
+            }
+        }
+
+        public string GPKD
+        {
+            get { return gPKD; }
+            set
+            {
+                if (gPKD != value)
+                {
+                    gPKD = value;
+                    OnPropertyChanged(nameof(GPKD));
+                }
+            }
+        }
+
+        public string IdCT
+        {
+            get { return idCT; }
+            set
+            {
+                if (idCT != value)
+                {
+                    idCT = value;
+                    OnPropertyChanged(nameof(IdCT));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

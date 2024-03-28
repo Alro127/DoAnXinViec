@@ -27,7 +27,7 @@ namespace DoAnXinViec
         }
         public DataTable LoadForCT(string id)
         {
-            string sqlStr = string.Format("SELECT HoSo.IdCV, HoSo.IdUV, HoTen AS TenHoSo, TenCV AS ViTriUngTuyen, LoaiHoSo, NgayNop FROM UngVien, Don, HoSo WHERE HoSo.IdUV = UngVien.IdUV AND HoSo.IdCV = Don.IdCV and Don.IdCT = '{0}'", id);
+            string sqlStr = string.Format("SELECT HoSo.IdCV, HoSo.IdUV, HoTen AS TenHoSo, TenCV AS ViTriUngTuyen, LoaiHoSo, NgayNop, TrangThai FROM UngVien, Don, HoSo WHERE HoSo.IdUV = UngVien.IdUV AND HoSo.IdCV = Don.IdCV and Don.IdCT = '{0}'", id);
             return Dbconnection.Load(sqlStr);
         }
 

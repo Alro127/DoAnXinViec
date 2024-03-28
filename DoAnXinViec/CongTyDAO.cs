@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace DoAnXinViec
 {
-    class CongTyDAO
+    public class CongTyDAO
     {
         DBConnection dbconnection = new DBConnection();
         internal DBConnection Dbconnection { get => dbconnection; set => dbconnection = value; }
@@ -33,6 +30,12 @@ namespace DoAnXinViec
             string sqlStr = Utility.GenerateUpdateSql("Cty", parameters, "Id = @Id");
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("ThanhCong");
+        }
+
+        public DataTable Get(string id)
+        {
+            string sqlStr = string.Format("SELECT * FROM Cty WHERE IdCT = '{0}'",id);
+            return dbconnection.Load(sqlStr);
         }
     }
 }

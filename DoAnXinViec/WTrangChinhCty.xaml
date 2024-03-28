@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="WTrangChinhCty" Height="830" Width="1550"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Loaded="WTrangChinhCTy_Loaded">
     <Grid Background="#FFE8E8E8">
 
         <StackPanel x:Name="stMain" Margin="240,0,0,0">
@@ -32,7 +32,7 @@
                         <StackPanel>
                             <Button x:Name="btnHoSoUngTuyen" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ ứng tuyển" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoUngTuyen_Click"/>
                             <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ đã lưu" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
-                            <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Tìm kiếm ứng viên" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
+                            <Button x:Name="btnTimKiemUngVien" Style="{DynamicResource ButtonStyleKeepColor}" Content="Tìm kiếm ứng viên" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnTimKiemUngVien_Click"/>
                         </StackPanel>
                     </Expander>
                     <Expander Header="Cài đặt chung" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background ="White"  FontSize="14" >
@@ -46,7 +46,7 @@
                         <ImageBrush ImageSource="/eb0ffac4c3043f5fceb42d66450b5880.jpg" />
                     </Ellipse.Fill>
                 </Ellipse>
-                <Label Content="Họ Tên" HorizontalAlignment="Left" Height="30" Margin="38,200,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="16"/>
+                <Label Content="{Binding TenCT}" HorizontalAlignment="Left" Height="30" Margin="38,200,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="16"/>
             </Grid>
         </Border>
     </Grid>

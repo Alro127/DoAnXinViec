@@ -26,7 +26,6 @@
                     materialDesign:HintAssist.FontFamily="Verdana"
                     materialDesign:HintAssist.Hint="Địa điểm"
                     Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="14,78,1074,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249">
-
                 <Label Content="An Giang" Foreground="White" FontSize="14"/>
                 <Label Content="Bà Rịa - Vũng Tàu" Foreground="White" FontSize="14"/>
                 <Label Content="Bắc Giang" Foreground="White" FontSize="14"/>

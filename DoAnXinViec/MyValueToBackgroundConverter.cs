@@ -13,8 +13,6 @@ namespace DoAnXinViec
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value != null)
-            {
                 switch (value)
                 {
                     case "Từ chối":
@@ -24,8 +22,6 @@ namespace DoAnXinViec
                     default:
                         return Brushes.LightGreen;
                 }
-            }
-            return Brushes.White;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

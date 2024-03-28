@@ -19,9 +19,15 @@ namespace DoAnXinViec
             string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT WHERE Don.NgayToiHan >= GETDATE()");
             return Dbconnection.Load(sqlStr);
         }
+
+        public DataTable LoadLichSu()
+        {
+            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT ORDER BY Don.NgayDang ASC");
+            return Dbconnection.Load(sqlStr);
+        }
         public void Them(Don don)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(don, new string[1] {nameof(don.IdCV)});
+            List<SqlParameter> parameters = Utility.GetParameters(don, new string[3] {nameof(don.IdCV), nameof(don.TenCT), nameof(don.Anh)});
             string sqlStr = Utility.GenerateInsertSql("Don", parameters);
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("Thanh Cong");
