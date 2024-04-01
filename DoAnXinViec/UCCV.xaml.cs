@@ -29,9 +29,12 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.Cv = cv;
+            imgAnh.DataContext = Cv.UngVien;
             grbTenUngVien.Header = Cv.UngVien.HoTen;
-            lblNoiLamViec.Content = Cv.UngVien.TinhThanh;
-            lblLuong.Content = Cv.Luong;
+            lblViTriUngTuyen.Content = Cv.ViTriUngTuyen;
+            lblNoiLamViec.Content ="Đại điểm: " + Cv.UngVien.TinhThanh;
+            lblLuong.Content = "Lương mong muốn: " + Cv.Luong;
+            lblKinhNghiem.Content = "Kinh nghiệm: " + Cv.NamKinhNghiem;
         }
         public CV Cv { get => this.cv; set => this.cv = value; }
 

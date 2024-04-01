@@ -11,26 +11,27 @@ namespace DoAnXinViec
 {
     public class CV:INotifyPropertyChanged
     {
-        string id;
+        int id;
+        string idUV;
         UngVien ungVien;
         string viTriUngTuyen;
         string linhVuc;
         string trinhDo;
-        int luong;
-        int namKinhNghiem;
+        string luong;
+        string namKinhNghiem;
         string mucTieu;
         string kyNang;
         string chungChi;
         string hocVan;
         string kinhNghiem;
         DateTime ngayDang;
-        DateTime ngayHetHan;
+        DateTime ngayToiHan;
 
         public CV() { }
 
-        public CV(string id, UngVien ungVien, string viTriUngTuyen, string linhVuc, string trinhDo, int luong, int namKinhNghiem, string mucTieu, string kyNang, string chungChi, string hocVan, string kinhNghiem, DateTime ngayDang, DateTime ngayHetHan)
+        public CV(string idUV, UngVien ungVien, string viTriUngTuyen, string linhVuc, string trinhDo, string luong, string namKinhNghiem, string mucTieu, string kyNang, string chungChi, string hocVan, string kinhNghiem, DateTime ngayDang, DateTime ngayToiHan)
         {
-            this.id = id;
+            this.idUV = idUV;
             this.ungVien = ungVien;
             this.viTriUngTuyen = viTriUngTuyen;
             this.linhVuc = linhVuc;
@@ -43,18 +44,23 @@ namespace DoAnXinViec
             this.hocVan = hocVan;
             this.kinhNghiem = kinhNghiem;
             this.ngayDang = ngayDang;
-            this.ngayHetHan = ngayHetHan;
+            this.ngayToiHan = ngayToiHan;
         }
 
-        public string Id
+        public int Id
         {
-            get { return id; }
+            get => id;
+            set => id = value;
+        }
+        public string IdUV
+        {
+            get { return idUV; }
             set
             {
-                if (id != value)
+                if (idUV != value)
                 {
-                    id = value;
-                    OnPropertyChanged(nameof(Id));
+                    idUV = value;
+                    OnPropertyChanged(nameof(IdUV));
                 }
             }
         }
@@ -110,7 +116,7 @@ namespace DoAnXinViec
                 }
             }
         }
-        public int Luong
+        public string Luong
         {
             get { return luong; }
             set
@@ -122,7 +128,7 @@ namespace DoAnXinViec
                 }
             }
         }
-        public int NamKinhNghiem
+        public string NamKinhNghiem
         {
             get { return namKinhNghiem; }
             set
@@ -208,15 +214,15 @@ namespace DoAnXinViec
             }
         }
 
-        public DateTime NgayHetHan
+        public DateTime NgayToiHan
         {
-            get { return ngayHetHan; }
+            get { return ngayToiHan; }
             set
             {
-                if (ngayHetHan != value)
+                if (ngayToiHan != value)
                 {
-                    ngayHetHan = value;
-                    OnPropertyChanged(nameof(NgayHetHan));
+                    ngayToiHan = value;
+                    OnPropertyChanged(nameof(NgayToiHan));
                 }
             }
         }
@@ -225,7 +231,10 @@ namespace DoAnXinViec
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if (PropertyChanged != null)
+            {
+                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }

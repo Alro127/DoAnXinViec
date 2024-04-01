@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,15 +17,13 @@ namespace DoAnXinViec
             string info = dbconnection.CheckLogin(taiKhoan);
             return info;
         }
-        /*public void SignUp(TaiKhoan taiKhoan)
-        {   
-            string sqlStr = string.Format("INSERT INTO TaiKhoan (Id, Matkhau, Quyen) VALUES('{0}','{1}','{2}')",taiKhoan.TenTK, taiKhoan.MatKhau, taiKhoan.Quyen);
-            if(Dbconnection.ThucThi(sqlStr))
-            {
-                MessageBox.Show("Thanhf coong");
-                return;
-            }
+        public void SignUp(TaiKhoan taiKhoan)
+        {
+            List<SqlParameter> parameters = Utility.GetParameters(taiKhoan, new string[0]);
+            string sqlStr = Utility.GenerateInsertSql("TaiKhoan", parameters);
+            if (dbconnection.ThucThi(sqlStr, parameters))
+                MessageBox.Show("Thanh Cong");
 
-        }*/
+        }
     }
 }

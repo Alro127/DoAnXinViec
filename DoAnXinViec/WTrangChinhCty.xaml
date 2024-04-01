@@ -31,7 +31,7 @@
                     <Expander Header="Quản lý ứng viên" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
                         <StackPanel>
                             <Button x:Name="btnHoSoUngTuyen" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ ứng tuyển" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoUngTuyen_Click"/>
-                            <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ đã lưu" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
+                            <Button x:Name="btnHoSoDaThich" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ đã thích" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoDaThich_Click"/>
                             <Button x:Name="btnTimKiemUngVien" Style="{DynamicResource ButtonStyleKeepColor}" Content="Tìm kiếm ứng viên" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnTimKiemUngVien_Click"/>
                         </StackPanel>
                     </Expander>
@@ -43,7 +43,7 @@
                 </StackPanel>
                 <Ellipse Width="150" Height="150" Margin="38,38,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="/eb0ffac4c3043f5fceb42d66450b5880.jpg" />
+                        <ImageBrush ImageSource="{Binding Anh}" />
                     </Ellipse.Fill>
                 </Ellipse>
                 <Label Content="{Binding TenCT}" HorizontalAlignment="Left" Height="30" Margin="38,200,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="16"/>

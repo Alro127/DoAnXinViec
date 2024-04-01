@@ -48,7 +48,7 @@ namespace DoAnXinViec
         {
             get { return hoTen; }
             set
-            {
+            {    
                 if (hoTen != value)
                 {
                     hoTen = value;

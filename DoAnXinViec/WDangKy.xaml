@@ -27,6 +27,7 @@
 
             </Border>
             <TextBox
+                 x:Name="txtTenDangNhap"
                  FontSize="14"
                  Width="274"
                  Height="34"
@@ -37,6 +38,7 @@
                  materialDesign:HintAssist.Hint="Tên đăng nhập"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,158,0,0" />
             <PasswordBox
+                    x:Name="txtMatKhau"
                     FontSize="14"
                     Width="274"
                     Height="34"
@@ -50,6 +52,7 @@
                     IsEnabled="{Binding ElementName=RevealPasswordFloatingEnabled, Path=IsChecked}"
                     Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}" Margin="0,196,0,0" />
             <PasswordBox
+                    x:Name="txtXacNhanMatKhau"
                     Foreground="White"
                     FontSize="14"
                     Width="274"

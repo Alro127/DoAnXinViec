@@ -79,3 +79,5 @@ D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-win
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCV.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WCVChiTiet.baml
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTimUngVien.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCVYeuThich.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCVYeuThich.baml

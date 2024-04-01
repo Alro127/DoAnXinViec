@@ -17,7 +17,14 @@
             <ListView x:Name="lvHoSoUngTuyen"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Width="300">
+                        <GridViewColumn Width="30">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="250">
                             <TextBlock Text="Tên hồ sơ" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -62,7 +69,7 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="150">
+                        <GridViewColumn Width="130">
                             <TextBlock Text="Chi Tiết" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>

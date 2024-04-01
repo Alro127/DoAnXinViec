@@ -63,19 +63,137 @@ namespace DoAnXinViec
             this.anh = anh;
         }
 
-        public string TenCV { get => tenCV; set => tenCV = value; }
-        public string IdCT { get => idCT; set => idCT = value; }
-        public string DiaDiem { get => diaDiem; set => diaDiem = value; }
-        public int Luong { get => luong; set => luong = value; }
-        public DateTime NgayToiHan { get => ngayToiHan; set => ngayToiHan = value; }
-        public string MoTaCV { get => moTaCV; set => moTaCV = value; }
-        public string YeuCau { get => yeuCau; set => yeuCau = value; }
-        public string QuyenLoi { get => quyenLoi; set => quyenLoi = value; }
-        public int IdCV { get => idCV; set => idCV = value; }
-        public int LuotXem { get => luotXem; set => luotXem = value; }
-        public int LuotNop { get => luotNop; set => luotNop = value; }
-        public DateTime NgayDang { get => ngayDang; set => ngayDang = value; }
-        public string TenCT { get => tenCT; set => tenCT = value; }
-        public string Anh { get => anh; set => anh = value; }
+        public string TenCV
+        {
+            get => tenCV;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                tenCV = value;
+            }
+        }
+        public string IdCT
+        {
+            get => idCT;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                idCT = value;
+            }
+        }
+
+        public string DiaDiem
+        {
+            get => diaDiem;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                diaDiem = value;
+            }
+        }
+
+        public int Luong
+        {
+            get => luong;
+            set => luong = value;
+        }
+
+        public DateTime NgayToiHan
+        {
+            get => ngayToiHan;
+            set => ngayToiHan = value;
+        }
+
+        public string MoTaCV
+        {
+            get => moTaCV;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                moTaCV = value;
+            }
+        }
+
+        public string YeuCau
+        {
+            get => yeuCau;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                yeuCau = value;
+            }
+        }
+
+        public string QuyenLoi
+        {
+            get => quyenLoi;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                quyenLoi = value;
+            }
+        }
+
+        public int IdCV
+        {
+            get => idCV;
+            set => idCV = value;
+        }
+
+        public int LuotXem
+        {
+            get => luotXem;
+            set => luotXem = value;
+        }
+
+        public int LuotNop
+        {
+            get => luotNop;
+            set => luotNop = value;
+        }
+
+        public DateTime NgayDang
+        {
+            get => ngayDang;
+            set => ngayDang = value;
+        }
+
+        public string TenCT
+        {
+            get => tenCT;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    return;
+                }
+                tenCT = value;
+            }
+        }
+
+        public string Anh
+        {
+            get => anh;
+            set => anh = value;
+        }
+
     }
 }

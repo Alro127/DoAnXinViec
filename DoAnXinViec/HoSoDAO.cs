@@ -13,11 +13,6 @@ namespace DoAnXinViec
     {
         DBConnection dbconnection = new DBConnection();
         internal DBConnection Dbconnection { get => dbconnection; set => dbconnection = value; }
-        public DataTable Load()
-        {
-            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT");
-            return Dbconnection.Load(sqlStr);
-        }
         public void Them(HoSo hoSo)
         {
             List<SqlParameter> parameters = Utility.GetParameters(hoSo, new string[2] {nameof(hoSo.ViTriUngTuyen), nameof(hoSo.TenHoSo)});

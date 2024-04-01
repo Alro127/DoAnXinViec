@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Forms;
@@ -23,6 +24,8 @@ namespace DoAnXinViec
     public partial class WTimUngVien : Window
     {
         CVDAO cvDAO = new CVDAO();
+        UngVienDAO ungVienDAO = new UngVienDAO();
+        YeuThichDAO yeuThichDAO = new YeuThichDAO();
         CongTy congTy = new CongTy();
         public WTimUngVien()
         {
@@ -36,10 +39,21 @@ namespace DoAnXinViec
         void DangUCCV(DataRow dr)
         {
             CV cv = new CV();
+            UngVien ungVien = new UngVien();
             Utility.SetItemFromRow(cv, dr);
+            DataTable dt = ungVienDAO.Get(cv.IdUV);
+            Utility.SetItemFromRow(ungVien, dt.Rows[0]);
+            cv.UngVien = ungVien;
             UCCV ucCV = new UCCV(cv);
             ucCV.Tag = cv;
             ucCV.MouseDoubleClick += new MouseButtonEventHandler(this.UCCV_Click);
+            ucCV.btnYeuThich.Click += new RoutedEventHandler(this.btnYeuThich_Click);
+            ucCV.btnYeuThich.Tag = cv.Id;
+            YeuThich yeuThich = new YeuThich(cv.Id, congTy.IdCT);
+            if (yeuThichDAO.CheckExist(yeuThich)) 
+                ucCV.btnYeuThich.IsChecked = true;
+            else
+                ucCV.btnYeuThich.IsChecked= false;
             ucTrangTimViec.wpDon.Children.Add(ucCV);
         }
 
@@ -47,6 +61,20 @@ namespace DoAnXinViec
         {
             WCVChiTiet wCVChiTiet = new WCVChiTiet((CV)(sender as UCCV).Tag);
             wCVChiTiet.ShowDialog();
+        }
+        void btnYeuThich_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton toggleButton = sender as ToggleButton;
+            if (toggleButton.IsChecked == true)
+            {
+                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, congTy.IdCT);
+                yeuThichDAO.Them(yeuThich);
+            }
+            else
+            {
+                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, congTy.IdCT);
+                yeuThichDAO.Xoa(yeuThich);
+            }
         }
         void Load()
         {

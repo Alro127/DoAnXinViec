@@ -10,7 +10,7 @@
     <Border Background="White" CornerRadius="30" Margin="0,10,0,0" Height="770" VerticalAlignment="Top">
         <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
             <Label Content="Hồ Sơ Của Bạn" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,0,0,0" VerticalAlignment="Top" Width="1290"/>
+            <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,0,0,0" VerticalAlignment="Top" Width="1290"/>
             <TabControl x:Name="tbcHoSoCuaBan" Style="{StaticResource MaterialDesignTabControl}" HorizontalAlignment="Center" Height="610" VerticalAlignment="Bottom" Width="1250" Background="White" Margin="0,0,0,80">
                 <TabItem x:Name="tbiThongTinCaNhan" Header="Thông tin cá nhân" DataContext="{Binding UngVien}">
                     <Grid Background="White">
@@ -160,18 +160,15 @@
 
                         <ComboBox 
                          x:Name="cbTrinhDo"
-                         Text="{Binding TrinhDoHocVan, Mode=TwoWay}"
+                         Text="{Binding TrinhDo, Mode=TwoWay}"
                          HorizontalAlignment="Left" Height="40" Margin="40,160,0,0" Width="540"
                          Style="{StaticResource MaterialDesignOutlinedComboBox}"
                          materialDesign:HintAssist.Background="White"
                          materialDesign:HintAssist.Hint="Trình độ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
-                            <Label Content="Chưa có kinh nghiệm" Foreground="Black" FontSize="14"/>
-                            <Label Content="Dưới 1 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="2 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="3 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="4 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="5 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="Hơn 5 năm" Foreground="Black" FontSize="14"/>
+                            <Label Content="Cử nhân" Foreground="Black" FontSize="14"/>
+                            <Label Content="Tiến Sĩ" Foreground="Black" FontSize="14"/>
+                            <Label Content="Thạc Sĩ" Foreground="Black" FontSize="14"/>
+                            <Label Content="Phổ Thông" Foreground="Black" FontSize="14"/>
                         </ComboBox>
 
                         <TextBox
@@ -230,7 +227,7 @@
                             />
                         <TextBox
                             x:Name="txtHocVan"
-                            Text="{Binding ThanhTich, Mode=TwoWay}"
+                            Text="{Binding HocVan, Mode=TwoWay}"
                             Width="585" 
                             Margin="0,0,40,181"
                             HorizontalAlignment="Right"
@@ -253,7 +250,7 @@
                          Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="540" Height="40" HorizontalAlignment="Left" Margin="40,220,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
                         <TextBox
                             x:Name="txtKinhNghiem"
-                            Text="{Binding ThanhTich, Mode=TwoWay}"
+                            Text="{Binding KinhNghiem, Mode=TwoWay}"
                             Width="585" 
                             Margin="0,0,40,40"
                             HorizontalAlignment="Right"
@@ -269,7 +266,7 @@
                             />
                         <ComboBox 
                             x:Name="cbNamKinhNghiem"
-                            Text="{Binding TrinhDoHocVan, Mode=TwoWay}"
+                            Text="{Binding NamKinhNghiem, Mode=TwoWay}"
                             HorizontalAlignment="Left" Height="40" Margin="40,280,0,0" Width="540"
                             Style="{StaticResource MaterialDesignOutlinedComboBox}"
                             materialDesign:HintAssist.Background="White"
@@ -284,18 +281,18 @@
                         </ComboBox>
                         <ComboBox 
                             x:Name="cbLinhVuc"
-                            Text="{Binding TrinhDoHocVan, Mode=TwoWay}"
+                            Text="{Binding LinhVuc, Mode=TwoWay}"
                             HorizontalAlignment="Left" Height="40" Margin="40,100,0,0" Width="540"
                             Style="{StaticResource MaterialDesignOutlinedComboBox}"
                             materialDesign:HintAssist.Background="White"
                             materialDesign:HintAssist.Hint="Lĩnh Vực" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
-                            <Label Content="Chưa có kinh nghiệm" Foreground="Black" FontSize="14"/>
-                            <Label Content="Dưới 1 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="2 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="3 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="4 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="5 năm" Foreground="Black" FontSize="14"/>
-                            <Label Content="Hơn 5 năm" Foreground="Black" FontSize="14"/>
+                            <Label Content="Công Nghệ Thông Tin" Foreground="Black" FontSize="14"/>
+                            <Label Content="Kinh Doanh" Foreground="Black" FontSize="14"/>
+                            <Label Content="Truyền Thông - Sự Kiện" Foreground="Black" FontSize="14"/>
+                            <Label Content="Y Tế" Foreground="Black" FontSize="14"/>
+                            <Label Content="Môi Trường" Foreground="Black" FontSize="14"/>
+                            <Label Content="Xây Dựng" Foreground="Black" FontSize="14"/>
+                            <Label Content="Thực Phẩm" Foreground="Black" FontSize="14"/>
                         </ComboBox>
 
                     </Grid>

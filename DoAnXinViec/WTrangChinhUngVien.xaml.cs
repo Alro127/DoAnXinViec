@@ -25,7 +25,7 @@ namespace DoAnXinViec
     {
         UngVien ungVien;
         UngVienDAO ungVienDAO = new UngVienDAO();
-        CV cv;
+        CV cv = new CV();
         CVDAO cvDAO = new CVDAO();
         UCHoSoCuaBan uCHoSoCuaBan = new UCHoSoCuaBan();
         public WTrangChinhUngVien()
@@ -40,27 +40,24 @@ namespace DoAnXinViec
         }
 
         public UngVien UngVien { get => ungVien; set => ungVien = value; }
+        public CV Cv { get => cv; set => cv = value; }
 
         private void btnHoSoCuaBan_Click(object sender, RoutedEventArgs e)
         {
+            uCHoSoCuaBan.tbiThongTinCaNhan.DataContext = ungVien;
+            uCHoSoCuaBan.tbiThongTinCV.DataContext = Cv;
+            uCHoSoCuaBan.btnLuuVaDangHoSo.Click += new RoutedEventHandler(this.btnLuuVaDangHoSo_Click);
             stMain.Children.Clear();
             stMain.Children.Add(uCHoSoCuaBan);
-            DataTable dt = cvDAO.Get(UngVien.IdUV);
-            if (dt.Rows.Count > 0 )
-            {
-                Utility.SetItemFromRow(cv, dt.Rows[0]);
-                cv.NgayDang = DateTime.Now.Date;
-                cv.NgayHetHan = DateTime.MaxValue;
-                cv.UngVien = UngVien;
-            }
-            uCHoSoCuaBan.tbiThongTinCaNhan.DataContext = ungVien;
-            uCHoSoCuaBan.tbiThongTinCV.DataContext = cv;
-            uCHoSoCuaBan.btnLuuVaDangHoSo.Click += new RoutedEventHandler(this.btnLuuVaDangHoSo_Click);
         }
         private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
         {
             ungVienDAO.CapNhat(UngVien);
-            cvDAO.Them(cv);
+            Cv.NgayDang = DateTime.Now.Date;
+            Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            Cv.UngVien = UngVien;
+            Cv.IdUV = UngVien.IdUV;
+            cvDAO.Them(Cv);
         }
     } 
 }

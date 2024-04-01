@@ -16,7 +16,7 @@ namespace DoAnXinViec
         internal DBConnection Dbconnection { get => dbconnection; set => dbconnection = value; }
         public DataTable Load()
         {
-            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT WHERE Don.NgayToiHan >= GETDATE()");
+            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.IdCT WHERE Don.NgayToiHan > GETDATE()");
             return Dbconnection.Load(sqlStr);
         }
 
@@ -35,7 +35,14 @@ namespace DoAnXinViec
         public void CapNhat(Don don)
         {
             List<SqlParameter> parameters = Utility.GetParameters(don, new string[0]);
-            string sqlStr = Utility.GenerateUpdateSql("Don", parameters, "Id = @Id");
+            string sqlStr = Utility.GenerateUpdateSql("Don", parameters, "IdCV = @IdCV");
+            if (dbconnection.ThucThi(sqlStr, parameters))
+                MessageBox.Show("ThanhCong");
+        }
+        public void Xoa(Don don)
+        {
+            string sqlStr = string.Format("UPDATE Don SET NgayToiHan = @NOW WHERE IdCV = @IdCV");
+            List<SqlParameter> parameters = new List<SqlParameter>() { new SqlParameter("@NOW", DateTime.Now), new SqlParameter("@IdCV", don.IdCV) };
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("ThanhCong");
         }

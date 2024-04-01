@@ -48,7 +48,7 @@ namespace DoAnXinViec
         }
         public static string GenerateDeleteSql(string tableName, string conditionColumn)
         {
-            string sqlStr = $"DELETE FROM {tableName} WHERE {conditionColumn} = @ConditionValue";
+            string sqlStr = $"DELETE FROM {tableName} WHERE {conditionColumn}";
             return sqlStr;
         }
     }

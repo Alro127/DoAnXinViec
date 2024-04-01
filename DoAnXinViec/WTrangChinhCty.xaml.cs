@@ -28,10 +28,14 @@ namespace DoAnXinViec
         UCDanhSachTin uCDanhSachTin = new UCDanhSachTin();
         UCLichSuDangDon uCLichSuDangDon = new UCLichSuDangDon();
         UCHoSoUngTuyen uCHoSoUngTuyen = new UCHoSoUngTuyen();
+        UCCVYeuThich uCCVYeuThich = new UCCVYeuThich();
         CongTy congTy = new CongTy();
         CongTyDAO congTyDAO = new CongTyDAO();
         DonDAO donDAO = new DonDAO();
         HoSoDAO hoSoDAO = new HoSoDAO();
+        YeuThichDAO yeuThichDAO = new YeuThichDAO();
+        UngVienDAO ungVienDAO = new UngVienDAO();
+        CVDAO cvDAO = new CVDAO();
         public WTrangChinhCty()
         {
             InitializeComponent();
@@ -60,16 +64,15 @@ namespace DoAnXinViec
             stMain.Children.Clear();
             stMain.Children.Add(uCDanhSachTin);
             DataTable dt = donDAO.Load();
-            List<Don> listDon = new List<Don>();
+            uCDanhSachTin.ListDon.Clear();
             foreach (DataRow dr in dt.Rows)
             {
                 Don don = new Don();
                 Utility.SetItemFromRow(don,dr);             
-                listDon.Add(don);
+                uCDanhSachTin.ListDon.Add(don);
             }
-            uCDanhSachTin.lvDonTuyen.ItemsSource = listDon;
+            uCDanhSachTin.lvDonTuyen.ItemsSource = uCDanhSachTin.ListDon;
         }
-
         private void btnTaoTinDangTuyen_Click(object sender, RoutedEventArgs e)
         {
             stMain.Children.Clear();
@@ -149,6 +152,33 @@ namespace DoAnXinViec
         {
             WTimUngVien wTimUngVien = new WTimUngVien(congTy);
             wTimUngVien.ShowDialog();
+        }
+        void DangUCCV(DataRow dr)
+        {
+            CV cv = new CV();
+            UngVien ungVien = new UngVien();
+            YeuThich yeuThich = new YeuThich();
+            Utility.SetItemFromRow(yeuThich, dr);
+            DataTable dt = cvDAO.Get(yeuThich.IdCV);
+            Utility.SetItemFromRow(cv, dt.Rows[0]);
+            dt = ungVienDAO.Get(cv.IdUV);
+            Utility.SetItemFromRow(ungVien, dt.Rows[0]);
+            cv.UngVien = ungVien;
+            UCCV ucCV = new UCCV(cv);
+            ucCV.Tag = cv;
+            ucCV.btnYeuThich.IsEnabled = false;
+            uCCVYeuThich.wpCVYeuThich.Children.Add(ucCV);
+        }
+        private void btnHoSoDaThich_Click(object sender, RoutedEventArgs e)
+        {
+            stMain.Children.Clear();
+            stMain.Children.Add(uCCVYeuThich);
+            DataTable dt = yeuThichDAO.Load(congTy);
+            uCCVYeuThich.wpCVYeuThich.Children.Clear();
+            foreach (DataRow dr in dt.Rows)
+            {
+                DangUCCV(dr);
+            }
         }
     } 
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,9 +21,29 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCDanhSachTin : UserControl
     {
+        DonDAO donDAO = new DonDAO();
+        List<Don> listDon = new List<Don>();
+
         public UCDanhSachTin()
         {
             InitializeComponent();
+        }
+
+        internal DonDAO DonDAO { get => donDAO; set => donDAO = value; }
+        public List<Don> ListDon { get => listDon; set => listDon = value; }
+
+        private void EditMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void DeleteMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Don don = (Don)lvDonTuyen.SelectedItem;
+            donDAO.Xoa(don);
+            listDon.Remove(don);
+            lvDonTuyen.ItemsSource = ListDon;
+            lvDonTuyen.Items.Refresh();
         }
     }
 }
