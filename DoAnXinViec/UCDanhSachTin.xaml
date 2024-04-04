@@ -9,8 +9,9 @@
              d:DesignHeight="770" d:DesignWidth="1290">
     <UserControl.Resources>
         <ContextMenu x:Key="ItemContextMenu">
-            <MenuItem Header="Edit" Click="EditMenuItem_Click"/>
-            <MenuItem Header="Delete" Click="DeleteMenuItem_Click"/>
+            <MenuItem Header="Chọn" Click="ChonMenuItem_Click"/>
+            <MenuItem Header="Sửa" Click="SuaMenuItem_Click"/>
+            <MenuItem Header="Xóa" Click="XoaMenuItem_Click"/>
         </ContextMenu>
     </UserControl.Resources>
     <Border Background="White" CornerRadius="30" Margin="0,10,0,0">
@@ -18,7 +19,7 @@
             <Label Content="Danh Sách Tin" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1040" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1060" HorizontalAlignment="Left"/>
             <Button x:Name="btnLichSu" Content="Lịch Sử" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140"/>
-            <ListView x:Name="lvDonTuyen" Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" BorderBrush="black" >
+            <ListView x:Name="lvDonTuyen" Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" BorderBrush="black" MouseDoubleClick="lvDonTuyen_MouseDoubleClick" >
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="ContextMenu" Value="{StaticResource ItemContextMenu}"/>
@@ -29,7 +30,8 @@
                         <GridViewColumn Width="30">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <CheckBox/>
+                                    <CheckBox x:Name="cbListView" Visibility="Hidden">
+                                    </CheckBox>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -42,7 +44,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Width="250">
-                            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Ngày đăng" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}"/>
+                            <TextBlock Text="Ngày đăng" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Content="{Binding NgayDang}" Margin="18,0,0,0"/>
@@ -50,7 +52,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Width="250">
-                            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Tới hạn" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}"/>
+                            <TextBlock Text="Tới hạn" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Content="{Binding NgayToiHan}" Margin="18,0,0,0"/>
@@ -73,7 +75,6 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        
                     </GridView>
                 </ListView.View>
             </ListView>

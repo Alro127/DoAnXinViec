@@ -21,10 +21,18 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCDangDon : UserControl
     {
+        CongTy congTy;
+        DonDAO donDAO = new DonDAO();
         public UCDangDon()
         {
             InitializeComponent();
-            ucDon.lblTenCT.Content = "TenCT";
+            ucDon.lblTenCT.Content = ((CongTy)(this.Tag)).TenCT;
+        }
+        public UCDangDon(CongTy congTy)
+        {
+            InitializeComponent();
+            this.congTy = congTy;
+            ucDon.lblTenCT.Content = congTy.TenCT;
         }
 
         private void txtTenCV_KeyUp(object sender, KeyEventArgs e)
@@ -45,6 +53,12 @@ namespace DoAnXinViec
         private void cbLuong_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ucDon.lblLuong.Content = ((Label)cbLuong.SelectedValue).Content;
+        }
+
+        private void btnDang_Click(object sender, RoutedEventArgs e)
+        {
+            Don don = new Don(0, txtTenCV.Text, congTy.Id, cbDiaDiem.Text, int.Parse(cbLuong.Text), DateTime.Now.Date, DateTime.ParseExact(dtpNgayToiHan.Text, "dd/MM/yyyy", null).Date, txtMoTaCV.Text, txtYeuCau.Text, txtQuyenLoi.Text, 0, 0);
+            donDAO.Them(don);
         }
     }
 }

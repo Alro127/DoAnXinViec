@@ -11,7 +11,7 @@
     <Grid Background="#FFE8E8E8">
 
         <StackPanel x:Name="stMain" Margin="240,0,0,0">
-            
+
         </StackPanel>
         <Border HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="White" CornerRadius="30">
             <Grid HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="Transparent">
@@ -37,7 +37,7 @@
                     </Expander>
                     <Expander Header="Cài đặt chung" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background ="White"  FontSize="14" >
                         <StackPanel>
-                            <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Cập nhật thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
+                            <Button x:Name="btnCapNhatThongTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Cập nhật thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
                         </StackPanel>
                     </Expander>
                 </StackPanel>

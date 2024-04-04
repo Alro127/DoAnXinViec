@@ -20,9 +20,42 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCHoSoCuaBan : UserControl
     {
+        UngVien ungVien;
+        UngVien tempUngVien;
+        UngVienDAO ungVienDAO = new UngVienDAO();
+        CV cv = new CV();
+        CVDAO cvDAO = new CVDAO();
         public UCHoSoCuaBan()
         {
             InitializeComponent();
+        }
+        public UCHoSoCuaBan(UngVien ungVien)
+        {
+            InitializeComponent();
+            this.ungVien = ungVien;
+            this.tempUngVien = new UngVien(ungVien);
+            this.tbiThongTinCaNhan.DataContext = tempUngVien;
+            this.tbcHoSoCuaBan.DataContext = cv;
+        }
+        private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
+        {
+            this.ungVien = new UngVien(tempUngVien);
+            ungVienDAO.CapNhat(ungVien, "UngVien");
+            cv.NgayDang = DateTime.Now.Date;
+            cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            cv.UngVien = ungVien;
+            cv.IdUV = ungVien.Id;
+            cvDAO.Them(cv);
+        }
+
+        private void btnXemTruoc_Click(object sender, RoutedEventArgs e)
+        {
+            cv.NgayDang = DateTime.Now.Date;
+            cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            cv.UngVien = tempUngVien;
+            cv.IdUV = tempUngVien.Id;
+            WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+            wCVChiTiet.ShowDialog();
         }
     }
 }

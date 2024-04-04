@@ -42,12 +42,12 @@ namespace DoAnXinViec
             MessageBox.Show("Xin chúc mừng bạn đã đăng nhập thành công");
             if (taiKhoan.Quyen == "uv")
             {
-                WTrangXemDon wTrangXemDon = new WTrangXemDon(taiKhoan.TenTK);
+                WTrangXemDon wTrangXemDon = new WTrangXemDon(taiKhoan.Id);
                 wTrangXemDon.ShowDialog();
             }
             else
             {
-                WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(taiKhoan.TenTK);
+                WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(taiKhoan.Id);
                 wTrangChinhCty.ShowDialog();
             }
         }

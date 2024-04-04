@@ -29,12 +29,6 @@ namespace DoAnXinViec
             InitializeComponent();
             this.Cv = cv;
             this.DataContext = Cv;
-            //lblGioiTinh.Content = Cv.UngVien.GioiTinh;
-            //lblNgaySinh.Content = Cv.UngVien.NgaySinh.Date.ToString("dd/MM/yyyy");
-            /*lblDiaChi.Content = Cv.UngVien.DiaChi;
-            lblEmail.Content = Cv.UngVien.Email;
-            lblSDT.Content = Cv.UngVien.SDT;
-            elpAnh.DataContext = Cv.UngVien;*/
         }
 
         public CV Cv { get => cv; set => cv = value; }

@@ -41,7 +41,7 @@ namespace DoAnXinViec
             CV cv = new CV();
             UngVien ungVien = new UngVien();
             Utility.SetItemFromRow(cv, dr);
-            DataTable dt = ungVienDAO.Get(cv.IdUV);
+            DataTable dt = ungVienDAO.Get(cv.IdUV, "UngVien");
             Utility.SetItemFromRow(ungVien, dt.Rows[0]);
             cv.UngVien = ungVien;
             UCCV ucCV = new UCCV(cv);
@@ -49,7 +49,7 @@ namespace DoAnXinViec
             ucCV.MouseDoubleClick += new MouseButtonEventHandler(this.UCCV_Click);
             ucCV.btnYeuThich.Click += new RoutedEventHandler(this.btnYeuThich_Click);
             ucCV.btnYeuThich.Tag = cv.Id;
-            YeuThich yeuThich = new YeuThich(cv.Id, congTy.IdCT);
+            YeuThich yeuThich = new YeuThich(cv.Id, congTy.Id);
             if (yeuThichDAO.CheckExist(yeuThich)) 
                 ucCV.btnYeuThich.IsChecked = true;
             else
@@ -67,12 +67,12 @@ namespace DoAnXinViec
             ToggleButton toggleButton = sender as ToggleButton;
             if (toggleButton.IsChecked == true)
             {
-                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, congTy.IdCT);
+                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, congTy.Id);
                 yeuThichDAO.Them(yeuThich);
             }
             else
             {
-                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, congTy.IdCT);
+                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, congTy.Id);
                 yeuThichDAO.Xoa(yeuThich);
             }
         }

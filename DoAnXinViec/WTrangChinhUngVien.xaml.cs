@@ -1,11 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -24,10 +19,7 @@ namespace DoAnXinViec
     public partial class WTrangChinhUngVien : Window
     {
         UngVien ungVien;
-        UngVienDAO ungVienDAO = new UngVienDAO();
-        CV cv = new CV();
-        CVDAO cvDAO = new CVDAO();
-        UCHoSoCuaBan uCHoSoCuaBan = new UCHoSoCuaBan();
+        UCChinhSuaThongTinCaNhan uCChinhSuaThongTinCaNhan;
         public WTrangChinhUngVien()
         {
             InitializeComponent();
@@ -35,29 +27,43 @@ namespace DoAnXinViec
         public WTrangChinhUngVien(UngVien ungVien)
         {
             InitializeComponent();
-            this.UngVien = ungVien;
+            this.ungVien = ungVien;
             this.DataContext = ungVien;
         }
-
-        public UngVien UngVien { get => ungVien; set => ungVien = value; }
-        public CV Cv { get => cv; set => cv = value; }
-
+        //Tạm để đợi tìm cách làm bên xaml
+        private void btnLuu_Click(object sender, RoutedEventArgs e)
+        {
+            ungVien = uCChinhSuaThongTinCaNhan.UngVien;
+            if (!File.Exists(uCChinhSuaThongTinCaNhan.NewImagePath))
+            {
+                File.Copy(ungVien.Anh,uCChinhSuaThongTinCaNhan.NewImagePath);
+            }
+            UngVienDAO ungVienDAO = new UngVienDAO();
+            if (ungVienDAO.CapNhat(ungVien, "UngVien") == true)
+                System.Windows.MessageBox.Show("ThanhCong");
+            this.imgAnh.ImageSource = new BitmapImage(new Uri(ungVien.Anh));
+        }
+        private void btnChinhSuaThongTinCaNhan_Click(object sender, RoutedEventArgs e)
+        {
+            uCChinhSuaThongTinCaNhan = new UCChinhSuaThongTinCaNhan(ungVien);
+            uCChinhSuaThongTinCaNhan.btnLuu.Click += new RoutedEventHandler(this.btnLuu_Click);
+            stMain.Children.Clear();
+            stMain.Children.Add(uCChinhSuaThongTinCaNhan);
+        }
         private void btnHoSoCuaBan_Click(object sender, RoutedEventArgs e)
         {
-            uCHoSoCuaBan.tbiThongTinCaNhan.DataContext = ungVien;
-            uCHoSoCuaBan.tbiThongTinCV.DataContext = Cv;
-            uCHoSoCuaBan.btnLuuVaDangHoSo.Click += new RoutedEventHandler(this.btnLuuVaDangHoSo_Click);
+            UCHoSoCuaBan uCHoSoCuaBan = new UCHoSoCuaBan(ungVien);
             stMain.Children.Clear();
             stMain.Children.Add(uCHoSoCuaBan);
         }
-        private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
+        private void btnChinhSuaCV_Click(object sender, RoutedEventArgs e)
         {
-            ungVienDAO.CapNhat(UngVien);
-            Cv.NgayDang = DateTime.Now.Date;
-            Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
-            Cv.UngVien = UngVien;
-            Cv.IdUV = UngVien.IdUV;
-            cvDAO.Them(Cv);
+        }
+        private void btnViecDaUngTuyen_Click(object sender, RoutedEventArgs e)
+        {
+            UCViecDaUngTuyen uCViecDaUngTuyen = new UCViecDaUngTuyen(ungVien);
+            stMain.Children.Clear();
+            stMain.Children.Add(uCViecDaUngTuyen);
         }
     } 
 }

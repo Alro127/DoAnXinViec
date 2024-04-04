@@ -29,13 +29,13 @@
         </Grid>
         <Grid HorizontalAlignment="Left" Height="800" VerticalAlignment="Center" Width="330" Background="#FFF1F1F1">
 
-            <Ellipse x:Name="elpAnh" Margin="0,30,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
+            <Ellipse x:Name="elpAnh" DataContext="{Binding UngVien}" Margin="0,30,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush x:Name="imgAnh" ImageSource="{Binding Anh}"/>
                 </Ellipse.Fill>
 
             </Ellipse>
-            <Label Content="HoTen" Margin="0,230,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="282" Height="40" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe UI Black" Foreground="#FF07177C"/>
+            <Label DataContext ="{Binding UngVien}" Content="{Binding HoTen}" Margin="0,230,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="282" Height="40" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe UI Black" Foreground="#FF07177C"/>
             <Label Content="{Binding ViTriUngTuyen}" Margin="0,266,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="310" Height="32" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Black" Foreground="Black"/>
             <materialDesign:PackIcon Kind="CardAccountPhone" Margin="11,294,0,0" Height="40" Width="29" Grid.RowSpan="2" />
             <Label x:Name="lblThongTinCaNhan" Content="THÔNG TIN CÁ NHÂN" Margin="40,298,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="194" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16" Grid.RowSpan="2"/>
@@ -49,7 +49,7 @@
             <materialDesign:PackIcon Kind="PhoneOutline" Margin="11,410,0,0" Height="40" Width="20" />
             <Label x:Name="lblSDT" DataContext="{Binding UngVien}" Content="{Binding SDT}" Margin="35,417,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
             <materialDesign:PackIcon Kind="MapMarker" Margin="11,435,0,0" Height="40" Width="20" />
-            <Label x:Name="lblDiaChi" DataContext="{Binding UngVien}" Content="{Binding DiaChia}" Margin="35,442,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
+            <Label x:Name="lblDiaChi" DataContext="{Binding UngVien}" Content="{Binding DiaChi}" Margin="35,442,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" TextBlock.Foreground="Black"/>
             <materialDesign:PackIcon Kind="BullseyeArrow" Margin="11,470,0,0" Height="40" Width="29" Grid.RowSpan="2" />
             <Label Content="MỤC TIÊU NGHỀ NGHIỆP" Margin="40,475,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="213" Height="32" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="#FF07177C" FontSize="16"/>
             <ProgressBar VerticalAlignment="Top" Margin="3,505,0,0" Width ="250" Height ="4" Value="25" HorizontalAlignment="Left" />

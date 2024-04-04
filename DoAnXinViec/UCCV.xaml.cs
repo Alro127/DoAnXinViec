@@ -32,7 +32,7 @@ namespace DoAnXinViec
             imgAnh.DataContext = Cv.UngVien;
             grbTenUngVien.Header = Cv.UngVien.HoTen;
             lblViTriUngTuyen.Content = Cv.ViTriUngTuyen;
-            lblNoiLamViec.Content ="Đại điểm: " + Cv.UngVien.TinhThanh;
+            lblNoiLamViec.Content ="Địa điểm: " + Cv.UngVien.TinhThanh;
             lblLuong.Content = "Lương mong muốn: " + Cv.Luong;
             lblKinhNghiem.Content = "Kinh nghiệm: " + Cv.NamKinhNghiem;
         }

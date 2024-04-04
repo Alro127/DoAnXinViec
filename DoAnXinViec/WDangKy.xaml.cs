@@ -21,7 +21,6 @@ namespace DoAnXinViec
     public partial class WDangKy : Window
     {
         DBConnection dBConnection = new DBConnection();
-        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
         public WDangKy()
         {
             InitializeComponent();
@@ -35,7 +34,13 @@ namespace DoAnXinViec
                 return;
             }
             TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "uv");
-            taiKhoanDAO.SignUp(taiKhoan);
+            if (!dBConnection.CheckSignUp(taiKhoan))
+            {
+                MessageBox.Show("Tài khoản đã tồn tại");
+                return;
+            }
+            WThongTinUngVien wthongTinUngVien = new WThongTinUngVien(taiKhoan);
+            wthongTinUngVien.ShowDialog();
         }
 
         private void btnDangKyCongTy_Click(object sender, RoutedEventArgs e)
@@ -45,8 +50,15 @@ namespace DoAnXinViec
                 MessageBox.Show("Mật khẩu không khớp");
                 return;
             }
-            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
-            taiKhoanDAO.SignUp(taiKhoan);
+
+            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "cty");
+            if (!dBConnection.CheckSignUp(taiKhoan))
+            {
+                MessageBox.Show("Tài khoản đã tồn tại");
+                return;
+            }
+            WThongTinCongTy wthongTinCongTy = new WThongTinCongTy(taiKhoan);
+            wthongTinCongTy.ShowDialog();
         }
     }
 }

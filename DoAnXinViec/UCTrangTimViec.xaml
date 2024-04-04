@@ -18,7 +18,7 @@
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </TextBox.Background>
             </TextBox>
-            <ComboBox
+            <ComboBox x:Name="cbDiaDiem"
                     MinWidth="72"
                     IsEditable="True"
                     materialDesign:ColorZoneAssist.Mode ="Dark" 
@@ -89,7 +89,7 @@
                 <Label Content="Vĩnh Phúc" Foreground="White" FontSize="14"/>
                 <Label Content="Yên Bái" Foreground="White" FontSize="14"/>
             </ComboBox>
-            <ComboBox
+            <ComboBox x:Name="cbNganhNghe"
                 MinWidth="72"
                 IsEditable="True"
                 materialDesign:ColorZoneAssist.Mode ="Dark" 
@@ -108,33 +108,42 @@
                 <Label Content="Sư phạm" Foreground="White" FontSize="14"/>
                 <Label Content="Nông - Lâm - Ngư nghiệp" Foreground="White" FontSize="14"/>
             </ComboBox>
-            <ComboBox
+            <ComboBox x:Name="cbKinhNghiem"
                 MinWidth="72"
                 IsEditable="True"
                 materialDesign:ColorZoneAssist.Mode ="Dark" 
                 materialDesign:ComboBoxAssist.MaxLength="30"
                 materialDesign:HintAssist.FontFamily="Verdana"
                 materialDesign:HintAssist.Hint="Kinh nghiệm"
-                Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="528,78,571,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249">
+                Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="528,78,571,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249" SelectionChanged="cbKinhNghiem_SelectionChanged">
                 <Label Content="Chưa có kinh nghiệm" Foreground="White" FontSize="14"/>
+                <Label Content="Dưới 1 năm" Foreground="White" FontSize="14"/>
                 <Label Content="1 - 2 năm" Foreground="White" FontSize="14"/>
                 <Label Content="2 - 5 năm" Foreground="White" FontSize="14"/>
-                <Label Content="5 - 10 năm" Foreground="White" FontSize="14"/>
-                <Label Content="Hơn 10 năm" Foreground="White" FontSize="14"/>
+                <Label Content="Hơn 5 năm" Foreground="White" FontSize="14"/>
+                <WrapPanel x:Name="wpKhoangKinhNghiem">
+                    <TextBox x:Name="txtMinNam" materialDesign:HintAssist.Hint="Min (năm)" Width="100"/>
+                    <TextBlock Text=" - " Width="45" TextAlignment="Center" />
+                    <TextBox x:Name="txtMaxNam" materialDesign:HintAssist.Hint="Max (năm)" Width="100"/>
+                </WrapPanel>
             </ComboBox>
-            <ComboBox
+            <ComboBox x:Name="cbLuong"
                 MinWidth="72"
                 IsEditable="True"
                 materialDesign:ColorZoneAssist.Mode ="Dark" 
                 materialDesign:ComboBoxAssist.MaxLength="30"
                 materialDesign:HintAssist.FontFamily="Verdana"
                 materialDesign:HintAssist.Hint="Lương"
-                Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="782,78,317,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249">
-                <Label Content="Chưa có kinh nghiệm" Foreground="White" FontSize="14"/>
-                <Label Content="1 - 2 năm" Foreground="White" FontSize="14"/>
-                <Label Content="2 - 5 năm" Foreground="White" FontSize="14"/>
-                <Label Content="5 - 10 năm" Foreground="White" FontSize="14"/>
-                <Label Content="Hơn 10 năm" Foreground="White" FontSize="14"/>
+                Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="782,78,317,0" VerticalAlignment="Top" Foreground="#FFF7F3F3" Padding="10,4,0,4" FontSize="16" Width="249" SelectionChanged="cbLuong_SelectionChanged">
+                <Label Content="Dưới 5 triệu" Foreground="White" FontSize="14"/>
+                <Label Content="5 - 10 triệu" Foreground="White" FontSize="14"/>
+                <Label Content="10 - 20 triệu" Foreground="White" FontSize="14"/>
+                <Label Content="Trên 20 triệu" Foreground="White" FontSize="14"/>
+                <WrapPanel x:Name="wpKhoangLuong">
+                    <TextBox x:Name="txtMinLuong" materialDesign:HintAssist.Hint="Min (triệu)" Width="100"/>
+                    <TextBlock Text=" - " Width="45" TextAlignment="Center" />
+                    <TextBox x:Name="txtMaxLuong" materialDesign:HintAssist.Hint="Max (triệu)" Width="100"/>
+                </WrapPanel>
             </ComboBox>
         </Grid>
         <Grid Margin="0,0,0,40" Height="610" VerticalAlignment="Bottom">
