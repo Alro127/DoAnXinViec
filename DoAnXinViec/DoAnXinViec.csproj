@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Avatar.jpg" />
     <None Remove="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
     <None Remove="eb0ffac4c3043f5fceb42d66450b5880.jpg" />
     <None Remove="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />
@@ -24,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Avatar.jpg" />
     <Resource Include="e1c256a07cd178357ee6ef13bf255ffd.jpg" />
     <Resource Include="eb0ffac4c3043f5fceb42d66450b5880.jpg" />
     <Resource Include="Premium Photo _ Fantastic beautiful planets in a far uncharted space.jpeg" />

@@ -8,10 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="770" d:DesignWidth="1290">
     <UserControl.Resources>
-        <local:MyValueToBackgroundConverter x:Key="ValueToBackgroundConverter" />
-        <Style TargetType="Border" x:Key="CustomBorderStyle">
-            <Setter Property="Background" Value="{Binding TrangThai, Converter={StaticResource ValueToBackgroundConverter}}" />
-        </Style>
+        <local:MyValueToBackgroundConverter x:Key="ValueToBackgroundConverter"/>
     </UserControl.Resources>
     <Border Background="White" CornerRadius="30" Margin="0,10,0,0">
         <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
@@ -20,7 +17,14 @@
             <ListView x:Name="lvHoSoUngTuyen"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Width="300">
+                        <GridViewColumn Width="30">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="250">
                             <TextBlock Text="Tên hồ sơ" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -37,7 +41,14 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Width="200" >
-                            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Ngày nộp" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}" BorderThickness="0,0,0,0"/>
+                            <ComboBox x:Name="cbThoiGianNop" Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Thời gian nộp" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" ClipToBounds="True" SelectionChanged="cbThoiGianNop_SelectionChanged" >
+                                <Label x:Name="lblTatCa" Content="Tất cả"/>
+                                <Label x:Name="lblHomNay" Content="Hôm nay"/>
+                                <Label x:Name="lblTuanNay" Content="Tuần này"/>
+                                <Label x:Name="lblThangNay" Content="Tháng này"/>
+                                <Label x:Name="lblNamNay" Content="Năm này"/>
+                                <DatePicker x:Name="dtpNgayNop" Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Ngày cụ thể" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderThickness="0,0,0,0" Background="#00000000" BorderBrush="{x:Null}"/>
+                            </ComboBox>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Content="{Binding NgayNop}" Margin="18,0,0,0"/>
@@ -45,27 +56,34 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Width="200">
-                            <ComboBox Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Loại hồ sơ" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" BorderThickness="0,0,0,0" ClipToBounds="True"/>
+                            <ComboBox x:Name="cbLoaiHoSo" Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Loại hồ sơ" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" ClipToBounds="True">
+                                <Label Content="Online" FontSize="10"/>
+                                <Label Content="Offline" FontSize="10"/>
+                                <Label Content="Tất cả" FontSize="10"/>
+                            </ComboBox>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Content="{Binding LoaiHoSo}" Margin="18,0,0,0"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        
-                        <GridViewColumn Width="150">
-                            <TextBlock Text="Trạng thái" FontSize="16" FontFamily="Segoe UI Black"/>
+                        <GridViewColumn Width="200">
+                            <ComboBox x:Name="cbTrangThai" Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Trạng thái" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" ClipToBounds="True" Text="">
+                                <CheckBox Content="Đợi" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True"/>
+                                <CheckBox Content="Chấp nhận" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True"/>
+                                <CheckBox Content="Từ chối" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True"/>
+                            </ComboBox>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <Border Style="{StaticResource CustomBorderStyle}" CornerRadius="10" Width="100" Height="30" Margin="20,0,0,0">
-                                            <Label Width="auto" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{Binding TrangThai, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                        <Border Background="{Binding TrangThai, Converter={StaticResource ValueToBackgroundConverter}}" CornerRadius="10" Width="100" Height="30" Margin="20,0,0,0">
+                                            <Label Content="{Binding TrangThai}" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                                         </Border>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="150">
+                        <GridViewColumn Width="130">
                             <TextBlock Text="Chi Tiết" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -83,7 +101,7 @@
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"
                 materialDesign:HintAssist.Hint="Tất cả hồ sơ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
-            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140" Click="btnLuu_Click"/>
+            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140"/>
         </Grid>
     </Border>
 

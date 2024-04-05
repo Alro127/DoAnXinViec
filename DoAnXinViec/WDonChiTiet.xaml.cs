@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace DoAnXinViec
     {
         HoSoDAO hoSoDAO= new HoSoDAO();
         Don don = new Don();
+        CongTy congTy = new CongTy(); 
+        CongTyDAO congTyDAO = new CongTyDAO();
         DonDAO donDAO = new DonDAO();
         string idUV;
         public WDonChiTiet()
@@ -32,13 +35,13 @@ namespace DoAnXinViec
         public WDonChiTiet(Don don, string idUV)
         {
             InitializeComponent();
-            this.don = don;
+            this.Don = don;
             this.idUV = idUV;
         }
 
         public Don Don { get => don; set => don = value; }
         public string IdUV { get => idUV; set => idUV = value; }
-
+        internal CongTy CongTy { get => congTy; set => congTy = value; }
         void Check()
         {
             if (hoSoDAO.CheckExist(Don, IdUV))

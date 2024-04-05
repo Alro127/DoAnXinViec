@@ -1,0 +1,195 @@
+﻿<UserControl x:Class="DoAnXinViec.UCCapNhatThongTinCty"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoAnXinViec"
+                          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="780" d:DesignWidth="1290">
+    <Border Background="White" CornerRadius="30" Width="1290" Height="770" Margin="0,10,0,0" VerticalAlignment="Top">
+        <Grid x:Name="thongtincty"  DataContext="{Binding CongTy}">
+            <Grid.Background>
+                <ImageBrush/>
+            </Grid.Background>
+            <Ellipse Width="120" Height="120" Margin="40,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="imgAnh" ImageSource="/Avatar.jpg"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Label Content="Thông tin cá nhân" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1290"/>
+            <Label Content="Ảnh đại diện" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="40,80,0,0" VerticalAlignment="Top" Width="120" FontSize="16" FontFamily="Segoe UI Black" Height="40"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,260,0,0" VerticalAlignment="Top" Width="1290"/>
+            <Button x:Name="btnTaiAnhLen" Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="180,140,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}" Click="btnTaiAnhLen_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="180,185,0,0" VerticalAlignment="Top" Width="244"/>
+            <TextBox
+                    Text="{Binding TenCT, Mode=TwoWay}"
+                    materialDesign:HintAssist.Background="White"
+                    VerticalAlignment="Top"
+                    materialDesign:HintAssist.Hint="Tên công ty"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,280,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <TextBox
+                Text="{Binding DiaChi, Mode=TwoWay}"
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Địa chỉ"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Right" Margin="0,520,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <ComboBox 
+                Text ="{Binding LinhVuc, Mode=TwoWay}"
+                HorizontalAlignment="Left" Height="40" Margin="40,340,0,0" Width="585"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      materialDesign:HintAssist.Background="White"
+                      materialDesign:HintAssist.Hint="Lĩnh vực" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
+                <Label Content="Sản xuất và chế biến" Foreground="#555" FontSize="14"/>
+                <Label Content="Kiến trúc và xây dựng" Foreground="#555" FontSize="14"/>
+                <Label Content="Kinh doanh" Foreground="#555" FontSize="14"/>
+                <Label Content="Công nghệ thông tin" Foreground="#555" FontSize="14"/>
+                <Label Content="Luật - Nhân văn" Foreground="#555" FontSize="14"/>
+                <Label Content="Nghệ thuật - Thẩm mỹ - Đồ họa" Foreground="#555" FontSize="14"/>
+                <Label Content="Báo chí - Khoa học xã hội" Foreground="#555" FontSize="14"/>
+                <Label Content="Khoa học cơ bản" Foreground="#555" FontSize="14"/>
+                <Label Content="Sư phạm" Foreground="#555" FontSize="14"/>
+                <Label Content="Nông - Lâm - Ngư nghiệp" Foreground="#555" FontSize="14"/>
+            </ComboBox>
+            <TextBox
+                    Text="{Binding QuyMoNhanSu}"
+                 materialDesign:HintAssist.Background="White"
+                 VerticalAlignment="Top"
+                 materialDesign:HintAssist.Hint="Quy mô nhân sự"
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Right" Margin="0,400,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <ComboBox 
+                Text="{Binding TinhThanh, Mode=TwoWay}"
+                HorizontalAlignment="Right" Height="40" Margin="0,460,665,0" VerticalAlignment="Top" Width="585"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                materialDesign:HintAssist.Background="White"
+                materialDesign:HintAssist.Hint="Tỉnh/ Thành Phố" Padding="10,10,10,10" FontSize="14">
+                <Label Content="An Giang" Foreground="#555" FontSize="14"/>
+                <Label Content="Bà Rịa - Vũng Tàu" Foreground="#555" FontSize="14"/>
+                <Label Content="Bắc Giang" Foreground="#555" FontSize="14"/>
+                <Label Content="Bắc Kạn" Foreground="#555" FontSize="14"/>
+                <Label Content="Bạc Liêu" Foreground="#555" FontSize="14"/>
+                <Label Content="Bắc Ninh" Foreground="#555" FontSize="14"/>
+                <Label Content="Bến Tre" Foreground="#555" FontSize="14"/>
+                <Label Content="Bình Định" Foreground="#555" FontSize="14"/>
+                <Label Content="Bình Dương" Foreground="#555" FontSize="14"/>
+                <Label Content="Bình Phước" Foreground="#555" FontSize="14"/>
+                <Label Content="Bình Thuận" Foreground="#555" FontSize="14"/>
+                <Label Content="Cà Mau" Foreground="#555" FontSize="14"/>
+                <Label Content="Cần Thơ" Foreground="#555" FontSize="14"/>
+                <Label Content="Cao Bằng" Foreground="#555" FontSize="14"/>
+                <Label Content="Đà Nẵng" Foreground="#555" FontSize="14"/>
+                <Label Content="Đắk Lắk" Foreground="#555" FontSize="14"/>
+                <Label Content="Đắk Nông" Foreground="#555" FontSize="14"/>
+                <Label Content="Điện Biên" Foreground="#555" FontSize="14"/>
+                <Label Content="Đồng Nai" Foreground="#555" FontSize="14"/>
+                <Label Content="Đồng Tháp" Foreground="#555" FontSize="14"/>
+                <Label Content="Gia Lai" Foreground="#555" FontSize="14"/>
+                <Label Content="Hà Giang" Foreground="#555" FontSize="14"/>
+                <Label Content="Hà Nam" Foreground="#555" FontSize="14"/>
+                <Label Content="Hà Nội" Foreground="#555" FontSize="14"/>
+                <Label Content="Hà Tĩnh" Foreground="#555" FontSize="14"/>
+                <Label Content="Hải Dương" Foreground="#555" FontSize="14"/>
+                <Label Content="Hải Phòng" Foreground="#555" FontSize="14"/>
+                <Label Content="Hậu Giang" Foreground="#555" FontSize="14"/>
+                <Label Content="TP. Hồ CHí Minh" Foreground="#555" FontSize="14"/>
+                <Label Content="Hòa Bình" Foreground="#555" FontSize="14"/>
+                <Label Content="Hưng Yên" Foreground="#555" FontSize="14"/>
+                <Label Content="Khánh Hòa" Foreground="#555" FontSize="14"/>
+                <Label Content="Kiên Giang" Foreground="#555" FontSize="14"/>
+                <Label Content="Kon Tum" Foreground="#555" FontSize="14"/>
+                <Label Content="Lai Châu" Foreground="#555" FontSize="14"/>
+                <Label Content="Lâm Đồng" Foreground="#555" FontSize="14"/>
+                <Label Content="Lạng Sơn" Foreground="#555" FontSize="14"/>
+                <Label Content="Lào Cai" Foreground="#555" FontSize="14"/>
+                <Label Content="Long An" Foreground="#555" FontSize="14"/>
+                <Label Content="Nam Định" Foreground="#555" FontSize="14"/>
+                <Label Content="Nghệ An" Foreground="#555" FontSize="14"/>
+                <Label Content="Ninh Bình" Foreground="#555" FontSize="14"/>
+                <Label Content="Ninh Thuận" Foreground="#555" FontSize="14"/>
+                <Label Content="Phú Thọ" Foreground="#555" FontSize="14"/>
+                <Label Content="Phú Yên" Foreground="#555" FontSize="14"/>
+                <Label Content="Quảng Bình" Foreground="#555" FontSize="14"/>
+                <Label Content="Quảng Nam" Foreground="#555" FontSize="14"/>
+                <Label Content="Quảng Ngãi" Foreground="#555" FontSize="14"/>
+                <Label Content="Quảng Trị" Foreground="#555" FontSize="14"/>
+                <Label Content="Sóc Trăng" Foreground="#555" FontSize="14"/>
+                <Label Content="Sơn La" Foreground="#555" FontSize="14"/>
+                <Label Content="Tây Ninh" Foreground="#555" FontSize="14"/>
+                <Label Content="Thái Bình" Foreground="#555" FontSize="14"/>
+                <Label Content="Thái Nguyên" Foreground="#555" FontSize="14"/>
+                <Label Content="Thanh Hóa" Foreground="#555" FontSize="14"/>
+                <Label Content="Thừa Thiên Huế" Foreground="#555" FontSize="14"/>
+                <Label Content="Tiền Giang" Foreground="#555" FontSize="14"/>
+                <Label Content="Trà Vinh" Foreground="#555" FontSize="14"/>
+                <Label Content="Tuyên Quang" Foreground="#555" FontSize="14"/>
+                <Label Content="Vĩnh Long" Foreground="#555" FontSize="14"/>
+                <Label Content="Vĩnh Phúc" Foreground="#555" FontSize="14"/>
+                <Label Content="Yên Bái" Foreground="#555" FontSize="14"/>
+            </ComboBox>
+            <TextBox
+                Text="{Binding Link, Mode=TwoWay}"
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Đường link công ty"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,580,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <TextBox
+                Text="{Binding GPKD, Mode=TwoWay}"
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Giấy phép kinh doanh"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,640,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <Button x:Name="btnLuu" Content="Lưu" Height="40" Margin="0,700,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button Content="Hủy" Margin="0,700,220,30" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40">
+                <Button.Background>
+                    <SolidColorBrush Color="#FF560C81" Opacity="0.3"/>
+                </Button.Background>
+            </Button>
+            <TextBox
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Tên đăng nhập"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="399" Height="40" HorizontalAlignment="Left" Margin="665,110,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <PasswordBox 
+                Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" materialDesign:HintAssist.Hint="Mật khẩu"
+                HorizontalAlignment="Left" Height="40" Margin="665,170,0,0" VerticalAlignment="Top" Width="399" Padding="10,10,10,10" FontSize="14"/>
+            <Button Content="Sửa" Height="40" Margin="0,110,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <TextBox
+                    Text="{Binding MaSoThue, Mode=TwoWay}"
+                    materialDesign:HintAssist.Background="White"
+                    VerticalAlignment="Top"
+                    materialDesign:HintAssist.Hint="Mã số thuế"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,280,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <TextBox
+                    Text="{Binding HoTen, Mode=TwoWay}"
+                    materialDesign:HintAssist.Background="White"
+                    VerticalAlignment="Top"
+                    materialDesign:HintAssist.Hint="Họ và Tên"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,340,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <TextBox
+                    Text="{Binding Email,Mode=TwoWay}"
+                    materialDesign:HintAssist.Background="White"
+                    VerticalAlignment="Top"
+                    materialDesign:HintAssist.Hint="Email"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,400,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <TextBox
+                    Text="{Binding SDT,Mode=TwoWay}"
+                    materialDesign:HintAssist.Background="White"
+                    VerticalAlignment="Top"
+                    materialDesign:HintAssist.Hint="Số điện thoại"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,460,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <TextBox
+                Text="{Binding GT, Mode=TwoWay}"
+                TextWrapping="Wrap"
+                materialDesign:HintAssist.Background="White"
+                VerticalAlignment="Top"
+                materialDesign:HintAssist.Hint="Giới thiệu công ty"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="160" HorizontalAlignment="Left" Margin="665,520,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+        </Grid>
+    </Border>
+</UserControl>

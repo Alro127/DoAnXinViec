@@ -18,7 +18,6 @@
         </Border>
 
         <GroupBox
-            
             Margin="33,89,825,499"
             materialDesign:ColorZoneAssist.Background="Transparent"
             materialDesign:ColorZoneAssist.Foreground="White"
@@ -27,6 +26,7 @@
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold">
             <StackPanel Margin="0,0,0,-25">
                 <TextBox
+                     Text="{Binding HoTen, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
                      Height="55"
@@ -35,6 +35,7 @@
                      materialDesign:HintAssist.Hint="Họ và Tên"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <TextBox
+                    Text="{Binding SDT, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
                      Height="55"
@@ -43,6 +44,7 @@
                      materialDesign:HintAssist.Hint="Số điện thoại"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <TextBox
+                    Text="{Binding Email, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
                      Height="55"
@@ -68,6 +70,7 @@
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold">
             <StackPanel Margin="0,0,0,-9">
                 <TextBox
+                    Text="{Binding TenCT, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
                      Height="55"
@@ -76,30 +79,108 @@
                      materialDesign:HintAssist.Hint="Tên công ty"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <ComboBox
+                    Text="{Binding LinhVuc, Mode=TwoWay}"
                       materialDesign:ColorZoneAssist.Mode="Dark"
                       MinWidth="72"
                       Foreground="White"
                       materialDesign:HintAssist.FontFamily="Verdana"
                       materialDesign:HintAssist.Hint="Lĩnh vực"
                       ItemsSource="{Binding LongStringList}"
-                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="61" Panel.ZIndex="-5" FontSize="14" FontWeight="Bold" Padding="10,20,10,4" />
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="61" Panel.ZIndex="-5" FontSize="14" FontWeight="Bold" Padding="10,20,10,4" >
+                    <Label Content="Sản xuất và chế biến" Foreground="White" FontSize="14"/>
+                    <Label Content="Kiến trúc và xây dựng" Foreground="White" FontSize="14"/>
+                    <Label Content="Kinh doanh" Foreground="White" FontSize="14"/>
+                    <Label Content="Công nghệ thông tin" Foreground="White" FontSize="14"/>
+                    <Label Content="Luật - Nhân văn" Foreground="White" FontSize="14"/>
+                    <Label Content="Nghệ thuật - Thẩm mỹ - Đồ họa" Foreground="White" FontSize="14"/>
+                    <Label Content="Báo chí - Khoa học xã hội" Foreground="White" FontSize="14"/>
+                    <Label Content="Khoa học cơ bản" Foreground="White" FontSize="14"/>
+                    <Label Content="Sư phạm" Foreground="White" FontSize="14"/>
+                    <Label Content="Nông - Lâm - Ngư nghiệp" Foreground="White" FontSize="14"/>
+                </ComboBox>
+                <TextBox
+                      Text="{Binding QuyMoNhanSu, Mode=TwoWay}"
+                FontSize="14"
+                Width="666"
+                Height="55"
+                Foreground="White"
+                Padding="10,20,0,0"
+                materialDesign:HintAssist.Hint="Quy Mô Nhân sự"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <ComboBox
-                      materialDesign:ColorZoneAssist.Mode="Dark"
-                      MinWidth="72"
-                      Foreground="White"
-                      materialDesign:HintAssist.FontFamily="Verdana"
-                      materialDesign:HintAssist.Hint="Quy mô nhân sự"
-                      ItemsSource="{Binding LongStringList}"
-                      Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="60" Panel.ZIndex="-5" FontSize="14" FontWeight="Bold" Padding="10,20,10,4" />
-                <ComboBox
+                        Text="{Binding TinhThanh, Mode=TwoWay}"
                         MinWidth="72"
                         materialDesign:ColorZoneAssist.Mode="Dark"
                         Foreground="White"
                         materialDesign:HintAssist.FontFamily="Verdana"
                         materialDesign:HintAssist.Hint="Tỉnh/Thành"
                         ItemsSource="{Binding LongStringList}"
-                        Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="60" Panel.ZIndex="-5" FontSize="14" FontWeight="Bold" Padding="10,20,10,4" />
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="60" Panel.ZIndex="-5" FontSize="14" FontWeight="Bold" Padding="10,20,10,4" >
+                    <Label Content="An Giang" Foreground="White" FontSize="14"/>
+                    <Label Content="Bà Rịa - Vũng Tàu" Foreground="White" FontSize="14"/>
+                    <Label Content="Bắc Giang" Foreground="White" FontSize="14"/>
+                    <Label Content="Bắc Kạn" Foreground="White" FontSize="14"/>
+                    <Label Content="Bạc Liêu" Foreground="White" FontSize="14"/>
+                    <Label Content="Bắc Ninh" Foreground="White" FontSize="14"/>
+                    <Label Content="Bến Tre" Foreground="White" FontSize="14"/>
+                    <Label Content="Bình Định" Foreground="White" FontSize="14"/>
+                    <Label Content="Bình Dương" Foreground="White" FontSize="14"/>
+                    <Label Content="Bình Phước" Foreground="White" FontSize="14"/>
+                    <Label Content="Bình Thuận" Foreground="White" FontSize="14"/>
+                    <Label Content="Cà Mau" Foreground="White" FontSize="14"/>
+                    <Label Content="Cần Thơ" Foreground="White" FontSize="14"/>
+                    <Label Content="Cao Bằng" Foreground="White" FontSize="14"/>
+                    <Label Content="Đà Nẵng" Foreground="White" FontSize="14"/>
+                    <Label Content="Đắk Lắk" Foreground="White" FontSize="14"/>
+                    <Label Content="Đắk Nông" Foreground="White" FontSize="14"/>
+                    <Label Content="Điện Biên" Foreground="White" FontSize="14"/>
+                    <Label Content="Đồng Nai" Foreground="White" FontSize="14"/>
+                    <Label Content="Đồng Tháp" Foreground="White" FontSize="14"/>
+                    <Label Content="Gia Lai" Foreground="White" FontSize="14"/>
+                    <Label Content="Hà Giang" Foreground="White" FontSize="14"/>
+                    <Label Content="Hà Nam" Foreground="White" FontSize="14"/>
+                    <Label Content="Hà Nội" Foreground="White" FontSize="14"/>
+                    <Label Content="Hà Tĩnh" Foreground="White" FontSize="14"/>
+                    <Label Content="Hải Dương" Foreground="White" FontSize="14"/>
+                    <Label Content="Hải Phòng" Foreground="White" FontSize="14"/>
+                    <Label Content="Hậu Giang" Foreground="White" FontSize="14"/>
+                    <Label Content="TP. Hồ CHí Minh" Foreground="White" FontSize="14"/>
+                    <Label Content="Hòa Bình" Foreground="White" FontSize="14"/>
+                    <Label Content="Hưng Yên" Foreground="White" FontSize="14"/>
+                    <Label Content="Khánh Hòa" Foreground="White" FontSize="14"/>
+                    <Label Content="Kiên Giang" Foreground="White" FontSize="14"/>
+                    <Label Content="Kon Tum" Foreground="White" FontSize="14"/>
+                    <Label Content="Lai Châu" Foreground="White" FontSize="14"/>
+                    <Label Content="Lâm Đồng" Foreground="White" FontSize="14"/>
+                    <Label Content="Lạng Sơn" Foreground="White" FontSize="14"/>
+                    <Label Content="Lào Cai" Foreground="White" FontSize="14"/>
+                    <Label Content="Long An" Foreground="White" FontSize="14"/>
+                    <Label Content="Nam Định" Foreground="White" FontSize="14"/>
+                    <Label Content="Nghệ An" Foreground="White" FontSize="14"/>
+                    <Label Content="Ninh Bình" Foreground="White" FontSize="14"/>
+                    <Label Content="Ninh Thuận" Foreground="White" FontSize="14"/>
+                    <Label Content="Phú Thọ" Foreground="White" FontSize="14"/>
+                    <Label Content="Phú Yên" Foreground="White" FontSize="14"/>
+                    <Label Content="Quảng Bình" Foreground="White" FontSize="14"/>
+                    <Label Content="Quảng Nam" Foreground="White" FontSize="14"/>
+                    <Label Content="Quảng Ngãi" Foreground="White" FontSize="14"/>
+                    <Label Content="Quảng Trị" Foreground="White" FontSize="14"/>
+                    <Label Content="Sóc Trăng" Foreground="White" FontSize="14"/>
+                    <Label Content="Sơn La" Foreground="White" FontSize="14"/>
+                    <Label Content="Tây Ninh" Foreground="White" FontSize="14"/>
+                    <Label Content="Thái Bình" Foreground="White" FontSize="14"/>
+                    <Label Content="Thái Nguyên" Foreground="White" FontSize="14"/>
+                    <Label Content="Thanh Hóa" Foreground="White" FontSize="14"/>
+                    <Label Content="Thừa Thiên Huế" Foreground="White" FontSize="14"/>
+                    <Label Content="Tiền Giang" Foreground="White" FontSize="14"/>
+                    <Label Content="Trà Vinh" Foreground="White" FontSize="14"/>
+                    <Label Content="Tuyên Quang" Foreground="White" FontSize="14"/>
+                    <Label Content="Vĩnh Long" Foreground="White" FontSize="14"/>
+                    <Label Content="Vĩnh Phúc" Foreground="White" FontSize="14"/>
+                    <Label Content="Yên Bái" Foreground="White" FontSize="14"/>
+                </ComboBox>
                 <TextBox
+                    Text="{Binding DiaChi, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
                      Height="55"
@@ -108,6 +189,7 @@
                      materialDesign:HintAssist.Hint="Địa chỉ"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <TextBox
+                    Text="{Binding Link, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
                      Height="55"
@@ -118,21 +200,46 @@
             </StackPanel>
 
         </GroupBox>
-        <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Left" Height="602" VerticalAlignment="Top" Width="726" Margin="775,130,0,0">
+        <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Left" Height="117" VerticalAlignment="Top" Width="726" Margin="775,130,0,0">
             <Border.Background>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </Border.Background>
         </Border>
+        <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Left" Height="436" VerticalAlignment="Top" Width="726" Margin="775,296,0,0">
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.5"/>
+            </Border.Background>
+        </Border>
+        <StackPanel Height="110" Margin="0,137,49,0" Width="726" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <TextBox
+                Text="{Binding MaSoThue, Mode=TwoWay}"
+                 FontSize="14"
+                 Width="694"
+                 Height="52"
+                 Foreground="White"
+                 Padding="10,20,0,0"
+                 materialDesign:HintAssist.Hint="Mã số thuế"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBox
+                Text="{Binding GPKD, Mode=TwoWay}"
+                 FontSize="14"
+                 Width="694"
+                 Height="52"
+                 Foreground="White"
+                 Padding="10,20,0,0"
+                 materialDesign:HintAssist.Hint="Giấy phép kinh doanh"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+        </StackPanel>
         <GroupBox
     
-            Margin="775,89,49,80"
+            Margin="775,247,49,80"
             materialDesign:ColorZoneAssist.Background="Transparent"
             materialDesign:ColorZoneAssist.Foreground="White"
             materialDesign:ColorZoneAssist.Mode="Custom"
             Header="Giới thiệu công ty" 
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold">
             <RichTextBox 
-                Margin="0,0,0,-10" 
+                Margin="0,0,0,0" 
                 FontSize="16" 
                 FontWeight="Bold" 
                 Foreground="White" 
@@ -142,13 +249,18 @@
                 BorderBrush="{x:Null}"
                 materialDesign:HintAssist.Hint="Nhập giới thiệu công ty"
                 Background="{x:Null}">
-
+                <FlowDocument>
+                    <Paragraph>
+                        <TextBlock x:Name="tbGTCT" Text="{Binding GTCT, Mode=TwoWay}"/>
+                    </Paragraph>
+                </FlowDocument>
             </RichTextBox>
         </GroupBox>
         <Label 
             Content="ĐĂNG KÝ NHÀ TUYỂN DỤNG"
             HorizontalAlignment="Center"
             Height="50" Margin="643,34,633,730" FontSize="18" FontWeight="Bold" Foreground="#E5E0FFF9"/>
+        <Button x:Name="btnDangKy" Content="Đăng ký" Margin="1415,0,0,25" VerticalAlignment="Bottom" Click="btnDangKy_Click" HorizontalAlignment="Left" Width="86"/>
 
     </Grid>
 </Window>

@@ -19,9 +19,31 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WThongTinCongTy : Window
     {
+        CongTy congTy = new CongTy();
+        CongTyDAO congTyDAO = new CongTyDAO();
+        TaiKhoan taiKhoan;
+        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
         public WThongTinCongTy()
         {
             InitializeComponent();
+        }
+
+        public WThongTinCongTy(TaiKhoan taiKhoan)
+        {
+            InitializeComponent();
+            this.TaiKhoan = taiKhoan;
+            this.DataContext = congTy;
+        }
+
+        internal TaiKhoan TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+
+        private void btnDangKy_Click(object sender, RoutedEventArgs e)
+        {
+            congTy.Id = TaiKhoan.Id;
+            congTy.Anh = "";
+            congTy.GT = tbGTCT.Text;
+            congTyDAO.Them(congTy, "CTy");
+            taiKhoanDAO.SignUp(TaiKhoan);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,6 +20,7 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WDangKy : Window
     {
+        DBConnection dBConnection = new DBConnection();
         public WDangKy()
         {
             InitializeComponent();
@@ -26,14 +28,37 @@ namespace DoAnXinViec
 
         private void btnDangKyUngVien_Click(object sender, RoutedEventArgs e)
         {
-            WThongTinUngVien wThongTinUngVien = new WThongTinUngVien();
-            wThongTinUngVien.ShowDialog();
+            if (txtMatKhau.Password != txtXacNhanMatKhau.Password)
+            {
+                MessageBox.Show("Mật khẩu không khớp");
+                return;
+            }
+            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "uv");
+            if (!dBConnection.CheckSignUp(taiKhoan))
+            {
+                MessageBox.Show("Tài khoản đã tồn tại");
+                return;
+            }
+            WThongTinUngVien wthongTinUngVien = new WThongTinUngVien(taiKhoan);
+            wthongTinUngVien.ShowDialog();
         }
 
         private void btnDangKyCongTy_Click(object sender, RoutedEventArgs e)
         {
-            WThongTinCongTy wThongTinCongTy = new WThongTinCongTy();
-            wThongTinCongTy.ShowDialog();
+            if (txtMatKhau.Password != txtXacNhanMatKhau.Password)
+            {
+                MessageBox.Show("Mật khẩu không khớp");
+                return;
+            }
+
+            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "cty");
+            if (!dBConnection.CheckSignUp(taiKhoan))
+            {
+                MessageBox.Show("Tài khoản đã tồn tại");
+                return;
+            }
+            WThongTinCongTy wthongTinCongTy = new WThongTinCongTy(taiKhoan);
+            wthongTinCongTy.ShowDialog();
         }
     }
 }

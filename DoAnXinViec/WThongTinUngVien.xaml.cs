@@ -19,9 +19,31 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WThongTinUngVien : Window
     {
+        UngVienDAO ungVienDAO = new UngVienDAO();
+        UngVien ungVien = new UngVien();
+        TaiKhoan taiKhoan;
+        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
         public WThongTinUngVien()
         {
             InitializeComponent();
+        }
+        public WThongTinUngVien(TaiKhoan taiKhoan)
+        {
+            InitializeComponent();
+            this.TaiKhoan = taiKhoan;
+            this.DataContext = UngVien;
+        }
+
+        public TaiKhoan TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
+        public UngVien UngVien { get => ungVien; set => ungVien = value; }
+
+        private void btnDangKy_Click(object sender, RoutedEventArgs e)
+        {
+            ungVien.Id = taiKhoan.Id;
+            ungVien.Anh = "";
+            MessageBox.Show(ungVien.NgaySinh + "");
+            if (ungVienDAO.Them(ungVien, "UngVien") == true && taiKhoanDAO.SignUp(taiKhoan) == true)
+                MessageBox.Show("Thành công");
         }
     }
 }

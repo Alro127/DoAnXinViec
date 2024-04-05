@@ -30,10 +30,7 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.Don = don;
-            grbTenCV.Header = don.TenCV;
-            lblTenCT.Content = don.IdCT; //cho sua thanh ten cong ty
-            lblDiaDiem.Content = don.DiaDiem;
-            lblLuong.Content = don.Luong;
+            this.DataContext = Don;
             btnXem.Tag = don;
         }
 

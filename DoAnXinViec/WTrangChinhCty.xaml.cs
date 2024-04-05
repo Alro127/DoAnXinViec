@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,9 +11,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -25,64 +24,92 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WTrangChinhCty : Window
     {
-        string id = "CT1";
-        string tenCT = "tenCT";
-        UCDangDon uCDangDon = new UCDangDon();
-        UCDanhSachTin uCDanhSachTin = new UCDanhSachTin();
-        UCHoSoUngTuyen uCHoSoUngTuyen = new UCHoSoUngTuyen();
-        DonDAO donDAO = new DonDAO();
-        HoSoDAO hoSoDAO = new HoSoDAO();
-        public WTrangChinhCty()
+        CongTy congTy = new CongTy();
+        CongTyDAO congTyDAO = new CongTyDAO();
+        UCCapNhatThongTinCty uCCapNhatThongTinCty;
+
+        private void SetImage()
+        {
+            BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh);
+            if (bitmapImg != null)
+                imgAnh.ImageSource = bitmapImg;
+        }
+        public WTrangChinhCty(string id)
         {
             InitializeComponent();
-            uCHoSoUngTuyen.btnLuu.Click += new RoutedEventHandler(this.btnLuu_Click);
+            DataTable dt = congTyDAO.Get(id, "Cty");
+            if (dt.Rows.Count > 0)
+            {
+                Utility.SetItemFromRow(congTy, dt.Rows[0]);
+            }
+            else MessageBox.Show("Lỗi");
+            SetImage();
         }
-
-        private void btnDanhSachTin_Click(object sender, RoutedEventArgs e)
+        public WTrangChinhCty(CongTy congTy)
         {
+            InitializeComponent();
+            this.congTy = congTy;
+            SetImage();
+        }
+        private void WTrangChinhCTy_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataTable dt = congTyDAO.Get(congTy.Id, "Cty");
+            if (dt != null)
+                Utility.SetItemFromRow(congTy, dt.Rows[0]);
+            this.DataContext = congTy;
+        }
+        private void btnDanhSachTin_Click(object sender, RoutedEventArgs e)
+        {            
+            UCDanhSachTin uCDanhSachTin = new UCDanhSachTin(congTy);
+            uCDanhSachTin.btnLichSu.Click += new RoutedEventHandler(this.btnLichSu_Click);
             stMain.Children.Clear();
             stMain.Children.Add(uCDanhSachTin);
-            DataTable dt = donDAO.Load();
-            List<Don> listDon = new List<Don>();
-            foreach (DataRow dr in dt.Rows)
-            {
-                Don don = new Don();
-                Utility.SetItemFromRow(don,dr);             
-                listDon.Add(don);
-            }
-            uCDanhSachTin.lvDonTuyen.ItemsSource = listDon;
         }
-
+        private void btnLichSu_Click(object sender, RoutedEventArgs e)
+        {
+            UCLichSuDangDon uCLichSuDangDon = new UCLichSuDangDon(congTy);
+            stMain.Children.Clear();
+            stMain.Children.Add(uCLichSuDangDon);
+        }
         private void btnTaoTinDangTuyen_Click(object sender, RoutedEventArgs e)
         {
+            UCDangDon uCDangDon = new UCDangDon(congTy);
             stMain.Children.Clear();
             stMain.Children.Add(uCDangDon);
-            uCDangDon.btnDang.Click += new System.Windows.RoutedEventHandler(this.btnDang_Click);
         }
-        private void btnDang_Click(object sender, RoutedEventArgs e)
-        {
-            
-            Don don = new Don(0,uCDangDon.txtTenCV.Text, id, uCDangDon.cbDiaDiem.Text, int.Parse(uCDangDon.cbLuong.Text), DateTime.Now.Date, DateTime.ParseExact(uCDangDon.dtpNgayToiHan.Text, "dd/MM/yyyy", null).Date, uCDangDon.txtMoTaCV.Text, uCDangDon.txtYeuCau.Text, uCDangDon.txtQuyenLoi.Text,0,0);
-            donDAO.Them(don);
-        }
-
         private void btnHoSoUngTuyen_Click(object sender, RoutedEventArgs e)
         {
+            UCHoSoUngTuyen uCHoSoUngTuyen = new UCHoSoUngTuyen(congTy);
             stMain.Children.Clear();
             stMain.Children.Add(uCHoSoUngTuyen);
-            DataTable dt = hoSoDAO.LoadForCT(id);
-            List <HoSo> listHoSo = new List <HoSo>();
-            foreach (DataRow dr in dt.Rows)
-            {
-                HoSo hoSo = new HoSo();
-                Utility.SetItemFromRow(hoSo, dr);
-                listHoSo.Add(hoSo);
-            }
-            uCHoSoUngTuyen.lvHoSoUngTuyen.ItemsSource = listHoSo;
+        }
+        private void btnTimKiemUngVien_Click(object sender, RoutedEventArgs e)
+        {
+            WTimUngVien wTimUngVien = new WTimUngVien(congTy);
+            wTimUngVien.ShowDialog();
+        }
+        private void btnHoSoDaThich_Click(object sender, RoutedEventArgs e)
+        {
+            UCCVYeuThich uCCVYeuThich = new UCCVYeuThich(congTy);
+            
+            stMain.Children.Clear();
+            stMain.Children.Add(uCCVYeuThich);
+        }
+
+        private void btnCapNhatThongTin_Click(object sender, RoutedEventArgs e)
+        {
+            uCCapNhatThongTinCty = new UCCapNhatThongTinCty(congTy);
+            uCCapNhatThongTinCty.btnLuu.Click += new RoutedEventHandler(this.btnLuu_Click);
+            stMain.Children.Clear();
+            stMain.Children.Add(uCCapNhatThongTinCty);
         }
         private void btnLuu_Click(object sender, RoutedEventArgs e)
         {
-              
+            congTy = uCCapNhatThongTinCty.CongTy;
+            SetImage();
+            UngVienDAO ungVienDAO = new UngVienDAO();
+            if (ungVienDAO.CapNhat(congTy, "CTy") == true)
+                System.Windows.MessageBox.Show("ThanhCong");
         }
     } 
 }

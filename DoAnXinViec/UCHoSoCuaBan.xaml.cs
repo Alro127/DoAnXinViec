@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,45 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCHoSoCuaBan : UserControl
     {
-        public UCHoSoCuaBan()
+        UngVien ungVien;
+        UngVien tempUngVien;
+        UngVienDAO ungVienDAO = new UngVienDAO();
+        CV cv = new CV();
+        CVDAO cvDAO = new CVDAO();
+        private void SetImage()
+        {
+            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh);
+            if (bitmapImg != null)
+                imgAnh.ImageSource = bitmapImg;
+        }    
+        public UCHoSoCuaBan(UngVien ungVien)
         {
             InitializeComponent();
+            this.ungVien = ungVien;
+            this.tempUngVien = new UngVien(ungVien);
+            this.tbiThongTinCaNhan.DataContext = tempUngVien;
+            this.tbcHoSoCuaBan.DataContext = cv;
+            SetImage();
+        }
+        private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
+        {
+            this.ungVien = new UngVien(tempUngVien);
+            ungVienDAO.CapNhat(ungVien, "UngVien");
+            cv.NgayDang = DateTime.Now.Date;
+            cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            cv.UngVien = ungVien;
+            cv.IdUV = ungVien.Id;
+            cvDAO.Them(cv);
+        }
+
+        private void btnXemTruoc_Click(object sender, RoutedEventArgs e)
+        {
+            cv.NgayDang = DateTime.Now.Date;
+            cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            cv.UngVien = tempUngVien;
+            cv.IdUV = tempUngVien.Id;
+            WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+            wCVChiTiet.ShowDialog();
         }
     }
 }
