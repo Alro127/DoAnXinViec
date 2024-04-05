@@ -19,6 +19,18 @@ namespace DoAnXinViec
 
 
         public CongTy() { }
+        public CongTy(CongTy congTy)
+        {
+            var properties = typeof(CongTy).GetProperties();
+
+            foreach (var property in properties)
+            {
+                if (property.CanWrite)
+                {
+                    property.SetValue(this, property.GetValue(congTy));
+                }
+            }
+        }
         public CongTy(string id, string hoTen, string sDT, string email, string tenCT, string maSoThue, string gPKD, string linhVuc, int quyMoNhanSu, string tinhThanh, string diaChi, string link, string gT, string anh): base(id, hoTen, tinhThanh, diaChi, sDT, email, gT, anh)
         {
             this.tenCT = tenCT;

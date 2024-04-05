@@ -26,9 +26,13 @@ namespace DoAnXinViec
     {
         CongTy congTy = new CongTy();
         CongTyDAO congTyDAO = new CongTyDAO();
-        public WTrangChinhCty()
+        UCCapNhatThongTinCty uCCapNhatThongTinCty;
+
+        private void SetImage()
         {
-            InitializeComponent();
+            BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh);
+            if (bitmapImg != null)
+                imgAnh.ImageSource = bitmapImg;
         }
         public WTrangChinhCty(string id)
         {
@@ -39,11 +43,13 @@ namespace DoAnXinViec
                 Utility.SetItemFromRow(congTy, dt.Rows[0]);
             }
             else MessageBox.Show("Lỗi");
+            SetImage();
         }
         public WTrangChinhCty(CongTy congTy)
         {
             InitializeComponent();
             this.congTy = congTy;
+            SetImage();
         }
         private void WTrangChinhCTy_Loaded(object sender, RoutedEventArgs e)
         {
@@ -88,6 +94,22 @@ namespace DoAnXinViec
             
             stMain.Children.Clear();
             stMain.Children.Add(uCCVYeuThich);
+        }
+
+        private void btnCapNhatThongTin_Click(object sender, RoutedEventArgs e)
+        {
+            uCCapNhatThongTinCty = new UCCapNhatThongTinCty(congTy);
+            uCCapNhatThongTinCty.btnLuu.Click += new RoutedEventHandler(this.btnLuu_Click);
+            stMain.Children.Clear();
+            stMain.Children.Add(uCCapNhatThongTinCty);
+        }
+        private void btnLuu_Click(object sender, RoutedEventArgs e)
+        {
+            congTy = uCCapNhatThongTinCty.CongTy;
+            SetImage();
+            UngVienDAO ungVienDAO = new UngVienDAO();
+            if (ungVienDAO.CapNhat(congTy, "CTy") == true)
+                System.Windows.MessageBox.Show("ThanhCong");
         }
     } 
 }

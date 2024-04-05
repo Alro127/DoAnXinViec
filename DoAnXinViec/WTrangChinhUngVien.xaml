@@ -39,7 +39,7 @@
                 </StackPanel>
                 <Ellipse Width="150" Height="150" Margin="0,38,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Ellipse.Fill>
-                        <ImageBrush x:Name="imgAnh" ImageSource="{Binding Anh, UpdateSourceTrigger=PropertyChanged}" />
+                        <ImageBrush x:Name="imgAnh" ImageSource="/Avatar.jpg"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Label Content="{Binding HoTen}" HorizontalAlignment="Center" Height="30" Margin="0,200,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="16"/>

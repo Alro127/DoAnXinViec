@@ -2,24 +2,24 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="UCCapNhatThongTinCty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UCViecDaUngTuyen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WDanhSachUVTheoDon.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Window1.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="UCCapNhatThongTinCty.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UCViecDaUngTuyen.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WDanhSachUVTheoDon.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

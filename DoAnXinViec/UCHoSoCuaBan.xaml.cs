@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,10 +26,12 @@ namespace DoAnXinViec
         UngVienDAO ungVienDAO = new UngVienDAO();
         CV cv = new CV();
         CVDAO cvDAO = new CVDAO();
-        public UCHoSoCuaBan()
+        private void SetImage()
         {
-            InitializeComponent();
-        }
+            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh);
+            if (bitmapImg != null)
+                imgAnh.ImageSource = bitmapImg;
+        }    
         public UCHoSoCuaBan(UngVien ungVien)
         {
             InitializeComponent();
@@ -36,6 +39,7 @@ namespace DoAnXinViec
             this.tempUngVien = new UngVien(ungVien);
             this.tbiThongTinCaNhan.DataContext = tempUngVien;
             this.tbcHoSoCuaBan.DataContext = cv;
+            SetImage();
         }
         private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
         {

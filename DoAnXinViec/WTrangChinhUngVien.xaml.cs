@@ -20,28 +20,26 @@ namespace DoAnXinViec
     {
         UngVien ungVien;
         UCChinhSuaThongTinCaNhan uCChinhSuaThongTinCaNhan;
-        public WTrangChinhUngVien()
-        {
-            InitializeComponent();
-        }
         public WTrangChinhUngVien(UngVien ungVien)
         {
             InitializeComponent();
             this.ungVien = ungVien;
             this.DataContext = ungVien;
+            imgAnh.ImageSource = ImageHandler.SetImage(ungVien.Anh);
         }
-        //Tạm để đợi tìm cách làm bên xaml
+        private void SetImage()
+        {
+            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh);
+            if (bitmapImg != null)
+                imgAnh.ImageSource = bitmapImg;
+        }
         private void btnLuu_Click(object sender, RoutedEventArgs e)
         {
             ungVien = uCChinhSuaThongTinCaNhan.UngVien;
-            if (!File.Exists(uCChinhSuaThongTinCaNhan.NewImagePath))
-            {
-                File.Copy(ungVien.Anh,uCChinhSuaThongTinCaNhan.NewImagePath);
-            }
+            SetImage();
             UngVienDAO ungVienDAO = new UngVienDAO();
             if (ungVienDAO.CapNhat(ungVien, "UngVien") == true)
                 System.Windows.MessageBox.Show("ThanhCong");
-            this.imgAnh.ImageSource = new BitmapImage(new Uri(ungVien.Anh));
         }
         private void btnChinhSuaThongTinCaNhan_Click(object sender, RoutedEventArgs e)
         {

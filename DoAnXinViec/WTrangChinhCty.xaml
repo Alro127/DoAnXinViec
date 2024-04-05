@@ -37,13 +37,13 @@
                     </Expander>
                     <Expander Header="Cài đặt chung" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background ="White"  FontSize="14" >
                         <StackPanel>
-                            <Button x:Name="btnCapNhatThongTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Cập nhật thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
+                            <Button x:Name="btnCapNhatThongTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Cập nhật thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnCapNhatThongTin_Click"/>
                         </StackPanel>
                     </Expander>
                 </StackPanel>
                 <Ellipse Width="150" Height="150" Margin="38,38,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="{Binding Anh}" />
+                        <ImageBrush x:Name="imgAnh" ImageSource="/Avatar.jpg" />
                     </Ellipse.Fill>
                 </Ellipse>
                 <Label Content="{Binding TenCT}" HorizontalAlignment="Left" Height="30" Margin="38,200,0,0" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="16"/>
