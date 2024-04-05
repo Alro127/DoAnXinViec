@@ -21,6 +21,7 @@ namespace DoAnXinViec
     public partial class WDangKy : Window
     {
         DBConnection dBConnection = new DBConnection();
+        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
         public WDangKy()
         {
             InitializeComponent();
@@ -28,6 +29,10 @@ namespace DoAnXinViec
 
         private void btnDangKyUngVien_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(txtTenDangNhap.Text) || string.IsNullOrEmpty(txtMatKhau.Password) || string.IsNullOrEmpty(txtXacNhanMatKhau.Password))
+            {
+                return;
+            }
             if (txtMatKhau.Password != txtXacNhanMatKhau.Password)
             {
                 MessageBox.Show("Mật khẩu không khớp");
@@ -45,6 +50,11 @@ namespace DoAnXinViec
 
         private void btnDangKyCongTy_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(txtTenDangNhap.Text) || string.IsNullOrEmpty(txtMatKhau.Password) || string.IsNullOrEmpty(txtXacNhanMatKhau.Password))
+            {
+                return;
+            }
+
             if (txtMatKhau.Password != txtXacNhanMatKhau.Password)
             {
                 MessageBox.Show("Mật khẩu không khớp");

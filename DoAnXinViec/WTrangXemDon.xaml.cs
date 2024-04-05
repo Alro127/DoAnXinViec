@@ -53,6 +53,9 @@ namespace DoAnXinViec
                     && (ucTrangTimViec.cbLuong.Text == ""))
                 {
                     UCDon uCDon = new UCDon(don);
+                    BitmapImage bitmapImg = ImageHandler.SetImage(don.Anh);
+                    if (bitmapImg != null)
+                        uCDon.imgAnh.Source = bitmapImg;
                     ucTrangTimViec.wpDon.Children.Add(uCDon);
                     uCDon.btnXem.Click += new RoutedEventHandler(this.btnXem_Click);
                 }

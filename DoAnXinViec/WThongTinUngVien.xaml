@@ -14,41 +14,41 @@
         <Grid HorizontalAlignment="Center" Height="379" VerticalAlignment="Center" Width="464">
             <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Center" Height="342" VerticalAlignment="Top" Width="464" Margin="0,37,0,0">
                 <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.5"/>
+                    <SolidColorBrush Color="White"/>
                 </Border.Background>
             </Border>
             <StackPanel RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Margin="0,37,0,0" Width="444">
                 <TextBox
                      x:Name="txtHoten"
-                    Text="{Binding HoTen, Mode=TwoWay}"
+                     Text="{Binding HoTen, Mode=TwoWay}"
                      FontSize="14"
                      Width="443"
                      Height="55"
-                     Foreground="White"
+                     Foreground="#555"
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Họ và Tên"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                 <ComboBox
                       x:Name="cbGioitinh"
                       Text="{Binding GioiTinh, Mode=TwoWay}"
-                      materialDesign:ColorZoneAssist.Mode="Dark"
+                      materialDesign:ColorZoneAssist.Mode="Light"
                       MinWidth="72"
-                      Foreground="White"
+                      Foreground="#555"
                       materialDesign:HintAssist.FontFamily="Verdana"
                       materialDesign:HintAssist.Hint="Giới tính"
                       ItemsSource="{Binding LongStringList}"
                       Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="55" Panel.ZIndex="-5" Padding="10,20,10,4" FontSize="14" >
-                    <Label Content="Nam" Foreground="White" FontSize="14"/>
-                    <Label Content="Nữ" Foreground="White" FontSize="14"/>
-                    <Label Content="Khác" Foreground="White" FontSize="14"/>
+                    <Label Content="Nam" Foreground="#555" FontSize="14"/>
+                    <Label Content="Nữ" Foreground="#555" FontSize="14"/>
+                    <Label Content="Khác" Foreground="#555" FontSize="14"/>
                 </ComboBox>
                 <WrapPanel>
                     <DatePicker
                       x:Name="dtpNgaysinh"
-                      SelectedDate="{Binding NgaySinh, Mode=TwoWay}"
+                      Text="{Binding NgaySinh, Mode=TwoWay}"
                       HorizontalAlignment="Left"
                       Width="157"
-                      materialDesign:HintAssist.Hint="Chọn ngày sinh" Foreground="White" Padding="10,20,0,4" FontSize="14" Height="58">
+                      materialDesign:HintAssist.Hint="Chọn ngày sinh" Foreground="#555" Padding="10,20,0,4" FontSize="14" Height="58">
                         <DatePicker.Resources>
                             <Style
                               x:Key="CustomCalendarDayButton"
@@ -56,7 +56,7 @@
                               BasedOn="{StaticResource MaterialDesignCalendarDayButton}">
                                 <Setter
                                 Property="materialDesign:CalendarAssist.SelectionColor"
-                                Value="White" />
+                                Value="#6675df" />
                                 <Setter
                                 Property="materialDesign:CalendarAssist.SelectionForegroundColor"
                                 Value="White" />
@@ -78,7 +78,7 @@
                               BasedOn="{StaticResource MaterialDesignDatePickerCalendarPortrait}">
                                 <Setter
                                 Property="Background"
-                                Value="#343C3F" />
+                                Value="White" />
                                 <Setter
                                 Property="CalendarButtonStyle"
                                 Value="{StaticResource CustomCalendarButton}" />
@@ -90,7 +90,7 @@
                                 Value="White" />
                                 <Setter
                                 Property="materialDesign:CalendarAssist.HeaderBackground"
-                                Value="Purple" />
+                                Value="#6675df" />
                                 <Setter
                                 Property="materialDesign:CalendarAssist.HeaderForeground"
                                 Value="White" />
@@ -108,75 +108,75 @@
                       x:Name="cbTinhThanh"
                       Text="{Binding TinhThanh, Mode=TwoWay}"
                       Margin="5,0,0,0"
-                      materialDesign:ColorZoneAssist.Mode="Dark"
+                      materialDesign:ColorZoneAssist.Mode="Light"
                       MinWidth="72"
-                      Foreground="White"
+                      Foreground="#555"
                       materialDesign:HintAssist.FontFamily="Verdana"
                       materialDesign:HintAssist.Hint="Tỉnh / Thành phố"
                       ItemsSource="{Binding LongStringList}"
                       Style="{StaticResource MaterialDesignFloatingHintComboBox}" Height="58" Panel.ZIndex="-5" Padding="10,20,10,4" FontSize="14" Width="277" >
-                        <Label Content="An Giang" Foreground="White" FontSize="14"/>
-                        <Label Content="Bà Rịa - Vũng Tàu" Foreground="White" FontSize="14"/>
-                        <Label Content="Bắc Giang" Foreground="White" FontSize="14"/>
-                        <Label Content="Bắc Kạn" Foreground="White" FontSize="14"/>
-                        <Label Content="Bạc Liêu" Foreground="White" FontSize="14"/>
-                        <Label Content="Bắc Ninh" Foreground="White" FontSize="14"/>
-                        <Label Content="Bến Tre" Foreground="White" FontSize="14"/>
-                        <Label Content="Bình Định" Foreground="White" FontSize="14"/>
-                        <Label Content="Bình Dương" Foreground="White" FontSize="14"/>
-                        <Label Content="Bình Phước" Foreground="White" FontSize="14"/>
-                        <Label Content="Bình Thuận" Foreground="White" FontSize="14"/>
-                        <Label Content="Cà Mau" Foreground="White" FontSize="14"/>
-                        <Label Content="Cần Thơ" Foreground="White" FontSize="14"/>
-                        <Label Content="Cao Bằng" Foreground="White" FontSize="14"/>
-                        <Label Content="Đà Nẵng" Foreground="White" FontSize="14"/>
-                        <Label Content="Đắk Lắk" Foreground="White" FontSize="14"/>
-                        <Label Content="Đắk Nông" Foreground="White" FontSize="14"/>
-                        <Label Content="Điện Biên" Foreground="White" FontSize="14"/>
-                        <Label Content="Đồng Nai" Foreground="White" FontSize="14"/>
-                        <Label Content="Đồng Tháp" Foreground="White" FontSize="14"/>
-                        <Label Content="Gia Lai" Foreground="White" FontSize="14"/>
-                        <Label Content="Hà Giang" Foreground="White" FontSize="14"/>
-                        <Label Content="Hà Nam" Foreground="White" FontSize="14"/>
-                        <Label Content="Hà Nội" Foreground="White" FontSize="14"/>
-                        <Label Content="Hà Tĩnh" Foreground="White" FontSize="14"/>
-                        <Label Content="Hải Dương" Foreground="White" FontSize="14"/>
-                        <Label Content="Hải Phòng" Foreground="White" FontSize="14"/>
-                        <Label Content="Hậu Giang" Foreground="White" FontSize="14"/>
-                        <Label Content="TP. Hồ CHí Minh" Foreground="White" FontSize="14"/>
-                        <Label Content="Hòa Bình" Foreground="White" FontSize="14"/>
-                        <Label Content="Hưng Yên" Foreground="White" FontSize="14"/>
-                        <Label Content="Khánh Hòa" Foreground="White" FontSize="14"/>
-                        <Label Content="Kiên Giang" Foreground="White" FontSize="14"/>
-                        <Label Content="Kon Tum" Foreground="White" FontSize="14"/>
-                        <Label Content="Lai Châu" Foreground="White" FontSize="14"/>
-                        <Label Content="Lâm Đồng" Foreground="White" FontSize="14"/>
-                        <Label Content="Lạng Sơn" Foreground="White" FontSize="14"/>
-                        <Label Content="Lào Cai" Foreground="White" FontSize="14"/>
-                        <Label Content="Long An" Foreground="White" FontSize="14"/>
-                        <Label Content="Nam Định" Foreground="White" FontSize="14"/>
-                        <Label Content="Nghệ An" Foreground="White" FontSize="14"/>
-                        <Label Content="Ninh Bình" Foreground="White" FontSize="14"/>
-                        <Label Content="Ninh Thuận" Foreground="White" FontSize="14"/>
-                        <Label Content="Phú Thọ" Foreground="White" FontSize="14"/>
-                        <Label Content="Phú Yên" Foreground="White" FontSize="14"/>
-                        <Label Content="Quảng Bình" Foreground="White" FontSize="14"/>
-                        <Label Content="Quảng Nam" Foreground="White" FontSize="14"/>
-                        <Label Content="Quảng Ngãi" Foreground="White" FontSize="14"/>
-                        <Label Content="Quảng Trị" Foreground="White" FontSize="14"/>
-                        <Label Content="Sóc Trăng" Foreground="White" FontSize="14"/>
-                        <Label Content="Sơn La" Foreground="White" FontSize="14"/>
-                        <Label Content="Tây Ninh" Foreground="White" FontSize="14"/>
-                        <Label Content="Thái Bình" Foreground="White" FontSize="14"/>
-                        <Label Content="Thái Nguyên" Foreground="White" FontSize="14"/>
-                        <Label Content="Thanh Hóa" Foreground="White" FontSize="14"/>
-                        <Label Content="Thừa Thiên Huế" Foreground="White" FontSize="14"/>
-                        <Label Content="Tiền Giang" Foreground="White" FontSize="14"/>
-                        <Label Content="Trà Vinh" Foreground="White" FontSize="14"/>
-                        <Label Content="Tuyên Quang" Foreground="White" FontSize="14"/>
-                        <Label Content="Vĩnh Long" Foreground="White" FontSize="14"/>
-                        <Label Content="Vĩnh Phúc" Foreground="White" FontSize="14"/>
-                        <Label Content="Yên Bái" Foreground="White" FontSize="14"/>
+                        <Label Content="An Giang" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bà Rịa - Vũng Tàu" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bắc Giang" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bắc Kạn" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bạc Liêu" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bắc Ninh" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bến Tre" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bình Định" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bình Dương" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bình Phước" Foreground="#555" FontSize="14"/>
+                        <Label Content="Bình Thuận" Foreground="#555" FontSize="14"/>
+                        <Label Content="Cà Mau" Foreground="#555" FontSize="14"/>
+                        <Label Content="Cần Thơ" Foreground="#555" FontSize="14"/>
+                        <Label Content="Cao Bằng" Foreground="#555" FontSize="14"/>
+                        <Label Content="Đà Nẵng" Foreground="#555" FontSize="14"/>
+                        <Label Content="Đắk Lắk" Foreground="#555" FontSize="14"/>
+                        <Label Content="Đắk Nông" Foreground="#555" FontSize="14"/>
+                        <Label Content="Điện Biên" Foreground="#555" FontSize="14"/>
+                        <Label Content="Đồng Nai" Foreground="#555" FontSize="14"/>
+                        <Label Content="Đồng Tháp" Foreground="#555" FontSize="14"/>
+                        <Label Content="Gia Lai" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hà Giang" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hà Nam" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hà Nội" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hà Tĩnh" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hải Dương" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hải Phòng" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hậu Giang" Foreground="#555" FontSize="14"/>
+                        <Label Content="TP. Hồ CHí Minh" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hòa Bình" Foreground="#555" FontSize="14"/>
+                        <Label Content="Hưng Yên" Foreground="#555" FontSize="14"/>
+                        <Label Content="Khánh Hòa" Foreground="#555" FontSize="14"/>
+                        <Label Content="Kiên Giang" Foreground="#555" FontSize="14"/>
+                        <Label Content="Kon Tum" Foreground="#555" FontSize="14"/>
+                        <Label Content="Lai Châu" Foreground="#555" FontSize="14"/>
+                        <Label Content="Lâm Đồng" Foreground="#555" FontSize="14"/>
+                        <Label Content="Lạng Sơn" Foreground="#555" FontSize="14"/>
+                        <Label Content="Lào Cai" Foreground="#555" FontSize="14"/>
+                        <Label Content="Long An" Foreground="#555" FontSize="14"/>
+                        <Label Content="Nam Định" Foreground="#555" FontSize="14"/>
+                        <Label Content="Nghệ An" Foreground="#555" FontSize="14"/>
+                        <Label Content="Ninh Bình" Foreground="#555" FontSize="14"/>
+                        <Label Content="Ninh Thuận" Foreground="#555" FontSize="14"/>
+                        <Label Content="Phú Thọ" Foreground="#555" FontSize="14"/>
+                        <Label Content="Phú Yên" Foreground="#555" FontSize="14"/>
+                        <Label Content="Quảng Bình" Foreground="#555" FontSize="14"/>
+                        <Label Content="Quảng Nam" Foreground="#555" FontSize="14"/>
+                        <Label Content="Quảng Ngãi" Foreground="#555" FontSize="14"/>
+                        <Label Content="Quảng Trị" Foreground="#555" FontSize="14"/>
+                        <Label Content="Sóc Trăng" Foreground="#555" FontSize="14"/>
+                        <Label Content="Sơn La" Foreground="#555" FontSize="14"/>
+                        <Label Content="Tây Ninh" Foreground="#555" FontSize="14"/>
+                        <Label Content="Thái Bình" Foreground="#555" FontSize="14"/>
+                        <Label Content="Thái Nguyên" Foreground="#555" FontSize="14"/>
+                        <Label Content="Thanh Hóa" Foreground="#555" FontSize="14"/>
+                        <Label Content="Thừa Thiên Huế" Foreground="#555" FontSize="14"/>
+                        <Label Content="Tiền Giang" Foreground="#555" FontSize="14"/>
+                        <Label Content="Trà Vinh" Foreground="#555" FontSize="14"/>
+                        <Label Content="Tuyên Quang" Foreground="#555" FontSize="14"/>
+                        <Label Content="Vĩnh Long" Foreground="#555" FontSize="14"/>
+                        <Label Content="Vĩnh Phúc" Foreground="#555" FontSize="14"/>
+                        <Label Content="Yên Bái" Foreground="#555" FontSize="14"/>
                     </ComboBox>
                 </WrapPanel>
                 <TextBox
@@ -185,7 +185,7 @@
                      FontSize="14"
                      Width="441"
                      Height="55"
-                     Foreground="White"
+                     Foreground="#555"
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Địa chỉ"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -195,7 +195,7 @@
                      FontSize="14"
                      Width="441"
                      Height="55"
-                     Foreground="White"
+                     Foreground="#555"
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Số điện thoại"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -205,7 +205,7 @@
                      FontSize="14"
                      Width="444"
                      Height="55"
-                     Foreground="White"
+                     Foreground="#555"
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Email"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
@@ -213,7 +213,7 @@
             <Label 
             VerticalAlignment="Top"
             Content="ĐĂNG KÝ ỨNG VIÊN"
-            HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Foreground="#E5E0FFF9"/>
+            HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Foreground="White"/>
         </Grid>
         <Button x:Name="btnDangKy" Content="Đăng ký" HorizontalAlignment="Left" Margin="676,0,0,17" VerticalAlignment="Bottom" Click="btnDangKy_Click"/>
     </Grid>

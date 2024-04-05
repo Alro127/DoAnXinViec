@@ -20,15 +20,14 @@ namespace DoAnXinViec
     public partial class WCVChiTiet : Window
     {
         CV cv;
-        public WCVChiTiet()
-        {
-            InitializeComponent();
-        }
         public WCVChiTiet(CV cv)
         {
             InitializeComponent();
             this.Cv = cv;
             this.DataContext = Cv;
+            BitmapImage bitmapImg = ImageHandler.SetImage(Cv.UngVien.Anh);
+            if (bitmapImg != null)
+                imgAnh.ImageSource = bitmapImg;
         }
 
         public CV Cv { get => cv; set => cv = value; }
