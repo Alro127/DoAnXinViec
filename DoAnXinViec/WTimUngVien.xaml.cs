@@ -45,7 +45,7 @@ namespace DoAnXinViec
             Utility.SetItemFromRow(ungVien, dt.Rows[0]);
             cv.UngVien = ungVien;
             UCCV ucCV = new UCCV(cv);
-            ucCV.Tag = cv;
+            ucCV.DataContext = cv;
             ucCV.MouseDoubleClick += new MouseButtonEventHandler(this.UCCV_Click);
             ucCV.btnYeuThich.Click += new RoutedEventHandler(this.btnYeuThich_Click);
             ucCV.btnYeuThich.Tag = cv.Id;
@@ -54,12 +54,16 @@ namespace DoAnXinViec
                 ucCV.btnYeuThich.IsChecked = true;
             else
                 ucCV.btnYeuThich.IsChecked= false;
+
+            BitmapImage bitmapImg = ImageHandler.SetImage(cv.UngVien.Anh);
+            if (bitmapImg != null)
+                ucCV.imgAnh.Source = bitmapImg;
             ucTrangTimViec.wpDon.Children.Add(ucCV);
         }
 
         void UCCV_Click(object sender, MouseButtonEventArgs e)
         {
-            WCVChiTiet wCVChiTiet = new WCVChiTiet((CV)(sender as UCCV).Tag);
+            WCVChiTiet wCVChiTiet = new WCVChiTiet((CV)(sender as UCCV).DataContext);
             wCVChiTiet.ShowDialog();
         }
         void btnYeuThich_Click(object sender, RoutedEventArgs e)
