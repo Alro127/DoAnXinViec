@@ -24,16 +24,20 @@
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Mô tả công việc"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="390" HorizontalAlignment="Right" Margin="0,340,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
-            <ComboBox x:Name="cbLuong" HorizontalAlignment="Left" Height="40" Margin="40,160,0,0" Width="585"
+            <ComboBox x:Name="cbLuong" HorizontalAlignment="Left" Height="40" Margin="40,160,0,0" Width="280"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 IsEditable="True"
                 materialDesign:HintAssist.Background="White"
                 materialDesign:HintAssist.Hint="Mức lương" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" KeyUp="cbLuong_KeyUp" SelectionChanged="cbLuong_SelectionChanged">
-                <Label Content="5000000" Foreground="Black" FontSize="14"/>
-                <Label Content="10000000" Foreground="Black" FontSize="14"/>
-                <Label Content="15000000" Foreground="Black" FontSize="14"/>
-                <Label Content="20000000" Foreground="Black" FontSize="14"/>
-                <Label Content="30000000" Foreground="Black" FontSize="14"/>
+                <Label Content="Dưới 5 triệu" Foreground="Black" FontSize="14"/>
+                <Label Content="5 - 10 triệu" Foreground="Black" FontSize="14"/>
+                <Label Content="10 - 20 triệu" Foreground="Black" FontSize="14"/>
+                <Label Content="Trên 20 triệu" Foreground="Black" FontSize="14"/>
+                <WrapPanel x:Name="wpKhoangLuong">
+                    <TextBox x:Name="txtMinLuong" materialDesign:HintAssist.Hint="Min (triệu)" Width="100"/>
+                    <TextBlock Text=" - " Width="45" TextAlignment="Center" />
+                    <TextBox x:Name="txtMaxLuong" materialDesign:HintAssist.Hint="Max (triệu)" Width="100"/>
+                </WrapPanel>
             </ComboBox>
             <DatePicker x:Name="dtpNgayToiHan" HorizontalAlignment="Right" Height="40" Margin="0,280,665,0" VerticalAlignment="Top" Width="585"
                 Style="{StaticResource MaterialDesignOutlinedDatePicker}"
@@ -123,6 +127,20 @@
             <local:UCDon x:Name="ucDon" HorizontalAlignment="Right" Margin="0,140,112.5,0" VerticalAlignment="Top" IsEnabled="False"/>
             <Button x:Name="btnDang" Content="Đăng" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140" Click="btnDang_Click"/>
             <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="52" Margin="759,160,0,0" VerticalAlignment="Top" Width="54" Stretch="UniformToFill" OpacityMask="Black"/>
+            <ComboBox x:Name="cbKinhNghiem" HorizontalAlignment="Left" Height="40" Margin="345,160,0,0" Width="280"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                IsEditable="True"
+                materialDesign:HintAssist.Background="White"
+                materialDesign:HintAssist.Hint="Kinh Nghiệm" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" KeyUp="cbLuong_KeyUp" SelectionChanged="cbLuong_SelectionChanged">
+                <Label Content="Không yêu cầu" Foreground="Black" FontSize="14"/>
+                <Label Content="Dưới 1 năm" Foreground="Black" FontSize="14"/>
+                <Label Content="1 năm" Foreground="Black" FontSize="14"/>
+                <Label Content="2 năm" Foreground="Black" FontSize="14"/>
+                <Label Content="3 năm " Foreground="Black" FontSize="14"/>
+                <Label Content="4 năm" Foreground="Black" FontSize="14"/>
+                <Label Content="5 năm" Foreground="Black" FontSize="14"/>
+                <Label Content="Trên 5 năm " Foreground="Black" FontSize="14"/>
+            </ComboBox>
 
         </Grid>
     </Border>

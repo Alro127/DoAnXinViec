@@ -30,16 +30,26 @@ namespace DoAnXinViec
         {
             if (cbLuong.SelectedItem == wpKhoangLuong)
             {
+                if ((txtMaxLuong.Text == "") || (txtMinLuong.Text == ""))
+                {
+                    cbLuong.SelectedItem = null;
+                    return;
+                }
                 string temp = txtMinLuong.Text + " - " + txtMaxLuong.Text + " triệu";
                 cbLuong.Items.Add(temp);
                 cbLuong.SelectedItem = temp;
-            }    
+            }
         }
 
         private void cbKinhNghiem_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (cbKinhNghiem.SelectedItem == wpKhoangKinhNghiem)
+            if (cbKinhNghiem.SelectedItem == wpKhoangKinhNghiem) 
             {
+                if ((txtMaxNam.Text == "") || (txtMinNam.Text == ""))
+                {
+                    cbKinhNghiem.SelectedItem = null;
+                    return;
+                }
                 string temp = txtMinNam.Text + " - " + txtMaxNam.Text + " năm";
                 cbKinhNghiem.Items.Add(temp);
                 cbKinhNghiem.SelectedItem = temp;

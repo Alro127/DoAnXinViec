@@ -15,14 +15,14 @@ namespace DoAnXinViec
         internal DBConnection Dbconnection { get => dbconnection; set => dbconnection = value; }
         public void Them(CV cv)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(cv, new string[2] {nameof(cv.Id),nameof(cv.UngVien)});
+            List<SqlParameter> parameters = Utility.GetParameters(cv, cv.UnecessaryProperty2());
             string sqlStr = Utility.GenerateInsertSql("CV", parameters);
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("Thanh Cong");
         }
         public void CapNhat(CV cv)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(cv, new string[1] { nameof(cv.UngVien) });
+            List<SqlParameter> parameters = Utility.GetParameters(cv, cv.UnecessaryProperty1());
             string sqlStr = Utility.GenerateUpdateSql("CV", parameters, "Id = @Id");
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("ThanhCong");
@@ -32,9 +32,9 @@ namespace DoAnXinViec
             string sqlStr = string.Format("SELECT*FROM CV");
             return Dbconnection.Load(sqlStr);
         }
-        public DataTable Get(string id)
+        public DataTable Get(UngVien ungVien)
         {
-            string sqlStr = string.Format("SELECT * FROM CV WHERE IdUV = '{0}'", id);
+            string sqlStr = string.Format("SELECT * FROM CV WHERE IdUV = '{0}'", ungVien.Id);
             return dbconnection.Load(sqlStr);
         }
 

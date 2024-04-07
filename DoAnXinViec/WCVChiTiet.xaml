@@ -29,7 +29,7 @@
         </Grid>
         <Grid HorizontalAlignment="Left" Height="800" VerticalAlignment="Center" Width="330" Background="#FFF1F1F1">
 
-            <Ellipse x:Name="elpAnh" DataContext="{Binding UngVien}" Margin="0,30,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
+            <Ellipse x:Name="elpAnh" Margin="0,30,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush x:Name="imgAnh" ImageSource="{Binding Anh}"/>
                 </Ellipse.Fill>

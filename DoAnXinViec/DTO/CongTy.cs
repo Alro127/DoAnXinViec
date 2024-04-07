@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -19,6 +20,11 @@ namespace DoAnXinViec
 
 
         public CongTy() { }
+
+        public CongTy(DataRow dr)
+        {
+            Utility.SetItemFromRow(this, dr);
+        }
         public CongTy(CongTy congTy)
         {
             var properties = typeof(CongTy).GetProperties();

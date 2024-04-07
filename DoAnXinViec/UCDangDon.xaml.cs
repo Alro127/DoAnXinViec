@@ -52,12 +52,28 @@ namespace DoAnXinViec
 
         private void cbLuong_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ucDon.lblLuong.Content = ((Label)cbLuong.SelectedValue).Content;
+            if (cbLuong.SelectedItem == null) return;
+            if (cbLuong.SelectedItem == wpKhoangLuong)
+            {
+                if ((txtMaxLuong.Text == "") || (txtMinLuong.Text == ""))
+                {
+                    cbLuong.SelectedItem = null;
+                    return;
+                }
+                string temp = txtMinLuong.Text + " - " + txtMaxLuong.Text + " triệu";
+                
+                if (!cbLuong.Items.Contains(temp))
+                {
+                    cbLuong.Items.Add(temp);
+                }
+                cbLuong.SelectedItem = temp;
+            }
+            ucDon.lblLuong.Content = cbLuong.Text;
         }
 
         private void btnDang_Click(object sender, RoutedEventArgs e)
         {
-            Don don = new Don(0, txtTenCV.Text, congTy.Id, cbDiaDiem.Text, int.Parse(cbLuong.Text), DateTime.Now.Date, DateTime.ParseExact(dtpNgayToiHan.Text, "dd/MM/yyyy", null).Date, txtMoTaCV.Text, txtYeuCau.Text, txtQuyenLoi.Text, 0, 0);
+            Don don = new Don(0, txtTenCV.Text, congTy.Id, cbDiaDiem.Text, cbLuong.Text, cbKinhNghiem.Text, DateTime.Now.Date, dtpNgayToiHan.SelectedDate.Value, txtMoTaCV.Text, txtYeuCau.Text, txtQuyenLoi.Text, 0, 0);
             donDAO.Them(don);
         }
     }

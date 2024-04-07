@@ -30,7 +30,7 @@ namespace DoAnXinViec
 
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh);
+            BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh, congTy.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
@@ -107,8 +107,7 @@ namespace DoAnXinViec
         {
             congTy = uCCapNhatThongTinCty.CongTy;
             SetImage();
-            UngVienDAO ungVienDAO = new UngVienDAO();
-            if (ungVienDAO.CapNhat(congTy, "CTy") == true)
+            if (congTyDAO.CapNhat(congTy, "CTy") == true)
                 System.Windows.MessageBox.Show("ThanhCong");
         }
     } 

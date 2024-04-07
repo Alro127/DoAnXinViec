@@ -49,7 +49,7 @@
 
             <Ellipse x:Name="elpAnh" Margin="0,22,0,0" Width="194" HorizontalAlignment="Center" Height="194" VerticalAlignment="Top">
                 <Ellipse.Fill>
-                    <ImageBrush ImageSource="{Binding Anh}"/>
+                    <ImageBrush x:Name="imgAnh"/>
                 </Ellipse.Fill>
 
             </Ellipse>
@@ -58,6 +58,7 @@
         <Button x:Name="btnUngTuyenNgay" Content="Ứng tuyển ngay" Margin="20,304,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top" Click="btnUngTuyenNgay_Click"/>
         <Button Content="Thêm vào yêu thích" Margin="20,350,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top"/>
         <Label Content="{Binding TenCT}" Margin="20,230,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="196" Height="auto" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe UI Black" Foreground="White"/>
+        <Button x:Name="btnXemCongTy" Content="Trang chủ công ty" Margin="20,397,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top" Click="btnXemCongTy_Click" />
 
     </Grid>
 </Window>

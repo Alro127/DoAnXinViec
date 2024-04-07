@@ -12,24 +12,39 @@ namespace DoAnXinViec
 {
     public class ImageHandler
     {
-        public static void SaveImage(string imageName, byte[] imageData)
+        public static void SaveImage(string imageName, string id, byte[] imageData)
         {
             string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string imagesDirectory = Path.Combine(projectDirectory, "Images");
+            string imagesDirectory = Path.Combine(projectDirectory, "Images/"+id);
             string imagePath = Path.Combine(imagesDirectory, imageName);
 
             if (!Directory.Exists(imagesDirectory))
             {
                 Directory.CreateDirectory(imagesDirectory);
             }
+            else
+            {
+                int counter = 1;
+                string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(imagePath);
+                string fileExtension = Path.GetExtension(imagePath);
+                string uniqueFileName = fileNameWithoutExtension + "_" + counter + fileExtension;
+
+                while (File.Exists(Path.Combine(imagesDirectory, uniqueFileName)))
+                {
+                    counter++;
+                    uniqueFileName = fileNameWithoutExtension + "_" + counter + fileExtension;
+                }
+
+                imagePath = Path.Combine(imagesDirectory, uniqueFileName);
+            }
 
             File.WriteAllBytes(imagePath, imageData);
         }
 
-        public static byte[] GetImage(string imageName)
+        public static byte[] GetImage(string imageName, string id)
         {
             string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-            string imagesDirectory = Path.Combine(projectDirectory, "Images");
+            string imagesDirectory = Path.Combine(projectDirectory, "Images/" + id);
             string imagePath = Path.Combine(imagesDirectory, imageName);
 
             if (File.Exists(imagePath))
@@ -42,9 +57,9 @@ namespace DoAnXinViec
             }
         }
 
-        public static BitmapImage SetImage(string imageName)
+        public static BitmapImage SetImage(string imageName, string id)
         {
-            byte[] imageData = ImageHandler.GetImage(imageName);
+            byte[] imageData = ImageHandler.GetImage(imageName, id);
 
             if (imageData != null)
             {
@@ -56,7 +71,7 @@ namespace DoAnXinViec
             }
             return null;
         }    
-        public static string SelectImageAndSave()
+        public static string SelectImageAndSave(string id)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
@@ -72,7 +87,7 @@ namespace DoAnXinViec
 
                 byte[] imageData = File.ReadAllBytes(imagePath);
 
-                SaveImage(imageName, imageData);
+                SaveImage(imageName, id, imageData);
 
                 return imageName;
             }
@@ -80,6 +95,24 @@ namespace DoAnXinViec
             {
                 return null;
             }
+        }
+        public static string[] GetImagesFromFolder(string folderName)
+        {
+            string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            string folderPath = Path.Combine(projectDirectory, "Images/"+folderName);
+
+            string[] imageExtensions = { ".bmp", ".jpg", ".jpeg", ".png", ".gif" };
+
+            if (Directory.Exists(folderPath))
+            {
+                string[] imageFiles = Directory.GetFiles(folderPath)
+                    .Where(file => imageExtensions.Contains(Path.GetExtension(file).ToLower()))
+                    .ToArray();
+
+                return imageFiles;
+            }
+            else
+                return null;
         }
     }
 }

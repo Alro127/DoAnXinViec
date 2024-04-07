@@ -16,11 +16,11 @@ namespace DoAnXinViec
                 switch (value)
                 {
                     case "Từ chối":
-                        return Brushes.IndianRed;
+                        return Brushes.Red;
                     case "Đợi":
                         return Brushes.Orange;
                     default:
-                        return Brushes.LightGreen;
+                        return Brushes.Green;
                 }
         }
 

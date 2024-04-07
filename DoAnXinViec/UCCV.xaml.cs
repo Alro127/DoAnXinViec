@@ -29,7 +29,9 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.Cv = cv;
-            imgAnh.DataContext = Cv.UngVien;
+            BitmapImage bitmapImg = ImageHandler.SetImage(Cv.Anh, Cv.UngVien.Id);
+            if (bitmapImg != null)
+                imgAnh.Source = bitmapImg;
             grbTenUngVien.Header = Cv.UngVien.HoTen;
             lblViTriUngTuyen.Content = Cv.ViTriUngTuyen;
             lblNoiLamViec.Content ="Địa điểm: " + Cv.UngVien.TinhThanh;

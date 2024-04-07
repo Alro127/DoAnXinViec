@@ -23,28 +23,21 @@ namespace DoAnXinViec
     {
         HoSoDAO hoSoDAO= new HoSoDAO();
         Don don = new Don();
-        CongTy congTy = new CongTy(); 
-        CongTyDAO congTyDAO = new CongTyDAO();
+        
         DonDAO donDAO = new DonDAO();
-        string idUV;
-        public WDonChiTiet()
+        UngVien ungVien;
+
+        CongTy congTy;
+        CongTyDAO congTyDAO = new CongTyDAO();
+        public WDonChiTiet(Don don, UngVien ungVien)
         {
             InitializeComponent();
+            this.don = don;
+            this.ungVien = ungVien;
         }
-
-        public WDonChiTiet(Don don, string idUV)
-        {
-            InitializeComponent();
-            this.Don = don;
-            this.idUV = idUV;
-        }
-
-        public Don Don { get => don; set => don = value; }
-        public string IdUV { get => idUV; set => idUV = value; }
-        internal CongTy CongTy { get => congTy; set => congTy = value; }
         void Check()
         {
-            if (hoSoDAO.CheckExist(Don, IdUV))
+            if (hoSoDAO.CheckExist(don, ungVien.Id))
             {
                 btnUngTuyenNgay.Content = "Đã gửi đơn ứng tuyển";
                 btnUngTuyenNgay.IsEnabled = false;
@@ -53,14 +46,30 @@ namespace DoAnXinViec
         private void WDonChiTiet_Load(object sender, RoutedEventArgs e)
         {
             Check();
-            this.DataContext = Don;
+            this.DataContext = don;
+
+            DataTable dt = congTyDAO.Get(don.IdCT, "Cty");
+            congTy = new CongTy(dt.Rows[0]);
+            imgAnh.ImageSource = ImageHandler.SetImage(congTy.Anh, congTy.Id);
         }
         private void btnUngTuyenNgay_Click(object sender, RoutedEventArgs e)
         {
-            HoSo hoSo = new HoSo(Don.IdCV,IdUV,"Online", DateTime.Now.Date,"Đợi");
-            hoSoDAO.Them(hoSo);
-            donDAO.TangLuotNop(Don);
-            Check();
+            WChonCV wChonCV = new WChonCV(ungVien);
+            wChonCV.ShowDialog();
+            if (wChonCV.Cv != null)
+            {
+                HoSo hoSo = new HoSo(don.IdDon, wChonCV.Cv.Id, "Online", DateTime.Now.Date, "Đợi");
+                hoSoDAO.Them(hoSo);
+                donDAO.TangLuotNop(don);
+                Check();
+            }    
+            
+        }
+
+        private void btnXemCongTy_Click(object sender, RoutedEventArgs e)
+        {
+            WTrangChuCTy wTrangChuCTy = new WTrangChuCTy(congTy);
+            wTrangChuCTy.ShowDialog();
         }
     }
 }

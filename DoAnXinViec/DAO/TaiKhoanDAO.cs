@@ -19,12 +19,11 @@ namespace DoAnXinViec
         }
         public bool SignUp(TaiKhoan taiKhoan)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(taiKhoan, new string[0]);
+            List<SqlParameter> parameters = Utility.GetParameters(taiKhoan);
             string sqlStr = Utility.GenerateInsertSql("TaiKhoan", parameters);
             if (dbconnection.ThucThi(sqlStr, parameters))
                 return true;
             return false;
-
         }
     }
 }

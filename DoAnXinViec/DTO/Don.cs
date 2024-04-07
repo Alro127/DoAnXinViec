@@ -13,11 +13,12 @@ namespace DoAnXinViec
 {
     public class Don
     {
-        int idCV;
+        int idDon;
         string tenCV;
         string idCT;
         string diaDiem;
-        int luong;
+        string luong;
+        string kinhNghiem;
         DateTime ngayDang;
         DateTime ngayToiHan;
         string moTaCV;
@@ -34,13 +35,20 @@ namespace DoAnXinViec
             this.luotNop = 0;
         }
 
-        public Don(int idCV, string tenCV, string idCT, string diaDiem, int luong, DateTime ngayDang, DateTime ngayToiHan, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop)
+        public Don(DataRow dr)
         {
-            this.idCV = idCV;
+            Utility.SetItemFromRow(this, dr);
+
+        }
+
+        public Don(int idDon, string tenCV, string idCT, string diaDiem, string luong, string kinhNghiem, DateTime ngayDang, DateTime ngayToiHan, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop)
+        {
+            this.idDon = idDon;
             this.tenCV = tenCV;
             this.idCT = idCT;
             this.diaDiem = diaDiem;
             this.luong = luong;
+            this.kinhNghiem = kinhNghiem;
             this.NgayDang = ngayDang;
             this.ngayToiHan = ngayToiHan;
             this.moTaCV = moTaCV;
@@ -49,25 +57,10 @@ namespace DoAnXinViec
             this.LuotXem = luotXem;
             this.LuotNop = luotNop;
         }
-
-        public Don(int idCV, string tenCV, string idCT, string diaDiem, int luong, DateTime ngayDang, DateTime ngayToiHan, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop, string tenCT, string anh)
+        public string[] UnecessaryProperty()
         {
-            this.idCV = idCV;
-            this.tenCV = tenCV;
-            this.idCT = idCT;
-            this.diaDiem = diaDiem;
-            this.luong = luong;
-            this.ngayDang = ngayDang;
-            this.ngayToiHan = ngayToiHan;
-            this.moTaCV = moTaCV;
-            this.yeuCau = yeuCau;
-            this.quyenLoi = quyenLoi;
-            this.luotXem = luotXem;
-            this.luotNop = luotNop;
-            this.tenCT = tenCT;
-            this.anh = anh;
+            return new string[3] { nameof(IdDon), nameof(TenCT), nameof(Anh) };
         }
-
         public string TenCV
         {
             get => tenCV;
@@ -106,10 +99,15 @@ namespace DoAnXinViec
             }
         }
 
-        public int Luong
+        public string Luong
         {
             get => luong;
             set => luong = value;
+        }
+        public string KinhNghiem
+        {
+            get => kinhNghiem;
+            set => kinhNghiem = value;
         }
 
         public DateTime NgayToiHan
@@ -157,10 +155,10 @@ namespace DoAnXinViec
             }
         }
 
-        public int IdCV
+        public int IdDon
         {
-            get => idCV;
-            set => idCV = value;
+            get => idDon;
+            set => idDon = value;
         }
 
         public int LuotXem

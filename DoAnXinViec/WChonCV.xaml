@@ -1,0 +1,64 @@
+﻿<Window x:Class="DoAnXinViec.WChonCV"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnXinViec"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="WChonCV" Height="800" Width="800">
+    <Border Background="White" CornerRadius="30" Margin="0,0,0,0">
+        <Grid HorizontalAlignment="Left" Background="Transparent">
+            <Label Content="Danh Sách CV" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,60,0,0" VerticalAlignment="Top"  HorizontalAlignment="Left" Width="800"/>
+            <ListView x:Name="lvDanhSachCV"  Margin="20,120,20,80" Foreground="Black" Background="white" FontFamily="Segoe UI" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="200">
+                            <TextBlock Text="Id CV" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding Id}" Margin="18,0,0,0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="200">
+                            <TextBlock Text="Vị trí ứng tuyển" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding ViTriUngTuyen}" Margin="18,0,0,0"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="200">
+                            <TextBlock Text="Lĩnh vực" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Label Content="{Binding LinhVuc}" Margin="18,0,0,0"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="130">
+                            <TextBlock Text="Chi Tiết" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Button Style="{StaticResource MaterialDesignFlatLightButton}" Content="Xem" Margin="20,0,0,0"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="60" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
+            <ComboBox HorizontalAlignment="Left" Height="40" Margin="120,80,0,0" Width="499"
+            Style="{StaticResource MaterialDesignOutlinedComboBox}"
+            materialDesign:HintAssist.Background="White"
+            materialDesign:HintAssist.Hint="Tất cả hồ sơ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
+            <Button x:Name="btnChon" Content="Chọn" HorizontalAlignment="Right" Height="38" Margin="0,0,20,20" VerticalAlignment="Bottom" Width="120" Click="btnChon_Click"/>
+        </Grid>
+    </Border>
+</Window>

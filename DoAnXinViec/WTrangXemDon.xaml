@@ -12,14 +12,22 @@
     xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
     xmlns:converters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf">
     <Window.Background>
-        <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
+
+        <ImageBrush ImageSource="/fe11b0da-ba89-4086-b879-f31af594dc47.jpeg" />
     </Window.Background>
 
     <Grid x:Name="gridMain" Loaded="WTrangChinh_Load">
-        <Grid.Background>
-            <ImageBrush />
-        </Grid.Background>
+        <Grid HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="1550">
+            <Border Margin="0,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Offset="0" Color="Transparent"/>
+                        <GradientStop Offset="0.5489"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </Grid>
         <local:UCTrangTimViec x:Name="ucTrangTimViec" Margin="0,0,96,0" HorizontalAlignment="Right" Width="1358"/>
-        <Button x:Name="btnQuanLyTaiKhoan" Style="{DynamicResource ButtonStyleBoGoc}" Content="Quản lý tài khoản" Margin="0,30,96,0" FontSize="16" FontFamily="Segoe UI Black" Foreground="#FFF6F0F0" BorderBrush="{x:Null}" Height="50" Width="228" HorizontalAlignment="Right" VerticalAlignment="Top" Click="btnQuanLyTaiKhoan_Click" Background="#FF560C81"/>
+        <Button x:Name="btnQuanLyTaiKhoan" Style="{DynamicResource ButtonStyleBoGoc}" Content="Quản lý tài khoản" Margin="0,37,110,0" FontSize="16" FontFamily="Segoe UI Black" Foreground="#FFF6F0F0" BorderBrush="{x:Null}" Height="39" Width="213" HorizontalAlignment="Right" VerticalAlignment="Top" Click="btnQuanLyTaiKhoan_Click" Background="#003C43"/>
     </Grid>
 </Window>

@@ -22,14 +22,14 @@ namespace DoAnXinViec
                 }
             }
         }
-        public static List<SqlParameter> GetParameters<T>(T obj, string[] prop)
+        public static List<SqlParameter> GetParameters<T>(T obj, string[]? prop = null )
         {
             PropertyInfo[] properties = typeof(T).GetProperties();
             List<SqlParameter> parameters = new List<SqlParameter>();
             for (int i = 0; i < properties.Length; i++)
             {
                 PropertyInfo property = properties[i];
-                if ((prop.Length==0) || (!prop.Contains(property.Name)))
+                if ((prop==null) || (!prop.Contains(property.Name)))
                     parameters.Add(new SqlParameter("@" + property.Name, property.GetValue(obj)));
             }
             return parameters;

@@ -9,7 +9,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -21,12 +20,12 @@ namespace DoAnXinViec
     /// <summary>
     /// Interaction logic for UCChinhSuaThongTin.xaml
     /// </summary>
-    public partial class UCChinhSuaThongTinCaNhan :System.Windows.Controls.UserControl
+    public partial class UCChinhSuaThongTinCaNhan :UserControl
     {
         UngVien ungVien;
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh);
+            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh, ungVien.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
@@ -42,7 +41,7 @@ namespace DoAnXinViec
 
         private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
         {
-            ungVien.Anh = ImageHandler.SelectImageAndSave();
+            ungVien.Anh = ImageHandler.SelectImageAndSave(ungVien.Id);
             SetImage();
         }
 

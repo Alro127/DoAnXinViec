@@ -26,9 +26,9 @@ namespace DoAnXinViec
         UngVienDAO ungVienDAO = new UngVienDAO();
         CV cv = new CV();
         CVDAO cvDAO = new CVDAO();
-        private void SetImage()
+        private void SetImage(string imageName)
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh);
+            BitmapImage bitmapImg = ImageHandler.SetImage(imageName, ungVien.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }    
@@ -39,7 +39,7 @@ namespace DoAnXinViec
             this.tempUngVien = new UngVien(ungVien);
             this.tbiThongTinCaNhan.DataContext = tempUngVien;
             this.tbcHoSoCuaBan.DataContext = cv;
-            SetImage();
+            SetImage(ungVien.Anh);
         }
         private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
         {
@@ -60,6 +60,12 @@ namespace DoAnXinViec
             cv.IdUV = tempUngVien.Id;
             WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
             wCVChiTiet.ShowDialog();
+        }
+
+        private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
+        {
+            cv.Anh = ImageHandler.SelectImageAndSave(ungVien.Id);
+            SetImage(cv.Anh);
         }
     }
 }

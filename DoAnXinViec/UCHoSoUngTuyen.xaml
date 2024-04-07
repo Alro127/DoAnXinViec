@@ -14,7 +14,7 @@
         <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
             <Label Content="Hồ Sơ Ứng Tuyển" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1040" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1060" HorizontalAlignment="Left"/>
-            <ListView x:Name="lvHoSoUngTuyen"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" >
+            <ListView x:Name="lvHoSoUngTuyen"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" MouseDoubleClick="lvHoSoUngTuyen_MouseDoubleClick" >
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="30">
@@ -76,9 +76,17 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <Border Background="{Binding TrangThai, Converter={StaticResource ValueToBackgroundConverter}}" CornerRadius="10" Width="100" Height="30" Margin="20,0,0,0">
-                                            <Label Content="{Binding TrangThai}" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                                        </Border>
+                                        <ComboBox x:Name="cbSetTrangThai"
+                                            Text="{Binding TrangThai, Mode=TwoWay}"
+                                            Foreground="{Binding TrangThai, Converter={StaticResource ValueToBackgroundConverter}}"
+                                            HorizontalAlignment="Left" Height="40" Width="120"
+                                            Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                            materialDesign:HintAssist.Background="White"
+                                            Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" Margin="18,0,0,0" FontWeight="Bold" Loaded="cbSetTrangThai_Loaded" SelectionChanged="cbSetTrangThai_SelectionChanged">
+                                            <Label x:Name="lblDoi" Content="Đợi" Foreground="Orange" FontWeight="Bold" />  
+                                            <Label x:Name="lblChapNhan" Content="Chấp nhận" Foreground="Green" FontWeight="Bold"/>
+                                            <Label x:Name="lblTuChoi" Content="Từ Chối" Foreground="Red" FontWeight="Bold"/>
+                                        </ComboBox>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -101,7 +109,7 @@
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"
                 materialDesign:HintAssist.Hint="Tất cả hồ sơ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
-            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140"/>
+            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140" Click="btnLuu_Click"/>
         </Grid>
     </Border>
 

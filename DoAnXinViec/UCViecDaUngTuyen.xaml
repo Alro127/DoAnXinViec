@@ -87,7 +87,7 @@
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"
                 materialDesign:HintAssist.Hint="Tất cả hồ sơ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
-            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140"/>
+            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140" Click="btnLuu_Click"/>
         </Grid>
     </Border>
 

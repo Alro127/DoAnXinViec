@@ -57,5 +57,22 @@ namespace DoAnXinViec
             lvHoSoTuChoi.ItemsSource = listHoSoTuChoi;
         }
 
+        private void lvHoSo_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DependencyObject dep = (DependencyObject)e.OriginalSource;
+            if (dep is Border)
+            {
+                HoSo hoSo = (HoSo)lvHoSo.SelectedItem;
+                CVDAO cvDAO = new CVDAO();
+                DataTable dt = cvDAO.Get(hoSo.IdCV);
+                CV cv = new CV(dt.Rows[0]);
+                UngVienDAO ungVienDAO = new UngVienDAO();
+                dt = ungVienDAO.Get(cv.IdUV, "UngVien");
+                UngVien ungVien = new UngVien(dt.Rows[0]);
+                cv.UngVien = ungVien;
+                WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+                wCVChiTiet.ShowDialog();
+            }
+        }
     }
 }

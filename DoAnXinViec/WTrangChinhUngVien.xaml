@@ -23,7 +23,7 @@
                     <Expander Header="Quản lý hồ sơ" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White"  FontSize="16" >
                         <StackPanel>
                             <Button x:Name="btnHoSoCuaBan" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ của bạn" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoCuaBan_Click"/>
-                            <Button x:Name="btnChinhSuaCV" Style="{DynamicResource ButtonStyleKeepColor}" Content="Chỉnh sửa CV" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnChinhSuaCV_Click"/>
+                            <Button x:Name="btnDanhSachCV" Style="{DynamicResource ButtonStyleKeepColor}" Content="Danh sách CV" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnDanhSachCV_Click"/>
                         </StackPanel>
                     </Expander>
                     <Expander Header="Quản lý việc làm" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="16" >

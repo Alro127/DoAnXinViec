@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DoAnXinViec
 {
@@ -26,11 +28,18 @@ namespace DoAnXinViec
         string kinhNghiem;
         DateTime ngayDang;
         DateTime ngayToiHan;
+        string anh;
 
         public CV() { }
 
-        public CV(string idUV, UngVien ungVien, string viTriUngTuyen, string linhVuc, string trinhDo, string luong, string namKinhNghiem, string mucTieu, string kyNang, string chungChi, string hocVan, string kinhNghiem, DateTime ngayDang, DateTime ngayToiHan)
+        public CV(DataRow dr)
         {
+            Utility.SetItemFromRow(this, dr);
+        }
+
+        public CV(int id, string idUV, UngVien ungVien, string viTriUngTuyen, string linhVuc, string trinhDo, string luong, string namKinhNghiem, string mucTieu, string kyNang, string chungChi, string hocVan, string kinhNghiem, DateTime ngayDang, DateTime ngayToiHan, string anh)
+        {
+            this.id = id;
             this.idUV = idUV;
             this.ungVien = ungVien;
             this.viTriUngTuyen = viTriUngTuyen;
@@ -45,6 +54,7 @@ namespace DoAnXinViec
             this.kinhNghiem = kinhNghiem;
             this.ngayDang = ngayDang;
             this.ngayToiHan = ngayToiHan;
+            this.anh = anh;
         }
 
         public int Id
@@ -226,7 +236,18 @@ namespace DoAnXinViec
                 }
             }
         }
-
+        public string Anh
+        {
+            get { return anh; }
+            set
+            {
+                if (anh != value)
+                {
+                    anh = value;
+                    OnPropertyChanged(nameof(Anh));
+                }
+            }
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
@@ -235,6 +256,15 @@ namespace DoAnXinViec
             {
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        public string[] UnecessaryProperty1()
+        {
+            return new string[1] { nameof(UngVien) };
+        }
+        public string[] UnecessaryProperty2()
+        {
+            return new string[2] { nameof(Id), nameof(UngVien) };
         }
     }
 }

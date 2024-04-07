@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace DoAnXinViec
         DateTime ngaySinh;
 
         public UngVien() { }
+
+        public UngVien(DataRow dr)
+        {
+            Utility.SetItemFromRow(this, dr);
+        }
 
         public UngVien(UngVien ungvien)
         {

@@ -20,7 +20,7 @@
                                 <ImageBrush x:Name="imgAnh" ImageSource="/Avatar.jpg"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Button Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="245,470,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}">
+                        <Button x:Name="btnTaiAnhLen" Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="245,470,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}" Click="btnTaiAnhLen_Click">
                             <Button.Background>
                                 <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
                             </Button.Background>
@@ -295,116 +295,6 @@
                             <Label Content="Thực Phẩm" Foreground="Black" FontSize="14"/>
                         </ComboBox>
 
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Kinh nghiệm">
-                    <Grid Background="White">
-                        <Border BorderBrush="Black" BorderThickness="1,1,1,1"/>
-                        <Label
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Top"
-                            Margin="0,5,1050,0"
-                            Content="Kinh nghiệm làm việc" FontSize="16" FontWeight="Bold"/>
-                        <TextBox
-                             materialDesign:HintAssist.Background="White"
-                             VerticalAlignment="Top"
-                             materialDesign:HintAssist.Hint="Chức danh"
-                             Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="570" Height="40" HorizontalAlignment="Right" Margin="0,40,640,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14" Grid.Column="1"/>
-                        <TextBox
-                              materialDesign:HintAssist.Background="White"
-                              VerticalAlignment="Top"
-                              materialDesign:HintAssist.Hint="Công ty"
-                              Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="570" Height="40" HorizontalAlignment="Right" Margin="0,100,640,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14" Grid.Column="1"/>
-                        <DatePicker x:Name="dtpThoiGianBatDauLamViec" HorizontalAlignment="Right" Height="40" Margin="0,160,935,0" VerticalAlignment="Top" Width="275"
-                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                            materialDesign:HintAssist.Background="White"
-                            materialDesign:HintAssist.Hint="Thơi gian bắt đầu" Padding="10,10,10,10" FontSize="14"/>
-                        <DatePicker x:Name="dtpThoiGianKetThucLamViec" HorizontalAlignment="Right" Height="40" Margin="0,160,640,0" VerticalAlignment="Top" Width="275"
-                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                            materialDesign:HintAssist.Background="White"
-                            materialDesign:HintAssist.Hint="Thơi gian bắt đầu" Padding="10,10,10,10" FontSize="14"/>
-                        <TextBox
-                            Width="570"
-                            Height="100"
-                            VerticalAlignment="Top" 
-                            Margin="0,220,640,0"
-                            HorizontalAlignment="Right"
-                            materialDesign:HintAssist.Hint="Mô tả công việc"
-                            Padding="10,10,10,10"
-                            FontSize="14"
-                            materialDesign:HintAssist.Background="White"
-                            AcceptsReturn="True"
-                            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedTextBoxEnabledComboBox}"
-                            Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                            TextWrapping="Wrap"
-                            VerticalScrollBarVisibility="Auto"
-                            />
-                        <Label
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Top"
-                            Margin="0,5,480,0"
-                            Content="Thông tin học vấn" FontSize="16" FontWeight="Bold"/>
-                        <TextBox
-                                materialDesign:HintAssist.Background="White"
-                                VerticalAlignment="Top"
-                                materialDesign:HintAssist.Hint="Trường / Trung tâm đào tạo"
-                                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="570" Height="40" HorizontalAlignment="Right" Margin="0,40,40,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14" Grid.Column="1"/>
-                        <TextBox
-                                materialDesign:HintAssist.Background="White"
-                                VerticalAlignment="Top"
-                                materialDesign:HintAssist.Hint="Chuyền ngành đào tạo"
-                                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="275" Height="40" HorizontalAlignment="Right" Margin="0,100,335,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14" Grid.Column="1"/>
-                        <TextBox
-                                materialDesign:HintAssist.Background="White"
-                                VerticalAlignment="Top"
-                                materialDesign:HintAssist.Hint="Tên bằng cấp / chứng chỉ"
-                                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="275" Height="40" HorizontalAlignment="Right" Margin="0,100,40,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14" Grid.Column="1"/>
-                        <DatePicker x:Name="dtpThoiGianBatDauHocVan" HorizontalAlignment="Right" Height="40" Margin="0,160,335,0" VerticalAlignment="Top" Width="275"
-                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                            materialDesign:HintAssist.Background="White"
-                            materialDesign:HintAssist.Hint="Thơi gian bắt đầu" Padding="10,10,10,10" FontSize="14"/>
-                        <DatePicker x:Name="dtpThoiGianKetThucHọcVan" HorizontalAlignment="Right" Height="40" Margin="0,160,40,0" VerticalAlignment="Top" Width="275"
-                            Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                            materialDesign:HintAssist.Background="White"
-                            materialDesign:HintAssist.Hint="Thơi gian bắt đầu" Padding="10,10,10,10" FontSize="14"/>
-                        <Label
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Top"
-                            Margin="0,320,1132,0"
-                            Content="Ngoại ngữ" FontSize="16" FontWeight="Bold"/>
-                        <ComboBox HorizontalAlignment="Right" Height="40" Margin="0,360,640,0" Width="570"
-                         Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                         materialDesign:HintAssist.Background="White"
-                         materialDesign:HintAssist.Hint="Ngoại Ngữ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" Grid.ColumnSpan="2">
-                            <Label Content="Tiếng Anh" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiếng Nhật" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiêng Pháp" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiếng Trung" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiếng Nga" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiếng Hàn" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiếng Đức" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiếng Ý" Foreground="Black" FontSize="14"/>
-                            <Label Content="Tiếng Ả Rập" Foreground="Black" FontSize="14"/>
-                            <Label Content="Ngôn ngữ khác" Foreground="Black" FontSize="14"/>
-                        </ComboBox>
-                        <ComboBox HorizontalAlignment="Right" Height="40" Margin="0,420,640,0" Width="570"
-                         Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                         materialDesign:HintAssist.Background="White"
-                         materialDesign:HintAssist.Hint="Mức độ thành thạo" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" Grid.ColumnSpan="2">
-                            <Label Content="Sơ cấp" Foreground="Black" FontSize="14"/>
-                            <Label Content="Trung cấp" Foreground="Black" FontSize="14"/>
-                            <Label Content="Cao cấp" Foreground="Black" FontSize="14"/>
-                        </ComboBox>
-                        <Label
-                            HorizontalAlignment="Right"
-                            VerticalAlignment="Top"
-                            Margin="0,320,562,0"
-                            Content="Tin học" FontSize="16" FontWeight="Bold"/>
-                        <TextBox
-                                materialDesign:HintAssist.Background="White"
-                                VerticalAlignment="Top"
-                                materialDesign:HintAssist.Hint="Tên chứng chỉ Tin học"
-                                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="570" Height="40" HorizontalAlignment="Right" Margin="0,360,40,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14" Grid.Column="1"/>
                     </Grid>
                 </TabItem>
             </TabControl>

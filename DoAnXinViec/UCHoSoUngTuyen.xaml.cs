@@ -23,6 +23,7 @@ namespace DoAnXinViec
     public partial class UCHoSoUngTuyen : UserControl
     {
         CongTy congTy;
+        HoSoDAO hoSoDAO = new HoSoDAO();
         List<HoSo> listHoSo = new List<HoSo>();
         List<HoSo> listHienThi = new List<HoSo>();
 
@@ -36,7 +37,6 @@ namespace DoAnXinViec
 
         public void Load()
         {
-            HoSoDAO hoSoDAO = new HoSoDAO();
             DataTable dt = hoSoDAO.LoadForCT(congTy);
             foreach (DataRow dr in dt.Rows)
             {
@@ -127,6 +127,63 @@ namespace DoAnXinViec
         private void cbTrangThai_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             cbTrangThai.Text = "Trạng Thái";
+        }
+
+        private void lvHoSoUngTuyen_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DependencyObject dep = (DependencyObject)e.OriginalSource;
+            if (dep is Border)
+            {
+                HoSo hoSo = (HoSo)lvHoSoUngTuyen.SelectedItem;
+                CVDAO cvDAO = new CVDAO();
+                DataTable dt = cvDAO.Get(hoSo.IdCV);
+                CV cv = new CV(dt.Rows[0]);
+                UngVienDAO ungVienDAO = new UngVienDAO();
+                dt = ungVienDAO.Get(cv.IdUV, "UngVien");
+                UngVien ungVien = new UngVien(dt.Rows[0]);
+                cv.UngVien = ungVien;
+                WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+                wCVChiTiet.ShowDialog();
+            }
+        }
+
+        private void btnLuu_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (HoSo hoSo in listHoSo)
+            {
+                if (hoSoDAO.CapNhat(hoSo) == false)
+                {
+                    MessageBox.Show("Lỗi");
+                    return;
+                }
+            }
+            MessageBox.Show("Thành công");
+        }
+        private void cbSetTrangThai_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (sender is ComboBox comboBox)
+            {
+                if (comboBox.DataContext is HoSo dataModel)
+                {
+                    if (dataModel.TrangThai == "Đợi")
+                        comboBox.SelectedIndex = 0;
+                    else if (dataModel.TrangThai == "Chấp nhận")
+                        comboBox.SelectedIndex = 1;
+                    else comboBox.SelectedIndex = 2;
+                }
+            }
+        }
+
+        private void cbSetTrangThai_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is ComboBox comboBox)
+            {
+                if (comboBox.SelectedIndex == 0)
+                    comboBox.Foreground = Brushes.Orange;
+                else if (comboBox.SelectedIndex == 1)
+                    comboBox.Foreground = Brushes.Green;
+                else comboBox.Foreground = Brushes.Red;
+            }
         }
     }
 }

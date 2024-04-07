@@ -32,16 +32,16 @@
                     materialDesign:HintAssist.Background="White"
                     VerticalAlignment="Top"
                     materialDesign:HintAssist.Hint="Tên công ty"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,280,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,400,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <TextBox
                 Text="{Binding DiaChi, Mode=TwoWay}"
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Địa chỉ"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Right" Margin="0,520,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Right" Margin="0,580,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <ComboBox 
                 Text ="{Binding LinhVuc, Mode=TwoWay}"
-                HorizontalAlignment="Left" Height="40" Margin="40,340,0,0" Width="585"
+                HorizontalAlignment="Left" Height="40" Margin="40,460,0,0" Width="280"
                       Style="{StaticResource MaterialDesignOutlinedComboBox}"
                       materialDesign:HintAssist.Background="White"
                       materialDesign:HintAssist.Hint="Lĩnh vực" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
@@ -61,10 +61,10 @@
                  materialDesign:HintAssist.Background="White"
                  VerticalAlignment="Top"
                  materialDesign:HintAssist.Hint="Quy mô nhân sự"
-                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Right" Margin="0,400,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="280" Height="40" HorizontalAlignment="Right" Margin="0,460,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <ComboBox 
                 Text="{Binding TinhThanh, Mode=TwoWay}"
-                HorizontalAlignment="Right" Height="40" Margin="0,460,665,0" VerticalAlignment="Top" Width="585"
+                HorizontalAlignment="Right" Height="40" Margin="0,520,665,0" VerticalAlignment="Top" Width="585"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"
                 materialDesign:HintAssist.Hint="Tỉnh/ Thành Phố" Padding="10,10,10,10" FontSize="14">
@@ -136,13 +136,13 @@
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Đường link công ty"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,580,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,640,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <TextBox
                 Text="{Binding GPKD, Mode=TwoWay}"
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Giấy phép kinh doanh"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,640,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,340,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <Button x:Name="btnLuu" Content="Lưu" Height="40" Margin="0,700,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
             <Button Content="Hủy" Margin="0,700,220,30" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40">
                 <Button.Background>
@@ -170,26 +170,38 @@
                     materialDesign:HintAssist.Background="White"
                     VerticalAlignment="Top"
                     materialDesign:HintAssist.Hint="Họ và Tên"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,340,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Height="40" Margin="40,280,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14" HorizontalAlignment="Left" Width="585"/>
             <TextBox
                     Text="{Binding Email,Mode=TwoWay}"
                     materialDesign:HintAssist.Background="White"
                     VerticalAlignment="Top"
                     materialDesign:HintAssist.Hint="Email"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,400,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="280" Height="40" HorizontalAlignment="Left" Margin="40,340,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <TextBox
                     Text="{Binding SDT,Mode=TwoWay}"
                     materialDesign:HintAssist.Background="White"
                     VerticalAlignment="Top"
                     materialDesign:HintAssist.Hint="Số điện thoại"
-                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,460,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="280" Height="40" HorizontalAlignment="Left" Margin="345,340,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <TextBox
                 Text="{Binding GT, Mode=TwoWay}"
                 TextWrapping="Wrap"
+                AcceptsReturn="True"
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Giới thiệu công ty"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="160" HorizontalAlignment="Left" Margin="665,520,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="160" HorizontalAlignment="Left" Margin="665,400,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+            <Border HorizontalAlignment="Left" Height="100" Margin="665,580,0,0" VerticalAlignment="Top" Width="585" BorderBrush="Black" BorderThickness="1,1,1,1" CornerRadius="5,5,5,5">
+                <WrapPanel x:Name="wpAnh">
+                    <Border Width="80" Height="80" BorderBrush="Black" CornerRadius="100" Background="Silver" Margin="10,9,0,9">
+                        <Button x:Name="btnThemAnh" Style="{StaticResource ResourceKey=MaterialDesignFlatButton}" Width="50" Height="50" FontSize="72" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" Click="btnThemAnh_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/—Pngtree—vector plus icon_3989579.png"/>
+                            </Button.Background>
+                        </Button>
+                    </Border>
+                </WrapPanel>
+            </Border>
         </Grid>
     </Border>
 </UserControl>

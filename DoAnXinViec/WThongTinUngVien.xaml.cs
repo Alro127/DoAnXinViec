@@ -41,7 +41,7 @@ namespace DoAnXinViec
         {
             ungVien.Id = taiKhoan.Id;
             ungVien.Anh = "";
-            MessageBox.Show(ungVien.NgaySinh + "");
+            ungVien.GT = "";
             if (ungVienDAO.Them(ungVien, "UngVien") == true && taiKhoanDAO.SignUp(taiKhoan) == true)
                 MessageBox.Show("Thành công");
         }

@@ -55,7 +55,7 @@ namespace DoAnXinViec
             else
                 ucCV.btnYeuThich.IsChecked= false;
 
-            BitmapImage bitmapImg = ImageHandler.SetImage(cv.UngVien.Anh);
+            BitmapImage bitmapImg = ImageHandler.SetImage(cv.Anh, cv.UngVien.Id);
             if (bitmapImg != null)
                 ucCV.imgAnh.Source = bitmapImg;
             ucTrangTimViec.wpDon.Children.Add(ucCV);

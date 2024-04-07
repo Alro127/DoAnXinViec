@@ -20,13 +20,13 @@ namespace DoAnXinViec
         }
         public bool Them(YeuThich yeuThich)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(yeuThich, new string[0]);
+            List<SqlParameter> parameters = Utility.GetParameters(yeuThich);
             string sqlStr = Utility.GenerateInsertSql("YeuThich", parameters);
             return (dbconnection.ThucThi(sqlStr, parameters));
         }
         public bool Xoa(YeuThich yeuThich)
         {
-            List<SqlParameter> parameters = Utility.GetParameters(yeuThich, new string[0]);
+            List<SqlParameter> parameters = Utility.GetParameters(yeuThich);
             string sqlStr = Utility.GenerateDeleteSql("YeuThich", "IdCV = @IdCV AND IdCT = @IdCT");
             return (dbconnection.ThucThi(sqlStr, parameters));
         }

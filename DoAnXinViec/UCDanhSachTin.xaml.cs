@@ -60,8 +60,7 @@ namespace DoAnXinViec
             listDon.Clear();
             foreach (DataRow dr in dt.Rows)
             {
-                Don don = new Don();
-                Utility.SetItemFromRow(don, dr);
+                Don don = new Don(dr);
                 listDon.Add(don);
             }
             lvDonTuyen.ItemsSource = listDon;

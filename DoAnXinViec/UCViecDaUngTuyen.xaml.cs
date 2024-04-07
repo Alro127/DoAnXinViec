@@ -22,6 +22,8 @@ namespace DoAnXinViec
     public partial class UCViecDaUngTuyen : UserControl
     {
         UngVien ungVien;
+        List<HoSo> listHoSo;
+        HoSoDAO hoSoDAO = new HoSoDAO();
         public UCViecDaUngTuyen(UngVien ungVien)
         {
             InitializeComponent();
@@ -31,16 +33,27 @@ namespace DoAnXinViec
 
         public void Load()
         {
-            HoSoDAO hoSoDAO = new HoSoDAO();
             DataTable dt = hoSoDAO.LoadForUV(ungVien);
-            List<HoSo> listHoSo = new List<HoSo>();
+            listHoSo = new List<HoSo>();
             foreach (DataRow dr in dt.Rows)
             {
-                HoSo hoSo = new HoSo();
-                Utility.SetItemFromRow(hoSo, dr);
+                HoSo hoSo = new HoSo(dr);
                 listHoSo.Add(hoSo);
             }
             lvHoSoUngTuyen.ItemsSource = listHoSo;
+        }
+
+        private void btnLuu_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (HoSo hoSo in listHoSo)
+            {
+                if (hoSoDAO.CapNhat(hoSo)==false)
+                {
+                    MessageBox.Show("Lỗi");
+                    return;
+                }    
+            }
+            MessageBox.Show("Thành công");
         }
     }
 }

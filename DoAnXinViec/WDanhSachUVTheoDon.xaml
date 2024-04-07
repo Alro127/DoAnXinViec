@@ -15,7 +15,7 @@
         <TabControl Style="{DynamicResource TabControl}" >
             <TabItem x:Name="tbiTatCa" Style="{DynamicResource MaterialDesignTabItem}" Header="Tất cả">
                 <Grid Background="White">
-                    <ListView x:Name="lvHoSo">
+                    <ListView x:Name="lvHoSo" MouseDoubleClick="lvHoSo_MouseDoubleClick">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="auto">

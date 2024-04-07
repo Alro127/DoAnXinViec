@@ -25,7 +25,7 @@ namespace DoAnXinViec
             InitializeComponent();
             this.Cv = cv;
             this.DataContext = Cv;
-            BitmapImage bitmapImg = ImageHandler.SetImage(Cv.UngVien.Anh);
+            BitmapImage bitmapImg = ImageHandler.SetImage(Cv.Anh, Cv.UngVien.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }

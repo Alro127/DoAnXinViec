@@ -21,30 +21,44 @@ namespace DoAnXinViec
     public partial class UCCapNhatThongTinCty : UserControl
     {
         CongTy congTy;
-        CongTy tempCongTy;
-        CongTyDAO congTyDAO = new CongTyDAO();
-
         public CongTy CongTy { get => congTy; set => congTy = value; }
 
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(CongTy.Anh);
+            BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh, CongTy.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
         public UCCapNhatThongTinCty(CongTy congTy)
         {
             InitializeComponent();
-            this.CongTy = congTy;
-            this.tempCongTy = new CongTy(congTy);
-            this.thongtincty.DataContext = tempCongTy;
+            this.congTy = new CongTy(congTy);
+            this.thongtincty.DataContext = this.congTy;
+            SetImage();
+            Load();
+        }
+        void Load()
+        {
+            string[] DanhSachAnh = ImageHandler.GetImagesFromFolder(congTy.Id);
+            for (int i = 0; i<DanhSachAnh.Length; i++)
+            {
+                Image anh = new Image() { Width = 100, Height = 100, Margin = new Thickness(10, 9, 0, 9) };
+                anh.Source = ImageHandler.SetImage(DanhSachAnh[i], congTy.Id);
+                wpAnh.Children.Add(anh);
+            }
+        }
+        private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
+        {
+            congTy.Anh = ImageHandler.SelectImageAndSave(congTy.Id);
             SetImage();
         }
 
-        private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
+        private void btnThemAnh_Click(object sender, RoutedEventArgs e)
         {
-            CongTy.Anh = ImageHandler.SelectImageAndSave();
-            SetImage();
+            string anhStr = ImageHandler.SelectImageAndSave(congTy.Id);
+            Image anh = new Image() {Width = 100, Height = 100, Margin = new Thickness(10,9,0,9) };
+            anh.Source = ImageHandler.SetImage(anhStr, congTy.Id);
+            wpAnh.Children.Add(anh);
         }
     }
 }

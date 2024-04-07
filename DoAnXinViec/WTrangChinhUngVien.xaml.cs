@@ -25,11 +25,11 @@ namespace DoAnXinViec
             InitializeComponent();
             this.ungVien = ungVien;
             this.DataContext = ungVien;
-            imgAnh.ImageSource = ImageHandler.SetImage(ungVien.Anh);
+            imgAnh.ImageSource = ImageHandler.SetImage(ungVien.Anh, ungVien.Id);
         }
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh);
+            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh, ungVien.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
@@ -54,8 +54,11 @@ namespace DoAnXinViec
             stMain.Children.Clear();
             stMain.Children.Add(uCHoSoCuaBan);
         }
-        private void btnChinhSuaCV_Click(object sender, RoutedEventArgs e)
+        private void btnDanhSachCV_Click(object sender, RoutedEventArgs e)
         {
+            UCDanhSachCV uCDanhSachCV = new UCDanhSachCV(ungVien);
+            stMain.Children.Clear();
+            stMain.Children.Add(uCDanhSachCV);
         }
         private void btnViecDaUngTuyen_Click(object sender, RoutedEventArgs e)
         {
