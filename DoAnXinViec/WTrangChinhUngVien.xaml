@@ -15,24 +15,24 @@
         <Border HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="White" CornerRadius="30">
             <Grid HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="Transparent">
                 <StackPanel Margin="0,260,0,0">
-                    <Expander Header="Quản lý tài khoản" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="16" >
+                    <Expander Header="Quản lý tài khoản" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="16" >
                         <StackPanel>
                             <Button x:Name="btnChinhSuaThongTinCaNhan" Style="{DynamicResource ButtonStyleKeepColor}" Content="Chỉnh sửa thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnChinhSuaThongTinCaNhan_Click"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Quản lý hồ sơ" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White"  FontSize="16" >
+                    <Expander Header="Quản lý hồ sơ" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White"  FontSize="16" >
                         <StackPanel>
                             <Button x:Name="btnHoSoCuaBan" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ của bạn" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoCuaBan_Click"/>
                             <Button x:Name="btnDanhSachCV" Style="{DynamicResource ButtonStyleKeepColor}" Content="Danh sách CV" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnDanhSachCV_Click"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Quản lý việc làm" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="16" >
+                    <Expander Header="Quản lý việc làm" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="16" >
                         <StackPanel>
                             <Button x:Name="btnViecDaUngTuyen" Style="{DynamicResource ButtonStyleKeepColor}" Content="Việc đã ứng tuyển" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnViecDaUngTuyen_Click"/>
                             <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Thông báo việc làm" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Cài đặt chung" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="16" >
+                    <Expander Header="Cài đặt chung" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="16" >
                         <StackPanel>
                         </StackPanel>
                     </Expander>

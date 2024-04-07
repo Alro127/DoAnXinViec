@@ -23,7 +23,7 @@
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,260,0,0" VerticalAlignment="Top" Width="1290"/>
             <Button x:Name="btnTaiAnhLen" Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="180,140,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}" Click="btnTaiAnhLen_Click">
                 <Button.Background>
-                    <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
+                    <SolidColorBrush Color="#FF2A8DD3" Opacity="0.5"/>
                 </Button.Background>
             </Button>
             <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="180,185,0,0" VerticalAlignment="Top" Width="244"/>
@@ -136,10 +136,10 @@
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Email"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="40,640,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
-            <Button x:Name="btnLuu" Content="Lưu" Height="40" Margin="0,700,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button x:Name="btnLuu" Content="Lưu" Height="40" Margin="0,700,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
             <Button Content="Hủy" Margin="0,700,220,30" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40">
                 <Button.Background>
-                    <SolidColorBrush Color="#FF560C81" Opacity="0.3"/>
+                    <SolidColorBrush Color="#FF2A8DD3" Opacity="0.3"/>
                 </Button.Background>
             </Button>
             <TextBox
@@ -149,8 +149,8 @@
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Tên đăng nhập"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="399" Height="40" HorizontalAlignment="Left" Margin="665,110,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
-            <Button Content="Sửa" Height="40" Margin="0,110,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
-            <Button Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button Content="Sửa" Height="40" Margin="0,110,40,0" VerticalAlignment="Top" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
             <PasswordBox 
                 Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" materialDesign:HintAssist.Hint="Mật khẩu"
                 HorizontalAlignment="Left" Height="40" Margin="665,170,0,0" VerticalAlignment="Top" Width="399" Padding="10,10,10,10" FontSize="14"/>

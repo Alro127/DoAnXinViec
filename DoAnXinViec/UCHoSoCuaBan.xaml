@@ -22,7 +22,7 @@
                         </Ellipse>
                         <Button x:Name="btnTaiAnhLen" Content="Tải ảnh lên" HorizontalAlignment="Left" Height="40" Margin="245,470,0,0" VerticalAlignment="Top" Width="150" BorderBrush="{x:Null}" Click="btnTaiAnhLen_Click">
                             <Button.Background>
-                                <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
+                                <SolidColorBrush Color="#FF2A8DD3" Opacity="0.5"/>
                             </Button.Background>
                         </Button>
                         <Label Content="Định dạng .JPG, .JPEG, .PNG" HorizontalAlignment="Left" Height="40" Margin="245,515,0,0" VerticalAlignment="Top" Width="244"/>
@@ -298,10 +298,10 @@
                     </Grid>
                 </TabItem>
             </TabControl>
-            <Button x:Name="btnLuuVaDangHoSo" Content="Lưu và đăng hồ sơ" Height="40" Margin="0,0,20,20" VerticalAlignment="Bottom" BorderBrush="#FF560C81" HorizontalAlignment="Right" Width="260" Background="White" Foreground="#DD000000" Click="btnLuuVaDangHoSo_Click"/>
+            <Button x:Name="btnLuuVaDangHoSo" Content="Lưu và đăng hồ sơ" Height="40" Margin="0,0,20,20" VerticalAlignment="Bottom" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="260" Background="White" Foreground="#DD000000" Click="btnLuuVaDangHoSo_Click"/>
             <Button x:Name="btnXemTruoc" Content="Xem trước" Margin="0,710,300,20" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40" Click="btnXemTruoc_Click">
                 <Button.Background>
-                    <SolidColorBrush Color="#FF560C81" Opacity="0.5"/>
+                    <SolidColorBrush Color="#FF2A8DD3" Opacity="0.5"/>
                 </Button.Background>
             </Button>
         </Grid>

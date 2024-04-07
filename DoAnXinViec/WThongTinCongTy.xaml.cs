@@ -41,7 +41,6 @@ namespace DoAnXinViec
         {
             congTy.Id = TaiKhoan.Id;
             congTy.Anh = "";
-            congTy.GT = tbGTCT.Text;
             congTyDAO.Them(congTy, "CTy");
             taiKhoanDAO.SignUp(TaiKhoan);
         }

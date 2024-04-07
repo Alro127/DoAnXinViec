@@ -20,24 +20,24 @@
             <materialDesign:Card x:Name="crdThongTinChiTiet" Background="{x:Null}" Margin="20,20,20,20">
                 <ScrollViewer VerticalScrollBarVisibility="Visible">
                     <StackPanel>
-                        <Expander Header="Giới thiệu công ty" Background="{x:Null}" BorderBrush="Black" Foreground="White">
+                        <Expander Header="Giới thiệu công ty" Background="{x:Null}" BorderBrush="Black" Foreground="White" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbGioiThieuCT" Text="Content" TextWrapping="Wrap" Foreground="White" />
+                                <TextBlock x:Name="tbGioiThieuCT" Text="Content" TextWrapping="Wrap" Foreground="White" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
-                        <Expander Header="Mô tả công việc" Background="{x:Null}" BorderBrush="Black" Foreground="White">
+                        <Expander Header="Mô tả công việc" Background="{x:Null}" BorderBrush="Black" Foreground="White" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbMoTaCV" Text="{Binding Path=MoTaCV}" TextWrapping="Wrap" Foreground="White" />
+                                <TextBlock x:Name="tbMoTaCV" Text="{Binding Path=MoTaCV}" TextWrapping="Wrap" Foreground="White" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
-                        <Expander HorizontalAlignment="Stretch" Header="Quyền lợi" Background="{x:Null}" Foreground="White">
+                        <Expander HorizontalAlignment="Stretch" Header="Quyền lợi" Background="{x:Null}" Foreground="White" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbQuyenLoi" Text="{Binding Path=QuyenLoi}" Foreground="White" />
+                                <TextBlock x:Name="tbQuyenLoi" Text="{Binding Path=QuyenLoi}" Foreground="White" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
-                        <Expander HorizontalAlignment="Stretch" Header="Yêu cầu" Background="{x:Null}" BorderBrush="Black" Foreground="White">
+                        <Expander HorizontalAlignment="Stretch" Header="Yêu cầu" Background="{x:Null}" BorderBrush="Black" Foreground="White" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbYeuCau" Text="{Binding Path=YeuCau}" Foreground="White" />
+                                <TextBlock x:Name="tbYeuCau" Text="{Binding Path=YeuCau}" Foreground="White" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
                     </StackPanel>

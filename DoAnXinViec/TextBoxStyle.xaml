@@ -55,7 +55,7 @@
                             <Setter Property="BorderBrush" Value="#D1DBE4" TargetName="border"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="True">
-                            <Setter Property="BorderBrush" Value="#FF560C81" TargetName="border"/>
+                            <Setter Property="BorderBrush" Value="#FF2A8DD3" TargetName="border"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

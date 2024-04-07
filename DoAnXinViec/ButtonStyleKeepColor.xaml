@@ -51,7 +51,7 @@
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="true">
                             <Setter Property="wpf:ShadowAssist.Darken" TargetName="border" Value="True"/>
-                            <Setter Property="Background" TargetName="border" Value="#FF560C81"/>
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource MaterialDesign.Brush.Primary.Light}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Opacity" Value="0.38"/>

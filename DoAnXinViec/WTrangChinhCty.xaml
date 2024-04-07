@@ -16,26 +16,26 @@
         <Border HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="White" CornerRadius="30">
             <Grid HorizontalAlignment="Left" Height="770" VerticalAlignment="Center" Width="225" Background="Transparent">
                 <StackPanel Margin="0,260,0,0">
-                    <Expander Header="Tổng quan" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <Expander Header="Tổng quan" Foreground="#FF2A8DD3" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
                         <StackPanel>
                             <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Thống kê" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
                             <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Báo cáo" HorizontalContentAlignment="Left"  Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" Background="White"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Quản lý đơn tuyển" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <Expander Header="Quản lý đơn tuyển" Foreground="#FF2A8DD3" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
                         <StackPanel>
                             <Button x:Name="btnTaoTinDangTuyen" Style="{DynamicResource ButtonStyleKeepColor}" Content="Tạo tin đăng" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnTaoTinDangTuyen_Click"/>
                             <Button x:Name="btnDanhSachTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Danh sách tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnDanhSachTin_Click"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Quản lý ứng viên" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <Expander Header="Quản lý ứng viên" Foreground="#FF2A8DD3" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
                         <StackPanel>
                             <Button x:Name="btnHoSoUngTuyen" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ ứng tuyển" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoUngTuyen_Click"/>
                             <Button x:Name="btnHoSoDaThich" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ đã thích" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoDaThich_Click"/>
                             <Button x:Name="btnTimKiemUngVien" Style="{DynamicResource ButtonStyleKeepColor}" Content="Tìm kiếm ứng viên" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnTimKiemUngVien_Click"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Cài đặt chung" Foreground="#FF560C81" FontFamily="Segoe UI Black" Background ="White"  FontSize="14" >
+                    <Expander Header="Cài đặt chung" Foreground="#FF2A8DD3" FontFamily="Segoe UI Black" Background ="White"  FontSize="14" >
                         <StackPanel>
                             <Button x:Name="btnCapNhatThongTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Cập nhật thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnCapNhatThongTin_Click"/>
                         </StackPanel>

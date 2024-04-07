@@ -148,7 +148,7 @@
                     <TextBox x:Name="txtMaxLuong" materialDesign:HintAssist.Hint="Max (triệu)" Width="100"/>
                 </WrapPanel>
             </ComboBox>
-            <Button x:Name="btnTimKiem" Style="{DynamicResource ButtonStyleBoGoc}" Content="Search" HorizontalAlignment="Left" Height="33" Margin="851,33,0,0" VerticalAlignment="Top" Width="141" Foreground="#FFFCFCFC" Background="#6675df" FontSize="16" FontWeight="Bold"/>
+            <Button x:Name="btnTimKiem" Style="{DynamicResource ButtonStyleBoGoc}" Content="Search" HorizontalAlignment="Left" Height="33" Margin="851,33,0,0" VerticalAlignment="Top" Width="141" Foreground="#FFFCFCFC" Background="{StaticResource MaterialDesign.Brush.Primary}" FontSize="16" FontWeight="Bold"/>
         </Grid>
         <Grid Margin="0,0,0,40" Height="610" VerticalAlignment="Bottom">
             <Border CornerRadius="10" BorderBrush="Black" Margin="10,10,10,-10">

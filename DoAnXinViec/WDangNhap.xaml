@@ -38,7 +38,7 @@
                  Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,141,0,0" />
             <Button x:Name="btnDangNhap" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng nhập" HorizontalAlignment="Center" Height="36" Margin="0,295,0,0" VerticalAlignment="Top" Width="341" Foreground="#FFFCFCFC" FontFamily="Segoe UI Black" FontSize="18" Click="btnDangNhap_Click">
                 <Button.Background>
-                    <SolidColorBrush Color="#FF560C81"  Opacity="0.7"/>
+                    <SolidColorBrush Color="#FF2A8DD3"  Opacity="0.7"/>
                 </Button.Background>
                 <Button.BorderBrush>
                     <SolidColorBrush Color="Black" Opacity="0.5"/>

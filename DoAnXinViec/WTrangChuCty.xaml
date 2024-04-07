@@ -11,13 +11,13 @@
             <Border>
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Offset="0" Color="BurlyWood"/>
+                        <GradientStop Offset="0" Color="#FF2A8DD3"/>
                         <GradientStop Offset="0.5489" Color="#121212"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
             <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="160" Margin="60,20,0,0" VerticalAlignment="Top" Width="160" />
-            <Label Content="MB Bank" HorizontalAlignment="Left" Margin="240,20,0,0" VerticalAlignment="Top" Height="37" Width="114" FontSize="24" Foreground="White" FontWeight="Bold"/>
+            <Label Content="{Binding TenCT}" HorizontalAlignment="Left" Margin="240,20,0,0" VerticalAlignment="Top" Height="37" FontSize="24" Foreground="White" FontWeight="Bold"/>
             <WrapPanel Width="200" Height="30" Margin="240,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" >
                 <materialDesign:PackIcon Kind="MapMarkerOutline" Height="26" Width="41" Foreground="Gray" />
                 <Label Content="{Binding TinhThanh}" Foreground="#E5FFFFFF" FontWeight="Bold"/>
