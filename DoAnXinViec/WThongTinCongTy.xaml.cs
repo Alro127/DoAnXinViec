@@ -23,26 +23,26 @@ namespace DoAnXinViec
         CongTyDAO congTyDAO = new CongTyDAO();
         TaiKhoan taiKhoan;
         TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
-        public WThongTinCongTy()
-        {
-            InitializeComponent();
-        }
 
         public WThongTinCongTy(TaiKhoan taiKhoan)
         {
             InitializeComponent();
-            this.TaiKhoan = taiKhoan;
+            this.taiKhoan = taiKhoan;
             this.DataContext = congTy;
         }
-
-        internal TaiKhoan TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
-
         private void btnDangKy_Click(object sender, RoutedEventArgs e)
         {
-            congTy.Id = TaiKhoan.Id;
+            congTy.Id = taiKhoan.Id;
             congTy.Anh = "";
-            congTyDAO.Them(congTy, "CTy");
-            taiKhoanDAO.SignUp(TaiKhoan);
+            if (congTyDAO.Them(congTy, "Cty") == true)
+            {
+                taiKhoanDAO.SignUp(taiKhoan);
+                MediaHandler.CreateDirectory(congTy.Id);
+                MessageBox.Show("Thành công");
+                this.Close();
+                WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(congTy);
+                wTrangChinhCty.ShowDialog();
+            }
         }
     }
 }

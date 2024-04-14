@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -26,14 +27,18 @@ namespace DoAnXinViec
         UngVien ungVien;
         UngVienDAO ungVienDAO = new UngVienDAO();
         DonDAO donDAO = new DonDAO();
+        YeuThichDAO yeuThichDAO = new YeuThichDAO();
         List<Don> donList = new List<Don>();
         public WTrangXemDon(string id)
         {
             InitializeComponent();
-            ucTrangTimViec.btnTimKiem.Click += new RoutedEventHandler(this.btnTimKiem_Click);
-            ucTrangTimViec.cbDiaDiem.SelectionChanged += new SelectionChangedEventHandler(this.cbDiaDiem_SelectionChanged);
             DataTable dt = ungVienDAO.Get(id, "UngVien");
             ungVien = new UngVien(dt.Rows[0]);
+        }
+        public WTrangXemDon(UngVien ungVien)
+        {
+            InitializeComponent();
+            this.ungVien = ungVien;
         }
         bool CheckTimKiem(Don don)
         {
@@ -108,24 +113,23 @@ namespace DoAnXinViec
         }
         void DangUCDon()
         {
+            ucTrangTimViec.wpDon.Children.Clear();
             foreach (Don don in donList)
             {
-                if (CheckTimKiem(don)==true && CheckDiaDiem(don)==true && CheckLuong(don)==true)
+                if (CheckTimKiem(don) && CheckDiaDiem(don) && CheckLuong(don) && CheckKinhNghiem(don))
                 {
-                    UCDon uCDon = new UCDon(don);
-                    CongTyDAO congTyDAO = new CongTyDAO();
-                    DataTable dt = congTyDAO.Get(don.IdCT, "Cty");
-                    CongTy congTy = new CongTy(dt.Rows[0]);
-                    BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh,congTy.Id);
-                    if (bitmapImg != null)
-                        uCDon.imgAnh.Source = bitmapImg;
+                    YeuThich yeuThich = new YeuThich(don.IdDon, ungVien.Id);
+                    UCDon uCDon = new UCDon(don, yeuThich);
                     ucTrangTimViec.wpDon.Children.Add(uCDon);
                     uCDon.btnXem.Click += new RoutedEventHandler(this.btnXem_Click);
+                    uCDon.btnYeuThich.Click += new RoutedEventHandler(this.btnYeuThich_Click);
                 }
             }
+
         }
         void Load()
         {
+            donList.Clear();
             DataTable dt = donDAO.Load();
             foreach (DataRow dr in dt.Rows)
             {
@@ -136,32 +140,64 @@ namespace DoAnXinViec
         }
         private void btnXem_Click(object sender, RoutedEventArgs e)
         {
-            Don don = (Don)(sender as Button).Tag;
+            Don don = (Don)(sender as Button).DataContext;
             WDonChiTiet wDonChiTiet = new WDonChiTiet(don, ungVien);
             donDAO.TangLuotXem(don);
             wDonChiTiet.ShowDialog();
+            Load();
+        }
+        void btnYeuThich_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton toggleButton = sender as ToggleButton;
+            if (toggleButton.IsChecked == true)
+            {
+                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, ungVien.Id);
+                yeuThichDAO.Them(yeuThich);
+            }
+            else
+            {
+                YeuThich yeuThich = new YeuThich((int)(toggleButton).Tag, ungVien.Id);
+                yeuThichDAO.Xoa(yeuThich);
+            }
+        }
+        
+
+        private void WTrangChinh_Load(object sender, RoutedEventArgs e)
+        {
+            ucTrangTimViec.btnTimKiem.Click += new RoutedEventHandler(this.btnTimKiem_Click);
+            ucTrangTimViec.btnQuanLyTaiKhoan.Click += new RoutedEventHandler(this.btnQuanLyTaiKhoan_Click);
+            ucTrangTimViec.cbDiaDiem.SelectionChanged += new SelectionChangedEventHandler(this.cbDiaDiem_SelectionChanged);
+            ucTrangTimViec.cbKinhNghiem.SelectionChanged += new SelectionChangedEventHandler(this.cbKinhNghiem_SelectionChanged);
+            ucTrangTimViec.cbLuong.SelectionChanged += new SelectionChangedEventHandler(this.cbLuong_SelectionChanged);
+
+            BitmapImage bitmapImg = MediaHandler.SetImage(ungVien.Anh, ungVien.Id);
+            if (bitmapImg != null)
+                ucTrangTimViec.imgAnh.ImageSource = bitmapImg;
+            ucTrangTimViec.lblTen.Content = ungVien.HoTen;
+            Load();
+        }
+
+        private void btnTimKiem_Click(object sender, RoutedEventArgs e)
+        {
+            DangUCDon();
+        }
+        private void cbDiaDiem_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DangUCDon();
+        }
+        private void cbKinhNghiem_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DangUCDon();
+        }
+        private void cbLuong_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DangUCDon();
         }
         private void btnQuanLyTaiKhoan_Click(object sender, RoutedEventArgs e)
         {
             WTrangChinhUngVien wTrangChinhUngVien = new WTrangChinhUngVien(ungVien);
             this.Close();
             wTrangChinhUngVien.ShowDialog();
-        }
-
-        private void WTrangChinh_Load(object sender, RoutedEventArgs e)
-        {
-            Load();
-        }
-
-        private void btnTimKiem_Click(object sender, RoutedEventArgs e)
-        {
-            ucTrangTimViec.wpDon.Children.Clear();
-            DangUCDon();
-        }
-        private void cbDiaDiem_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ucTrangTimViec.wpDon.Children.Clear();
-            DangUCDon();
         }
     }
 }

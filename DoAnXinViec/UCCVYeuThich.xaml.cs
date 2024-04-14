@@ -23,12 +23,7 @@ namespace DoAnXinViec
     {
         CongTy congTy;
         CVDAO cvDAO = new CVDAO();
-        UngVienDAO ungVienDAO = new UngVienDAO();
         YeuThichDAO yeuThichDAO = new YeuThichDAO();
-        public UCCVYeuThich()
-        {
-            InitializeComponent();
-        }
         public UCCVYeuThich(CongTy congTy)
         {
             InitializeComponent();
@@ -38,17 +33,11 @@ namespace DoAnXinViec
         void DangUCCV(DataRow dr)
         {
             YeuThich yeuThich = new YeuThich(dr);
-            DataTable dt = cvDAO.Get(yeuThich.IdCV);
+            DataTable dt = cvDAO.Get(yeuThich.Id);
             if (dt.Rows.Count>0)
             {
                 CV cv = new CV(dt.Rows[0]);
-                dt = ungVienDAO.Get(cv.IdUV, "UngVien");
-                UngVien ungVien = new UngVien(dt.Rows[0]);
-                cv.UngVien = ungVien;
-
-                UCCV ucCV = new UCCV(cv);
-                ucCV.DataContext = cv;
-                ucCV.btnYeuThich.IsEnabled = false;
+                UCCV ucCV = new UCCV(cv,yeuThich);
                 wpCVYeuThich.Children.Add(ucCV);
             }
         }

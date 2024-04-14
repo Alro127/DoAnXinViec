@@ -66,5 +66,10 @@ namespace DoAnXinViec
             if (Dbconnection.ThucThi(sqlStr, parameters) == false)
                 MessageBox.Show("Co Loi");
         }
+        public DataTable Get(int id)
+        {
+            string sqlStr = string.Format("SELECT * FROM Don WHERE IdDon = '{0}'", id);
+            return dbconnection.Load(sqlStr);
+        }
     }
 }

@@ -23,16 +23,11 @@ namespace DoAnXinViec
     {
         CongTy congTy;
         DonDAO donDAO = new DonDAO();
-        public UCDangDon()
-        {
-            InitializeComponent();
-            ucDon.lblTenCT.Content = ((CongTy)(this.Tag)).TenCT;
-        }
         public UCDangDon(CongTy congTy)
         {
             InitializeComponent();
             this.congTy = congTy;
-            ucDon.lblTenCT.Content = congTy.TenCT;
+            this.ucDon.DataContext = congTy;
         }
 
         private void txtTenCV_KeyUp(object sender, KeyEventArgs e)
@@ -73,8 +68,16 @@ namespace DoAnXinViec
 
         private void btnDang_Click(object sender, RoutedEventArgs e)
         {
-            Don don = new Don(0, txtTenCV.Text, congTy.Id, cbDiaDiem.Text, cbLuong.Text, cbKinhNghiem.Text, DateTime.Now.Date, dtpNgayToiHan.SelectedDate.Value, txtMoTaCV.Text, txtYeuCau.Text, txtQuyenLoi.Text, 0, 0);
-            donDAO.Them(don);
+            try
+            {
+                Don don = new Don(0, txtTenCV.Text, congTy.Id, cbDiaDiem.Text, cbLuong.Text, cbKinhNghiem.Text, DateTime.Now.Date, dtpNgayToiHan.SelectedDate.Value.Date, txtMoTaCV.Text, txtYeuCau.Text, txtQuyenLoi.Text, 0, 0);
+                donDAO.Them(don);
+            }
+            catch (InvalidOperationException ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

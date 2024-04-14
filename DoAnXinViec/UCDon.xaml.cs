@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,17 +22,33 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCDon : UserControl
     {
-        Don don;
-        public UCDon()
+        Don don = new Don();
+        public UCDon() 
         {
             InitializeComponent();
         }
-        public UCDon(Don don)
+        public UCDon(Don don, YeuThich? yeuThich=null)
         {
             InitializeComponent();
-            this.Don = don;
-            this.DataContext = Don;
-            btnXem.Tag = don;
+            this.DataContext = don;
+            btnXem.DataContext = don;
+
+            CongTyDAO congTyDAO = new CongTyDAO();
+            DataTable dt = congTyDAO.Get(don.IdCT, "Cty");
+            CongTy congTy = new CongTy(dt.Rows[0]);
+            BitmapImage bitmapImg = MediaHandler.SetImage(congTy.Anh, congTy.Id);
+            if (bitmapImg != null)
+                imgAnh.Source = bitmapImg;
+
+            YeuThichDAO yeuThichDAO = new YeuThichDAO();
+            if (yeuThich != null )
+            {
+                if (yeuThichDAO.CheckExist(yeuThich))
+                    btnYeuThich.IsChecked = true;
+                else
+                    btnYeuThich.IsChecked = false;
+                btnYeuThich.Tag = don.IdDon;
+            }
         }
 
         public Don Don { get => don; set => don = value; }

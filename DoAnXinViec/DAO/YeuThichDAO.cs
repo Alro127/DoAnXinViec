@@ -13,9 +13,9 @@ namespace DoAnXinViec
     public class YeuThichDAO
     {
         DBConnection dbconnection = new DBConnection();
-        public DataTable Load(CongTy congTy)
+        public DataTable Load<T>(T user) where T : User
         {
-            string sqlStr = string.Format("SELECT * FROM YeuThich WHERE IdCT = '{0}'", congTy.Id);
+            string sqlStr = string.Format("SELECT * FROM YeuThich WHERE IdUser = '{0}'", user.Id);
             return dbconnection.Load(sqlStr);
         }
         public bool Them(YeuThich yeuThich)
@@ -27,14 +27,15 @@ namespace DoAnXinViec
         public bool Xoa(YeuThich yeuThich)
         {
             List<SqlParameter> parameters = Utility.GetParameters(yeuThich);
-            string sqlStr = Utility.GenerateDeleteSql("YeuThich", "IdCV = @IdCV AND IdCT = @IdCT");
+            string sqlStr = Utility.GenerateDeleteSql("YeuThich", "Id = @Id AND IdUser = @IdUser");
             return (dbconnection.ThucThi(sqlStr, parameters));
         }
         
         public bool CheckExist(YeuThich yeuThich)
         {
-            string sqlStr = string.Format("SELECT COUNT(*) AS SoLuong FROM YeuThich Where IdCV = '{0}' AND IdCT ='{1}'", yeuThich.IdCV, yeuThich.IdCT);
+            string sqlStr = string.Format("SELECT COUNT(*) AS SoLuong FROM YeuThich Where Id = '{0}' AND IdUser ='{1}'", yeuThich.Id, yeuThich.IdUser);
             return dbconnection.CheckExist(sqlStr);
         }
+
     }
 }

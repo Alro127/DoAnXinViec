@@ -8,36 +8,36 @@
         mc:Ignorable="d"
         Title="WDonChiTiet" Height="586" Width="995" Loaded="WDonChiTiet_Load">
     <Grid>
-         <Grid.Background>
-            <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/2.png"/>
         </Grid.Background>
         <Grid HorizontalAlignment="Left" Height="550" Margin="230,0,0,0" VerticalAlignment="Center" Width="749">
             <Border CornerRadius="10" Margin="10,10,10,10">
                 <Border.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    <SolidColorBrush Color= "White"/>
                 </Border.Background>
             </Border>
             <materialDesign:Card x:Name="crdThongTinChiTiet" Background="{x:Null}" Margin="20,20,20,20">
-                <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <ScrollViewer VerticalScrollBarVisibility="Visible" BorderBrush="Black">
                     <StackPanel>
-                        <Expander Header="Giới thiệu công ty" Background="{x:Null}" BorderBrush="Black" Foreground="White" FontWeight="Bold">
+                        <Expander Header="Giới thiệu công ty" Background="{x:Null}" BorderBrush="Black" Foreground="#555" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbGioiThieuCT" Text="Content" TextWrapping="Wrap" Foreground="White" FontWeight="Normal" />
+                                <TextBlock x:Name="tbGioiThieuCT" Text="Content" TextWrapping="Wrap" Foreground="#555" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
-                        <Expander Header="Mô tả công việc" Background="{x:Null}" BorderBrush="Black" Foreground="White" FontWeight="Bold">
+                        <Expander Header="Mô tả công việc" Background="{x:Null}" BorderBrush="Black" Foreground="#555" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbMoTaCV" Text="{Binding Path=MoTaCV}" TextWrapping="Wrap" Foreground="White" FontWeight="Normal" />
+                                <TextBlock x:Name="tbMoTaCV" Text="{Binding Path=MoTaCV}" TextWrapping="Wrap" Foreground="#555" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
-                        <Expander HorizontalAlignment="Stretch" Header="Quyền lợi" Background="{x:Null}" Foreground="White" FontWeight="Bold">
+                        <Expander HorizontalAlignment="Stretch" Header="Quyền lợi" Background="{x:Null}" Foreground="#555" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbQuyenLoi" Text="{Binding Path=QuyenLoi}" Foreground="White" FontWeight="Normal" />
+                                <TextBlock x:Name="tbQuyenLoi" Text="{Binding Path=QuyenLoi}" Foreground="#555" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
-                        <Expander HorizontalAlignment="Stretch" Header="Yêu cầu" Background="{x:Null}" BorderBrush="Black" Foreground="White" FontWeight="Bold">
+                        <Expander HorizontalAlignment="Stretch" Header="Yêu cầu" Background="{x:Null}" BorderBrush="Black" Foreground="#555" FontWeight="Bold">
                             <StackPanel Margin="24,8,24,16" Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
-                                <TextBlock x:Name="tbYeuCau" Text="{Binding Path=YeuCau}" Foreground="White" FontWeight="Normal" />
+                                <TextBlock x:Name="tbYeuCau" Text="{Binding Path=YeuCau}" Foreground="#555" FontWeight="Normal" />
                             </StackPanel>
                         </Expander>
                     </StackPanel>
@@ -56,7 +56,7 @@
 
         </Grid>
         <Button x:Name="btnUngTuyenNgay" Content="Ứng tuyển ngay" Margin="20,304,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top" Click="btnUngTuyenNgay_Click"/>
-        <Button Content="Thêm vào yêu thích" Margin="20,350,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top"/>
+        <Button x:Name="btnThemVaoYeuThich" Content="Thêm vào yêu thích" Margin="20,350,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top" Click="btnThemVaoYeuThich_Click"/>
         <Label Content="{Binding TenCT}" Margin="20,230,0,0" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Width="196" Height="auto" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe UI Black" Foreground="White"/>
         <Button x:Name="btnXemCongTy" Content="Trang chủ công ty" Margin="20,397,0,0" HorizontalAlignment="Left" Width="196" Height="32" VerticalAlignment="Top" Click="btnXemCongTy_Click" />
 

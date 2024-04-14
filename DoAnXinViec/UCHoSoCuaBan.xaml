@@ -1,16 +1,16 @@
-﻿<UserControl
+﻿<UserControl x:Class="DoAnXinViec.UCHoSoCuaBan"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoAnXinViec"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="DoAnXinViec.UCHoSoCuaBan"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="780" d:DesignWidth="1290">
-    <Border Background="White" CornerRadius="30" Margin="0,10,0,0" Height="770" VerticalAlignment="Top">
-        <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
+             d:DesignHeight="800" d:DesignWidth="1290">
+    <Border Background="White" CornerRadius="30,0,0,30" Margin="0,0,0,0" Height="800" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Left" Height="800" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
             <Label Content="Hồ Sơ Của Bạn" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1250" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
-            <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,0,0,0" VerticalAlignment="Top" Width="1290"/>
+            <Border BorderBrush="black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1290"/>
             <TabControl x:Name="tbcHoSoCuaBan" Style="{StaticResource MaterialDesignTabControl}" HorizontalAlignment="Center" Height="610" VerticalAlignment="Bottom" Width="1250" Background="White" Margin="0,0,0,80">
                 <TabItem x:Name="tbiThongTinCaNhan" Header="Thông tin cá nhân" DataContext="{Binding UngVien}">
                     <Grid Background="White">
@@ -298,8 +298,8 @@
                     </Grid>
                 </TabItem>
             </TabControl>
-            <Button x:Name="btnLuuVaDangHoSo" Content="Lưu và đăng hồ sơ" Height="40" Margin="0,0,20,20" VerticalAlignment="Bottom" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="260" Background="White" Foreground="#DD000000" Click="btnLuuVaDangHoSo_Click"/>
-            <Button x:Name="btnXemTruoc" Content="Xem trước" Margin="0,710,300,20" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40" Click="btnXemTruoc_Click">
+            <Button x:Name="btnLuuVaDangHoSo" Content="Lưu và đăng hồ sơ" Height="40" Margin="0,0,20,20" VerticalAlignment="Bottom" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="260" Background="White" Foreground="#DD000000"/>
+            <Button x:Name="btnXemTruoc" Content="Xem trước" Margin="0,0,300,20" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40" Click="btnXemTruoc_Click" VerticalAlignment="Bottom">
                 <Button.Background>
                     <SolidColorBrush Color="#FF2A8DD3" Opacity="0.5"/>
                 </Button.Background>

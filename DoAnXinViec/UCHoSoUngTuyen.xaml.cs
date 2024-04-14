@@ -169,7 +169,8 @@ namespace DoAnXinViec
                         comboBox.SelectedIndex = 0;
                     else if (dataModel.TrangThai == "Chấp nhận")
                         comboBox.SelectedIndex = 1;
-                    else comboBox.SelectedIndex = 2;
+                    else if (dataModel.TrangThai == "Từ chối")
+                        comboBox.SelectedIndex = 2;
                 }
             }
         }

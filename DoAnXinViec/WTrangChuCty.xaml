@@ -16,66 +16,66 @@
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="160" Margin="60,20,0,0" VerticalAlignment="Top" Width="160" />
+            <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="160" Margin="60,20,0,0" VerticalAlignment="Top" Width="160" Stretch="UniformToFill" />
             <Label Content="{Binding TenCT}" HorizontalAlignment="Left" Margin="240,20,0,0" VerticalAlignment="Top" Height="37" FontSize="24" Foreground="White" FontWeight="Bold"/>
             <WrapPanel Width="200" Height="30" Margin="240,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" >
                 <materialDesign:PackIcon Kind="MapMarkerOutline" Height="26" Width="41" Foreground="Gray" />
                 <Label Content="{Binding TinhThanh}" Foreground="#E5FFFFFF" FontWeight="Bold"/>
             </WrapPanel>
-            <WrapPanel Width="200" Margin="240,100,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" >
+            <WrapPanel Width="327" Margin="240,100,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" >
                 <materialDesign:PackIcon Kind="BriefcaseVariantOutline" Height="26" Width="41" Foreground="Gray" />
-                <Label x:Name="lblSoLuongDon" Content="7 job openings" Foreground="#E5FFFFFF" FontWeight="Bold" Width="149"/>
+                <Label x:Name="lblSoLuongDon" Content="7 job openings" Foreground="#E5FFFFFF" FontWeight="Bold"/>
             </WrapPanel>
         </Grid>
         <materialDesign:Card Margin="40,250,40,0" VerticalAlignment="Top" Background="{x:Null}">
             <ScrollViewer VerticalScrollBarVisibility="Visible" >
                 <StackPanel>
-                <Grid>
-                    <StackPanel >
-                        <Grid HorizontalAlignment="Left" Height="180" VerticalAlignment="Top" Width="930">
-                            <Border CornerRadius="10" BorderThickness="1" >
-                                <Border.Background>
-                                    <SolidColorBrush Color="White"/>
-                                </Border.Background>
-                            </Border>
-                            <Label Content="Thông tin chung" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="239" FontSize="24" Foreground="Black" FontWeight="Bold" Height="40"/>
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
-                            <Label Content="Lĩnh Vực" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Width="98" Foreground="#FF555555" FontSize="14"/>
-                            <Label Content="{Binding LinhVuc}" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="160" FontSize="18" Foreground="Black"/>
-                            <Label Content="Email" HorizontalAlignment="Left" Margin="20,120,0,0" VerticalAlignment="Top" Width="98" Foreground="#FF555555" FontSize="14"/>
-                            <Label Content="{Binding Email}" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top" Width="420" FontSize="18" Foreground="Black"/>
-                            <Label Content="Quy mô nhân viên" HorizontalAlignment="Left" Margin="300,60,0,0" VerticalAlignment="Top" Width="123" Foreground="#FF555555" FontSize="14"/>
-                            <Label Content="{Binding QuyMoNhanSu}" HorizontalAlignment="Left" Margin="300,80,0,0" VerticalAlignment="Top" Width="160" FontSize="18" Foreground="Black"/>
-                            <Label Content="Tỉnh/Thành" HorizontalAlignment="Left" Margin="600,60,0,0" VerticalAlignment="Top" Width="123" Foreground="#FF555555" FontSize="14"/>
-                            <Label Content="{Binding TinhThanh}" HorizontalAlignment="Left" Margin="600,80,0,0" VerticalAlignment="Top" Width="160" FontSize="18" Foreground="Black"/>
-                        </Grid>
-                        <Grid HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="930">
-                            <Border CornerRadius="10" BorderThickness="1" Height="auto" >
-                                <Border.Background>
-                                    <SolidColorBrush Color="White"/>
-                                </Border.Background>
-                            </Border>
-                            <Label Content="Giới thiệu về chúng tôi" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="37" FontSize="24" Foreground="Black" FontWeight="Bold"/>
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
-                            <TextBlock Text="{Binding GT}" Margin="20,70,0,20" HorizontalAlignment="Left" Width="895" VerticalAlignment="Top"/>
-                        </Grid>
-                        <Grid HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="930">
-                            <Border CornerRadius="10" BorderThickness="1" >
-                                <Border.Background>
-                                    <SolidColorBrush Color="White"/>
-                                </Border.Background>
-                            </Border>
-                            <Label Content="Ảnh" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="37" Width="239" FontSize="24" Foreground="Black" FontWeight="Bold"/>
-                            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
-                            <WrapPanel x:Name="wpAnh" Margin="20,70,20,20"/>
-                        </Grid>
-                    </StackPanel>
-                    <materialDesign:Card HorizontalAlignment="Right" Height="520" Margin="0,0,20,0" VerticalAlignment="Top" Width="460" Background="{x:Null}">
-                        <ScrollViewer VerticalScrollBarVisibility="Visible" >
-                            <StackPanel x:Name="stDon"/>
-                        </ScrollViewer>
-                    </materialDesign:Card>
-                </Grid>
+                    <Grid>
+                        <StackPanel >
+                            <Grid HorizontalAlignment="Left" Height="180" VerticalAlignment="Top" Width="930">
+                                <Border CornerRadius="10" BorderThickness="1" >
+                                    <Border.Background>
+                                        <SolidColorBrush Color="White"/>
+                                    </Border.Background>
+                                </Border>
+                                <Label Content="Thông tin chung" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="239" FontSize="24" Foreground="Black" FontWeight="Bold" Height="40"/>
+                                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
+                                <Label Content="Lĩnh Vực" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Width="98" Foreground="#FF555555" FontSize="14"/>
+                                <Label Content="{Binding LinhVuc}" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="160" FontSize="18" Foreground="Black"/>
+                                <Label Content="Email" HorizontalAlignment="Left" Margin="20,120,0,0" VerticalAlignment="Top" Width="98" Foreground="#FF555555" FontSize="14"/>
+                                <Label Content="{Binding Email}" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top" Width="420" FontSize="18" Foreground="Black"/>
+                                <Label Content="Quy mô nhân viên" HorizontalAlignment="Left" Margin="300,60,0,0" VerticalAlignment="Top" Width="123" Foreground="#FF555555" FontSize="14"/>
+                                <Label Content="{Binding QuyMoNhanSu}" HorizontalAlignment="Left" Margin="300,80,0,0" VerticalAlignment="Top" Width="160" FontSize="18" Foreground="Black"/>
+                                <Label Content="Tỉnh/Thành" HorizontalAlignment="Left" Margin="600,60,0,0" VerticalAlignment="Top" Width="123" Foreground="#FF555555" FontSize="14"/>
+                                <Label Content="{Binding TinhThanh}" HorizontalAlignment="Left" Margin="600,80,0,0" VerticalAlignment="Top" Width="160" FontSize="18" Foreground="Black"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="930">
+                                <Border CornerRadius="10" BorderThickness="1" Height="auto" >
+                                    <Border.Background>
+                                        <SolidColorBrush Color="White"/>
+                                    </Border.Background>
+                                </Border>
+                                <Label Content="Giới thiệu về chúng tôi" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="37" FontSize="24" Foreground="Black" FontWeight="Bold"/>
+                                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
+                                <TextBlock Text="{Binding GT}" Margin="20,70,0,20" HorizontalAlignment="Left" Width="895" VerticalAlignment="Top"/>
+                            </Grid>
+                            <Grid HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="930">
+                                <Border CornerRadius="10" BorderThickness="1" >
+                                    <Border.Background>
+                                        <SolidColorBrush Color="White"/>
+                                    </Border.Background>
+                                </Border>
+                                <Label Content="Ảnh" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="37" Width="239" FontSize="24" Foreground="Black" FontWeight="Bold"/>
+                                <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
+                                <WrapPanel x:Name="wpAnh" Margin="20,70,20,20"/>
+                            </Grid>
+                        </StackPanel>
+                        <materialDesign:Card HorizontalAlignment="Right" Height="520" Margin="0,0,20,0" VerticalAlignment="Top" Width="460" Background="{x:Null}">
+                            <ScrollViewer VerticalScrollBarVisibility="Visible" >
+                                <StackPanel x:Name="stDon"/>
+                            </ScrollViewer>
+                        </materialDesign:Card>
+                    </Grid>
                 </StackPanel>
             </ScrollViewer>
         </materialDesign:Card>

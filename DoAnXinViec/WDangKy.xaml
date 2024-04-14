@@ -8,46 +8,40 @@
         mc:Ignorable="d"
         Title="WDangKy" Height="450" Width="800">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="432" VerticalAlignment="Center" Width="390" Background="White" Margin="408,0,0,0">
+        <Grid HorizontalAlignment="Left" Height="432" VerticalAlignment="Center" Width="364" Background="White" Margin="434,0,0,0">
             <TextBox
                  x:Name="txtTenDangNhap"
                  FontSize="16"
-                 Width="342"
-                 Height="42"
+                 Height="40"
                  VerticalAlignment="Top"
-                 HorizontalAlignment="Center"
                  Foreground="#555"
                  Padding="10,8,0,0"
                  materialDesign:HintAssist.Hint="Tên đăng nhập"
                 materialDesign:HintAssist.Background="White"
-                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,138,0,0" />
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,140,20,0" />
             <PasswordBox
                     x:Name="txtMatKhau"
                     FontSize="16"
-                    Width="342"
-                    Height="42"
+                    Height="40"
                     VerticalAlignment="Top"
-                    HorizontalAlignment="Center"
                     Padding="10,8,0,0"               
                     materialDesign:HintAssist.Hint="Mật khẩu"
                     Foreground="#555"
                     materialDesign:PasswordBoxAssist.Password="{Binding Password2, Mode=TwoWay}"
                     materialDesign:HintAssist.Background="White"
-                    Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="0,189,0,0" />
+                    Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="20,190,20,0" />
             <PasswordBox
                     x:Name="txtXacNhanMatKhau"
                     FontSize="16"
-                    Width="342"
-                    Height="42"
+                    Height="40"
                     VerticalAlignment="Top"
-                    HorizontalAlignment="Center"
                     Padding="10,8,0,0"               
                     materialDesign:HintAssist.Hint="Xác nhận lại mật khẩu"
                     Foreground="#555"
                     materialDesign:PasswordBoxAssist.Password="{Binding Password2, Mode=TwoWay}"
                     materialDesign:HintAssist.Background="White"
-                    Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="0,240,0,0" />
-            <Button x:Name="btnDangKyUngVien" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng ký ứng tuyển" HorizontalAlignment="Center" Height="36" Margin="0,302,0,0" VerticalAlignment="Top" Width="342" Foreground="#FFFCFCFC" FontFamily="Segoe UI Black" FontSize="18" Click="btnDangKyUngVien_Click">
+                    Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="20,240,20,0" />
+            <Button x:Name="btnDangKyUngVien" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng ký ứng tuyển" Height="40" Margin="20,300,20,0" VerticalAlignment="Top" Foreground="#FFFCFCFC" FontFamily="Segoe UI Black" FontSize="18" Click="btnDangKyUngVien_Click">
                 <Button.Background>
                     <SolidColorBrush Color="#FF2A8DD3" Opacity="0.7"/>
                 </Button.Background>
@@ -55,7 +49,7 @@
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </Button.BorderBrush>
             </Button>
-            <Button x:Name="btnDangKyCongTy" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng ký công ty" HorizontalAlignment="Center" Height="36" VerticalAlignment="Top" Width="342" Foreground="#FF2A8DD3" FontFamily="Segoe UI Black" FontSize="18" Margin="0,355,0,0" Click="btnDangKyCongTy_Click">
+            <Button x:Name="btnDangKyCongTy" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng ký công ty" Height="40" VerticalAlignment="Top" Foreground="#FF2A8DD3" FontFamily="Segoe UI Black" FontSize="18" Margin="20,350,20,0" Click="btnDangKyCongTy_Click">
                 <Button.Background>
                     <SolidColorBrush Color="#FFDDD8CF" Opacity="0.7"/>
                 </Button.Background>
@@ -63,8 +57,8 @@
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </Button.BorderBrush>
             </Button>
-            <Label Content="Đăng ký" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+            <Label Content="Đăng ký" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="410" Stretch="UniformToFill" Source="/—Pngtree—starry sky galaxy space background_2269978.png"/>
+        <Image HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="434" Source="/UniJob.png" Stretch="UniformToFill"/>
     </Grid>
 </Window>

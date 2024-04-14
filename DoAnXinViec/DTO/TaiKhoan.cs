@@ -13,9 +13,9 @@ namespace DoAnXinViec
         string quyen;
         public TaiKhoan(string id, string matKhau, string quyen)
         {
-            this.Id = id;
-            this.MatKhau = matKhau;
-            this.Quyen = quyen;
+            Id = id;
+            MatKhau = matKhau;
+            Quyen = quyen;
         }
 
         public string Id { get => id; set => id = value; }

@@ -9,13 +9,13 @@ namespace DoAnXinViec
 {
     public class YeuThich
     {
-        int idCV;
-        string idCT;
+        int id;
+        string idUser;
 
-        public YeuThich(int idCV, string idCT)
+        public YeuThich(int id, string idUser)
         {
-            this.idCV = idCV;
-            this.idCT = idCT;
+            this.id = id;
+            this.idUser = idUser;
         }
 
         public YeuThich(DataRow dr)
@@ -23,7 +23,7 @@ namespace DoAnXinViec
             Utility.SetItemFromRow(this, dr);
         }
         public YeuThich() { }
-        public int IdCV { get => idCV; set => idCV = value; }
-        public string IdCT { get => idCT; set => idCT = value; }
+        public int Id { get => id; set => id = value; }
+        public string IdUser { get => idUser; set => idUser = value; }
     }
 }

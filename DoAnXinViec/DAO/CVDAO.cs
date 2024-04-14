@@ -22,8 +22,9 @@ namespace DoAnXinViec
         }
         public void CapNhat(CV cv)
         {
+            List<SqlParameter> valueParameters = Utility.GetParameters(cv, cv.UnecessaryProperty2());
             List<SqlParameter> parameters = Utility.GetParameters(cv, cv.UnecessaryProperty1());
-            string sqlStr = Utility.GenerateUpdateSql("CV", parameters, "Id = @Id");
+            string sqlStr = Utility.GenerateUpdateSql("CV", valueParameters, "Id = @Id");
             if (dbconnection.ThucThi(sqlStr, parameters))
                 MessageBox.Show("ThanhCong");
         }

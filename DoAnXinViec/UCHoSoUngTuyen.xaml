@@ -6,12 +6,12 @@
              xmlns:local="clr-namespace:DoAnXinViec"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="770" d:DesignWidth="1290">
+             d:DesignHeight="800" d:DesignWidth="1290">
     <UserControl.Resources>
         <local:MyValueToBackgroundConverter x:Key="ValueToBackgroundConverter"/>
     </UserControl.Resources>
-    <Border Background="White" CornerRadius="30" Margin="0,10,0,0">
-        <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
+    <Border Background="White" CornerRadius="30,0,0,30" Margin="0,0,0,0">
+        <Grid HorizontalAlignment="Left" Height="800" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
             <Label Content="Hồ Sơ Ứng Tuyển" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1040" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1060" HorizontalAlignment="Left"/>
             <ListView x:Name="lvHoSoUngTuyen"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" MouseDoubleClick="lvHoSoUngTuyen_MouseDoubleClick" >
@@ -85,7 +85,7 @@
                                             Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" Margin="18,0,0,0" FontWeight="Bold" Loaded="cbSetTrangThai_Loaded" SelectionChanged="cbSetTrangThai_SelectionChanged">
                                             <Label x:Name="lblDoi" Content="Đợi" Foreground="Orange" FontWeight="Bold" />  
                                             <Label x:Name="lblChapNhan" Content="Chấp nhận" Foreground="Green" FontWeight="Bold"/>
-                                            <Label x:Name="lblTuChoi" Content="Từ Chối" Foreground="Red" FontWeight="Bold"/>
+                                            <Label x:Name="lblTuChoi" Content="Từ chối" Foreground="Red" FontWeight="Bold"/>
                                         </ComboBox>
                                     </StackPanel>
                                 </DataTemplate>

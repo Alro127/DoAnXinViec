@@ -25,7 +25,7 @@ namespace DoAnXinViec
 
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh, CongTy.Id);
+            BitmapImage bitmapImg = MediaHandler.SetImage(congTy.Anh, CongTy.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
@@ -39,25 +39,26 @@ namespace DoAnXinViec
         }
         void Load()
         {
-            string[] DanhSachAnh = ImageHandler.GetImagesFromFolder(congTy.Id);
+            string[] DanhSachAnh = MediaHandler.GetImagesFromFolder(congTy.Id);
             for (int i = 0; i<DanhSachAnh.Length; i++)
             {
                 Image anh = new Image() { Width = 100, Height = 100, Margin = new Thickness(10, 9, 0, 9) };
-                anh.Source = ImageHandler.SetImage(DanhSachAnh[i], congTy.Id);
+                anh.Source = MediaHandler.SetImage(DanhSachAnh[i], congTy.Id);
                 wpAnh.Children.Add(anh);
             }
         }
         private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
         {
-            congTy.Anh = ImageHandler.SelectImageAndSave(congTy.Id);
+            congTy.Anh = MediaHandler.SelectImageAndSave(congTy.Id);
             SetImage();
         }
 
         private void btnThemAnh_Click(object sender, RoutedEventArgs e)
         {
-            string anhStr = ImageHandler.SelectImageAndSave(congTy.Id);
+            string anhStr = MediaHandler.SelectImageAndSave(congTy.Id);
+            if (anhStr == null) return;
             Image anh = new Image() {Width = 100, Height = 100, Margin = new Thickness(10,9,0,9) };
-            anh.Source = ImageHandler.SetImage(anhStr, congTy.Id);
+            anh.Source = MediaHandler.SetImage(anhStr, congTy.Id);
             wpAnh.Children.Add(anh);
         }
     }

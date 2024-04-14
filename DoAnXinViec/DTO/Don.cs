@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace DoAnXinViec
@@ -38,24 +39,30 @@ namespace DoAnXinViec
         public Don(DataRow dr)
         {
             Utility.SetItemFromRow(this, dr);
-
         }
 
         public Don(int idDon, string tenCV, string idCT, string diaDiem, string luong, string kinhNghiem, DateTime ngayDang, DateTime ngayToiHan, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop)
         {
-            this.idDon = idDon;
-            this.tenCV = tenCV;
-            this.idCT = idCT;
-            this.diaDiem = diaDiem;
-            this.luong = luong;
-            this.kinhNghiem = kinhNghiem;
-            this.NgayDang = ngayDang;
-            this.ngayToiHan = ngayToiHan;
-            this.moTaCV = moTaCV;
-            this.yeuCau = yeuCau;
-            this.quyenLoi = quyenLoi;
-            this.LuotXem = luotXem;
-            this.LuotNop = luotNop;
+            try
+            {
+                IdDon = idDon;
+                TenCV = tenCV;
+                IdCT = idCT;
+                DiaDiem = diaDiem;
+                Luong = luong;
+                KinhNghiem = kinhNghiem;
+                NgayDang = ngayDang;
+                NgayToiHan = ngayToiHan;
+                MoTaCV = moTaCV;
+                YeuCau = yeuCau;
+                QuyenLoi = quyenLoi;
+                LuotXem = luotXem;
+                LuotNop = luotNop;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
         public string[] UnecessaryProperty()
         {
@@ -68,7 +75,7 @@ namespace DoAnXinViec
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    return;
+                    throw new ArgumentNullException("Không được bỏ trống tên công việc");
                 }
                 tenCV = value;
             }
@@ -80,7 +87,7 @@ namespace DoAnXinViec
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    return;
+                    throw new ArgumentNullException("Không được bỏ trống id CT");
                 }
                 idCT = value;
             }
@@ -93,7 +100,7 @@ namespace DoAnXinViec
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    return;
+                    throw new ArgumentNullException("Không được bỏ trống địa điểm");
                 }
                 diaDiem = value;
             }
@@ -102,18 +109,39 @@ namespace DoAnXinViec
         public string Luong
         {
             get => luong;
-            set => luong = value;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("Không được bỏ trống lương");
+                }
+                luong = value;
+            }
         }
         public string KinhNghiem
         {
             get => kinhNghiem;
-            set => kinhNghiem = value;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("Không được bỏ trống kinh nghiệm");
+                }
+                kinhNghiem = value;
+            }
         }
 
         public DateTime NgayToiHan
         {
             get => ngayToiHan;
-            set => ngayToiHan = value;
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Không được bỏ trống ngày tới hạn");
+                }
+                ngayToiHan = value;
+            }
         }
 
         public string MoTaCV
@@ -123,7 +151,7 @@ namespace DoAnXinViec
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    return;
+                    throw new ArgumentNullException("Không được bỏ trống mô tả công việc");
                 }
                 moTaCV = value;
             }
@@ -136,7 +164,7 @@ namespace DoAnXinViec
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    return;
+                    throw new ArgumentNullException("Không được bỏ trống yêu cầu");
                 }
                 yeuCau = value;
             }
@@ -149,7 +177,7 @@ namespace DoAnXinViec
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    return;
+                    throw new ArgumentNullException("Không được bỏ trống quyền lợi");
                 }
                 quyenLoi = value;
             }
@@ -158,25 +186,53 @@ namespace DoAnXinViec
         public int IdDon
         {
             get => idDon;
-            set => idDon = value;
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Không được bỏ trống id đơn");
+                }
+                idDon = value;
+            }
         }
 
         public int LuotXem
         {
             get => luotXem;
-            set => luotXem = value;
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Không được bỏ trống lượt xem");
+                }
+                luotXem = value;
+            }
         }
 
         public int LuotNop
         {
             get => luotNop;
-            set => luotNop = value;
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Không được bỏ trống lượt nộp");
+                }
+                luotNop = value;
+            }
         }
 
         public DateTime NgayDang
         {
             get => ngayDang;
-            set => ngayDang = value;
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Không được bỏ trống ngày đăng");
+                }
+                ngayDang = value;
+            }
         }
 
         public string TenCT
@@ -186,7 +242,7 @@ namespace DoAnXinViec
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    return;
+                    throw new ArgumentNullException("Không được bỏ trống tên công ty");
                 }
                 tenCT = value;
             }

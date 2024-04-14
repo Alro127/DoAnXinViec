@@ -35,8 +35,23 @@ namespace DoAnXinViec
         public CV(DataRow dr)
         {
             Utility.SetItemFromRow(this, dr);
+            UngVienDAO ungVienDAO = new UngVienDAO();
+            DataTable dtuv = ungVienDAO.Get(IdUV, "UngVien");
+            UngVien ungVien = new UngVien(dtuv.Rows[0]);
+            UngVien = ungVien;
         }
+        public CV(CV cV)
+        {
+            var properties = typeof(CV).GetProperties();
 
+            foreach (var property in properties)
+            {
+                if (property.CanWrite)
+                {
+                    property.SetValue(this, property.GetValue(cV));
+                }
+            }
+        }
         public CV(int id, string idUV, UngVien ungVien, string viTriUngTuyen, string linhVuc, string trinhDo, string luong, string namKinhNghiem, string mucTieu, string kyNang, string chungChi, string hocVan, string kinhNghiem, DateTime ngayDang, DateTime ngayToiHan, string anh)
         {
             this.id = id;

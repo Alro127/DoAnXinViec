@@ -30,7 +30,7 @@ namespace DoAnXinViec
 
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(congTy.Anh, congTy.Id);
+            BitmapImage bitmapImg = MediaHandler.SetImage(congTy.Anh, congTy.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
@@ -85,6 +85,7 @@ namespace DoAnXinViec
         }
         private void btnTimKiemUngVien_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
             WTimUngVien wTimUngVien = new WTimUngVien(congTy);
             wTimUngVien.ShowDialog();
         }

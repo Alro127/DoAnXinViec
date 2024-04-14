@@ -22,13 +22,17 @@ namespace DoAnXinViec
     public partial class WDonChiTiet : Window
     {
         HoSoDAO hoSoDAO= new HoSoDAO();
+
         Don don = new Don();
-        
         DonDAO donDAO = new DonDAO();
+
         UngVien ungVien;
 
         CongTy congTy;
         CongTyDAO congTyDAO = new CongTyDAO();
+
+        YeuThich yeuThich;
+        YeuThichDAO yeuThichDAO = new YeuThichDAO();
         public WDonChiTiet(Don don, UngVien ungVien)
         {
             InitializeComponent();
@@ -46,11 +50,13 @@ namespace DoAnXinViec
         private void WDonChiTiet_Load(object sender, RoutedEventArgs e)
         {
             Check();
+            yeuThich = new YeuThich(don.IdDon, ungVien.Id);
+            if (yeuThichDAO.CheckExist(yeuThich))
+                btnThemVaoYeuThich.Content = "Xóa khỏi yêu thích";
             this.DataContext = don;
-
             DataTable dt = congTyDAO.Get(don.IdCT, "Cty");
             congTy = new CongTy(dt.Rows[0]);
-            imgAnh.ImageSource = ImageHandler.SetImage(congTy.Anh, congTy.Id);
+            imgAnh.ImageSource = MediaHandler.SetImage(congTy.Anh, congTy.Id);
         }
         private void btnUngTuyenNgay_Click(object sender, RoutedEventArgs e)
         {
@@ -68,8 +74,22 @@ namespace DoAnXinViec
 
         private void btnXemCongTy_Click(object sender, RoutedEventArgs e)
         {
-            WTrangChuCTy wTrangChuCTy = new WTrangChuCTy(congTy);
+            WTrangChuCTy wTrangChuCTy = new WTrangChuCTy(congTy,ungVien);
             wTrangChuCTy.ShowDialog();
+        }
+
+        private void btnThemVaoYeuThich_Click(object sender, RoutedEventArgs e)
+        {
+            if (yeuThichDAO.CheckExist(yeuThich))
+            {
+                yeuThichDAO.Xoa(yeuThich);
+                btnThemVaoYeuThich.Content = "Thêm vào yêu thích";
+            }
+            else
+            {
+                yeuThichDAO.Them(yeuThich);
+                btnThemVaoYeuThich.Content = "Xóa khỏi yêu thích";
+            }
         }
     }
 }

@@ -48,8 +48,10 @@ namespace DoAnXinViec
             if (dep is Border)
             {
                 CV cv = (CV)lvDanhSachCV.SelectedItem;
-                WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
-                wCVChiTiet.ShowDialog();
+                /*WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+                wCVChiTiet.ShowDialog();*/
+                WChinhSuaCV wChinhSuaCV = new WChinhSuaCV(cv);
+                wChinhSuaCV.ShowDialog();
             }
         }
     }

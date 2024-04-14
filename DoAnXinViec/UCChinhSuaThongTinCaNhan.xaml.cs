@@ -25,7 +25,7 @@ namespace DoAnXinViec
         UngVien ungVien;
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh, ungVien.Id);
+            BitmapImage bitmapImg = MediaHandler.SetImage(ungVien.Anh, ungVien.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
@@ -41,7 +41,7 @@ namespace DoAnXinViec
 
         private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
         {
-            ungVien.Anh = ImageHandler.SelectImageAndSave(ungVien.Id);
+            ungVien.Anh = MediaHandler.SelectImageAndSave(ungVien.Id);
             SetImage();
         }
 

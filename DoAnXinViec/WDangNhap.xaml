@@ -9,34 +9,30 @@
         Title="WDangNhap" Height="450" Width="800">
     <Grid>
 
-        <Grid HorizontalAlignment="Left" Height="432" VerticalAlignment="Center" Width="390" Background="White" Margin="408,0,0,0">
+        <Grid HorizontalAlignment="Right" Height="432" VerticalAlignment="Center" Width="364" Background="White" Margin="0,0,0,0">
             <PasswordBox x:Name="txtMatKhau"
                 FontSize="16"
-                Width="341"
                 Height="42"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center"
                 Padding="10,8,0,0"               
                 materialDesign:HintAssist.Hint="Mật khẩu"
                 Foreground="#555"
                 materialDesign:PasswordBoxAssist.Password="{Binding Password2, Mode=TwoWay}"
                 materialDesign:HintAssist.Background="White"
-                Style="{StaticResource MaterialDesignOutlinedPasswordBox}" />
+                Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="20,0,20,0" />
 
             <TextBox 
                 
                 x:Name="txtTenDangNhap"
                  FontSize="16"
-                 Width="341"
                  Height="42"
                  VerticalAlignment="Top"
-                 HorizontalAlignment="Center"
                  Foreground="#555"
                  Padding="10,8,0,0"
                  materialDesign:HintAssist.Hint="Tên đăng nhập"
                 materialDesign:HintAssist.Background="White"
-                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,141,0,0" />
-            <Button x:Name="btnDangNhap" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng nhập" HorizontalAlignment="Center" Height="36" Margin="0,295,0,0" VerticalAlignment="Top" Width="341" Foreground="#FFFCFCFC" FontFamily="Segoe UI Black" FontSize="18" Click="btnDangNhap_Click">
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,141,20,0" />
+            <Button x:Name="btnDangNhap" Style="{DynamicResource ButtonStyleBoGoc}" Content="Đăng nhập" Height="36" Margin="20,295,20,0" VerticalAlignment="Top" Foreground="#FFFCFCFC" FontFamily="Segoe UI Black" FontSize="18" Click="btnDangNhap_Click">
                 <Button.Background>
                     <SolidColorBrush Color="#FF2A8DD3"  Opacity="0.7"/>
                 </Button.Background>
@@ -44,10 +40,22 @@
                     <SolidColorBrush Color="Black" Opacity="0.5"/>
                 </Button.BorderBrush>
             </Button>
-            <RadioButton  x:Name="rdoCongTy" IsChecked="True" Content="Công ty" Height="30" Margin="0,248,248,0" HorizontalAlignment="Right" Width="113" VerticalAlignment="Top" Foreground="#555" FontSize="14" />
+            <RadioButton  x:Name="rdoCongTy" IsChecked="True" Content="Công ty" Height="30" Margin="20,248,248,0" VerticalAlignment="Top" Foreground="#555" FontSize="14" />
             <RadioButton x:Name="rdoUngVien"  Content="Ứng viên" Margin="150,248,0,154" HorizontalAlignment="Left" Width="112" Foreground="#555" FontSize="14" />
             <Label Content="Đăng Nhập" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Width="135" FontSize="25"/>
+            <Label x:Name="lblDangKy" Content="Bạn chưa có tài khoản? Đăng ký ngay!" Margin="0,0,20,74" HorizontalAlignment="Right" Width="211" Height="26" VerticalAlignment="Bottom" MouseLeftButtonDown="lblDangKy_MouseLeftButtonDown">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Blue"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Label.Style>
+            </Label>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="434" VerticalAlignment="Top" Width="410" Source="/—Pngtree—starry sky galaxy space background_2269978.png" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Right" Height="434" VerticalAlignment="Center" Width="436" Source="/UniJob.png" Stretch="UniformToFill" Margin="0,0,364,0"/>
     </Grid>
 </Window>

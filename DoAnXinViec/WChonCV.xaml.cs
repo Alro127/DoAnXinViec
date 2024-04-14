@@ -22,7 +22,7 @@ namespace DoAnXinViec
     {
         UngVien ungVien;
         List<CV> listCV = new List<CV>();
-        CV cv = new CV();
+        CV cv;
 
         public CV Cv { get => cv; set => cv = value; }
 

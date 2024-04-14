@@ -13,7 +13,7 @@
     xmlns:converters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf">
     <Window.Background>
 
-        <ImageBrush ImageSource="/fe11b0da-ba89-4086-b879-f31af594dc47.jpeg" />
+        <ImageBrush ImageSource="/BackGround.png" />
     </Window.Background>
 
     <Grid x:Name="gridMain" Loaded="WTrangChinh_Load">
@@ -28,6 +28,5 @@
             </Border>
         </Grid>
         <local:UCTrangTimViec x:Name="ucTrangTimViec" Margin="0,0,96,0" HorizontalAlignment="Right" Width="1358"/>
-        <Button x:Name="btnQuanLyTaiKhoan" Style="{DynamicResource ButtonStyleBoGoc}" Content="Quản lý tài khoản" Margin="0,37,110,0" FontSize="16" FontFamily="Segoe UI Black" Foreground="#FFF6F0F0" BorderBrush="{x:Null}" Height="39" Width="213" HorizontalAlignment="Right" VerticalAlignment="Top" Click="btnQuanLyTaiKhoan_Click" Background="#003C43"/>
     </Grid>
 </Window>

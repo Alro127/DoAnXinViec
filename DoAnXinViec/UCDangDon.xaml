@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:DoAnXinViec"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="DoAnXinViec.UCDangDon"
              mc:Ignorable="d" 
-             d:DesignHeight="780" d:DesignWidth="1290">
-    <Border Background="White" CornerRadius="30" Width="1290" Height="770" Margin="0,10,0,0" VerticalAlignment="Top">
+             d:DesignHeight="800" d:DesignWidth="1290">
+    <Border Background="White" CornerRadius="30,0,0,30" Width="1290" Height="800" Margin="0,0,0,0" VerticalAlignment="Top">
         <Grid>
             <Label Content="Tạo tin tuyển dụng" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1046" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1060" HorizontalAlignment="Left"/>
@@ -23,7 +23,7 @@
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Mô tả công việc"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="390" HorizontalAlignment="Right" Margin="0,340,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="420" HorizontalAlignment="Right" Margin="0,340,665,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <ComboBox x:Name="cbLuong" HorizontalAlignment="Left" Height="40" Margin="40,160,0,0" Width="280"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 IsEditable="True"
@@ -124,9 +124,8 @@
                 VerticalAlignment="Bottom"
                 materialDesign:HintAssist.Hint="Quyền lợi"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="180" HorizontalAlignment="Left" Margin="665,0,0,40" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
-            <local:UCDon x:Name="ucDon" HorizontalAlignment="Right" Margin="0,140,112.5,0" VerticalAlignment="Top" IsEnabled="False"/>
+            <local:UCDon x:Name="ucDon" HorizontalAlignment="Right" Margin="0,140,112.5,0" VerticalAlignment="Top" IsEnabled="False" Width="440" Height="120"/>
             <Button x:Name="btnDang" Content="Đăng" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140" Click="btnDang_Click"/>
-            <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="52" Margin="759,160,0,0" VerticalAlignment="Top" Width="54" Stretch="UniformToFill" OpacityMask="Black"/>
             <ComboBox x:Name="cbKinhNghiem" HorizontalAlignment="Left" Height="40" Margin="345,160,0,0" Width="280"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 IsEditable="True"
@@ -141,7 +140,6 @@
                 <Label Content="5 năm" Foreground="Black" FontSize="14"/>
                 <Label Content="Trên 5 năm " Foreground="Black" FontSize="14"/>
             </ComboBox>
-
         </Grid>
     </Border>
 </UserControl>

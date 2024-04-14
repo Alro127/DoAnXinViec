@@ -26,9 +26,13 @@ namespace DoAnXinViec
         UngVienDAO ungVienDAO = new UngVienDAO();
         CV cv = new CV();
         CVDAO cvDAO = new CVDAO();
+
+        public UngVien TempUngVien { get => tempUngVien; set => tempUngVien = value; }
+        public CV Cv { get => cv; set => cv = value; }
+
         private void SetImage(string imageName)
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(imageName, ungVien.Id);
+            BitmapImage bitmapImg = MediaHandler.SetImage(imageName, TempUngVien.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }    
@@ -36,36 +40,45 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.ungVien = ungVien;
-            this.tempUngVien = new UngVien(ungVien);
-            this.tbiThongTinCaNhan.DataContext = tempUngVien;
-            this.tbcHoSoCuaBan.DataContext = cv;
-            SetImage(ungVien.Anh);
+            this.TempUngVien = new UngVien(ungVien);
+            this.tbiThongTinCaNhan.DataContext = TempUngVien;
+            this.tbcHoSoCuaBan.DataContext = Cv;
+            SetImage(TempUngVien.Anh);
+        }
+        public UCHoSoCuaBan(CV cv)
+        {
+            InitializeComponent();
+            this.Cv = cv;
+            this.TempUngVien = this.Cv.UngVien;
+            this.tbiThongTinCaNhan.DataContext = this.Cv.UngVien;
+            this.tbcHoSoCuaBan.DataContext = this.Cv;
+            SetImage(this.Cv.UngVien.Anh);
         }
         private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
         {
-            this.ungVien = new UngVien(tempUngVien);
+            this.ungVien = new UngVien(TempUngVien);
             ungVienDAO.CapNhat(ungVien, "UngVien");
-            cv.NgayDang = DateTime.Now.Date;
-            cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
-            cv.UngVien = ungVien;
-            cv.IdUV = ungVien.Id;
-            cvDAO.Them(cv);
+            Cv.NgayDang = DateTime.Now.Date;
+            Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            Cv.UngVien = ungVien;
+            Cv.IdUV = ungVien.Id;
+            cvDAO.Them(Cv);
         }
 
         private void btnXemTruoc_Click(object sender, RoutedEventArgs e)
         {
-            cv.NgayDang = DateTime.Now.Date;
-            cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
-            cv.UngVien = tempUngVien;
-            cv.IdUV = tempUngVien.Id;
-            WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+            Cv.NgayDang = DateTime.Now.Date;
+            Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            Cv.UngVien = TempUngVien;
+            Cv.IdUV = TempUngVien.Id;
+            WCVChiTiet wCVChiTiet = new WCVChiTiet(Cv);
             wCVChiTiet.ShowDialog();
         }
 
         private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
         {
-            cv.Anh = ImageHandler.SelectImageAndSave(ungVien.Id);
-            SetImage(cv.Anh);
+            Cv.Anh = MediaHandler.SelectImageAndSave(ungVien.Id);
+            SetImage(Cv.Anh);
         }
     }
 }

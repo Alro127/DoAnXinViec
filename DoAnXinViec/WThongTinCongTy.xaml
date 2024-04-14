@@ -9,7 +9,7 @@
         Title="WThongTinCongTyxaml" Height="830" Width="1550">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/—Pngtree—starry sky galaxy space background_2269978.png"/>
+            <ImageBrush ImageSource="/2.png"/>
         </Grid.Background>
         <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Right" Height="180" VerticalAlignment="Top" Width="720" Margin="0,130,50,0">
             <Border.Background>
@@ -20,11 +20,11 @@
         <GroupBox
             Margin="0,90,40,0"
             materialDesign:ColorZoneAssist.Background="Transparent"
-            materialDesign:ColorZoneAssist.Foreground="White"
+            materialDesign:ColorZoneAssist.Foreground="Gray"
             materialDesign:ColorZoneAssist.Mode="Custom"
             Header="Thông tin liên hệ"
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Width="735" Height="226" VerticalAlignment="Top">
-            <StackPanel Margin="0,0,0,-25">
+            <StackPanel Margin="0,0,0,0">
                 <TextBox
                      Text="{Binding HoTen, Mode=TwoWay}"
                      FontSize="14"
@@ -55,21 +55,19 @@
             </StackPanel>
 
         </GroupBox>
-        <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Left" Height="602" VerticalAlignment="Top" Width="692" Margin="33,130,0,0">
+        <Border CornerRadius="10" BorderThickness="1" HorizontalAlignment="Left" Height="602" VerticalAlignment="Top" Width="685" Margin="40,130,0,0">
             <Border.Background>
                 <SolidColorBrush Color="White"/>
             </Border.Background>
         </Border>
         <GroupBox
-            
-    
-            Margin="0,90,818,0"
+            Margin="40,90,0,0"
             materialDesign:ColorZoneAssist.Background="Transparent"
-            materialDesign:ColorZoneAssist.Foreground="White"
+            materialDesign:ColorZoneAssist.Foreground="Gray"
             materialDesign:ColorZoneAssist.Mode="Custom"
             Header="Thông tin Công ty"
-            Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold" Height="645" VerticalAlignment="Top" HorizontalAlignment="Right" Width="692">
-            <StackPanel Margin="0,0,0,-9">
+            Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold" Height="645" VerticalAlignment="Top" HorizontalAlignment="Left" Width="685">
+            <StackPanel>
                 <TextBox
                     Text="{Binding TenCT, Mode=TwoWay}"
                      FontSize="14"
@@ -228,7 +226,7 @@
     
             Margin="0,315,49,0"
             materialDesign:ColorZoneAssist.Background="Transparent"
-            materialDesign:ColorZoneAssist.Foreground="White"
+            materialDesign:ColorZoneAssist.Foreground="Gray"
             materialDesign:ColorZoneAssist.Mode="Custom"
             Header="Giới thiệu công ty" 
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold" Height="420" VerticalAlignment="Top" HorizontalAlignment="Right" Width="716">
@@ -241,9 +239,7 @@
 
         </GroupBox>
         <Label 
-            Content="ĐĂNG KÝ NHÀ TUYỂN DỤNG"
-            HorizontalAlignment="Center"
-            Height="50" Margin="643,34,633,730" FontSize="18" FontWeight="Bold" Foreground="#E5E0FFF9"/>
+            Content="ĐĂNG KÝ NHÀ TUYỂN DỤNG" Margin="620,35,620,729" FontSize="22" FontWeight="Bold" Foreground="Gray"/>
         <Button x:Name="btnDangKy" Content="Đăng ký" Margin="1415,0,0,25" VerticalAlignment="Bottom" Click="btnDangKy_Click" HorizontalAlignment="Left" Width="86" Background="#FF2A8DD3"/>
 
     </Grid>

@@ -19,17 +19,19 @@ namespace DoAnXinViec
     public partial class WTrangChinhUngVien : Window
     {
         UngVien ungVien;
+        UngVienDAO ungVienDAO = new UngVienDAO();
         UCChinhSuaThongTinCaNhan uCChinhSuaThongTinCaNhan;
+        UCHoSoCuaBan uCHoSoCuaBan;
         public WTrangChinhUngVien(UngVien ungVien)
         {
             InitializeComponent();
             this.ungVien = ungVien;
             this.DataContext = ungVien;
-            imgAnh.ImageSource = ImageHandler.SetImage(ungVien.Anh, ungVien.Id);
+            imgAnh.ImageSource = MediaHandler.SetImage(ungVien.Anh, ungVien.Id);
         }
         private void SetImage()
         {
-            BitmapImage bitmapImg = ImageHandler.SetImage(ungVien.Anh, ungVien.Id);
+            BitmapImage bitmapImg = MediaHandler.SetImage(ungVien.Anh, ungVien.Id);
             if (bitmapImg != null)
                 imgAnh.ImageSource = bitmapImg;
         }
@@ -50,9 +52,21 @@ namespace DoAnXinViec
         }
         private void btnHoSoCuaBan_Click(object sender, RoutedEventArgs e)
         {
-            UCHoSoCuaBan uCHoSoCuaBan = new UCHoSoCuaBan(ungVien);
+            uCHoSoCuaBan = new UCHoSoCuaBan(ungVien);
+            uCHoSoCuaBan.btnLuuVaDangHoSo.Click += new RoutedEventHandler(btnLuuVaDangHoSo_Click);
             stMain.Children.Clear();
             stMain.Children.Add(uCHoSoCuaBan);
+        }
+        private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
+        {
+            this.ungVien = new UngVien(uCHoSoCuaBan.TempUngVien);
+            ungVienDAO.CapNhat(ungVien, "UngVien");
+            uCHoSoCuaBan.Cv.NgayDang = DateTime.Now.Date;
+            uCHoSoCuaBan.Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
+            uCHoSoCuaBan.Cv.UngVien = ungVien;
+            uCHoSoCuaBan.Cv.IdUV = ungVien.Id;
+            CVDAO cvDAO = new CVDAO();
+            cvDAO.Them(uCHoSoCuaBan.Cv);
         }
         private void btnDanhSachCV_Click(object sender, RoutedEventArgs e)
         {
@@ -65,6 +79,19 @@ namespace DoAnXinViec
             UCViecDaUngTuyen uCViecDaUngTuyen = new UCViecDaUngTuyen(ungVien);
             stMain.Children.Clear();
             stMain.Children.Add(uCViecDaUngTuyen);
+        }
+
+        private void btnCongViecYeuThich_Click(object sender, RoutedEventArgs e)
+        {
+            UCCongViecYeuThich uCCongViecYeuThich = new UCCongViecYeuThich(ungVien);
+            stMain.Children.Clear();
+            stMain.Children.Add(uCCongViecYeuThich);
+        }
+
+        private void btnTimKiemCongViec_Click(object sender, RoutedEventArgs e)
+        {
+            WTrangXemDon wTrangXemDon = new WTrangXemDon(ungVien);
+            wTrangXemDon.ShowDialog();
         }
     } 
 }

@@ -23,27 +23,28 @@ namespace DoAnXinViec
         UngVien ungVien = new UngVien();
         TaiKhoan taiKhoan;
         TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
-        public WThongTinUngVien()
-        {
-            InitializeComponent();
-        }
         public WThongTinUngVien(TaiKhoan taiKhoan)
         {
             InitializeComponent();
-            this.TaiKhoan = taiKhoan;
-            this.DataContext = UngVien;
+            this.taiKhoan = taiKhoan;
+            this.DataContext = ungVien;
         }
-
-        public TaiKhoan TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
-        public UngVien UngVien { get => ungVien; set => ungVien = value; }
 
         private void btnDangKy_Click(object sender, RoutedEventArgs e)
         {
             ungVien.Id = taiKhoan.Id;
             ungVien.Anh = "";
             ungVien.GT = "";
-            if (ungVienDAO.Them(ungVien, "UngVien") == true && taiKhoanDAO.SignUp(taiKhoan) == true)
+            if (ungVienDAO.Them(ungVien, "UngVien") == true)
+            {
+                taiKhoanDAO.SignUp(taiKhoan);
+                MediaHandler.CreateDirectory(ungVien.Id);
                 MessageBox.Show("Thành công");
+                this.Close();
+
+                WTrangChinhUngVien wTrangChinhUngVien = new WTrangChinhUngVien(ungVien);
+                wTrangChinhUngVien.Close();
+            }
         }
     }
 }

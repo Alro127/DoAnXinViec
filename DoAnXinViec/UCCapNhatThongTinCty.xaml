@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:DoAnXinViec"
                           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="780" d:DesignWidth="1290">
-    <Border Background="White" CornerRadius="30" Width="1290" Height="770" Margin="0,10,0,0" VerticalAlignment="Top">
+             d:DesignHeight="800" d:DesignWidth="1290">
+    <Border Background="White" CornerRadius="30,0,0,30" Width="1290" Height="800" Margin="0,0,0,0" VerticalAlignment="Top">
         <Grid x:Name="thongtincty"  DataContext="{Binding CongTy}">
             <Grid.Background>
                 <ImageBrush/>
@@ -143,8 +143,8 @@
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Giấy phép kinh doanh"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="40" HorizontalAlignment="Left" Margin="665,340,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
-            <Button x:Name="btnLuu" Content="Lưu" Height="40" Margin="0,700,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
-            <Button Content="Hủy" Margin="0,700,220,30" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40">
+            <Button x:Name="btnLuu" Content="Lưu" Margin="0,0,40,40" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000" Height="40" VerticalAlignment="Bottom"/>
+            <Button Content="Hủy" Margin="0,0,220,40" BorderBrush="{x:Null}" HorizontalAlignment="Right" Width="150" Height="40" VerticalAlignment="Bottom">
                 <Button.Background>
                     <SolidColorBrush Color="#FF2A8DD3" Opacity="0.3"/>
                 </Button.Background>

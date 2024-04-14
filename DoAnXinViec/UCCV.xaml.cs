@@ -21,17 +21,25 @@ namespace DoAnXinViec
     public partial class UCCV : UserControl
     {
         CV cv;
-        public UCCV()
+        public UCCV(CV cv, YeuThich? yeuThich=null)
         {
             InitializeComponent();
-        }
-        public UCCV(CV cv)
-        {
-            InitializeComponent();
-            this.Cv = cv;
-            BitmapImage bitmapImg = ImageHandler.SetImage(Cv.Anh, Cv.UngVien.Id);
+            this.cv = cv;
+            ucCV.DataContext = cv;
+            btnYeuThich.Tag = cv.Id;
+            if (yeuThich != null )
+            {
+                YeuThichDAO yeuThichDAO = new YeuThichDAO();
+                if (yeuThichDAO.CheckExist(yeuThich))
+                    btnYeuThich.IsChecked = true;
+                else
+                    btnYeuThich.IsChecked = false;
+            }
+
+            BitmapImage bitmapImg = MediaHandler.SetImage(cv.Anh, cv.UngVien.Id);
             if (bitmapImg != null)
                 imgAnh.Source = bitmapImg;
+
             grbTenUngVien.Header = Cv.UngVien.HoTen;
             lblViTriUngTuyen.Content = Cv.ViTriUngTuyen;
             lblNoiLamViec.Content ="Địa điểm: " + Cv.UngVien.TinhThanh;
@@ -40,9 +48,11 @@ namespace DoAnXinViec
         }
         public CV Cv { get => this.cv; set => this.cv = value; }
 
-        private void grbTenUngVien_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
 
+        private void ucCV_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            WCVChiTiet wCVChiTiet = new WCVChiTiet(Cv);
+            wCVChiTiet.ShowDialog();
         }
     }
 }

@@ -19,8 +19,10 @@ namespace DoAnXinViec
                         return Brushes.Red;
                     case "Đợi":
                         return Brushes.Orange;
-                    default:
+                    case "Chấp nhận":
                         return Brushes.Green;
+                    default:
+                        return Brushes.White;
                 }
         }
 
