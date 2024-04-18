@@ -28,9 +28,7 @@ namespace DoAnXinViec
             {
                 taiKhoan.Quyen = "uv";
             }
-
-            string getuser = taiKhoanDAO.Checklogin(taiKhoan);
-            if (getuser == "Tài khoản hoặc mật khẩu không đúng!")
+            if (!taiKhoanDAO.Checklogin(taiKhoan))
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
                 return;

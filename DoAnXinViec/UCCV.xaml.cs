@@ -40,11 +40,23 @@ namespace DoAnXinViec
             if (bitmapImg != null)
                 imgAnh.Source = bitmapImg;
 
-            grbTenUngVien.Header = Cv.UngVien.HoTen;
-            lblViTriUngTuyen.Content = Cv.ViTriUngTuyen;
+            grbViTriUngTuyen.Header = Cv.UngVien.HoTen;
+            lblTenUngVien.Content = Cv.ViTriUngTuyen;
             lblNoiLamViec.Content ="Địa điểm: " + Cv.UngVien.TinhThanh;
-            lblLuong.Content = "Lương mong muốn: " + Cv.Luong;
+            lblLuong.Content = Cv.Luong;
             lblKinhNghiem.Content = "Kinh nghiệm: " + Cv.NamKinhNghiem;
+            lblthoigiandang.Content = tinhThoiGian(Cv.NgayDang);
+        }
+        public string tinhThoiGian(DateTime ngayDang)
+        {
+            TimeSpan timeSincePosted = DateTime.Now - ngayDang;
+            if (timeSincePosted.TotalMinutes < 1)
+                return "Bây giờ";
+            if (timeSincePosted.TotalHours < 1)
+                return $"{(int)timeSincePosted.TotalMinutes} phút trước";
+            if (timeSincePosted.TotalDays < 1)
+                return $"{(int)timeSincePosted.TotalHours} giờ trước";
+            return $"{(int)timeSincePosted.TotalDays} ngày trước";
         }
         public CV Cv { get => this.cv; set => this.cv = value; }
 

@@ -21,69 +21,52 @@ namespace DoAnXinViec
     public partial class WDangKy : Window
     {
         DBConnection dBConnection = new DBConnection();
+        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
         public WDangKy()
         {
             InitializeComponent();
         }
-        bool checkNull()
-        {
-            if (string.IsNullOrEmpty(txtTenDangNhap.Text))
-            {
-                MessageBox.Show("Tên đăng nhập không được bỏ trống");
-                txtTenDangNhap.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtMatKhau.Password))
-            {
-                MessageBox.Show("Mật khẩu không được bỏ trống");
-                txtMatKhau.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtXacNhanMatKhau.Password))
-            {
-                MessageBox.Show("Xác nhận mật khẩu không được bỏ trống");
-                txtXacNhanMatKhau.Focus();
-                return false;
-            }
-            if (txtMatKhau.Password != txtXacNhanMatKhau.Password)
-            {
-                MessageBox.Show("Mật khẩu không khớp");
-                txtMatKhau.Focus();
-                return false;
-            }
-            return true;
-        }
         private void btnDangKyUngVien_Click(object sender, RoutedEventArgs e)
         {
-            if (!checkNull())
-                return;
-
-            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "uv");
-
-            if (!dBConnection.CheckSignUp(taiKhoan))
+            try
             {
-                MessageBox.Show("Tài khoản đã tồn tại");
-                txtTenDangNhap.Focus();
-                return;
-            }
+                TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "uv");
 
-            WThongTinUngVien wthongTinUngVien = new WThongTinUngVien(taiKhoan);
-            wthongTinUngVien.ShowDialog();
+                if (taiKhoanDAO.CheckSignUp(taiKhoan))
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại");
+                    txtTenDangNhap.Focus();
+                    return;
+                }
+
+                WThongTinUngVien wthongTinUngVien = new WThongTinUngVien(taiKhoan);
+                wthongTinUngVien.ShowDialog();
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
         private void btnDangKyCongTy_Click(object sender, RoutedEventArgs e)
         {
-            if (!checkNull())
-                return;
 
-            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
-
-            if (!dBConnection.CheckSignUp(taiKhoan))
+            try
             {
-                MessageBox.Show("Tài khoản đã tồn tại");
-                return;
+                TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
+
+                if (taiKhoanDAO.CheckSignUp(taiKhoan))
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại");
+                    txtTenDangNhap.Focus();
+                    return;
+                }
+                WThongTinCongTy wthongTinCongTy = new WThongTinCongTy(taiKhoan);
+                wthongTinCongTy.ShowDialog();
             }
-            WThongTinCongTy wthongTinCongTy = new WThongTinCongTy(taiKhoan);
-            wthongTinCongTy.ShowDialog();
+            catch (ArgumentNullException ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
     }
 }

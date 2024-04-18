@@ -13,10 +13,10 @@ namespace DoAnXinViec
         DBConnection dbconnection = new DBConnection();
         internal DBConnection Dbconnection { get => dbconnection; set => dbconnection = value; }
 
-        public string Checklogin(TaiKhoan taiKhoan)
+        public bool Checklogin(TaiKhoan taiKhoan)
         {
-            string info = dbconnection.CheckLogin(taiKhoan);
-            return info;
+            string sqlStr = string.Format("SELECT Count(*) FROM TaiKhoan WHERE Id = '{0}' AND MatKhau = '{1}' AND Quyen = '{2}'  ", taiKhoan.Id,taiKhoan.MatKhau,taiKhoan.Quyen);
+            return dbconnection.CheckExist(sqlStr);
         }
         public bool SignUp(TaiKhoan taiKhoan)
         {
@@ -31,5 +31,11 @@ namespace DoAnXinViec
             string sqlStr = string.Format("SELECT * FROM TaiKhoan WHERE Id = '{0}'", id);
             return dbconnection.Load(sqlStr);
         }
+        public bool CheckSignUp(TaiKhoan taiKhoan)
+        {
+            string sqlStr = string.Format("SELECT Count(Id) FROM TaiKhoan WHERE Id = '{0}'", taiKhoan.Id);
+            return dbconnection.CheckExist(sqlStr);
+        }
+
     }
 }

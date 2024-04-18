@@ -13,32 +13,56 @@
             <ImageBrush ImageSource="/BackGround.png"/>
         </Grid.Background>
 
-        <StackPanel x:Name="stMain" Margin="240,0,0,0">
+        <StackPanel x:Name="stMain" Margin="240,0,0,0" Height="814" VerticalAlignment="Bottom">
 
         </StackPanel>
         <Border HorizontalAlignment="Left"  VerticalAlignment="Center" Width="225" Background="White" CornerRadius="0,30,30,0" Height="800">
             <Grid HorizontalAlignment="Left"  VerticalAlignment="Center" Width="225" Background="Transparent" Margin="0,1,0,0" Height="801">
                 <StackPanel Margin="0,260,0,0">
-                    <Expander Header="Tổng quan" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <Expander Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                        <Expander.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="AccountBox" Height="19" Width="18" Margin="0,0,5,0" />
+                                <TextBlock Text="Quản lý tài khoản"/>
+                            </StackPanel>
+                        </Expander.Header>
                         <StackPanel>
                             <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Thống kê" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White"/>
                             <Button Style="{DynamicResource ButtonStyleKeepColor}" Content="Báo cáo" HorizontalContentAlignment="Left"  Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" Background="White"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Quản lý đơn tuyển" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <Expander Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                        <Expander.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="ApplicationEditOutline" Height="19" Width="18" Margin="0,0,5,0" />
+                                <TextBlock Text="Quản lý đơn tuyển"/>
+                            </StackPanel>
+                        </Expander.Header>
                         <StackPanel>
                             <Button x:Name="btnTaoTinDangTuyen" Style="{DynamicResource ButtonStyleKeepColor}" Content="Tạo tin đăng" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnTaoTinDangTuyen_Click"/>
                             <Button x:Name="btnDanhSachTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Danh sách tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnDanhSachTin_Click"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Quản lý ứng viên" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                    <Expander Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background="White" FontSize="14" >
+                        <Expander.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="AccountGroupOutline" Height="19" Width="18" Margin="0,0,5,0" />
+                                <TextBlock Text="Quản lý ứng viên"/>
+                            </StackPanel>
+                        </Expander.Header>
                         <StackPanel>
                             <Button x:Name="btnHoSoUngTuyen" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ ứng tuyển" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoUngTuyen_Click"/>
                             <Button x:Name="btnHoSoDaThich" Style="{DynamicResource ButtonStyleKeepColor}" Content="Hồ sơ đã thích" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnHoSoDaThich_Click"/>
                             <Button x:Name="btnTimKiemUngVien" Style="{DynamicResource ButtonStyleKeepColor}" Content="Tìm kiếm ứng viên" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnTimKiemUngVien_Click"/>
                         </StackPanel>
                     </Expander>
-                    <Expander Header="Cài đặt chung" Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background ="White"  FontSize="14" >
+                    <Expander Foreground="{StaticResource MaterialDesign.Brush.Primary.Dark}" FontFamily="Segoe UI Black" Background ="White"  FontSize="14" >
+                        <Expander.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Cog" Height="19" Width="18" Margin="0,0,5,0" />
+                                <TextBlock Text="Cài đặt chung"/>
+                            </StackPanel>
+                        </Expander.Header>
                         <StackPanel>
                             <Button x:Name="btnCapNhatThongTin" Style="{DynamicResource ButtonStyleKeepColor}" Content="Cập nhật thông tin" HorizontalContentAlignment="Left" Foreground="Black" Padding="40,4,16,4" FontFamily="Segoe UI" BorderBrush="{x:Null}" OpacityMask="#FF560C81" Background="White" Click="btnCapNhatThongTin_Click"/>
                         </StackPanel>

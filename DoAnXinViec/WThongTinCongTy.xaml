@@ -239,7 +239,7 @@
 
         </GroupBox>
         <Label 
-            Content="ĐĂNG KÝ NHÀ TUYỂN DỤNG" Margin="620,35,620,729" FontSize="22" FontWeight="Bold" Foreground="Gray"/>
+            Content="ĐĂNG KÝ NHÀ TUYỂN DỤNG" Margin="0,35,0,0" FontSize="22" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center" Width="310" Height="50" VerticalAlignment="Top"/>
         <Button x:Name="btnDangKy" Content="Đăng ký" Margin="1415,0,0,25" VerticalAlignment="Bottom" Click="btnDangKy_Click" HorizontalAlignment="Left" Width="86" Background="#FF2A8DD3"/>
 
     </Grid>
