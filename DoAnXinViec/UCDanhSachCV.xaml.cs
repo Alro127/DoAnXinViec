@@ -42,17 +42,18 @@ namespace DoAnXinViec
             lvDanhSachCV.ItemsSource = listCV;
         }
 
-        private void lvDanhSachCV_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void btnXem_Click(object sender, RoutedEventArgs e)
         {
-            DependencyObject dep = (DependencyObject)e.OriginalSource;
-            if (dep is Border)
-            {
-                CV cv = (CV)lvDanhSachCV.SelectedItem;
-                /*WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
-                wCVChiTiet.ShowDialog();*/
-                WChinhSuaCV wChinhSuaCV = new WChinhSuaCV(cv);
-                wChinhSuaCV.ShowDialog();
-            }
+            CV cv = (sender as Button).Tag as CV;
+            WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+            wCVChiTiet.ShowDialog();
+        }
+
+        private void btnChinhSua_Click(object sender, RoutedEventArgs e)
+        {
+            CV cv = (sender as Button).Tag as CV;
+            WChinhSuaCV wChinhSuaCV = new WChinhSuaCV(cv);
+            wChinhSuaCV.ShowDialog();
         }
     }
 }

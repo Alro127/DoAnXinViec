@@ -12,6 +12,8 @@ namespace DoAnXinViec
         public static void SetItemFromRow<T>(T item, DataRow row)
         where T : new()
         {
+            if (item == null || row == null)
+                return;
             foreach (DataColumn c in row.Table.Columns)
             {
                 PropertyInfo p = item.GetType().GetProperty(c.ColumnName);

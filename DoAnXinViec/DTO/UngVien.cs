@@ -44,11 +44,12 @@ namespace DoAnXinViec
             get { return gioiTinh; }
             set
             {
-                if (gioiTinh != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    gioiTinh = value;
-                    OnPropertyChanged(nameof(GioiTinh));
+                    throw new ArgumentNullException("Không được bỏ trống giới tính");
                 }
+                gioiTinh = value;
+                OnPropertyChanged(nameof(GioiTinh));
             }
         }
         public DateTime NgaySinh
@@ -56,11 +57,12 @@ namespace DoAnXinViec
             get { return ngaySinh; }
             set
             {
-                if (ngaySinh != value)
+                if (value == null)
                 {
-                    ngaySinh = value;
-                    OnPropertyChanged(nameof(NgaySinh));
+                    throw new ArgumentNullException("Không được bỏ trống ngày sinh");
                 }
+                ngaySinh = value;
+                OnPropertyChanged(nameof(NgaySinh));
             }
         }
     }

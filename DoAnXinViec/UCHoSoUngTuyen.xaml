@@ -14,7 +14,7 @@
         <Grid HorizontalAlignment="Left" Height="800" Margin="0,0,0,0" VerticalAlignment="Center" Width="1290" Background="Transparent">
             <Label Content="Hồ Sơ Ứng Tuyển" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1040" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1060" HorizontalAlignment="Left"/>
-            <ListView x:Name="lvHoSoUngTuyen"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" MouseDoubleClick="lvHoSoUngTuyen_MouseDoubleClick" >
+            <ListView x:Name="lvHoSoUngTuyen"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="30">
@@ -96,7 +96,8 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <Button Style="{StaticResource MaterialDesignFlatLightButton}" Content="Xem" Margin="20,0,0,0"/>
+                                        <Button x:Name="btnXem" Style="{StaticResource MaterialDesignFlatLightButton}"
+                                                Content="Xem" Tag="{Binding}" Margin="20,0,0,0" Click="btnXem_Click"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

@@ -66,15 +66,11 @@ namespace DoAnXinViec
             lvDonTuyen.ItemsSource = listDon;
         }
 
-        private void lvDonTuyen_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void btnChiTiet_Click(object sender, RoutedEventArgs e)
         {
-            DependencyObject dep = (DependencyObject)e.OriginalSource;
-            if (dep is Border)
-            {
-                Don don = (Don)lvDonTuyen.SelectedItem;
-                WDanhSachUVTheoDon wDanhSachUVTheoDon = new WDanhSachUVTheoDon(congTy,don);
-                wDanhSachUVTheoDon.ShowDialog();
-            }
+            Don don = (sender as Button).Tag as Don;
+            WDanhSachUVTheoDon wDanhSachUVTheoDon = new WDanhSachUVTheoDon(congTy, don);
+            wDanhSachUVTheoDon.ShowDialog();
         }
     }
 }

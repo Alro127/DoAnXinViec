@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1290">
     <Border Background="White" CornerRadius="30,0,0,30" Width="1290" Height="800" Margin="0,0,0,0" VerticalAlignment="Top">
-        <Grid x:Name="thongtincty"  DataContext="{Binding CongTy}">
+        <Grid x:Name="thongtincty">
             <Grid.Background>
                 <ImageBrush/>
             </Grid.Background>
@@ -150,11 +150,12 @@
                 </Button.Background>
             </Button>
             <TextBox
+                Text="{Binding Id, UpdateSourceTrigger=PropertyChanged}"
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Tên đăng nhập"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="399" Height="40" HorizontalAlignment="Left" Margin="665,110,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
-            <PasswordBox 
+            <PasswordBox x:Name="pwMatKhau" 
                 Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" materialDesign:HintAssist.Hint="Mật khẩu"
                 HorizontalAlignment="Left" Height="40" Margin="665,170,0,0" VerticalAlignment="Top" Width="399" Padding="10,10,10,10" FontSize="14"/>
             <Button Content="Sửa" Height="40" Margin="0,110,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>

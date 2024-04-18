@@ -71,7 +71,7 @@ namespace DoAnXinViec
         }
         private void btnXem_Click(object sender, RoutedEventArgs e)
         {
-            Don don = (Don)(sender as Button).Tag;
+            Don don = (Don)(sender as Button).DataContext;
             WDonChiTiet wDonChiTiet = new WDonChiTiet(don, ungVien);
             donDAO.TangLuotXem(don);
             wDonChiTiet.ShowDialog();

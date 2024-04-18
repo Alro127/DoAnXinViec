@@ -40,7 +40,7 @@ namespace DoAnXinViec
         }
         bool CheckTimKiem(CV cv)
         {
-            if (ucTrangTimViec.txtTimKiem.Text == "" || cv.ViTriUngTuyen.Contains(ucTrangTimViec.txtTimKiem.Text))
+            if (ucTrangTimViec.txtTimKiem.Text == "" || cv.ViTriUngTuyen.ToLower().Contains(ucTrangTimViec.txtTimKiem.Text.ToLower()))
                 return true;
             return false;
         }
@@ -85,7 +85,7 @@ namespace DoAnXinViec
         bool CheckKinhNghiem(CV cv)
         {
             string kn = ucTrangTimViec.cbKinhNghiem.Text;
-            if (string.IsNullOrEmpty(kn))
+            if (string.IsNullOrEmpty(kn) || kn == "Không yêu cầu")
                 return true;
             kn = kn.Replace("năm", "");
             int min, max;

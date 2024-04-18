@@ -75,7 +75,7 @@ namespace DoAnXinViec
             if (!checkNull())
                 return;
 
-            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "cty");
+            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
 
             if (!dBConnection.CheckSignUp(taiKhoan))
             {

@@ -24,10 +24,6 @@ namespace DoAnXinViec
     {
         DonDAO donDAO = new DonDAO();
         CongTy congTy = new CongTy();
-        public UCLichSuDangDon()
-        {
-            InitializeComponent();
-        }
         public UCLichSuDangDon(CongTy congTy)
         {
             InitializeComponent();

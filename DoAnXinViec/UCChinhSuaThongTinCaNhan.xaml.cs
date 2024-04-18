@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -34,6 +35,10 @@ namespace DoAnXinViec
             InitializeComponent();
             this.UngVien = new UngVien(ungVien);
             this.DataContext = this.UngVien;
+            TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
+            DataTable dt = taiKhoanDAO.Get(ungVien.Id);
+            TaiKhoan taiKhoan = new TaiKhoan(dt.Rows[0]);
+            pwMatKhau.Password = taiKhoan.MatKhau;
             SetImage();
         }
 

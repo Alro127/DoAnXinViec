@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Drawing;
 
 namespace DoAnXinViec
 {
@@ -39,12 +40,20 @@ namespace DoAnXinViec
         }
         public CongTy(string id, string hoTen, string sDT, string email, string tenCT, string maSoThue, string gPKD, string linhVuc, int quyMoNhanSu, string tinhThanh, string diaChi, string link, string gT, string anh): base(id, hoTen, tinhThanh, diaChi, sDT, email, gT, anh)
         {
-            this.tenCT = tenCT;
-            this.maSoThue = maSoThue;
-            this.gPKD = gPKD;
-            this.linhVuc = linhVuc;
-            this.quyMoNhanSu = quyMoNhanSu;
-            this.link = link;
+            
+            try
+            {
+                TenCT = tenCT;
+                MaSoThue = maSoThue;
+                GPKD = gPKD;
+                LinhVuc = linhVuc;
+                QuyMoNhanSu = quyMoNhanSu;
+                Link = link;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
 
         public string TenCT
@@ -52,11 +61,12 @@ namespace DoAnXinViec
             get { return tenCT; }
             set
             {
-                if (tenCT != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    tenCT = value;
-                    OnPropertyChanged(nameof(TenCT));
+                    throw new ArgumentNullException("Không được bỏ trống tên công ty");
                 }
+                tenCT = value;
+                OnPropertyChanged(nameof(TenCT));
             }
         }
 
@@ -65,11 +75,12 @@ namespace DoAnXinViec
             get { return linhVuc; }
             set
             {
-                if (linhVuc != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    linhVuc = value;
-                    OnPropertyChanged(nameof(LinhVuc));
+                    throw new ArgumentNullException("Không được bỏ trống tên lĩnh vực");
                 }
+                linhVuc = value;
+                OnPropertyChanged(nameof(LinhVuc));
             }
         }
 
@@ -78,11 +89,12 @@ namespace DoAnXinViec
             get { return quyMoNhanSu; }
             set
             {
-                if (quyMoNhanSu != value)
+                if (value == 0)
                 {
-                    quyMoNhanSu = value;
-                    OnPropertyChanged(nameof(QuyMoNhanSu));
+                    throw new ArgumentNullException("Quy mô nhân sự phải là 1 con số lớn hơn 0");
                 }
+                quyMoNhanSu = value;
+                OnPropertyChanged(nameof(QuyMoNhanSu));
             }
         }
 
@@ -91,11 +103,12 @@ namespace DoAnXinViec
             get { return link; }
             set
             {
-                if (link != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    link = value;
-                    OnPropertyChanged(nameof(Link));
+                    throw new ArgumentNullException("Không được bỏ trống tên đường link");
                 }
+                link = value;
+                OnPropertyChanged(nameof(Link));
             }
         }
 
@@ -104,11 +117,12 @@ namespace DoAnXinViec
             get { return maSoThue; }
             set
             {
-                if (maSoThue != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    maSoThue = value;
-                    OnPropertyChanged(nameof(MaSoThue));
+                    throw new ArgumentNullException("Không được bỏ trống mã số thuế");
                 }
+                maSoThue = value;
+                OnPropertyChanged(nameof(MaSoThue));
             }
         }
 
@@ -117,11 +131,12 @@ namespace DoAnXinViec
             get { return gPKD; }
             set
             {
-                if (gPKD != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    gPKD = value;
-                    OnPropertyChanged(nameof(GPKD));
+                    throw new ArgumentNullException("Không được bỏ trống giấy phép kinh doanh");
                 }
+                gPKD = value;
+                OnPropertyChanged(nameof(GPKD));
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,11 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.congTy = new CongTy(congTy);
-            this.thongtincty.DataContext = this.congTy;
+            this.DataContext = this.congTy;
+            TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
+            DataTable dt = taiKhoanDAO.Get(congTy.Id);
+            TaiKhoan taiKhoan = new TaiKhoan(dt.Rows[0]);
+            pwMatKhau.Password = taiKhoan.MatKhau;
             SetImage();
             Load();
         }

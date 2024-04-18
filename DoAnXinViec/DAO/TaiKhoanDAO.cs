@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,11 @@ namespace DoAnXinViec
             if (dbconnection.ThucThi(sqlStr, parameters))
                 return true;
             return false;
+        }
+        public DataTable Get(string id)
+        {
+            string sqlStr = string.Format("SELECT * FROM TaiKhoan WHERE Id = '{0}'", id);
+            return dbconnection.Load(sqlStr);
         }
     }
 }

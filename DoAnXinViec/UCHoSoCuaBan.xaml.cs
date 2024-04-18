@@ -23,9 +23,7 @@ namespace DoAnXinViec
     {
         UngVien ungVien;
         UngVien tempUngVien;
-        UngVienDAO ungVienDAO = new UngVienDAO();
         CV cv = new CV();
-        CVDAO cvDAO = new CVDAO();
 
         public UngVien TempUngVien { get => tempUngVien; set => tempUngVien = value; }
         public CV Cv { get => cv; set => cv = value; }
@@ -53,16 +51,6 @@ namespace DoAnXinViec
             this.tbiThongTinCaNhan.DataContext = this.Cv.UngVien;
             this.tbcHoSoCuaBan.DataContext = this.Cv;
             SetImage(this.Cv.UngVien.Anh);
-        }
-        private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
-        {
-            this.ungVien = new UngVien(TempUngVien);
-            ungVienDAO.CapNhat(ungVien, "UngVien");
-            Cv.NgayDang = DateTime.Now.Date;
-            Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
-            Cv.UngVien = ungVien;
-            Cv.IdUV = ungVien.Id;
-            cvDAO.Them(Cv);
         }
 
         private void btnXemTruoc_Click(object sender, RoutedEventArgs e)

@@ -118,7 +118,7 @@
                 materialDesign:HintAssist.FontFamily="Verdana"
                 materialDesign:HintAssist.Hint="Kinh nghiệm"
                 Margin="520,78,0,0" VerticalAlignment="Top" Foreground="#555" Padding="10,4,0,4" FontSize="16" SelectionChanged="cbKinhNghiem_SelectionChanged" Width="250" HorizontalAlignment="Left">
-                <Label Content="Chưa có kinh nghiệm" Foreground="#555" FontSize="14"/>
+                <Label Content="Không yêu cầu" Foreground="#555" FontSize="14"/>
                 <Label Content="Dưới 1 năm" Foreground="#555" FontSize="14"/>
                 <Label Content="1 - 2 năm" Foreground="#555" FontSize="14"/>
                 <Label Content="2 - 5 năm" Foreground="#555" FontSize="14"/>

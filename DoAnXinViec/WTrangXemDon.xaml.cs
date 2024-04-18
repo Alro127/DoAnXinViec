@@ -42,7 +42,7 @@ namespace DoAnXinViec
         }
         bool CheckTimKiem(Don don)
         {
-            if (ucTrangTimViec.txtTimKiem.Text == "" || don.TenCV.Contains(ucTrangTimViec.txtTimKiem.Text))
+            if (ucTrangTimViec.txtTimKiem.Text == "" || don.TenCV.ToLower().Contains(ucTrangTimViec.txtTimKiem.Text.ToLower()))
                 return true;
             return false;
         }
@@ -87,7 +87,7 @@ namespace DoAnXinViec
         bool CheckKinhNghiem(Don don)
         {
             string kn = ucTrangTimViec.cbKinhNghiem.Text;
-            if (string.IsNullOrEmpty(kn)) 
+            if (string.IsNullOrEmpty(kn) || kn == "Không yêu cầu") 
                 return true;
             kn = kn.Replace("năm", "");
             int min, max;
@@ -144,7 +144,7 @@ namespace DoAnXinViec
             WDonChiTiet wDonChiTiet = new WDonChiTiet(don, ungVien);
             donDAO.TangLuotXem(don);
             wDonChiTiet.ShowDialog();
-            Load();
+            Load();       
         }
         void btnYeuThich_Click(object sender, RoutedEventArgs e)
         {

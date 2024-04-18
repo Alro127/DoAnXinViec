@@ -25,7 +25,7 @@
             Header="Thông tin liên hệ"
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Right" Width="735" Height="226" VerticalAlignment="Top">
             <StackPanel Margin="0,0,0,0">
-                <TextBox
+                <TextBox x:Name="txtHoTen"
                      Text="{Binding HoTen, Mode=TwoWay}"
                      FontSize="14"
                      Width="707"
@@ -34,7 +34,7 @@
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Họ và Tên"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox
+                <TextBox x:Name="txtSDT"
                     Text="{Binding SDT, Mode=TwoWay}"
                      FontSize="14"
                      Width="707"
@@ -43,7 +43,7 @@
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Số điện thoại"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox
+                <TextBox x:Name="txtEmail"
                     Text="{Binding Email, Mode=TwoWay}"
                      FontSize="14"
                      Width="707"
@@ -68,7 +68,7 @@
             Header="Thông tin Công ty"
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold" Height="645" VerticalAlignment="Top" HorizontalAlignment="Left" Width="685">
             <StackPanel>
-                <TextBox
+                <TextBox x:Name="txtTenCT"
                     Text="{Binding TenCT, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
@@ -77,7 +77,7 @@
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Tên công ty"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <ComboBox
+                <ComboBox x:Name="cbLinhVuc"
                     Text="{Binding LinhVuc, Mode=TwoWay}"
                       materialDesign:ColorZoneAssist.Mode="Light"
                       MinWidth="72"
@@ -97,7 +97,7 @@
                     <Label Content="Sư phạm" Foreground="#555" FontSize="14"/>
                     <Label Content="Nông - Lâm - Ngư nghiệp" Foreground="#555" FontSize="14"/>
                 </ComboBox>
-                <TextBox
+                <TextBox x:Name="txtQuyMoNhanSu"
                       Text="{Binding QuyMoNhanSu, Mode=TwoWay}"
                 FontSize="14"
                 Width="666"
@@ -106,7 +106,7 @@
                 Padding="10,20,0,0"
                 materialDesign:HintAssist.Hint="Quy Mô Nhân sự"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <ComboBox
+                <ComboBox x:Name="cbTinhThanh"
                         Text="{Binding TinhThanh, Mode=TwoWay}"
                         MinWidth="72"
                         materialDesign:ColorZoneAssist.Mode="Light"
@@ -178,7 +178,7 @@
                     <Label Content="Vĩnh Phúc" Foreground="#555" FontSize="14"/>
                     <Label Content="Yên Bái" Foreground="#555" FontSize="14"/>
                 </ComboBox>
-                <TextBox
+                <TextBox x:Name="txtDiaChi"
                     Text="{Binding DiaChi, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
@@ -187,7 +187,7 @@
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Địa chỉ"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox
+                <TextBox x:Name="txtLink"
                     Text="{Binding Link, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
@@ -196,7 +196,7 @@
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Đường link công ty"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox
+                <TextBox x:Name="txtMaSoThue"
                     Text="{Binding MaSoThue, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
@@ -205,7 +205,7 @@
                      Padding="10,20,0,0"
                      materialDesign:HintAssist.Hint="Mã số thuế"
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox
+                <TextBox x:Name="txtGPKD"
                     Text="{Binding GPKD, Mode=TwoWay}"
                      FontSize="14"
                      Width="666"
@@ -230,7 +230,7 @@
             materialDesign:ColorZoneAssist.Mode="Custom"
             Header="Giới thiệu công ty" 
             Style="{StaticResource MaterialDesignGroupBox}" FontSize="16" FontWeight="Bold" Height="420" VerticalAlignment="Top" HorizontalAlignment="Right" Width="716">
-            <TextBox
+            <TextBox x:Name="txtGT"
                 Text="{Binding GT, Mode=TwoWay}"
                 TextWrapping="Wrap"
                 materialDesign:HintAssist.Background="White"
