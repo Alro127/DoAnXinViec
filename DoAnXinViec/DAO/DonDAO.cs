@@ -71,5 +71,21 @@ namespace DoAnXinViec
             string sqlStr = string.Format("SELECT * FROM Don WHERE IdDon = '{0}'", id);
             return dbconnection.Load(sqlStr);
         }
+        public List<Don> SapXepDonHienThiUuTienTheoLinhVuc(List<Don> donList, List<CV> cvList)
+        {
+            var dsDon = cvList.Select(u => u.LinhVuc).ToList();
+
+            donList.Sort((x, y) =>
+            {
+                if (dsDon.Contains(x.LinhVuc) && !dsDon.Contains(y.LinhVuc))
+                    return -1;
+                else if (!dsDon.Contains(x.LinhVuc) && dsDon.Contains(y.LinhVuc))
+                    return 1;
+                else
+                    return 0;
+            });
+
+            return donList;
+        }
     }
 }

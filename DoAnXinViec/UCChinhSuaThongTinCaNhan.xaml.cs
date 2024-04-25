@@ -24,6 +24,7 @@ namespace DoAnXinViec
     public partial class UCChinhSuaThongTinCaNhan :UserControl
     {
         UngVien ungVien;
+        TaiKhoan taiKhoan;
         private void SetImage()
         {
             BitmapImage bitmapImg = MediaHandler.SetImage(ungVien.Anh, ungVien.Id);
@@ -37,7 +38,7 @@ namespace DoAnXinViec
             this.DataContext = this.UngVien;
             TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
             DataTable dt = taiKhoanDAO.Get(ungVien.Id);
-            TaiKhoan taiKhoan = new TaiKhoan(dt.Rows[0]);
+            taiKhoan = new TaiKhoan(dt.Rows[0]);
             pwMatKhau.Password = taiKhoan.MatKhau;
             SetImage();
         }
@@ -50,5 +51,10 @@ namespace DoAnXinViec
             SetImage();
         }
 
+        private void btnDoiMatKhau_Click(object sender, RoutedEventArgs e)
+        {
+            WDoiMatKhau wDoiMatKhau = new WDoiMatKhau(taiKhoan);
+            wDoiMatKhau.ShowDialog();
+        }
     }
 }

@@ -46,7 +46,7 @@ namespace DoAnXinViec
             if (dt.Rows.Count > 0)
             {
                 Don don = new Don(dt.Rows[0]);
-                UCDon ucDon= new UCDon(don);
+                UCDon ucDon= new UCDon(don,yeuThich);
                 ucDon.btnXem.Click += new RoutedEventHandler(this.btnXem_Click);
                 ucDon.btnYeuThich.Click += new RoutedEventHandler(this.btnYeuThich_Click);
                 wpCVYeuThich.Children.Add(ucDon);

@@ -27,8 +27,10 @@ namespace DoAnXinViec
         UngVien ungVien;
         UngVienDAO ungVienDAO = new UngVienDAO();
         DonDAO donDAO = new DonDAO();
+        CVDAO cVDAO = new CVDAO();
         YeuThichDAO yeuThichDAO = new YeuThichDAO();
         List<Don> donList = new List<Don>();
+        List<CV> cvList = new List<CV> ();
         public WTrangXemDon(string id)
         {
             InitializeComponent();
@@ -84,6 +86,12 @@ namespace DoAnXinViec
             if (maxDon > min && minDon < max) return true;
             return false;
         }
+        bool CheckLinhVuc(Don don)
+        {
+            if (ucTrangTimViec.cbLinhVuc.Text == "" || don.LinhVuc.Contains(ucTrangTimViec.cbLinhVuc.Text))
+                return true;
+            return false;
+        }
         bool CheckKinhNghiem(Don don)
         {
             string kn = ucTrangTimViec.cbKinhNghiem.Text;
@@ -116,7 +124,7 @@ namespace DoAnXinViec
             ucTrangTimViec.wpDon.Children.Clear();
             foreach (Don don in donList)
             {
-                if (CheckTimKiem(don) && CheckDiaDiem(don) && CheckLuong(don) && CheckKinhNghiem(don))
+                if (CheckTimKiem(don) && CheckDiaDiem(don) && CheckLuong(don) && CheckKinhNghiem(don)&& CheckLinhVuc(don))
                 {
                     YeuThich yeuThich = new YeuThich(don.IdDon, ungVien.Id);
                     UCDon uCDon = new UCDon(don, yeuThich);
@@ -130,12 +138,20 @@ namespace DoAnXinViec
         void Load()
         {
             donList.Clear();
-            DataTable dt = donDAO.Load();
-            foreach (DataRow dr in dt.Rows)
+            DataTable dtDon = donDAO.Load();
+            cvList.Clear();
+            DataTable dtCV = cVDAO.Load();
+            foreach (DataRow dr in dtDon.Rows)
             {
                 Don don = new Don(dr);
                 donList.Add(don);
             }
+            foreach (DataRow dr in dtCV.Rows)
+            {
+                CV cv = new CV(dr);
+                cvList.Add(cv);
+            }
+            donList = donDAO.SapXepDonHienThiUuTienTheoLinhVuc(donList, cvList);
             DangUCDon();
         }
         private void btnXem_Click(object sender, RoutedEventArgs e)
@@ -144,7 +160,7 @@ namespace DoAnXinViec
             WDonChiTiet wDonChiTiet = new WDonChiTiet(don, ungVien);
             donDAO.TangLuotXem(don);
             wDonChiTiet.ShowDialog();
-            Load();       
+            Load();            
         }
         void btnYeuThich_Click(object sender, RoutedEventArgs e)
         {

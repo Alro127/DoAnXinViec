@@ -29,6 +29,7 @@ namespace DoAnXinViec
         int luotNop;
         string tenCT;
         string anh;
+        string linhVuc;
         public Don() 
         { 
             this.ngayDang = DateTime.Now;
@@ -66,7 +67,7 @@ namespace DoAnXinViec
         }
         public string[] UnecessaryProperty()
         {
-            return new string[3] { nameof(IdDon), nameof(TenCT), nameof(Anh) };
+            return new string[4] { nameof(IdDon), nameof(TenCT), nameof(Anh) , nameof(LinhVuc)};
         }
         public string TenCV
         {
@@ -78,6 +79,18 @@ namespace DoAnXinViec
                     throw new ArgumentNullException("Không được bỏ trống tên công việc");
                 }
                 tenCV = value;
+            }
+        }
+        public string LinhVuc
+        {
+            get => linhVuc;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("Không được bỏ trống lĩnh vực");
+                }
+                linhVuc = value;
             }
         }
         public string IdCT

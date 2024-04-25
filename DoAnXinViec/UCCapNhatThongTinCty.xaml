@@ -158,8 +158,7 @@
             <PasswordBox x:Name="pwMatKhau" 
                 Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" materialDesign:HintAssist.Hint="Mật khẩu"
                 HorizontalAlignment="Left" Height="40" Margin="665,170,0,0" VerticalAlignment="Top" Width="399" Padding="10,10,10,10" FontSize="14"/>
-            <Button Content="Sửa" Height="40" Margin="0,110,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
-            <Button Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button x:Name="btnDoiMatKhau" Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000" Click="btnDoiMatKhau_Click"/>
             <TextBox
                     Text="{Binding MaSoThue, Mode=TwoWay}"
                     materialDesign:HintAssist.Background="White"

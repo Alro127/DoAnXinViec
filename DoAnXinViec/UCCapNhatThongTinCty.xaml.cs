@@ -23,7 +23,7 @@ namespace DoAnXinViec
     {
         CongTy congTy;
         public CongTy CongTy { get => congTy; set => congTy = value; }
-
+        TaiKhoan taiKhoan;
         private void SetImage()
         {
             BitmapImage bitmapImg = MediaHandler.SetImage(congTy.Anh, CongTy.Id);
@@ -37,7 +37,7 @@ namespace DoAnXinViec
             this.DataContext = this.congTy;
             TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
             DataTable dt = taiKhoanDAO.Get(congTy.Id);
-            TaiKhoan taiKhoan = new TaiKhoan(dt.Rows[0]);
+            taiKhoan = new TaiKhoan(dt.Rows[0]);
             pwMatKhau.Password = taiKhoan.MatKhau;
             SetImage();
             Load();
@@ -65,6 +65,12 @@ namespace DoAnXinViec
             Image anh = new Image() {Width = 100, Height = 100, Margin = new Thickness(10,9,0,9) };
             anh.Source = MediaHandler.SetImage(anhStr, congTy.Id);
             wpAnh.Children.Add(anh);
+        }
+
+        private void btnDoiMatKhau_Click(object sender, RoutedEventArgs e)
+        {
+            WDoiMatKhau wDoiMatKhau = new WDoiMatKhau(taiKhoan);
+            wDoiMatKhau.ShowDialog();
         }
     }
 }

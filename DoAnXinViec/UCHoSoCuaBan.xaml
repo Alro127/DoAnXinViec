@@ -281,6 +281,7 @@
                         </ComboBox>
                         <ComboBox 
                             x:Name="cbLinhVuc"
+                            IsEditable="True"
                             Text="{Binding LinhVuc, Mode=TwoWay}"
                             HorizontalAlignment="Left" Height="40" Margin="40,100,0,0" Width="540"
                             Style="{StaticResource MaterialDesignOutlinedComboBox}"

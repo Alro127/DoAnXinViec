@@ -30,8 +30,12 @@ namespace DoAnXinViec
         {
             try
             {
+                if (txtMatKhau.Password != txtXacNhanMatKhau.Password)
+                {
+                    MessageBox.Show("Mật khẩu không trùng khớp");
+                    return;
+                }
                 TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "uv");
-
                 if (taiKhoanDAO.CheckSignUp(taiKhoan))
                 {
                     MessageBox.Show("Tài khoản đã tồn tại");
@@ -52,6 +56,11 @@ namespace DoAnXinViec
 
             try
             {
+                if (txtMatKhau.Password != txtXacNhanMatKhau.Password)
+                {
+                    MessageBox.Show("Mật khẩu không trùng khớp");
+                    return;
+                }
                 TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
 
                 if (taiKhoanDAO.CheckSignUp(taiKhoan))

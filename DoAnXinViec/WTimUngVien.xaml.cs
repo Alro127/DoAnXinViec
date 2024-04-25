@@ -109,12 +109,18 @@ namespace DoAnXinViec
             return false;
 
         }
+        bool CheckLinhVuc(CV cv)
+        {
+            if (ucTrangTimViec.cbLinhVuc.Text == "" || cv.LinhVuc.Contains(ucTrangTimViec.cbLinhVuc.Text))
+                return true;
+            return false;
+        }
         void DangUCCV()
         {
             ucTrangTimViec.wpDon.Children.Clear();
             foreach (CV cv in cvList)
             {
-                if (CheckTimKiem(cv) && CheckDiaDiem(cv) && CheckLuong(cv) && CheckKinhNghiem(cv))
+                if (CheckTimKiem(cv) && CheckDiaDiem(cv) && CheckLuong(cv) && CheckKinhNghiem(cv)&& CheckLinhVuc(cv))
                 {
                     YeuThich yeuThich = new YeuThich(cv.Id, congTy.Id);
                     UCCV ucCV = new UCCV(cv, yeuThich);
@@ -148,6 +154,7 @@ namespace DoAnXinViec
                 CV cv = new CV(dr);
                 cvList.Add(cv);
             }
+            cvList = cvDAO.SapXepDonHienThiUuTienTheoLinhVuc(cvList, congTy);
             DangUCCV();
         }
 

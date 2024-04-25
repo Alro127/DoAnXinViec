@@ -89,14 +89,14 @@
                 <Label Content="Vĩnh Phúc" Foreground="#555" FontSize="14"/>
                 <Label Content="Yên Bái" Foreground="#555" FontSize="14"/>
             </ComboBox>
-            <ComboBox x:Name="cbNganhNghe"
+            <ComboBox x:Name="cbLinhVuc"
                 MinWidth="72"
                 IsEditable="True"
                 Background="#f8f9fa"
                 materialDesign:ColorZoneAssist.Mode ="Light" 
                 materialDesign:ComboBoxAssist.MaxLength="30"
                 materialDesign:HintAssist.FontFamily="Verdana"
-                materialDesign:HintAssist.Hint="Ngành nghề"
+                materialDesign:HintAssist.Hint="Lĩnh vực"
                 Margin="260,78,0,0" VerticalAlignment="Top" Foreground="#555" Padding="10,4,0,4" FontSize="16" Width="250" HorizontalAlignment="Left">
                 <Label Content="Sản xuất và chế biến" Foreground="#555" FontSize="14"/>
                 <Label Content="Kiến trúc và xây dựng" Foreground="#555" FontSize="14"/>

@@ -44,5 +44,20 @@ namespace DoAnXinViec
             string sqlStr = string.Format("SELECT * FROM CV WHERE Id = '{0}'", id);
             return dbconnection.Load(sqlStr);
         }
+        public List<CV> SapXepDonHienThiUuTienTheoLinhVuc(List<CV> cvList, CongTy congTy)
+        {
+
+            cvList.Sort((x, y) =>
+            {
+                if (x.LinhVuc == congTy.LinhVuc && y.LinhVuc != congTy.LinhVuc)
+                    return -1;
+                else if (x.LinhVuc != congTy.LinhVuc && y.LinhVuc == congTy.LinhVuc)
+                    return 1;
+                else
+                    return 0;
+            });
+
+            return cvList;
+        }
     }
 }

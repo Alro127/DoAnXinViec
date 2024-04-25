@@ -19,9 +19,39 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WDoiMatKhau : Window
     {
+        TaiKhoan taiKhoan;
+        TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
         public WDoiMatKhau()
         {
             InitializeComponent();
+        }
+        public WDoiMatKhau(TaiKhoan taiKhoan)
+        {
+            InitializeComponent();
+            this.taiKhoan = taiKhoan;
+
+        }
+
+        private void btnLuu_Click(object sender, RoutedEventArgs e)
+        {
+            taiKhoan.MatKhau = txtMatKhauCu.Password;
+            if(!taiKhoanDAO.CheckPassWord(taiKhoan))
+            {
+                MessageBox.Show("Mật khẩu cũ không trùng khớp");
+                return;
+            }    
+            if (txtMatKhauMoi.Password != txtXacNhanMatKhau.Password)
+            {
+                MessageBox.Show("Mật khẩu mới không trùng khớp");
+                return;
+            }
+            taiKhoan.MatKhau = txtMatKhauMoi.Password;
+            taiKhoanDAO.DoiMatKhau(taiKhoan);
+        }
+
+        private void btnHuy_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
