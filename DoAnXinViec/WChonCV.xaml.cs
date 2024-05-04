@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WChonCV : Window
     {
-        UngVien ungVien;
+        UngVien ungVien = new UngVien();
         List<CV> listCV = new List<CV>();
         CV cv;
 
@@ -36,6 +37,7 @@ namespace DoAnXinViec
         {
             CVDAO cvDAO = new CVDAO();
             DataTable dt = cvDAO.Get(ungVien);
+            listCV.Clear();
             foreach (DataRow dr in dt.Rows)
             {
                 CV cv = new CV(dr);
@@ -49,6 +51,31 @@ namespace DoAnXinViec
         {
             Cv = (CV)lvDanhSachCV.SelectedItem;
             this.Close();
+        }
+        private void tbTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            List<CV> listHienThi = new List<CV>();
+            foreach (CV cv in listCV)
+            {
+                string vtut = cv.ViTriUngTuyen.ToLower();
+                if (vtut.ToLower().Contains(tbTimKiem.Text))
+                {
+                    listHienThi.Add(cv);
+                }    
+            } 
+            lvDanhSachCV.ItemsSource = listHienThi;
+        }
+
+        private void btnTaoCVMoi_Click(object sender, RoutedEventArgs e)
+        {
+            WTaoCV wTaoCV = new WTaoCV(ungVien);
+            wTaoCV.ShowDialog();
+        }
+
+        private void btnReLoad_Click(object sender, RoutedEventArgs e)
+        {
+            Load();
+            lvDanhSachCV.Items.Refresh();
         }
     }
 }

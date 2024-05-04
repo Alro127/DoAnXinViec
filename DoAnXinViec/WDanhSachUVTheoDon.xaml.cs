@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnXinViec.DAO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -22,11 +23,9 @@ namespace DoAnXinViec
     {
         CongTy congTy;
         Don don;
+        HoSoDAO hoSoDAO = new HoSoDAO();
         List<HoSo> listHoSo = new List<HoSo>();
-        List<HoSo> listHoSoChapNhan = new List<HoSo>();
-        List<HoSo> listHoSoDoi = new List<HoSo>();
-        List<HoSo> listHoSoTuChoi = new List<HoSo>();
-
+        List<HoSo> listHienThi = new List<HoSo>();
 
         public WDanhSachUVTheoDon(CongTy congTy, Don don)
         {
@@ -41,37 +40,93 @@ namespace DoAnXinViec
             DataTable dt = hoSoDAO.LoadTheoDon(congTy, don);
             foreach (DataRow dr in dt.Rows)
             {
-                HoSo hoSo = new HoSo();
-                Utility.SetItemFromRow(hoSo, dr);
+                HoSo hoSo = new HoSo(dr);
                 listHoSo.Add(hoSo);
-                if (hoSo.TrangThai=="Chấp nhận")
-                    listHoSoChapNhan.Add(hoSo);
-                else if (hoSo.TrangThai=="Đợi")
-                    listHoSoDoi.Add(hoSo);
-                else
-                    listHoSoTuChoi.Add(hoSo);
             }
-            lvHoSo.ItemsSource = listHoSo;
-            lvHoSoChapNhan.ItemsSource = listHoSoChapNhan;
-            lvHoSoDoi.ItemsSource = listHoSoDoi;
-            lvHoSoTuChoi.ItemsSource = listHoSoTuChoi;
         }
 
-        private void lvHoSo_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void btnChiTiet_Click(object sender, RoutedEventArgs e)
         {
-            DependencyObject dep = (DependencyObject)e.OriginalSource;
-            if (dep is Border)
+            HoSo hoSo = (sender as Button).Tag as HoSo;
+            CVDAO cvDAO = new CVDAO();
+            DataTable dt = cvDAO.Get(hoSo.IdCV);
+            CV cv = new CV(dt.Rows[0]);
+            WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
+            wCVChiTiet.ShowDialog();
+        }
+        private void mniHen_Click(object sender, RoutedEventArgs e)
+        {
+            HoSo hoSo = (sender as MenuItem).Tag as HoSo;
+            WLichPhongVan wLichPhongVan = new WLichPhongVan(congTy, hoSo);
+            wLichPhongVan.ShowDialog();
+            lvHoSo.Items.Refresh();
+            lvHoSoChapNhan.Items.Refresh();
+            lvHoSoDoi.Items.Refresh();
+            lvHoSoTuChoi.Items.Refresh();
+        }
+        private void mniTuChoi_Click(object sender, RoutedEventArgs e)
+        {
+            HoSo hoSo = (sender as MenuItem).Tag as HoSo;
+            if (hoSo.TrangThai == "Chấp nhận")
             {
-                HoSo hoSo = (HoSo)lvHoSo.SelectedItem;
-                CVDAO cvDAO = new CVDAO();
-                DataTable dt = cvDAO.Get(hoSo.IdCV);
-                CV cv = new CV(dt.Rows[0]);
-                UngVienDAO ungVienDAO = new UngVienDAO();
-                dt = ungVienDAO.Get(cv.IdUV, "UngVien");
-                UngVien ungVien = new UngVien(dt.Rows[0]);
-                cv.UngVien = ungVien;
-                WCVChiTiet wCVChiTiet = new WCVChiTiet(cv);
-                wCVChiTiet.ShowDialog();
+                PhongVanDAO phongVanDAO = new PhongVanDAO();
+                DataTable dt = phongVanDAO.Get(hoSo.IdDon, hoSo.IdCV);
+                PhongVan phongVan = new PhongVan(dt.Rows[0]);
+                phongVanDAO.Xoa(phongVan);
+            }
+            hoSo.TrangThai = "Từ chối";
+            hoSoDAO.CapNhat(hoSo);
+            lvHoSo.Items.Refresh();
+            lvHoSoChapNhan.Items.Refresh();
+            lvHoSoDoi.Items.Refresh();
+            lvHoSoTuChoi.Items.Refresh();
+        }
+
+        private void tabChapNhan_Loaded(object sender, RoutedEventArgs e)
+        {
+            listHienThi.Clear();
+            foreach (HoSo hs in listHoSo)
+            {
+                if (hs.TrangThai == "Chấp nhận")
+                    listHienThi.Add(hs);
+            }
+            lvHoSoChapNhan.ItemsSource = listHienThi;
+            lvHoSoChapNhan.Items.Refresh();
+        }
+
+        private void tabDanhSach_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            listHienThi.Clear();
+            if (tabDanhSach.SelectedItem == tabTatCa) 
+            {
+                listHienThi.AddRange(listHoSo);
+                lvHoSo.ItemsSource = listHienThi;
+                lvHoSo.Items.Refresh();
+                return;
+            }
+            string trangthai = ((TabItem)tabDanhSach.SelectedItem).Header as string;
+            foreach (HoSo hs in listHoSo)
+            {
+                if (hs.TrangThai == trangthai)
+                    listHienThi.Add(hs);
+            }
+            if (tabDanhSach.SelectedItem == tabChapNhan)
+            {
+                lvHoSoChapNhan.ItemsSource = listHienThi;
+                lvHoSoChapNhan.Items.Refresh();
+                return;
+            }
+            if (tabDanhSach.SelectedItem == tabDoi)
+            {
+                lvHoSoDoi.ItemsSource = listHienThi;
+                lvHoSoDoi.Items.Refresh();
+                return;
+            }
+            if (tabDanhSach.SelectedItem == tabTuChoi)
+            {
+                lvHoSoTuChoi.ItemsSource = listHienThi;
+                lvHoSoTuChoi.Items.Refresh();
+                return;
             }
         }
     }

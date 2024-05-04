@@ -38,11 +38,7 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             DataTable dt = congTyDAO.Get(id, "Cty");
-            if (dt.Rows.Count > 0)
-            {
-                Utility.SetItemFromRow(congTy, dt.Rows[0]);
-            }
-            else MessageBox.Show("Lỗi");
+            congTy = new CongTy(dt.Rows[0]);
             SetImage();
         }
         public WTrangChinhCty(CongTy congTy)
@@ -53,9 +49,6 @@ namespace DoAnXinViec
         }
         private void WTrangChinhCTy_Loaded(object sender, RoutedEventArgs e)
         {
-            DataTable dt = congTyDAO.Get(congTy.Id, "Cty");
-            if (dt != null)
-                Utility.SetItemFromRow(congTy, dt.Rows[0]);
             this.DataContext = congTy;
         }
         private void btnDanhSachTin_Click(object sender, RoutedEventArgs e)

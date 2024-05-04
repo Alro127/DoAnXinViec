@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoAnXinViec" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             mc:Ignorable="d" Height="120" Width="440">
+             mc:Ignorable="d" Height="140" Width="440">
 
     <UserControl.Resources>
         <Style x:Key="GridBoGoc" TargetType="{x:Type Grid}"/>
@@ -94,26 +94,31 @@
                 <SolidColorBrush Color="White"/>
             </Border.Background>
         </Border>
-        <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Source ="{Binding Anh}"  Stretch="UniformToFill"/>
-        <Button x:Name="btnXem" x:FieldModifier="public" Style="{DynamicResource ButtonStyleBoGoc}" Content="Xem" HorizontalAlignment="Left" Margin="354,78,0,0" VerticalAlignment="Top" Background="#FF2A8DD3" FontSize="16" FontFamily="Segoe UI Black" Foreground="White" Width="69" Height="30" BorderBrush="{x:Null}" AutomationProperties.Name="btnXem"/>
-        <GroupBox x:Name="grbTenCV" Style="{DynamicResource GroupBox}" HorizontalAlignment="Left" Height="60" Header="{Binding TenCV}" Margin="81,10,0,0" VerticalAlignment="Top" Width="341" FontFamily="Segoe UI Black" FontSize="18" Foreground="Black">
+        <Label x:Name="lblthoigiandang" Content="Posted 7 days ago" Foreground="DarkGray" Margin="10,0,218,113" FontSize="10"/>
+        <WrapPanel Margin="218,0,0,113" FlowDirection="RightToLeft" >
+            <Label x:Name="lblLuong" Style="{DynamicResource LabelStyleBoGoc}" Content="{Binding Luong}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="12" Foreground="#0ab305" FlowDirection="LeftToRight"/>
+            <materialDesign:PackIcon Kind="CurrencyUsd" Foreground="#0ab305" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+        </WrapPanel>
+        <Image x:Name="imgAnh" HorizontalAlignment="Right" Height="60" Margin="0,0,367,48" VerticalAlignment="Bottom" Width="60" Source ="{Binding Anh}"  Stretch="UniformToFill"/>
+        <Button x:Name="btnXem" x:FieldModifier="public" Style="{DynamicResource ButtonStyleBoGoc}" Content="Xem" HorizontalAlignment="Left" Margin="361,0,0,10" VerticalAlignment="Bottom" Background="#FF2A8DD3" FontSize="16" FontFamily="Segoe UI Black" Foreground="White" Width="69" Height="30" BorderBrush="{x:Null}" AutomationProperties.Name="btnXem"/>
+        <GroupBox x:Name="grbTenCV" Style="{DynamicResource GroupBox}" HorizontalAlignment="Left" Header="{Binding TenCV}" Margin="81,30,0,48" Width="341" FontFamily="Segoe UI Black" FontSize="18" Foreground="Black">
             <Label x:Name="lblTenCT" Content="{Binding TenCT}" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="266" FontSize="14" Height="31" Foreground="#FF2A8DD3"/>
         </GroupBox>
-        <Grid HorizontalAlignment="Left" Height="32" Margin="10,80,0,0" VerticalAlignment="Top" Width="306">
+        <Grid HorizontalAlignment="Left" Height="32" Margin="10,0,0,6" VerticalAlignment="Bottom" Width="290">
             <WrapPanel>
                 <Label x:Name="lblDiaDiem" Style="{DynamicResource LabelStyleBoGoc}" Content="{Binding DiaDiem}" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#b3e5fc" FontWeight="Bold" FontSize="10" Foreground="Black" Margin="10,5"/>
-                <Label x:Name="lblLuong" Style="{DynamicResource LabelStyleBoGoc}" Content="{Binding Luong}" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#b3e5fc" FontWeight="Bold" FontSize="10" Foreground="Black" Margin="0,5,0,0"/>
+                <Label x:Name="lblKinhNghiem" Style="{DynamicResource LabelStyleBoGoc}" Content="{Binding KinhNghiem}" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#b3e5fc" FontWeight="Bold" FontSize="10" Foreground="Black" Margin="10,5"/>
             </WrapPanel>
         </Grid>
         <ToggleButton x:Name="btnYeuThich"
               Width="30"
               Height="30"
               BorderThickness="0"
-              VerticalAlignment="Top"
+              VerticalAlignment="Bottom"
               HorizontalAlignment="Right"
               IsChecked="False"
               ToolTip="MaterialDesignFlatPrimaryToggleButton"
-              Margin="0,11,0,0">
+              Margin="0,0,0,77">
             <ToggleButton.Template>
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid>

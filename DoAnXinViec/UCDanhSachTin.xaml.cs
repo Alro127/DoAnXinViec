@@ -24,9 +24,12 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCDanhSachTin : UserControl
     {
-        CongTy congTy;
+        CongTy congTy = new CongTy();
         DonDAO donDAO = new DonDAO();
         List<Don> listDon = new List<Don>();
+        List<Don> listHienThi = new List<Don>();
+        string header = "Tất cả";
+
         public UCDanhSachTin()
         {
             InitializeComponent();
@@ -44,11 +47,11 @@ namespace DoAnXinViec
         }
         private void XoaMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Don don = (Don)lvDonTuyen.SelectedItem;
+            /*Don don = (Don)lvDonTuyen.SelectedItem;
             donDAO.Xoa(don);
             listDon.Remove(don);
             lvDonTuyen.ItemsSource = listDon;
-            lvDonTuyen.Items.Refresh();
+            lvDonTuyen.Items.Refresh();*/
         }
         private void ChonMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -63,18 +66,119 @@ namespace DoAnXinViec
                 Don don = new Don(dr);
                 listDon.Add(don);
             }
-            lvDonTuyen.ItemsSource = listDon;
+            listHienThi.Clear();
+            listHienThi.AddRange(listDon);
+            SapXep();
         }
 
-        private void lvDonTuyen_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void btnChiTiet_Click(object sender, RoutedEventArgs e)
         {
-            DependencyObject dep = (DependencyObject)e.OriginalSource;
-            if (dep is Border)
+            Don don = (sender as Button).Tag as Don;
+            WDanhSachUVTheoDon wDanhSachUVTheoDon = new WDanhSachUVTheoDon(congTy, don);
+            wDanhSachUVTheoDon.ShowDialog();
+        }
+        bool CheckBoLoc(Don don)
+        {
+            if (cbBoLoc.SelectedIndex <= 0) return true;
+            if (cbBoLoc.SelectedIndex == 1)
+                if (don.NgayToiHan > DateTime.Now)
+                    return true;
+            if (cbBoLoc.SelectedIndex == 2)
+                if (don.NgayToiHan < DateTime.Now)
+                    return true;
+            return false;
+        }
+        private void cbBoLoc_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Loc();
+        }
+
+        private void SapXep()
+        {
+            if (cbSapXep == null) return;
+            if (cbSapXep.SelectedIndex == 0)
+                listHienThi = listHienThi.OrderBy(don => don.TenCV).ToList();
+            else if (cbSapXep.SelectedIndex == 1)
+                listHienThi = listHienThi.OrderByDescending(don => don.TenCV).ToList();
+            else if (cbSapXep.SelectedIndex == 2)
+                listHienThi = listHienThi.OrderByDescending(don => don.NgayDang).ToList();
+            else if (cbSapXep.SelectedIndex == 3)
+                listHienThi = listHienThi.OrderBy(don => don.NgayDang).ToList();
+            lvDonTuyen.ItemsSource = listHienThi;
+            lvDonTuyen.Items.Refresh();
+        }
+        private void cbSapXep_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SapXep();
+        }
+
+        bool CheckTimKiem(Don don)
+        {
+            if (tbTimKiem.Text == "") return true;
+            string str = don.TenCV.ToLower();
+            if (str.Contains(tbTimKiem.Text.ToLower()))
+                return true;
+            return false;
+        }
+        private void tbTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            Loc();
+        }
+        private void Loc()
+        {
+            listHienThi.Clear();
+            foreach (Don don in listDon)
             {
-                Don don = (Don)lvDonTuyen.SelectedItem;
-                WDanhSachUVTheoDon wDanhSachUVTheoDon = new WDanhSachUVTheoDon(congTy,don);
-                wDanhSachUVTheoDon.ShowDialog();
+                if (Filter.CheckNgay(don.NgayDang,header,dtpNgayDang.SelectedDate) && CheckBoLoc(don) && CheckTimKiem(don))
+                    listHienThi.Add(don);
             }
+            SapXep();
+        }
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem menuItem = sender as MenuItem;
+
+            if (menuItem != null)
+            {
+                header = menuItem.Header.ToString();
+                Loc();
+                mniThoiGianDang.Header = header;
+            }
+        }
+
+        private void dtpNgayDang_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            header = "";
+            Loc();
+            mniThoiGianDang.Header = dtpNgayDang.SelectedDate.ToString();
+        }
+
+        private void LuotNop_MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem menuItem = sender as MenuItem;
+
+            if (menuItem != null)
+                header = menuItem.Header.ToString();
+            if (header == "Cao nhất - Thấp nhất")
+                listHienThi = listHienThi.OrderByDescending(don => don.LuotNop).ToList();
+            else
+                listHienThi = listHienThi.OrderBy(don => don.LuotNop).ToList();
+            lvDonTuyen.ItemsSource = listHienThi;
+            lvDonTuyen.Items.Refresh();
+        }
+
+        private void LuotXem_MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem menuItem = sender as MenuItem;
+
+            if (menuItem != null)
+                header = menuItem.Header.ToString();
+            if (header == "Cao nhất - Thấp nhất")
+                listHienThi = listHienThi.OrderByDescending(don => don.LuotXem).ToList();
+            else
+                listHienThi = listHienThi.OrderBy(don => don.LuotXem).ToList();
+            lvDonTuyen.ItemsSource = listHienThi;
+            lvDonTuyen.Items.Refresh();
         }
     }
 }

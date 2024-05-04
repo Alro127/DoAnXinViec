@@ -93,3 +93,114 @@ D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-win
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.csproj.CopyComplete
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.genruntimeconfig.cache
 D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\ref\DoAnXinViec.dll
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCLich.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCLich.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WHenLich.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WLichPhongVan.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WHenLich.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WLichPhongVan.baml
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTaoCV.g.cs
+D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTaoCV.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.exe
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.dll.config
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.deps.json
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.runtimeconfig.json
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\DoAnXinViec.pdb
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignColors.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.csproj.AssemblyReference.cache
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\ButtonBoGoc.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\ButtonStyleKeepColor.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\PasswordBoxStyle.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\TextBoxStyle.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCapNhatThongTinCty.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCChinhSuaThongTinCaNhan.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCongViecYeuThich.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCV.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCVYeuThich.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDangDon.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDanhSachCV.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDanhSachTin.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDon.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCHoSoCuaBan.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCHoSoUngTuyen.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCLich.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCLichSuDangDon.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCTrangTimViec.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCViecDaUngTuyen.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WChinhSuaCV.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WChonCV.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WCVChiTiet.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangKy.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangNhap.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDanhSachUVTheoDon.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDoiMatKhau.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDonChiTiet.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WHenLich.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WLichPhongVan.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTaoCV.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinCongTy.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinUngVien.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTimUngVien.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinhCty.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinhUngVien.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChuCty.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangXemDon.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\App.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec_MarkupCompile.cache
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec_MarkupCompile.lref
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\App.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCapNhatThongTinCty.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCChinhSuaThongTinCaNhan.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCongViecYeuThich.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCV.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCCVYeuThich.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDangDon.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDanhSachCV.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDanhSachTin.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCDon.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCHoSoCuaBan.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCHoSoUngTuyen.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCLich.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCLichSuDangDon.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCTrangTimViec.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\UCViecDaUngTuyen.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WChinhSuaCV.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WChonCV.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WCVChiTiet.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangKy.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDangNhap.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDanhSachUVTheoDon.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDoiMatKhau.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WDonChiTiet.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WHenLich.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WLichPhongVan.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTaoCV.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinCongTy.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WThongTinUngVien.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTimUngVien.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinhCty.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChinhUngVien.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangChuCty.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\WTrangXemDon.baml
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.g.resources
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.GeneratedMSBuildEditorConfig.editorconfig
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.AssemblyInfoInputs.cache
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.AssemblyInfo.cs
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.csproj.CoreCompileInputs.cache
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.sourcelink.json
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinV.A9F3B5D6.Up2Date
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\refint\DoAnXinViec.dll
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.pdb
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\DoAnXinViec.genruntimeconfig.cache
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\ref\DoAnXinViec.dll

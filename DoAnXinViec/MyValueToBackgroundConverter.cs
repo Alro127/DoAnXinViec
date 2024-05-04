@@ -25,6 +25,12 @@ namespace DoAnXinViec
                         return Brushes.White;
                 }
         }
+        public object ConvertBorder(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if ((DateTime)value > DateTime.Now)
+                return Brushes.Orange;
+            return Brushes.Black;
+        }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {

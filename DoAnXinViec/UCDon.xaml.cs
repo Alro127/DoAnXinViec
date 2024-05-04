@@ -23,11 +23,11 @@ namespace DoAnXinViec
     public partial class UCDon : UserControl
     {
         Don don = new Don();
-        public UCDon() 
+        public UCDon()
         {
             InitializeComponent();
         }
-        public UCDon(Don don, YeuThich? yeuThich=null)
+        public UCDon(Don don, YeuThich? yeuThich = null)
         {
             InitializeComponent();
             this.DataContext = don;
@@ -41,7 +41,7 @@ namespace DoAnXinViec
                 imgAnh.Source = bitmapImg;
 
             YeuThichDAO yeuThichDAO = new YeuThichDAO();
-            if (yeuThich != null )
+            if (yeuThich != null)
             {
                 if (yeuThichDAO.CheckExist(yeuThich))
                     btnYeuThich.IsChecked = true;
@@ -49,8 +49,8 @@ namespace DoAnXinViec
                     btnYeuThich.IsChecked = false;
                 btnYeuThich.Tag = don.IdDon;
             }
+            lblthoigiandang.Content = Filter.tinhThoiGian(don.NgayDang);
         }
-
         public Don Don { get => don; set => don = value; }
     }
 }

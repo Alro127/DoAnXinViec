@@ -37,5 +37,10 @@ namespace DoAnXinViec
             return dbconnection.CheckExist(sqlStr);
         }
 
+        public DataTable Get(int id, string idUser)
+        {
+            string sqlStr = string.Format("SELECT * FROM YeuThich WHERE Id = '{0}' and IdUser", id, idUser);
+            return dbconnection.Load(sqlStr);
+        }
     }
 }

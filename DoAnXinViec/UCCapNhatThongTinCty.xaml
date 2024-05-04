@@ -7,8 +7,8 @@
                           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1290">
-    <Border Background="White" CornerRadius="30,0,0,30" Width="1290" Height="800" Margin="0,0,0,0" VerticalAlignment="Top">
-        <Grid x:Name="thongtincty"  DataContext="{Binding CongTy}">
+    <Border Background="White" CornerRadius="30,0,0,30" Width="1290" Height="800" VerticalAlignment="Bottom">
+        <Grid x:Name="thongtincty">
             <Grid.Background>
                 <ImageBrush/>
             </Grid.Background>
@@ -150,15 +150,17 @@
                 </Button.Background>
             </Button>
             <TextBox
+                Text="{Binding Id, UpdateSourceTrigger=PropertyChanged}"
                 materialDesign:HintAssist.Background="White"
                 VerticalAlignment="Top"
                 materialDesign:HintAssist.Hint="Tên đăng nhập"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="399" Height="40" HorizontalAlignment="Left" Margin="665,110,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
-            <PasswordBox 
+            <PasswordBox x:Name="pwMatKhau" 
+                materialDesign:HintAssist.Background="White"
                 Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" materialDesign:HintAssist.Hint="Mật khẩu"
                 HorizontalAlignment="Left" Height="40" Margin="665,170,0,0" VerticalAlignment="Top" Width="399" Padding="10,10,10,10" FontSize="14"/>
             <Button Content="Sửa" Height="40" Margin="0,110,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
-            <Button Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
+            <Button x:Name="btnDoiMatKhau" Content="Sửa" Height="40" Margin="0,170,40,0" VerticalAlignment="Top" BorderBrush="#FF2A8DD3" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000" Click="btnDoiMatKhau_Click"/>
             <TextBox
                     Text="{Binding MaSoThue, Mode=TwoWay}"
                     materialDesign:HintAssist.Background="White"
@@ -192,14 +194,20 @@
                 materialDesign:HintAssist.Hint="Giới thiệu công ty"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="585" Height="160" HorizontalAlignment="Left" Margin="665,400,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <Border HorizontalAlignment="Left" Height="100" Margin="665,580,0,0" VerticalAlignment="Top" Width="585" BorderBrush="Black" BorderThickness="1,1,1,1" CornerRadius="5,5,5,5">
-                <WrapPanel x:Name="wpAnh">
-                    <Border Width="80" Height="80" BorderBrush="Black" CornerRadius="100" Background="Silver" Margin="10,9,0,9">
+                <WrapPanel>
+                    <Border Width="98" Height="98" CornerRadius="100" Background="Silver" BorderThickness="10,10,10,10">
                         <Button x:Name="btnThemAnh" Style="{StaticResource ResourceKey=MaterialDesignFlatButton}" Width="50" Height="50" FontSize="72" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" Click="btnThemAnh_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/—Pngtree—vector plus icon_3989579.png"/>
                             </Button.Background>
                         </Button>
                     </Border>
+                    <materialDesign:Card HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Width="479">
+                        <ScrollViewer HorizontalScrollBarVisibility="Visible" Width="491" Height="98" VerticalScrollBarVisibility="Hidden" >
+                            <StackPanel x:Name="stAnh" Orientation="Horizontal"/>
+                        </ScrollViewer>
+                    </materialDesign:Card>
+
                 </WrapPanel>
             </Border>
         </Grid>

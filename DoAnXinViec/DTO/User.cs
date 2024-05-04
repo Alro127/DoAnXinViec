@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,14 +24,22 @@ namespace DoAnXinViec
 
         public User(string id, string hoTen, string tinhThanh, string diaChi, string sDT, string email, string gT, string anh)
         {
-            this.id = id;
-            this.hoTen = hoTen;
-            this.tinhThanh = tinhThanh;
-            this.diaChi = diaChi;
-            this.sDT = sDT;
-            this.email = email;
-            this.gT = gT;
-            this.anh = anh;
+            
+            try
+            {
+                Id = id;
+                HoTen = hoTen;
+                TinhThanh = tinhThanh;
+                DiaChi = diaChi;
+                SDT = sDT;
+                Email = email;
+                GT = gT;
+                Anh = anh;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new InvalidOperationException(ex.Message);
+            }
         }
 
         public string Id
@@ -38,11 +47,12 @@ namespace DoAnXinViec
             get { return id; }
             set
             {
-                if (id != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    id = value;
-                    OnPropertyChanged(nameof(Id));
+                    throw new ArgumentNullException("Không được bỏ trống Id");
                 }
+                id = value;
+                OnPropertyChanged(nameof(Id));
             }
         }
 
@@ -51,11 +61,12 @@ namespace DoAnXinViec
             get { return hoTen; }
             set
             {
-                if (hoTen != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    hoTen = value;
-                    OnPropertyChanged(nameof(HoTen));
+                    throw new ArgumentNullException("Không được bỏ trống họ tên");
                 }
+                hoTen = value;
+                OnPropertyChanged(nameof(HoTen));
             }
         }
 
@@ -64,11 +75,12 @@ namespace DoAnXinViec
             get { return tinhThanh; }
             set
             {
-                if (tinhThanh != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    tinhThanh = value;
-                    OnPropertyChanged(nameof(TinhThanh));
+                    throw new ArgumentNullException("Không được bỏ trống tỉnh thành");
                 }
+                tinhThanh = value;
+                OnPropertyChanged(nameof(TinhThanh));
             }
         }
 
@@ -77,11 +89,12 @@ namespace DoAnXinViec
             get { return diaChi; }
             set
             {
-                if (diaChi != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    diaChi = value;
-                    OnPropertyChanged(nameof(DiaChi));
+                    throw new ArgumentNullException("Không được bỏ trống địa chỉ");
                 }
+                diaChi = value;
+                OnPropertyChanged(nameof(DiaChi));
             }
         }
 
@@ -90,11 +103,12 @@ namespace DoAnXinViec
             get { return sDT; }
             set
             {
-                if (sDT != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    sDT = value;
-                    OnPropertyChanged(nameof(SDT));
+                    throw new ArgumentNullException("Không được bỏ trống số điện thoại");
                 }
+                sDT = value;
+                OnPropertyChanged(nameof(SDT));
             }
         }
 
@@ -103,11 +117,12 @@ namespace DoAnXinViec
             get { return email; }
             set
             {
-                if (email != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    email = value;
-                    OnPropertyChanged(nameof(Email));
+                    throw new ArgumentNullException("Không được bỏ trống địa chỉ email");
                 }
+                email = value;
+                OnPropertyChanged(nameof(Email));
             }
         }
         public string GT
@@ -115,11 +130,12 @@ namespace DoAnXinViec
             get { return gT; }
             set
             {
-                if (gT != value)
+                if (string.IsNullOrEmpty(value))
                 {
-                    gT = value;
-                    OnPropertyChanged(nameof(GT));
+                    throw new ArgumentNullException("Không được bỏ trống phần giới thiệu");
                 }
+                gT = value;
+                OnPropertyChanged(nameof(GT));
             }
         }
         public string Anh

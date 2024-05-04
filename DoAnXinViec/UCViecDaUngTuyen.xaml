@@ -24,7 +24,7 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="250">
+                        <GridViewColumn Width="300">
                             <TextBlock Text="Tên Công Ty" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -32,7 +32,7 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Width="250">
+                        <GridViewColumn Width="300">
                             <TextBlock Text="Vị trí ứng tuyển" FontSize="16" FontFamily="Segoe UI Black"/>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -41,24 +41,31 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <GridViewColumn Width="200" >
-                            <DatePicker Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Ngày nộp" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderBrush="{x:Null}" BorderThickness="0,0,0,0"/>
+                            <Menu FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" ClipToBounds="True" Width="200" >
+                                <MenuItem x:Name="mniThoiGianNop" Header="Ngày nộp" Width="200">
+                                    <MenuItem Header="Tất cả" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Hôm nay" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Tuần này" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Tháng này" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Năm này" Click="MenuItem_Click"/>
+                                    <DatePicker x:Name="dtpNgayNop" Style="{StaticResource MaterialDesignDatePicker}" materialDesign:HintAssist.Hint="Ngày cụ thể" Width="150" FontSize="16" FontFamily="Segoe UI Black" Foreground="#B2000000" BorderThickness="0,0,0,0" Background="#00000000" BorderBrush="{x:Null}" SelectedDateChanged="dtpNgayNop_SelectedDateChanged"/>
+                                </MenuItem>
+                            </Menu>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Content="{Binding NgayNop}" Margin="18,0,0,0"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
+                        
                         <GridViewColumn Width="200">
-                            <ComboBox Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Loại hồ sơ" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" BorderThickness="0,0,0,0" ClipToBounds="True"/>
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Label Content="{Binding LoaiHoSo}" Margin="18,0,0,0"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-
-                        <GridViewColumn Width="150">
-                            <TextBlock Text="Trạng thái" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <Menu x:Name="menuTrangThai" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" ClipToBounds="True" Width="200">
+                                <MenuItem x:Name="mniTrangThai" Header="Trạng thái">
+                                    <CheckBox Content="Đợi" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True"/>
+                                    <CheckBox Content="Chấp nhận" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True"/>
+                                    <CheckBox Content="Từ chối" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True"/>
+                                </MenuItem>
+                            </Menu>
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
@@ -82,12 +89,27 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" Width="60" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
-            <ComboBox HorizontalAlignment="Left" Height="40" Margin="120,160,0,0" Width="499"
+            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
+            <ComboBox x:Name="cbBoLoc" HorizontalAlignment="Left" Height="40" Margin="145,160,0,0" Width="499"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"
-                materialDesign:HintAssist.Hint="Tất cả hồ sơ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
-            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140" Click="btnLuu_Click"/>
+                Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" SelectionChanged="cbBoLoc_SelectionChanged">
+                <ComboBoxItem Content="Tất cả đơn"/>
+                <ComboBoxItem Content="Đơn còn thời hạn"/>
+                <ComboBoxItem Content="Đơn hết thời hạn"/>
+            </ComboBox>
+            <Label Content="Tìm kiếm:" HorizontalAlignment="Left" Margin="40,92,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
+            <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" Margin="145,92,230,668" Padding="5,10,0,0" FontSize="14"/>
+            <ComboBox x:Name="cbSapXep" HorizontalAlignment="Left" Height="40" Margin="775,161,0,0" Width="285"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                materialDesign:HintAssist.Background="White"
+                Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" SelectionChanged="cbSapXep_SelectionChanged">
+                <ComboBoxItem Content="A - Z"/>
+                <ComboBoxItem Content="Z - A"/>
+                <ComboBoxItem Content="Gần nhất"/>
+                <ComboBoxItem Content="Xa nhất"/>
+            </ComboBox>
+            <Label Content="Sắp xếp:" HorizontalAlignment="Left" Margin="670,160,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
         </Grid>
     </Border>
 

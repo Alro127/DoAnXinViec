@@ -19,7 +19,6 @@ namespace DoAnXinViec
     /// </summary>
     public partial class WThongTinCongTy : Window
     {
-        CongTy congTy = new CongTy();
         CongTyDAO congTyDAO = new CongTyDAO();
         TaiKhoan taiKhoan;
         TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
@@ -28,20 +27,26 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.taiKhoan = taiKhoan;
-            this.DataContext = congTy;
         }
         private void btnDangKy_Click(object sender, RoutedEventArgs e)
         {
-            congTy.Id = taiKhoan.Id;
-            congTy.Anh = "";
-            if (congTyDAO.Them(congTy, "Cty") == true)
+            try
             {
-                taiKhoanDAO.SignUp(taiKhoan);
-                MediaHandler.CreateDirectory(congTy.Id);
-                MessageBox.Show("Thành công");
-                this.Close();
-                WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(congTy);
-                wTrangChinhCty.ShowDialog();
+                int.TryParse(txtQuyMoNhanSu.Text, out int qmns);
+                CongTy congTy = new CongTy(taiKhoan.Id, txtHoTen.Text, txtSDT.Text, txtEmail.Text, txtTenCT.Text, txtMaSoThue.Text, txtGPKD.Text, cbLinhVuc.Text, qmns, cbTinhThanh.Text, txtDiaChi.Text, txtLink.Text, txtGT.Text, "");
+                if (congTyDAO.Them(congTy, "Cty") == true)
+                {
+                    taiKhoanDAO.SignUp(taiKhoan);
+                    MediaHandler.CreateDirectory(congTy.Id);
+                    MessageBox.Show("Thành công");
+                    this.Close();
+                    WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(congTy);
+                    wTrangChinhCty.ShowDialog();
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

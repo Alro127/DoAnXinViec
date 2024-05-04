@@ -12,10 +12,10 @@
         <local:MyValueToBackgroundConverter x:Key="ValueToBackgroundConverter"/>
     </Window.Resources>
     <Grid>
-        <TabControl Style="{DynamicResource TabControl}" >
-            <TabItem x:Name="tbiTatCa" Style="{DynamicResource MaterialDesignTabItem}" Header="Tất cả">
+        <TabControl x:Name="tabDanhSach" Style="{DynamicResource TabControl}" SelectionChanged="tabDanhSach_SelectionChanged" >
+            <TabItem x:Name="tabTatCa" Style="{DynamicResource MaterialDesignTabItem}" Header="Tất cả" >
                 <Grid Background="White">
-                    <ListView x:Name="lvHoSo" MouseDoubleClick="lvHoSo_MouseDoubleClick">
+                    <ListView x:Name="lvHoSo">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="auto">
@@ -42,14 +42,6 @@
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn Width="auto">
-                                    <ComboBox Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Loại hồ sơ" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" BorderThickness="0,0,0,0" ClipToBounds="True"/>
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Label Content="{Binding LoaiHoSo}" Margin="18,0,0,0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn Width="auto">
                                     <TextBlock Text="Trạng thái" FontSize="16" FontFamily="Segoe UI Black"/>
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
@@ -61,12 +53,36 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
+                                <GridViewColumn Width="130">
+                                    <TextBlock Text="Chi Tiết" FontSize="16" FontFamily="Segoe UI Black"/>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel>
+                                                <Button x:Name="btnChiTiet" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                                                    Content="Xem" Tag="{Binding}" Margin="20,0,0,0" Click="btnChiTiet_Click"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Width="200">
+                                    <TextBlock Text="Duyệt" FontSize="16" FontFamily="Segoe UI Black"/>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Menu>
+                                                <MenuItem x:Name="mniDuyet" Header="Duyệt" Width="auto" Height="30">
+                                                    <MenuItem x:Name="mniHenLich" Header="Hẹn lịch" Tag="{Binding}" Margin="0,0,0,0" Click="mniHen_Click"/>
+                                                    <MenuItem x:Name="mniTuChoi" Header="Từ chối" Tag="{Binding}" Margin="0,0,0,0" Click="mniTuChoi_Click"/>
+                                                </MenuItem>
+                                            </Menu>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
                 </Grid>
             </TabItem>
-            <TabItem Header="Chấp nhận" materialDesign:ColorZoneAssist.Background="LightGreen">
+            <TabItem x:Name="tabChapNhan" Header="Chấp nhận" materialDesign:ColorZoneAssist.Background="LightGreen">
                 <ListView x:Name="lvHoSoChapNhan">
                     <ListView.View>
                         <GridView>
@@ -94,14 +110,6 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
                             <GridViewColumn Width="auto">
-                                <ComboBox Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Loại hồ sơ" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" BorderThickness="0,0,0,0" ClipToBounds="True"/>
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Label Content="{Binding LoaiHoSo}" Margin="18,0,0,0"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Width="auto">
                                 <TextBlock Text="Trạng thái" FontSize="16" FontFamily="Segoe UI Black"/>
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
@@ -113,11 +121,35 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
+                            <GridViewColumn Width="130">
+                                <TextBlock Text="Chi Tiết" FontSize="16" FontFamily="Segoe UI Black"/>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Button x:Name="btnChiTiet" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                                            Content="Xem" Tag="{Binding}" Margin="20,0,0,0" Click="btnChiTiet_Click"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="200">
+                                <TextBlock Text="Duyệt" FontSize="16" FontFamily="Segoe UI Black"/>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Menu>
+                                            <MenuItem x:Name="mniDuyet" Header="Duyệt" Width="auto" Height="30">
+                                                <MenuItem x:Name="mniHenLich" Header="Hẹn lịch" Tag="{Binding}" Margin="0,0,0,0" Click="mniHen_Click"/>
+                                                <MenuItem x:Name="mniTuChoi" Header="Từ chối" Tag="{Binding}" Margin="0,0,0,0" Click="mniTuChoi_Click"/>
+                                            </MenuItem>
+                                        </Menu>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
-            <TabItem Header="Chờ" materialDesign:ColorZoneAssist.Background="LightSalmon">
+            <TabItem x:Name="tabDoi" Header="Đợi" materialDesign:ColorZoneAssist.Background="LightSalmon">
                 <ListView x:Name="lvHoSoDoi">
                     <ListView.View>
                         <GridView>
@@ -145,14 +177,6 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
                             <GridViewColumn Width="auto">
-                                <ComboBox Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Loại hồ sơ" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" BorderThickness="0,0,0,0" ClipToBounds="True"/>
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Label Content="{Binding LoaiHoSo}" Margin="18,0,0,0"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Width="auto">
                                 <TextBlock Text="Trạng thái" FontSize="16" FontFamily="Segoe UI Black"/>
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
@@ -164,11 +188,35 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
+                            <GridViewColumn Width="130">
+                                <TextBlock Text="Chi Tiết" FontSize="16" FontFamily="Segoe UI Black"/>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Button x:Name="btnChiTiet" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                                            Content="Xem" Tag="{Binding}" Margin="20,0,0,0" Click="btnChiTiet_Click"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="200">
+                                <TextBlock Text="Duyệt" FontSize="16" FontFamily="Segoe UI Black"/>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Menu>
+                                            <MenuItem x:Name="mniDuyet" Header="Duyệt" Width="auto" Height="30">
+                                                <MenuItem x:Name="mniHenLich" Header="Hẹn lịch" Tag="{Binding}" Margin="0,0,0,0" Click="mniHen_Click"/>
+                                                <MenuItem x:Name="mniTuChoi" Header="Từ chối" Tag="{Binding}" Margin="0,0,0,0" Click="mniTuChoi_Click"/>
+                                            </MenuItem>
+                                        </Menu>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
-            <TabItem Header="Từ chối" materialDesign:ColorZoneAssist.Background="LightCoral">
+            <TabItem x:Name="tabTuChoi" Header="Từ chối" materialDesign:ColorZoneAssist.Background="LightCoral">
                 <ListView x:Name="lvHoSoTuChoi">
                     <ListView.View>
                         <GridView>
@@ -196,14 +244,6 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
                             <GridViewColumn Width="auto">
-                                <ComboBox Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Loại hồ sơ" FontSize="16" FontFamily="Segoe UI Black" BorderBrush="#7F000000" BorderThickness="0,0,0,0" ClipToBounds="True"/>
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Label Content="{Binding LoaiHoSo}" Margin="18,0,0,0"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Width="auto">
                                 <TextBlock Text="Trạng thái" FontSize="16" FontFamily="Segoe UI Black"/>
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
@@ -215,11 +255,34 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
+                            <GridViewColumn Width="130">
+                                <TextBlock Text="Chi Tiết" FontSize="16" FontFamily="Segoe UI Black"/>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Button x:Name="btnChiTiet" Style="{StaticResource MaterialDesignFlatLightButton}" 
+                                            Content="Xem" Tag="{Binding}" Margin="20,0,0,0" Click="btnChiTiet_Click"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="200">
+                                <TextBlock Text="Duyệt" FontSize="16" FontFamily="Segoe UI Black"/>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Menu>
+                                            <MenuItem x:Name="mniDuyet" Header="Duyệt" Width="auto" Height="30">
+                                                <MenuItem x:Name="mniHenLich" Header="Hẹn lịch" Tag="{Binding}" Margin="0,0,0,0" Click="mniHen_Click"/>
+                                                <MenuItem x:Name="mniTuChoi" Header="Từ chối" Tag="{Binding}" Margin="0,0,0,0" Click="mniTuChoi_Click"/>
+                                            </MenuItem>
+                                        </Menu>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>

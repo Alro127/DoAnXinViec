@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\obj\Debug\net7.0-windows\
 DoAnXinViec
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\HK2 - Năm 2\Lập Trình Window\DoAnXinViec\DoAnXinViec\App.xaml
-33961316380
+D:\DSNVTT\DoAnXinViec\DoAnXinViec\DoAnXinViec\App.xaml
+371417158621
 
-54-1955308363
-211209258680
-ButtonBoGoc.xaml;ButtonStyleKeepColor.xaml;PasswordBoxStyle.xaml;TextBoxStyle.xaml;UCCapNhatThongTinCty.xaml;UCChinhSuaThongTinCaNhan.xaml;UCCongViecYeuThich.xaml;UCCV.xaml;UCCVYeuThich.xaml;UCDangDon.xaml;UCDanhSachCV.xaml;UCDanhSachTin.xaml;UCDon.xaml;UCHoSoCuaBan.xaml;UCHoSoUngTuyen.xaml;UCLichSuDangDon.xaml;UCTrangTimViec.xaml;UCViecDaUngTuyen.xaml;WChinhSuaCV.xaml;WChonCV.xaml;WCVChiTiet.xaml;WDangKy.xaml;WDangNhap.xaml;WDanhSachUVTheoDon.xaml;WDoiMatKhau.xaml;WDonChiTiet.xaml;WThongTinCongTy.xaml;WThongTinUngVien.xaml;WTimUngVien.xaml;WTrangChinhCty.xaml;WTrangChinhUngVien.xaml;WTrangChuCty.xaml;WTrangXemDon.xaml;
+611327455265
+211-1844379878
+ButtonBoGoc.xaml;ButtonStyleKeepColor.xaml;PasswordBoxStyle.xaml;TextBoxStyle.xaml;UCCapNhatThongTinCty.xaml;UCChinhSuaThongTinCaNhan.xaml;UCCongViecYeuThich.xaml;UCCV.xaml;UCCVYeuThich.xaml;UCDangDon.xaml;UCDanhSachCV.xaml;UCDanhSachTin.xaml;UCDon.xaml;UCHoSoCuaBan.xaml;UCHoSoUngTuyen.xaml;UCLich.xaml;UCLichSuDangDon.xaml;UCTrangTimViec.xaml;UCViecDaUngTuyen.xaml;WChinhSuaCV.xaml;WChonCV.xaml;WCVChiTiet.xaml;WDangKy.xaml;WDangNhap.xaml;WDanhSachUVTheoDon.xaml;WDoiMatKhau.xaml;WDonChiTiet.xaml;WHenLich.xaml;WLichPhongVan.xaml;WTaoCV.xaml;WThongTinCongTy.xaml;WThongTinUngVien.xaml;WTimUngVien.xaml;WTrangChinhCty.xaml;WTrangChinhUngVien.xaml;WTrangChuCty.xaml;WTrangXemDon.xaml;
 
-False
+True
 

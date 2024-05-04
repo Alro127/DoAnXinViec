@@ -12,13 +12,15 @@ namespace DoAnXinViec
         public static void SetItemFromRow<T>(T item, DataRow row)
         where T : new()
         {
+            if (item == null || row == null)
+                return;
             foreach (DataColumn c in row.Table.Columns)
             {
                 PropertyInfo p = item.GetType().GetProperty(c.ColumnName);
 
                 if (p != null && row[c] != DBNull.Value)
                 {                  
-                        p.SetValue(item, row[c], null);
+                    p.SetValue(item, row[c], null);
                 }
             }
         }

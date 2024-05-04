@@ -21,7 +21,6 @@ namespace DoAnXinViec
         UngVien ungVien;
         UngVienDAO ungVienDAO = new UngVienDAO();
         UCChinhSuaThongTinCaNhan uCChinhSuaThongTinCaNhan;
-        UCHoSoCuaBan uCHoSoCuaBan;
         public WTrangChinhUngVien(UngVien ungVien)
         {
             InitializeComponent();
@@ -39,7 +38,6 @@ namespace DoAnXinViec
         {
             ungVien = uCChinhSuaThongTinCaNhan.UngVien;
             SetImage();
-            UngVienDAO ungVienDAO = new UngVienDAO();
             if (ungVienDAO.CapNhat(ungVien, "UngVien") == true)
                 System.Windows.MessageBox.Show("ThanhCong");
         }
@@ -49,24 +47,6 @@ namespace DoAnXinViec
             uCChinhSuaThongTinCaNhan.btnLuu.Click += new RoutedEventHandler(this.btnLuu_Click);
             stMain.Children.Clear();
             stMain.Children.Add(uCChinhSuaThongTinCaNhan);
-        }
-        private void btnHoSoCuaBan_Click(object sender, RoutedEventArgs e)
-        {
-            uCHoSoCuaBan = new UCHoSoCuaBan(ungVien);
-            uCHoSoCuaBan.btnLuuVaDangHoSo.Click += new RoutedEventHandler(btnLuuVaDangHoSo_Click);
-            stMain.Children.Clear();
-            stMain.Children.Add(uCHoSoCuaBan);
-        }
-        private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
-        {
-            this.ungVien = new UngVien(uCHoSoCuaBan.TempUngVien);
-            ungVienDAO.CapNhat(ungVien, "UngVien");
-            uCHoSoCuaBan.Cv.NgayDang = DateTime.Now.Date;
-            uCHoSoCuaBan.Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
-            uCHoSoCuaBan.Cv.UngVien = ungVien;
-            uCHoSoCuaBan.Cv.IdUV = ungVien.Id;
-            CVDAO cvDAO = new CVDAO();
-            cvDAO.Them(uCHoSoCuaBan.Cv);
         }
         private void btnDanhSachCV_Click(object sender, RoutedEventArgs e)
         {

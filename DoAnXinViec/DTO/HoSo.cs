@@ -10,7 +10,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DoAnXinViec
 {
-    class HoSo: INotifyPropertyChanged
+    public class HoSo: INotifyPropertyChanged
     {
         int idDon;
         int idCV;

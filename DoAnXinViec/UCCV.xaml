@@ -91,30 +91,64 @@
     <Grid Width="630" Height="210">
         <Border CornerRadius="10" BorderThickness="1" >
             <Border.Background>
-                <SolidColorBrush Color="Black" Opacity="0.5"/>
+                <SolidColorBrush Color="White"/>
             </Border.Background>
         </Border>
-
-        <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="170" Margin="20,20,0,0" VerticalAlignment="Top" Width="170" Source="{Binding Anh}" Stretch="UniformToFill"/>
-        <GroupBox x:Name="grbTenUngVien" Style="{DynamicResource GroupBox}" HorizontalAlignment="Left" Height="170" Header="Tên của tao" Margin="210,0,0,0" VerticalAlignment="Center" Width="394" FontFamily="Segoe UI Black" FontSize="18" Foreground="White">
-            <StackPanel Height="140">
-                <Label x:Name="lblViTriUngTuyen" Content="Vị trí ứng tuyển" HorizontalAlignment="Left" Margin="10,5,0,0" Width="266" FontSize="14" Foreground="Wheat" Height="30"/>
-                <Label x:Name="lblKinhNghiem" Content="Kinh nghiệm: 3 năm" HorizontalAlignment="Left" Margin="10,5,0,0" Width="266" FontSize="14" Foreground="Wheat" Height="30"/>
-                <Label x:Name="lblNoiLamViec" Content="TP.HCM" HorizontalAlignment="Left" Margin="10,5,0,0" Width="266" FontSize="14" Foreground="Wheat" Height="30"/>
-                <Label x:Name="lblLuong" Content="10,000" HorizontalAlignment="Left" Margin="10,5,0,0" Width="266" FontSize="14" Foreground="Wheat" Height="30"/>
+        <Label x:Name="lblthoigiandang" Content="Posted 7 days ago" Foreground="DarkGray" Margin="10,0,412,179" FontSize="14"/>
+        <WrapPanel Margin="218,0,28,180" FlowDirection="RightToLeft" >
+            <Label x:Name="lblLuong" Style="{DynamicResource LabelStyleBoGoc}" Content="{Binding Luong}" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="#0ab305" FlowDirection="LeftToRight"/>
+            <materialDesign:PackIcon Kind="CurrencyUsd" Foreground="#0ab305" HorizontalAlignment="Center" Height="22" Width="20" VerticalAlignment="Center"/>
+        </WrapPanel>
+        <Image x:Name="imgAnh" HorizontalAlignment="Left" Height="152" Margin="20,36,0,0" VerticalAlignment="Top" Width="170" Source="{Binding Anh}" Stretch="UniformToFill"/>
+        <GroupBox x:Name="grbViTriUngTuyen" Style="{DynamicResource GroupBox}" HorizontalAlignment="Left" Height="138" Header="Nhân Viên Ngân Hàng" Margin="210,0,0,0" VerticalAlignment="Center" Width="394" FontFamily="Segoe UI Black" FontSize="18" Foreground="Black" FontWeight="Bold">
+            <StackPanel Height="114">
+                <Label x:Name="lblTenUngVien" Content="Hồ Nhựt Tân" HorizontalAlignment="Left" Margin="10,5,0,0" Width="266" FontSize="14" Foreground="Black" Height="30"/>
+                <Label x:Name="lblKinhNghiem" Content="Kinh nghiệm: 3 năm" HorizontalAlignment="Left" Margin="10,5,0,0" Width="266" FontSize="14" Foreground="#414042" Height="30"/>
+                <Label x:Name="lblNoiLamViec" Content="TP.HCM" HorizontalAlignment="Left" Margin="10,5,0,0" Width="266" FontSize="14" Foreground="#414042" Height="30" FontWeight="Bold"/>
             </StackPanel>
 
         </GroupBox>
         <ToggleButton x:Name="btnYeuThich"
-              BorderThickness="1"
-              BorderBrush="Black"
+              Width="30"
+              Height="30"
+              BorderThickness="0"
               VerticalAlignment="Top"
-              HorizontalAlignment="Right"
-              Margin="0,15,10,0"
-              Content="{materialDesign:PackIcon Kind=Heart,Size=21}"
+              HorizontalAlignment="Left"
               IsChecked="False"
-              Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
-              ToolTip="MaterialDesignFlatPrimaryToggleButton"/>
+              ToolTip="MaterialDesignFlatPrimaryToggleButton"
+              Margin="588,35,0,0">
+            <ToggleButton.Template>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Grid>
+                        <!-- Outer circle -->
+                        <Ellipse x:Name="OuterCircle"
+                         Width="30"
+                         Height="30"
+                         StrokeThickness="1"
+                         Fill="{TemplateBinding Background}"/>
+                        <!-- Inner circle -->
+                        <Ellipse x:Name="InnerCircle"
+                         Width="26"
+                         Height="26"
+                         Fill="LightGray"
+                         Margin="2"/>
+                        <materialDesign:PackIcon x:Name="Icon"
+                                          Kind="Heart"
+                                          Foreground="White"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="InnerCircle" Property="Fill" Value="Red"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="OuterCircle" Property="Stroke" Value="LightGray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </ToggleButton.Template>
+        </ToggleButton>
 
     </Grid>
 </UserControl>
