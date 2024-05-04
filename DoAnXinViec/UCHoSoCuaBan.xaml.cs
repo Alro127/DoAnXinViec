@@ -21,11 +21,9 @@ namespace DoAnXinViec
     /// </summary>
     public partial class UCHoSoCuaBan : UserControl
     {
-        UngVien ungVien;
+        UngVien ungVien = new UngVien();
         UngVien tempUngVien;
-        UngVienDAO ungVienDAO = new UngVienDAO();
         CV cv = new CV();
-        CVDAO cvDAO = new CVDAO();
 
         public UngVien TempUngVien { get => tempUngVien; set => tempUngVien = value; }
         public CV Cv { get => cv; set => cv = value; }
@@ -40,37 +38,29 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.ungVien = ungVien;
-            this.TempUngVien = new UngVien(ungVien);
+            this.tempUngVien = new UngVien(ungVien);
             this.tbiThongTinCaNhan.DataContext = TempUngVien;
             this.tbcHoSoCuaBan.DataContext = Cv;
+            Cv.Anh = this.TempUngVien.Anh;
             SetImage(TempUngVien.Anh);
         }
         public UCHoSoCuaBan(CV cv)
         {
             InitializeComponent();
             this.Cv = cv;
-            this.TempUngVien = this.Cv.UngVien;
+            this.tempUngVien = this.Cv.UngVien;
             this.tbiThongTinCaNhan.DataContext = this.Cv.UngVien;
             this.tbcHoSoCuaBan.DataContext = this.Cv;
             SetImage(this.Cv.UngVien.Anh);
         }
-        private void btnLuuVaDangHoSo_Click(object sender, RoutedEventArgs e)
-        {
-            this.ungVien = new UngVien(TempUngVien);
-            ungVienDAO.CapNhat(ungVien, "UngVien");
-            Cv.NgayDang = DateTime.Now.Date;
-            Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
-            Cv.UngVien = ungVien;
-            Cv.IdUV = ungVien.Id;
-            cvDAO.Them(Cv);
-        }
 
         private void btnXemTruoc_Click(object sender, RoutedEventArgs e)
         {
-            Cv.NgayDang = DateTime.Now.Date;
+            Cv.NgayDang = DateTime.Now;
             Cv.NgayToiHan = new DateTime(3000, 12, 31).Date;
             Cv.UngVien = TempUngVien;
             Cv.IdUV = TempUngVien.Id;
+            Cv.Anh = Cv.UngVien.Anh;
             WCVChiTiet wCVChiTiet = new WCVChiTiet(Cv);
             wCVChiTiet.ShowDialog();
         }

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoAnXinViec"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="WChonCV" Height="800" Width="800">
     <Border Background="White" CornerRadius="30" Margin="0,0,0,0">
@@ -53,12 +54,13 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="60" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
-            <ComboBox HorizontalAlignment="Left" Height="40" Margin="120,80,0,0" Width="499"
-            Style="{StaticResource MaterialDesignOutlinedComboBox}"
-            materialDesign:HintAssist.Background="White"
-            materialDesign:HintAssist.Hint="Tất cả hồ sơ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
-            <Button x:Name="btnChon" Content="Chọn" HorizontalAlignment="Right" Height="38" Margin="0,0,20,20" VerticalAlignment="Bottom" Width="120" Click="btnChon_Click"/>
+            <Button x:Name="btnChon" Content="Chọn" HorizontalAlignment="Left" Height="38" Margin="660,726,0,0" VerticalAlignment="Top" Width="120" Click="btnChon_Click"/>
+            <Label Content="Tìm kiếm:" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
+            <TextBox x:Name="tbTimKiem" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" Margin="145,80,80,0" KeyUp="tbTimKiem_KeyUp" Height="34" VerticalAlignment="Top" Padding="5,5,0,0" FontSize="14"/>
+            <Button x:Name="btnTaoCVMoi" Content="Tạo CV mới" HorizontalAlignment="Left" Height="38" Margin="519,726,0,0" VerticalAlignment="Top" Width="120" Click="btnTaoCVMoi_Click"/>
+            <Button x:Name="btnReLoad" Style="{StaticResource MaterialDesignOutlinedButton}" HorizontalAlignment="Left" Margin="730,80,0,0" VerticalAlignment="Top" Height="34" Width="55" FontFamily="Segoe UI Black" FontWeight="Bold" FontSize="72" Padding="16,0,16,0" VerticalContentAlignment="Top" BorderBrush="#FF2196F3" Click="btnReLoad_Click">
+                <materialDesign:PackIcon Kind="Reload" Height="33" Width="auto" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
         </Grid>
     </Border>
 </Window>

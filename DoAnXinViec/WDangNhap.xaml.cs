@@ -21,33 +21,39 @@ namespace DoAnXinViec
     {
         private void btnDangNhap_Click(object sender, RoutedEventArgs e)
         {
-            TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
-            TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
-
-            if (rdoUngVien.IsChecked == true)
+            try
             {
-                taiKhoan.Quyen = "uv";
+                TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
+                TaiKhoan taiKhoan = new TaiKhoan(txtTenDangNhap.Text, txtMatKhau.Password, "ct");
+
+                if (rdoUngVien.IsChecked == true)
+                {
+                    taiKhoan.Quyen = "uv";
+                }
+                if (!taiKhoanDAO.Checklogin(taiKhoan))
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
+                    return;
+                }
+
+                MessageBox.Show("Xin chúc mừng bạn đã đăng nhập thành công");
+
+                if (taiKhoan.Quyen == "uv")
+                {
+                    WTrangXemDon wTrangXemDon = new WTrangXemDon(taiKhoan.Id);
+                    wTrangXemDon.ShowDialog();
+                }
+                else
+                {
+                    WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(taiKhoan.Id);
+                    wTrangChinhCty.ShowDialog();
+                }
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw new InvalidOperationException(ex.Message);
             }
 
-            string getuser = taiKhoanDAO.Checklogin(taiKhoan);
-            if (getuser == "Tài khoản hoặc mật khẩu không đúng!")
-            {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
-                return;
-            }
-
-            MessageBox.Show("Xin chúc mừng bạn đã đăng nhập thành công");
-
-            if (taiKhoan.Quyen == "uv")
-            {
-                WTrangXemDon wTrangXemDon = new WTrangXemDon(taiKhoan.Id);
-                wTrangXemDon.ShowDialog();
-            }
-            else
-            {
-                WTrangChinhCty wTrangChinhCty = new WTrangChinhCty(taiKhoan.Id);
-                wTrangChinhCty.ShowDialog();
-            }
         }
 
         private void lblDangKy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -27,7 +27,7 @@ namespace DoAnXinViec
         UngVien ungVien;
         DonDAO donDAO = new DonDAO();
         CongTyDAO congTyDAO = new CongTyDAO();
-
+        List <Don> listDon = new List <Don>();
         YeuThichDAO yeuThichDAO = new YeuThichDAO();
         public UCCongViecYeuThich()
         {
@@ -46,7 +46,7 @@ namespace DoAnXinViec
             if (dt.Rows.Count > 0)
             {
                 Don don = new Don(dt.Rows[0]);
-                UCDon ucDon= new UCDon(don);
+                UCDon ucDon= new UCDon(don, yeuThich);
                 ucDon.btnXem.Click += new RoutedEventHandler(this.btnXem_Click);
                 ucDon.btnYeuThich.Click += new RoutedEventHandler(this.btnYeuThich_Click);
                 wpCVYeuThich.Children.Add(ucDon);
@@ -80,6 +80,25 @@ namespace DoAnXinViec
             foreach (DataRow dr in dt.Rows)
             {
                 DangUCDon(dr);
+            }
+        }
+        private void tbTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            wpCVYeuThich.Children.Clear();
+            foreach (Don don in listDon)
+            {
+                string vtut = don.TenCV.ToLower();
+                string ten = don.TenCT.ToLower();
+                if (vtut.Contains(tbTimKiem.Text.ToLower()) || ten.Contains(tbTimKiem.Text.ToLower()))
+                {
+                    DataTable dt = yeuThichDAO.Get(don.IdDon, ungVien.Id);
+                    if (dt.Rows.Count > 0)
+                    {
+                        YeuThich yeuThich = new YeuThich(dt.Rows[0]);
+                        UCDon ucDon = new UCDon(don, yeuThich);
+                        wpCVYeuThich.Children.Add(ucDon);
+                    }
+                }
             }
         }
 

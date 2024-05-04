@@ -8,6 +8,9 @@
     <Compile Update="UCDanhSachCV.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UCLich.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UCViecDaUngTuyen.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,6 +21,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WDanhSachUVTheoDon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WHenLich.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WLichPhongVan.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WTaoCV.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="WTrangChuCty.xaml.cs">
@@ -31,6 +43,9 @@
     <Page Update="UCDanhSachCV.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UCLich.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UCViecDaUngTuyen.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -41,6 +56,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WDanhSachUVTheoDon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WHenLich.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WLichPhongVan.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WTaoCV.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WTrangChuCty.xaml">

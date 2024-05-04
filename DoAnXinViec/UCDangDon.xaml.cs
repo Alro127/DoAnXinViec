@@ -45,6 +45,11 @@ namespace DoAnXinViec
             ucDon.lblDiaDiem.Content =((Label)cbDiaDiem.SelectedValue).Content;
         }
 
+        private void cbKinhNghiem_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ucDon.lblKinhNghiem.Content = ((Label)cbKinhNghiem.SelectedValue).Content;
+        }
+
         private void cbLuong_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cbLuong.SelectedItem == null) return;
@@ -70,7 +75,7 @@ namespace DoAnXinViec
         {
             try
             {
-                Don don = new Don(0, txtTenCV.Text, congTy.Id, cbDiaDiem.Text, cbLuong.Text, cbKinhNghiem.Text, DateTime.Now.Date, dtpNgayToiHan.SelectedDate.Value.Date, txtMoTaCV.Text, txtYeuCau.Text, txtQuyenLoi.Text, 0, 0);
+                Don don = new Don(0, txtTenCV.Text, congTy.Id, cbDiaDiem.Text, cbLuong.Text, cbKinhNghiem.Text, cbLinhVuc.Text, DateTime.Now, dtpNgayToiHan.SelectedDate.Value.Date, txtMoTaCV.Text, txtYeuCau.Text, txtQuyenLoi.Text, 0, 0);
                 donDAO.Them(don);
             }
             catch (InvalidOperationException ex) 

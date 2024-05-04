@@ -7,6 +7,7 @@ using System.Reflection.Metadata;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DoAnXinViec
@@ -34,7 +35,7 @@ namespace DoAnXinViec
 
         public CV(DataRow dr)
         {
-            Utility.SetItemFromRow(this, dr);
+            Utility.SetItemFromRow(this,dr);
             UngVienDAO ungVienDAO = new UngVienDAO();
             DataTable dtuv = ungVienDAO.Get(IdUV, "UngVien");
             UngVien ungVien = new UngVien(dtuv.Rows[0]);

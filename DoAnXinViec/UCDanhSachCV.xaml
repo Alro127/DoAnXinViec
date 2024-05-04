@@ -11,7 +11,7 @@
         <Grid>
             <Label Content="Danh Sách CV" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="1040" FontSize="18" FontFamily="Segoe UI Black" Height="40"/>
             <Border BorderBrush="Black" BorderThickness="1" Height="1" Margin="0,60,0,0" VerticalAlignment="Top" Width="1060" HorizontalAlignment="Left"/>
-            <ListView x:Name="lvDanhSachCV"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" MouseDoubleClick="lvDanhSachCV_MouseDoubleClick" >
+            <ListView x:Name="lvDanhSachCV"  Margin="20,200,20,20" Foreground="Black" Background="white" FontFamily="Segoe UI" >
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="30">
@@ -52,7 +52,18 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <Button Style="{StaticResource MaterialDesignFlatLightButton}" Content="Xem" Margin="20,0,0,0"/>
+                                        <Button x:Name="btnXem" Style="{StaticResource MaterialDesignFlatLightButton}" Content="Xem" 
+                                                Tag="{Binding}" Margin="20,0,0,0" Click="btnXem_Click" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="130">
+                            <TextBlock Text="Sửa" FontSize="16" FontFamily="Segoe UI Black"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Button x:Name="btnChinhSua" Style="{StaticResource MaterialDesignFlatLightButton}" Content="Sửa" Tag="{Binding}" Margin="20,0,0,0" Click="btnChinhSua_Click" />
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -60,12 +71,31 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" Width="60" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
-            <ComboBox HorizontalAlignment="Left" Height="40" Margin="120,160,0,0" Width="499"
+            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Left" Height="40" Margin="1110,22,0,0" VerticalAlignment="Top" Width="140"/>
+            <Label Content="Tìm kiếm:" HorizontalAlignment="Left" Margin="40,92,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="16" FontFamily="Segoe UI Black"/>
+            <TextBox x:Name="tbTimKiem" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" Margin="145,92,230,668" KeyUp="tbTimKiem_KeyUp" Padding="5,10,0,0" FontSize="14"/>
+            <ComboBox x:Name="cbSapXep" HorizontalAlignment="Left" Height="40" Margin="775,161,0,0" Width="285"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"
-                materialDesign:HintAssist.Hint="Tất cả hồ sơ" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top"/>
-            <Button x:Name="btnLuu" Content="Lưu" HorizontalAlignment="Right" Height="40" Margin="0,40,40,0" VerticalAlignment="Top" Width="140"/>
+                Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" SelectionChanged="cbSapXep_SelectionChanged">
+                <ComboBoxItem Content="A - Z"/>
+                <ComboBoxItem Content="Z - A"/>
+                <ComboBoxItem Content="Gần nhất"/>
+                <ComboBoxItem Content="Xa nhất"/>
+            </ComboBox>
+            <Label Content="Sắp xếp:" HorizontalAlignment="Left" Margin="670,160,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="16" FontFamily="Segoe UI Black"/>
+            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="16" FontFamily="Segoe UI Black"/>
+            <ComboBox x:Name="cbBoLoc" HorizontalAlignment="Left" Height="40" Margin="145,160,0,0" Width="499"
+                Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                materialDesign:HintAssist.Background="White"
+                Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" SelectionChanged="cbBoLoc_SelectionChanged">
+            </ComboBox>
+            <Button x:Name="btnThemCV" Style="{StaticResource MaterialDesignOutlinedButton}" HorizontalAlignment="Left" Margin="1110,160,0,0" VerticalAlignment="Top" Height="40" Width="140" FontFamily="Segoe UI Black" FontWeight="Bold" FontSize="72" Padding="16,0,16,0" VerticalContentAlignment="Top" BorderBrush="#FF2196F3" Click="btnThemCV_Click">
+                <materialDesign:PackIcon Kind="Plus" Height="44" Width="140" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
+            <Button x:Name="btnReLoad" Style="{StaticResource MaterialDesignOutlinedButton}" HorizontalAlignment="Left" Margin="1110,92,0,0" VerticalAlignment="Top" Height="40" Width="140" FontFamily="Segoe UI Black" FontWeight="Bold" FontSize="72" Padding="16,0,16,0" VerticalContentAlignment="Top" BorderBrush="#FF2196F3" Click="btnReLoad_Click">
+                <materialDesign:PackIcon Kind="Reload" Height="40" Width="137" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Button>
         </Grid>
     </Border>
 

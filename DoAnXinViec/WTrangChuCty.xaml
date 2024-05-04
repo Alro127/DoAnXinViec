@@ -20,7 +20,7 @@
             <Label Content="{Binding TenCT}" HorizontalAlignment="Left" Margin="240,20,0,0" VerticalAlignment="Top" Height="37" FontSize="24" Foreground="White" FontWeight="Bold"/>
             <WrapPanel Width="200" Height="30" Margin="240,70,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" >
                 <materialDesign:PackIcon Kind="MapMarkerOutline" Height="26" Width="41" Foreground="Gray" />
-                <Label Content="{Binding TinhThanh}" Foreground="#E5FFFFFF" FontWeight="Bold"/>
+                <Label Content="{Binding DiaChi}" Foreground="#E5FFFFFF" FontWeight="Bold"/>
             </WrapPanel>
             <WrapPanel Width="327" Margin="240,100,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" >
                 <materialDesign:PackIcon Kind="BriefcaseVariantOutline" Height="26" Width="41" Foreground="Gray" />
@@ -41,7 +41,7 @@
                                 <Label Content="Thông tin chung" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="239" FontSize="24" Foreground="Black" FontWeight="Bold" Height="40"/>
                                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
                                 <Label Content="Lĩnh Vực" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top" Width="98" Foreground="#FF555555" FontSize="14"/>
-                                <Label Content="{Binding LinhVuc}" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="160" FontSize="18" Foreground="Black"/>
+                                <Label Content="{Binding LinhVuc}" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" FontSize="18" Foreground="Black"/>
                                 <Label Content="Email" HorizontalAlignment="Left" Margin="20,120,0,0" VerticalAlignment="Top" Width="98" Foreground="#FF555555" FontSize="14"/>
                                 <Label Content="{Binding Email}" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top" Width="420" FontSize="18" Foreground="Black"/>
                                 <Label Content="Quy mô nhân viên" HorizontalAlignment="Left" Margin="300,60,0,0" VerticalAlignment="Top" Width="123" Foreground="#FF555555" FontSize="14"/>
@@ -57,7 +57,7 @@
                                 </Border>
                                 <Label Content="Giới thiệu về chúng tôi" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="37" FontSize="24" Foreground="Black" FontWeight="Bold"/>
                                 <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="1" Margin="0,52,0,0" VerticalAlignment="Top" Width="900"/>
-                                <TextBlock Text="{Binding GT}" Margin="20,70,0,20" HorizontalAlignment="Left" Width="895" VerticalAlignment="Top"/>
+                                <TextBlock Text="{Binding GT}" Margin="20,70,0,20" HorizontalAlignment="Left" Width="895" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="16"/>
                             </Grid>
                             <Grid HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="930">
                                 <Border CornerRadius="10" BorderThickness="1" >

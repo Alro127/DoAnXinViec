@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1350">
     <Grid>
-        <Grid HorizontalAlignment="Center" Height="147" Margin="0,0,0,643" VerticalAlignment="Bottom" Width="1330">
+        <Grid HorizontalAlignment="Center" Height="147" Margin="0,10,0,0" VerticalAlignment="Top" Width="1330">
             <TextBox x:Name="txtTimKiem" Style="{DynamicResource TBstyle}" Height="32" TextWrapping="Wrap" Foreground="#555"
              Tag="Tìm kiếm" Width="868" BorderBrush="Black" RenderTransformOrigin="0,0.5" Margin="0,34,0,0" VerticalAlignment="Top" Padding="5,5,0,0" VerticalContentAlignment="Center" FontSize="14">
                 <TextBox.Background>
@@ -54,7 +54,7 @@
                 <Label Content="Hải Dương" Foreground="#555" FontSize="14"/>
                 <Label Content="Hải Phòng" Foreground="#555" FontSize="14"/>
                 <Label Content="Hậu Giang" Foreground="#555" FontSize="14"/>
-                <Label Content="TP. Hồ CHí Minh" Foreground="#555" FontSize="14"/>
+                <Label Content="TP. Hồ Chí Minh" Foreground="#555" FontSize="14"/>
                 <Label Content="Hòa Bình" Foreground="#555" FontSize="14"/>
                 <Label Content="Hưng Yên" Foreground="#555" FontSize="14"/>
                 <Label Content="Khánh Hòa" Foreground="#555" FontSize="14"/>
@@ -89,16 +89,17 @@
                 <Label Content="Vĩnh Phúc" Foreground="#555" FontSize="14"/>
                 <Label Content="Yên Bái" Foreground="#555" FontSize="14"/>
             </ComboBox>
-            <ComboBox x:Name="cbNganhNghe"
+            <ComboBox x:Name="cbLinhVuc"
                 MinWidth="72"
                 IsEditable="True"
                 Background="#f8f9fa"
                 materialDesign:ColorZoneAssist.Mode ="Light" 
                 materialDesign:ComboBoxAssist.MaxLength="30"
                 materialDesign:HintAssist.FontFamily="Verdana"
-                materialDesign:HintAssist.Hint="Ngành nghề"
+                materialDesign:HintAssist.Hint="Lĩnh vực"
                 Margin="260,78,0,0" VerticalAlignment="Top" Foreground="#555" Padding="10,4,0,4" FontSize="16" Width="250" HorizontalAlignment="Left">
                 <Label Content="Sản xuất và chế biến" Foreground="#555" FontSize="14"/>
+                <Label Content="Tài chính - Ngân hàng" Foreground="#555" FontSize="14"/>
                 <Label Content="Kiến trúc và xây dựng" Foreground="#555" FontSize="14"/>
                 <Label Content="Kinh doanh" Foreground="#555" FontSize="14"/>
                 <Label Content="Công nghệ thông tin" Foreground="#555" FontSize="14"/>
@@ -118,7 +119,7 @@
                 materialDesign:HintAssist.FontFamily="Verdana"
                 materialDesign:HintAssist.Hint="Kinh nghiệm"
                 Margin="520,78,0,0" VerticalAlignment="Top" Foreground="#555" Padding="10,4,0,4" FontSize="16" SelectionChanged="cbKinhNghiem_SelectionChanged" Width="250" HorizontalAlignment="Left">
-                <Label Content="Chưa có kinh nghiệm" Foreground="#555" FontSize="14"/>
+                <Label Content="Không yêu cầu" Foreground="#555" FontSize="14"/>
                 <Label Content="Dưới 1 năm" Foreground="#555" FontSize="14"/>
                 <Label Content="1 - 2 năm" Foreground="#555" FontSize="14"/>
                 <Label Content="2 - 5 năm" Foreground="#555" FontSize="14"/>
@@ -150,7 +151,7 @@
             </ComboBox>
             <Button x:Name="btnTimKiem" Style="{DynamicResource ButtonStyleBoGoc}" Content="Search" HorizontalAlignment="Left" Height="33" Margin="882,33,0,0" VerticalAlignment="Top" Width="148" Foreground="#FFFCFCFC" Background="{StaticResource MaterialDesign.Brush.Primary}" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}"/>
         </Grid>
-        <Grid Margin="0,0,0,10" Height="640" VerticalAlignment="Bottom">
+        <Grid Margin="0,150,0,0" Height="640" VerticalAlignment="Top">
             <Border CornerRadius="10" BorderBrush="Transparent" Margin="10,10,10,10">
                 <Border.Background>
                     <SolidColorBrush Color="#f8f9fa"/>
@@ -164,7 +165,7 @@
                 </materialDesign:Card>
             </Border>
         </Grid>
-        <Border CornerRadius="10" Margin="0,0,10,680" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="284" Background="#E5F3FAFC" >
+        <Border CornerRadius="10" Margin="0,20,10,0" Height="100" VerticalAlignment="Top" HorizontalAlignment="Right" Width="284" Background="#E5F3FAFC" >
             <Grid>
                 <Border CornerRadius="10" Width="92" HorizontalAlignment="Left" Margin="10,10,0,10">
                     <Border.Background>
@@ -175,7 +176,7 @@
                 <Label x:Name="lblTen" Content="Tên người dùng" Margin="0,0,10,54" HorizontalAlignment="Right" Width="167" Height="30" VerticalAlignment="Bottom" Foreground="Black" FontWeight="Bold" FontSize="16"/>
             </Grid>
         </Border>
-        <materialDesign:PackIcon Kind="Bell" Height="30" Width="30" Margin="1310,20,0,0" />
+        <materialDesign:PackIcon Kind="Bell" Height="30" Width="30" Margin="0,30,10,0" HorizontalAlignment="Right" />
 
     </Grid>
 </UserControl>

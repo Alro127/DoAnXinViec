@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace DoAnXinViec
     public partial class UCCapNhatThongTinCty : UserControl
     {
         CongTy congTy;
+        TaiKhoan taiKhoan;
         public CongTy CongTy { get => congTy; set => congTy = value; }
 
         private void SetImage()
@@ -33,7 +35,11 @@ namespace DoAnXinViec
         {
             InitializeComponent();
             this.congTy = new CongTy(congTy);
-            this.thongtincty.DataContext = this.congTy;
+            this.DataContext = this.congTy;
+            TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
+            DataTable dt = taiKhoanDAO.Get(congTy.Id);
+            taiKhoan = new TaiKhoan(dt.Rows[0]);
+            pwMatKhau.Password = taiKhoan.MatKhau;
             SetImage();
             Load();
         }
@@ -44,7 +50,7 @@ namespace DoAnXinViec
             {
                 Image anh = new Image() { Width = 100, Height = 100, Margin = new Thickness(10, 9, 0, 9) };
                 anh.Source = MediaHandler.SetImage(DanhSachAnh[i], congTy.Id);
-                wpAnh.Children.Add(anh);
+                stAnh.Children.Add(anh);
             }
         }
         private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)
@@ -59,7 +65,13 @@ namespace DoAnXinViec
             if (anhStr == null) return;
             Image anh = new Image() {Width = 100, Height = 100, Margin = new Thickness(10,9,0,9) };
             anh.Source = MediaHandler.SetImage(anhStr, congTy.Id);
-            wpAnh.Children.Add(anh);
+            stAnh.Children.Add(anh);
+        }
+
+        private void btnDoiMatKhau_Click(object sender, RoutedEventArgs e)
+        {
+            WDoiMatKhau wDoiMatKhau = new WDoiMatKhau(taiKhoan);
+            wDoiMatKhau.ShowDialog();
         }
     }
 }

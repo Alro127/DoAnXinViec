@@ -43,6 +43,7 @@ namespace DoAnXinViec
 
         public static byte[] GetImage(string imageName, string id)
         {
+            if (imageName == null) return null;
             string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
             string imagesDirectory = Path.Combine(projectDirectory, "Images\\" + id);
             string imagePath = Path.Combine(imagesDirectory, imageName);

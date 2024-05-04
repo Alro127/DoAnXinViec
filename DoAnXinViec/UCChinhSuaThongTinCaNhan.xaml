@@ -150,8 +150,9 @@
                 materialDesign:HintAssist.Hint="Tên đăng nhập"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="399" Height="40" HorizontalAlignment="Left" Margin="665,100,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
             <Button Content="Sửa" Height="40" Margin="0,100,40,0" VerticalAlignment="Top" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
-            <Button Content="Sửa" Height="40" Margin="0,160,40,0" VerticalAlignment="Top" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000"/>
-            <PasswordBox 
+            <Button x:Name="btnDoiMatKhau" Content="Sửa" Height="40" Margin="0,160,40,0" VerticalAlignment="Top" BorderBrush="{StaticResource MaterialDesign.Brush.Primary}" HorizontalAlignment="Right" Width="150" Background="White" Foreground="#DD000000" Click="btnDoiMatKhau_Click"/>
+            <PasswordBox x:Name="pwMatKhau" 
+                materialDesign:HintAssist.Background="White"
                 Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}" materialDesign:HintAssist.Hint="Mật khẩu"
                 HorizontalAlignment="Left" Height="40" Margin="665,160,0,0" VerticalAlignment="Top" Width="399" Padding="10,10,10,10" FontSize="14"/>
             <TextBox

@@ -241,13 +241,7 @@
                             TextWrapping="Wrap"
                             VerticalScrollBarVisibility="Auto" Height="100" VerticalAlignment="Bottom"
                             />
-                        <TextBox
-                         x:Name="txtLuong"
-                         Text="{Binding Luong, Mode=TwoWay}"
-                         materialDesign:HintAssist.Background="White"
-                         VerticalAlignment="Top"
-                         materialDesign:HintAssist.Hint="Lương"
-                         Style="{StaticResource MaterialDesignOutlinedTextBox}" Width="540" Height="40" HorizontalAlignment="Left" Margin="40,220,0,0" Padding="10,10,10,10" VerticalContentAlignment="Stretch" Background="{x:Null}" FontSize="14"/>
+                        
                         <TextBox
                             x:Name="txtKinhNghiem"
                             Text="{Binding KinhNghiem, Mode=TwoWay}"
@@ -286,13 +280,34 @@
                             Style="{StaticResource MaterialDesignOutlinedComboBox}"
                             materialDesign:HintAssist.Background="White"
                             materialDesign:HintAssist.Hint="Lĩnh Vực" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
-                            <Label Content="Công Nghệ Thông Tin" Foreground="Black" FontSize="14"/>
-                            <Label Content="Kinh Doanh" Foreground="Black" FontSize="14"/>
-                            <Label Content="Truyền Thông - Sự Kiện" Foreground="Black" FontSize="14"/>
-                            <Label Content="Y Tế" Foreground="Black" FontSize="14"/>
-                            <Label Content="Môi Trường" Foreground="Black" FontSize="14"/>
-                            <Label Content="Xây Dựng" Foreground="Black" FontSize="14"/>
-                            <Label Content="Thực Phẩm" Foreground="Black" FontSize="14"/>
+                            <Label Content="Sản xuất và chế biến" Foreground="#555" FontSize="14"/>
+                            <Label Content="Tài chính - Ngân hàng" Foreground="#555" FontSize="14"/>
+                            <Label Content="Kiến trúc và xây dựng" Foreground="#555" FontSize="14"/>
+                            <Label Content="Kinh doanh" Foreground="#555" FontSize="14"/>
+                            <Label Content="Công nghệ thông tin" Foreground="#555" FontSize="14"/>
+                            <Label Content="Luật - Nhân văn" Foreground="#555" FontSize="14"/>
+                            <Label Content="Nghệ thuật - Thẩm mỹ - Đồ họa" Foreground="#555" FontSize="14"/>
+                            <Label Content="Báo chí - Khoa học xã hội" Foreground="#555" FontSize="14"/>
+                            <Label Content="Khoa học cơ bản" Foreground="#555" FontSize="14"/>
+                            <Label Content="Sư phạm" Foreground="#555" FontSize="14"/>
+                            <Label Content="Nông - Lâm - Ngư nghiệp" Foreground="#555" FontSize="14"/>
+                        </ComboBox>
+                        <ComboBox 
+                            x:Name="cbLuong"
+                            Text="{Binding Luong, Mode=TwoWay}"
+                            HorizontalAlignment="Left" Height="40" Margin="40,220,0,0" Width="540"
+                            Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                            materialDesign:HintAssist.Background="White"
+                            materialDesign:HintAssist.Hint="Lương mong muốn" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
+                            <Label Content="Dưới 5 triệu" Foreground="#555" FontSize="14"/>
+                            <Label Content="5 - 10 triệu" Foreground="#555" FontSize="14"/>
+                            <Label Content="10 - 20 triệu" Foreground="#555" FontSize="14"/>
+                            <Label Content="Trên 20 triệu" Foreground="#555" FontSize="14"/>
+                            <WrapPanel x:Name="wpKhoangLuong">
+                                <TextBox x:Name="txtMinLuong" materialDesign:HintAssist.Hint="Min (triệu)" Width="100"/>
+                                <TextBlock Text=" - " Width="45" TextAlignment="Center" />
+                                <TextBox x:Name="txtMaxLuong" materialDesign:HintAssist.Hint="Max (triệu)" Width="100"/>
+                            </WrapPanel>
                         </ComboBox>
 
                     </Grid>

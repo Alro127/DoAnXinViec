@@ -16,12 +16,8 @@
                     <WrapPanel x:Name="wpCVYeuThich"/>
                 </ScrollViewer>
             </materialDesign:Card>
-            <Label Content="Bộ lọc:" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="60" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
-            <ComboBox HorizontalAlignment="Left" Height="40" Margin="120,80,0,0" Width="499"
-        Style="{StaticResource MaterialDesignOutlinedComboBox}"
-        materialDesign:HintAssist.Background="White"
-        materialDesign:HintAssist.Hint="Tất cả tin đăng" Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top">
-            </ComboBox>
+            <Label Content="Tìm kiếm:" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
+            <TextBox x:Name="tbTimKiem" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" Margin="145,80,40,686" KeyUp="tbTimKiem_KeyUp" Padding="5,10,0,0"/>
 
         </Grid>
     </Border>

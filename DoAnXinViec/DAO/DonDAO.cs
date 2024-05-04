@@ -21,7 +21,7 @@ namespace DoAnXinViec
         }
         public DataTable LoadForCT(CongTy congTy)
         {
-            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.Id WHERE Don.NgayToiHan > GETDATE() AND Cty.Id = '{0}'", congTy.Id);
+            string sqlStr = string.Format("SELECT*FROM Don INNER JOIN Cty ON Don.IdCT = Cty.Id WHERE Cty.Id = '{0}'", congTy.Id);
             return Dbconnection.Load(sqlStr);
         }
         public DataTable LoadLichSu(CongTy congTy)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace DoAnXinViec
     public partial class UCChinhSuaThongTinCaNhan :UserControl
     {
         UngVien ungVien;
+        TaiKhoan taiKhoan;
         private void SetImage()
         {
             BitmapImage bitmapImg = MediaHandler.SetImage(ungVien.Anh, ungVien.Id);
@@ -34,6 +36,10 @@ namespace DoAnXinViec
             InitializeComponent();
             this.UngVien = new UngVien(ungVien);
             this.DataContext = this.UngVien;
+            TaiKhoanDAO taiKhoanDAO = new TaiKhoanDAO();
+            DataTable dt = taiKhoanDAO.Get(ungVien.Id);
+            taiKhoan = new TaiKhoan(dt.Rows[0]);
+            pwMatKhau.Password = taiKhoan.MatKhau;
             SetImage();
         }
 
@@ -44,6 +50,10 @@ namespace DoAnXinViec
             ungVien.Anh = MediaHandler.SelectImageAndSave(ungVien.Id);
             SetImage();
         }
-
+        private void btnDoiMatKhau_Click(object sender, RoutedEventArgs e)
+        {
+            WDoiMatKhau wDoiMatKhau = new WDoiMatKhau(taiKhoan);
+            wDoiMatKhau.ShowDialog();
+        }
     }
 }

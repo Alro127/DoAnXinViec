@@ -55,7 +55,8 @@ namespace DoAnXinViec
             foreach (DataRow dr in dt.Rows)
             {
                 Don don = new Don(dr);
-                donList.Add(don);
+                if (don.NgayToiHan > DateTime.Now)
+                    donList.Add(don);
             }
             DangUCDon();
         }
@@ -71,7 +72,7 @@ namespace DoAnXinViec
         }
         private void btnXem_Click(object sender, RoutedEventArgs e)
         {
-            Don don = (Don)(sender as Button).Tag;
+            Don don = (Don)(sender as Button).DataContext;
             WDonChiTiet wDonChiTiet = new WDonChiTiet(don, ungVien);
             donDAO.TangLuotXem(don);
             wDonChiTiet.ShowDialog();

@@ -20,6 +20,7 @@ namespace DoAnXinViec
         string diaDiem;
         string luong;
         string kinhNghiem;
+        string linhVuc;
         DateTime ngayDang;
         DateTime ngayToiHan;
         string moTaCV;
@@ -41,7 +42,7 @@ namespace DoAnXinViec
             Utility.SetItemFromRow(this, dr);
         }
 
-        public Don(int idDon, string tenCV, string idCT, string diaDiem, string luong, string kinhNghiem, DateTime ngayDang, DateTime ngayToiHan, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop)
+        public Don(int idDon, string tenCV, string idCT, string diaDiem, string luong, string kinhNghiem, string linhVuc, DateTime ngayDang, DateTime ngayToiHan, string moTaCV, string yeuCau, string quyenLoi, int luotXem, int luotNop)
         {
             try
             {
@@ -51,6 +52,7 @@ namespace DoAnXinViec
                 DiaDiem = diaDiem;
                 Luong = luong;
                 KinhNghiem = kinhNghiem;
+                LinhVuc = linhVuc;
                 NgayDang = ngayDang;
                 NgayToiHan = ngayToiHan;
                 MoTaCV = moTaCV;
@@ -128,6 +130,18 @@ namespace DoAnXinViec
                     throw new ArgumentNullException("Không được bỏ trống kinh nghiệm");
                 }
                 kinhNghiem = value;
+            }
+        }
+        public string LinhVuc
+        {
+            get => linhVuc;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("Không được bỏ trống lĩnh vực");
+                }
+                linhVuc = value;
             }
         }
 
@@ -227,10 +241,6 @@ namespace DoAnXinViec
             get => ngayDang;
             set
             {
-                if (value == null)
-                {
-                    throw new ArgumentNullException("Không được bỏ trống ngày đăng");
-                }
                 ngayDang = value;
             }
         }
