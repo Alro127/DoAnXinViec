@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAnXinViec.DAO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -104,7 +105,7 @@ namespace DoAnXinViec
             listHienThi.Clear();
             foreach (HoSo hs in listHoSo)
             {
-                if (CheckNgay(hs) == true && CheckTrangThai(hs) == true)
+                if (CheckNgay(hs) == true && CheckTrangThai(hs) == true &&CheckBoLoc(hs) && CheckTimKiem(hs))
                     listHienThi.Add(hs);
             }
             lvHoSoUngTuyen.ItemsSource = listHienThi;
@@ -119,17 +120,37 @@ namespace DoAnXinViec
         {
             Loc();
         }
+        bool CheckBoLoc(HoSo hoSo)
+        {
+            if (cbBoLoc.SelectedIndex <= 0) return true;
+            if (cbBoLoc.SelectedIndex == 1)
+                if (hoSo.TrangThai == "Chấp nhận")
+                    return true;
+            if (cbBoLoc.SelectedIndex == 2)
+                if (hoSo.TrangThai == "Đợi")
+                    return true;
+            if (cbBoLoc.SelectedIndex == 3)
+                if (hoSo.TrangThai == "Từ chối")
+                    return true;
+            return false;
+        }
         private void cbBoLoc_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            Loc();
         }
-
+        bool CheckTimKiem(HoSo hs)
+        {
+            string vtut = hs.ViTriUngTuyen.ToLower();
+            if (vtut.Contains(tbTimKiem.Text.ToLower()))
+                return true;
+            return false;
+        }
         private void cbSapXep_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cbSapXep.SelectedIndex == 0)
-                listHienThi = listHienThi.OrderBy(hoSo => hoSo.TenHoSo).ToList();
+                listHienThi = listHienThi.OrderBy(hoSo => hoSo.TenCT).ToList();
             else if (cbSapXep.SelectedIndex == 1)
-                listHienThi = listHienThi.OrderByDescending(hoSo => hoSo.TenHoSo).ToList();
+                listHienThi = listHienThi.OrderByDescending(hoSo => hoSo.TenCT).ToList();
             else if (cbSapXep.SelectedIndex == 2)
                 listHienThi = listHienThi.OrderByDescending(hoSo => hoSo.NgayNop).ToList();
             else if (cbSapXep.SelectedIndex == 3)
@@ -161,6 +182,30 @@ namespace DoAnXinViec
                 if (item.IsChecked == true && item.Content.ToString() == hs.TrangThai)
                     return true;
             return false;
+        }
+
+        private void btnXem_Click(object sender, RoutedEventArgs e)
+        {
+            HoSo hoSo = (sender as Button).Tag as HoSo;
+            if(hoSo.TrangThai == "Chấp nhận")
+            {
+                DonDAO donDAO = new DonDAO();
+                DataTable dtDon = donDAO.Get(hoSo.IdDon);
+                Don don = new Don(dtDon.Rows[0]);
+                PhongVanDAO phongVanDAO = new PhongVanDAO();
+                DataTable dtPhongVan = phongVanDAO.Get(hoSo.IdDon, hoSo.IdCV);
+                PhongVan phongVan = new PhongVan(dtPhongVan.Rows[0]);
+                CongTyDAO congTyDAO = new CongTyDAO();
+                DataTable dtCTy = congTyDAO.Get(don.IdCT, "CTy");
+                CongTy congTy = new CongTy(dtCTy.Rows[0]);
+                WHenLich wHenLich = new WHenLich(don, phongVan, ungVien, congTy);
+                wHenLich.ShowDialog();
+            }
+        }
+
+        private void tbTimKiem_KeyUp(object sender, KeyEventArgs e)
+        {
+            Loc();
         }
     }
 }

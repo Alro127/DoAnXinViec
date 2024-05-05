@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,18 @@ namespace DoAnXinViec
 
         private void lblPV_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            PhongVan phongVan = (sender as Label).Tag as PhongVan;
+            DonDAO donDAO = new DonDAO();
+            DataTable dtDon = donDAO.Get(phongVan.IdDon);
+            Don don = new Don(dtDon.Rows[0]);
+            CVDAO cVDAO = new CVDAO();
+            DataTable dtCV = cVDAO.Get(phongVan.IdCV);
+            CV cv = new CV(dtCV.Rows[0]);
+            UngVienDAO ungVienDAO = new UngVienDAO();
+            DataTable dtUngVien = ungVienDAO.Get(cv.IdUV, "UngVien");
+            UngVien ungVien = new UngVien(dtUngVien.Rows[0]);
+            WThongTinBuoiPhongVan wThongTinBuoiPhongVan = new WThongTinBuoiPhongVan(cv,ungVien,phongVan,don);
+            wThongTinBuoiPhongVan.ShowDialog();
         }
     }
 }

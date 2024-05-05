@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="WHenLich" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Thư mời phỏng vấn" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" Width="196" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="lblKinhGui" Content="Kính gửi: " HorizontalAlignment="Left" Margin="26,80,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,108,0,0" TextWrapping="Wrap" Text="Công ty thông báo: Anh/Chị đã vượt qua vòng lọc hồ sơ, chúng tôi nhận thấy bạn là một ứng viên tiềm năng.  Chúng tôi xin trân trọng kính mời Anh/Chị đến tham gia phỏng vấn tại công ty chúng tôi với nội dung như sau:" VerticalAlignment="Top" Height="39" Width="740" Foreground="#FF333232"/>
+        <Label x:Name="lblViTriTuyenDung" Content="Vị trí tuyển dụng: " HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top" Foreground="#FF333232"/>
+        <Label x:Name="lblThoiGian" Content="Thời gian: vào lúc " HorizontalAlignment="Left" Margin="28,164,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDiaDiem" Content="Địa điểm: " HorizontalAlignment="Left" Margin="28,188,0,0" VerticalAlignment="Top"/>
+        <TextBlock Margin="32,285,0,0" TextWrapping="Wrap" Text="Rất mong Anh/Chị thu xếp thời gian tham gia. Trường hợp Anh/Chị không thể thu xếp được thời gian, xin vui lòng liên hệ lại chúng tôi theo số điện thoại/email trên để xác nhận lại." VerticalAlignment="Top" RenderTransformOrigin="0.093,0.679" Foreground="#FF333232" HorizontalAlignment="Left" Width="740"/>
+        <Label Content="Mọi chi tiết, anh chị vui lòng có thể liên hệ qua: " HorizontalAlignment="Left" Margin="28,212,0,0" VerticalAlignment="Top"/>
+        <Label Content="Lưu ý khi tham gia buổi phỏng vấn:" HorizontalAlignment="Left" Margin="28,318,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <TextBlock x:Name="tbLuuY" HorizontalAlignment="Left" Margin="32,343,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="740" Foreground="#E5000000"/>
+        <Label Content="Trân trọng kính chào!" HorizontalAlignment="Left" Margin="28,360,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSdt" Content="Số điện thoại: " HorizontalAlignment="Left" Margin="28,234,0,0" VerticalAlignment="Top"/>
+        <Label x:Name ="lblEmail"  Content="Email: " HorizontalAlignment="Left" Margin="28,258,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTenCty" Content="ADC Group" HorizontalAlignment="Left" Margin="28,381,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+
     </Grid>
 </Window>

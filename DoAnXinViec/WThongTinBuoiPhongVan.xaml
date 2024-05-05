@@ -1,0 +1,17 @@
+﻿<Window x:Class="DoAnXinViec.WThongTinBuoiPhongVan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAnXinViec"
+        mc:Ignorable="d"
+        Title="WThongTinBuoiPhongVan" Height="349" Width="584">
+    <Grid>
+        <Label x:Name="lblTenBuoiPhongvan" Content="Tên buổi phỏng vấn" HorizontalAlignment="Center" Margin="0,22,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="lblTenUngVien" Content="Tên ứng viên: " HorizontalAlignment="Left" Margin="60,75,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lblVitriungtuyen" Content="Vị trí ứng tuyển: " HorizontalAlignment="Left" Margin="60,105,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lblThoiGian" Content="Thời gian: " HorizontalAlignment="Left" Margin="60,135,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lblDiaDiem" Content="Địa điểm: " HorizontalAlignment="Left" Margin="60,165,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button Content="CV Chi Tiết" HorizontalAlignment="Left" Margin="458,0,0,22" VerticalAlignment="Bottom" Click="Button_Click"/>
+    </Grid>
+</Window>

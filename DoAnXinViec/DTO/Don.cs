@@ -68,7 +68,7 @@ namespace DoAnXinViec
         }
         public string[] UnecessaryProperty()
         {
-            return new string[3] { nameof(IdDon), nameof(TenCT), nameof(Anh) };
+            return new string[3] { nameof(IdDon), nameof(TenCT), nameof(Anh)};
         }
         public string TenCV
         {

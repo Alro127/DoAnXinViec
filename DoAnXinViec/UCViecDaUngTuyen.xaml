@@ -81,7 +81,7 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
-                                        <Button Style="{StaticResource MaterialDesignFlatLightButton}" Content="Xem" Margin="20,0,0,0"/>
+                                        <Button x:Name="btnXem" Style="{StaticResource MaterialDesignFlatLightButton}" Tag="{Binding}" Content="Xem" Margin="20,0,0,0" Click="btnXem_Click"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -94,12 +94,13 @@
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"
                 Padding="10,10,10,10" FontSize="14" VerticalAlignment="Top" SelectionChanged="cbBoLoc_SelectionChanged">
-                <ComboBoxItem Content="Tất cả đơn"/>
-                <ComboBoxItem Content="Đơn còn thời hạn"/>
-                <ComboBoxItem Content="Đơn hết thời hạn"/>
+                <ComboBoxItem Content="Tất cả"/>
+                <ComboBoxItem Content="Chấp nhận"/>
+                <ComboBoxItem Content="Đợi"/>
+                <ComboBoxItem Content="Từ chối"/>
             </ComboBox>
             <Label Content="Tìm kiếm:" HorizontalAlignment="Left" Margin="40,92,0,0" VerticalAlignment="Top" Width="100" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontFamily="Segoe UI Black"/>
-            <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" Margin="145,92,230,668" Padding="5,10,0,0" FontSize="14"/>
+            <TextBox x:Name="tbTimKiem" Style="{StaticResource MaterialDesignOutlinedTextBox}" TextWrapping="Wrap" Margin="145,92,230,668" Padding="5,10,0,0" FontSize="14" KeyUp="tbTimKiem_KeyUp"/>
             <ComboBox x:Name="cbSapXep" HorizontalAlignment="Left" Height="40" Margin="775,161,0,0" Width="285"
                 Style="{StaticResource MaterialDesignOutlinedComboBox}"
                 materialDesign:HintAssist.Background="White"

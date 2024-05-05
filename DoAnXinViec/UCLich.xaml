@@ -11,7 +11,7 @@
         <ListView x:Name="listLichPhongVan" Margin="0,20,0,0" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Label x:Name="lblPV" Content="{Binding TenBuoiPV}" MouseDoubleClick="lblPV_MouseDoubleClick" />
+                    <Label x:Name="lblPV" Content="{Binding TenBuoiPV}" Tag="{Binding}" MouseDoubleClick="lblPV_MouseDoubleClick" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

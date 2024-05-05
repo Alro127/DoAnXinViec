@@ -23,5 +23,18 @@ namespace DoAnXinViec
         {
             InitializeComponent();
         }
+        public WHenLich(Don don, PhongVan phongVan,UngVien ungVien,CongTy cty)
+        {
+            InitializeComponent();
+            lblViTriTuyenDung.Content += don.TenCV;
+            string thoiGian = $"{phongVan.ThoiGian.Hour} giờ {phongVan.ThoiGian.Minute} phút, ngày {phongVan.ThoiGian.Day} tháng {phongVan.ThoiGian.Month} năm {phongVan.ThoiGian.Year}";
+            lblThoiGian.Content += thoiGian;
+            lblDiaDiem.Content += phongVan.DiaDiem;
+            lblKinhGui.Content += ungVien.HoTen;
+            tbLuuY.Text = phongVan.LuuY;
+            lblSdt.Content += cty.SDT;
+            lblEmail.Content += cty.Email;
+            lblTenCty.Content = cty.TenCT;
+        }
     }
 }
