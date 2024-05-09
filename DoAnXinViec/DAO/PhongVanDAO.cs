@@ -18,9 +18,9 @@ namespace DoAnXinViec.DAO
             string sqlStr = string.Format("SELECT*FROM PhongVan");
             return dbconnection.Load(sqlStr);
         }
-        public bool CheckExist(PhongVan phongVan)
+        public bool CheckExist(string idDon,string idCV)
         {
-            string sqlStr = string.Format("SELECT COUNT(*) FROM PhongVan WHERE IdDon = '{0}' AND IdCV = '{1}'", phongVan.IdDon, phongVan.IdCV);
+            string sqlStr = string.Format("SELECT COUNT(*) FROM PhongVan WHERE IdDon = '{0}' AND IdCV = '{1}'", idDon, idCV);
             return dbconnection.CheckExist(sqlStr);
         }
         public void Them(PhongVan phongVan)

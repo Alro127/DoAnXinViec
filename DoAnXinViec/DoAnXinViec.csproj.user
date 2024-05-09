@@ -26,6 +26,9 @@
     <Compile Update="WHenLich.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="WLargeImage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="WLichPhongVan.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -62,6 +65,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WHenLich.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WLargeImage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="WLichPhongVan.xaml">

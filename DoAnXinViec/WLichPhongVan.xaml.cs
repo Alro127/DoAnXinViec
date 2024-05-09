@@ -96,11 +96,11 @@ namespace DoAnXinViec
             HoSo hoSo = listHoSo[cbHoSo.SelectedIndex];
             DateTime ngay = cldLich.SelectedDate.Value.Date;
             DateTime gio = tpThoiGian.SelectedTime.Value;
-            PhongVan phongVan = new PhongVan(hoSo.IdDon, hoSo.IdCV, tbTenBuoiPV.Text, new DateTime(ngay.Year, ngay.Month, ngay.Day, gio.Hour, gio.Minute, gio.Second), tbDiaChi.Text, tbLuuY.Text);
-            if (phongVanDAO.CheckExist(phongVan))
+            PhongVan phongVan = new PhongVan(hoSo.IdDon, hoSo.IdCV, tbTenBuoiPV.Text, new DateTime(ngay.Year, ngay.Month, ngay.Day, gio.Hour, gio.Minute, gio.Second), tbDiaChi.Text, tbLuuY.Text,"");
+            if (phongVanDAO.CheckExist(phongVan.IdDon.ToString(),phongVan.IdCV.ToString()))
                 phongVanDAO.CapNhat(phongVan);
             else phongVanDAO.Them(phongVan);
-            hoSo.TrangThai = "Chấp nhận";
+            hoSo.TrangThai = "Đợi";
             HoSoDAO hoSoDAO = new HoSoDAO();
             hoSoDAO.CapNhat(hoSo);
         }

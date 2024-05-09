@@ -187,20 +187,31 @@ namespace DoAnXinViec
         private void btnXem_Click(object sender, RoutedEventArgs e)
         {
             HoSo hoSo = (sender as Button).Tag as HoSo;
-            if(hoSo.TrangThai == "Chấp nhận")
+            PhongVanDAO phongVanDAO = new PhongVanDAO();
+            if ((hoSo.TrangThai == "Đợi") && (!phongVanDAO.CheckExist(hoSo.IdDon.ToString(), hoSo.IdCV.ToString())))
+            {
+                MessageBox.Show("Chưa có thông báo từ công ty");
+                return;
+            }
+            if (hoSo.TrangThai == "Từ chối")
+            {
+                MessageBox.Show("Cảm ơn bạn đã tham gia ứng tuyển, hồ sơ của bạn chưa thuyết phục được nhà tuyển dụng");
+                return;
+            }
+            DataTable dtPhongVan = phongVanDAO.Get(hoSo.IdDon, hoSo.IdCV);
+            PhongVan phongVan = new PhongVan(dtPhongVan.Rows[0]);
+            if ((hoSo.TrangThai == "Chấp nhận")||((hoSo.TrangThai == "Đợi")&&string.IsNullOrEmpty(phongVan.XacNhan)))
             {
                 DonDAO donDAO = new DonDAO();
                 DataTable dtDon = donDAO.Get(hoSo.IdDon);
                 Don don = new Don(dtDon.Rows[0]);
-                PhongVanDAO phongVanDAO = new PhongVanDAO();
-                DataTable dtPhongVan = phongVanDAO.Get(hoSo.IdDon, hoSo.IdCV);
-                PhongVan phongVan = new PhongVan(dtPhongVan.Rows[0]);
                 CongTyDAO congTyDAO = new CongTyDAO();
                 DataTable dtCTy = congTyDAO.Get(don.IdCT, "CTy");
                 CongTy congTy = new CongTy(dtCTy.Rows[0]);
-                WHenLich wHenLich = new WHenLich(don, phongVan, ungVien, congTy);
+                WHenLich wHenLich = new WHenLich(don, phongVan, ungVien, congTy,hoSo);
                 wHenLich.ShowDialog();
             }
+
         }
 
         private void tbTimKiem_KeyUp(object sender, KeyEventArgs e)

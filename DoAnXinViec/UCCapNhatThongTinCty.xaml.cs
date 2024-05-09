@@ -23,6 +23,8 @@ namespace DoAnXinViec
     {
         CongTy congTy;
         TaiKhoan taiKhoan;
+        Dictionary<Image, string> imagePaths = new Dictionary<Image, string>();
+        string[] DanhSachAnh;
         public CongTy CongTy { get => congTy; set => congTy = value; }
 
         private void SetImage()
@@ -45,12 +47,29 @@ namespace DoAnXinViec
         }
         void Load()
         {
-            string[] DanhSachAnh = MediaHandler.GetImagesFromFolder(congTy.Id);
+            DanhSachAnh = MediaHandler.GetImagesFromFolder(congTy.Id);
             for (int i = 0; i<DanhSachAnh.Length; i++)
             {
                 Image anh = new Image() { Width = 100, Height = 100, Margin = new Thickness(10, 9, 0, 9) };
-                anh.Source = MediaHandler.SetImage(DanhSachAnh[i], congTy.Id);
+                BitmapImage bitmap = MediaHandler.SetImage(DanhSachAnh[i], congTy.Id);
+                imagePaths.Add(anh, DanhSachAnh[i]);
+                anh.Source = bitmap;
+                anh.MouseLeftButtonDown += Image_MouseLeftButtonDown;
                 stAnh.Children.Add(anh);
+            }
+        }
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is Image clickedImage)
+            {
+                BitmapImage bitmap = clickedImage.Source as BitmapImage;
+                if (bitmap != null)
+                {
+                    string imagePath = imagePaths[clickedImage];
+                    int viTri = Array.IndexOf(DanhSachAnh, imagePath);
+                    WLargeImage largeImage = new WLargeImage(congTy.Id, viTri, DanhSachAnh);
+                    largeImage.ShowDialog();
+                }
             }
         }
         private void btnTaiAnhLen_Click(object sender, RoutedEventArgs e)

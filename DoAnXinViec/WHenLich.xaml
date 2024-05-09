@@ -21,6 +21,8 @@
         <Label x:Name="lblSdt" Content="Số điện thoại: " HorizontalAlignment="Left" Margin="28,234,0,0" VerticalAlignment="Top"/>
         <Label x:Name ="lblEmail"  Content="Email: " HorizontalAlignment="Left" Margin="28,258,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTenCty" Content="ADC Group" HorizontalAlignment="Left" Margin="28,381,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="btnXacNhan" Content="Xác nhận" HorizontalAlignment="Right" Margin="0,0,13,21" VerticalAlignment="Bottom" Click="btnXacNhan_Click"/>
+        <Button x:Name="btnTuChoi" Content="Từ chối" HorizontalAlignment="Right" Margin="0,0,121,21" VerticalAlignment="Bottom" Background="#FFF3213F" Click="btnTuChoi_Click"/>
 
     </Grid>
 </Window>

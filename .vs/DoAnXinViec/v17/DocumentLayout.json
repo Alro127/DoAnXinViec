@@ -3,132 +3,76 @@
   "WorkspaceRootPath": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\dto\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\dto\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wthongtinbuoiphongvan.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wthongtinbuoiphongvan.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wthongtinbuoiphongvan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wthongtinbuoiphongvan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wcvchitiet.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wcvchitiet.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wcvchitiet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wcvchitiet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wthongtincongty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wthongtincongty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\whenlich.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\whenlich.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wlichphongvan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wlichphongvan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wtaocv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtaocv.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\whenlich.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\whenlich.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uclich.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uclich.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uclich.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uclich.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\ucviecdaungtuyen.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\ucviecdaungtuyen.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\dao\\taikhoandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\dao\\ungviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\dao\\ungviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\ucviecdaungtuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\ucviecdaungtuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wtrangchinhungvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangchinhungvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wtrangchinhcty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangchinhcty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\ucdon.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\ucdon.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wdanhsachuvtheodon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wdanhsachuvtheodon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wdoimatkhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wdoimatkhau.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wdonchitiet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wdonchitiet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wlichphongvan.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wlichphongvan.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wtrangxemdon.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangxemdon.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uchosoungtuyen.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uchosoungtuyen.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uchosoungtuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uchosoungtuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wtrangchucty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\wtrangchucty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangchucty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uclichsudangdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uclichsudangdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\ucchinhsuathongtincanhan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\ucchinhsuathongtincanhan.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wtrangxemdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangxemdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uccapnhatthongtincty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uccapnhatthongtincty.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\uccapnhatthongtincty.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uccapnhatthongtincty.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\wtrangchucty.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangchucty.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uctrangtimviec.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uctrangtimviec.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\wlargeimage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wlargeimage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|d:\\dsnvtt\\doanxinviec\\doanxinviec\\doanxinviec\\uctrangtimviec.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\wlargeimage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wlargeimage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\wdonchitiet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wdonchitiet.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\whenlich.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\whenlich.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\dao\\dto\\phongvan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\dao\\dto\\phongvan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\uclichsudangdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uclichsudangdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\uctrangtimviec.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uctrangtimviec.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\wtrangxemdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangxemdon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\wtrangxemdon.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\wtrangxemdon.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\uchosoungtuyen.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\uchosoungtuyen.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\doanxinviec\\dao\\phongvandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4D38E9F-731F-4360-8B2E-54F34FA6C6AB}|DoAnXinViec\\DoAnXinViec.csproj|solutionrelative:doanxinviec\\dao\\phongvandao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,406 +82,221 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WCVChiTiet.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WCVChiTiet.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WCVChiTiet.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WCVChiTiet.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\WCVChiTiet.xaml.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T09:33:56.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WCVChiTiet.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WCVChiTiet.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WCVChiTiet.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WCVChiTiet.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WCVChiTiet.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T09:33:54.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WTaoCV.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTaoCV.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WTaoCV.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTaoCV.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WTaoCV.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T09:28:46.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WHenLich.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WHenLich.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WHenLich.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WHenLich.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\WHenLich.xaml.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T09:26:22.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CV.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DTO\\CV.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\DTO\\CV.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DTO\\CV.cs",
-              "RelativeToolTip": "DoAnXinViec\\DTO\\CV.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAgwCsAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T08:57:19.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TaiKhoanDAO.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\TaiKhoanDAO.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\DAO\\TaiKhoanDAO.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\TaiKhoanDAO.cs",
-              "RelativeToolTip": "DoAnXinViec\\DAO\\TaiKhoanDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T09:15:28.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\UserDAO.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\DAO\\UserDAO.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\UserDAO.cs",
-              "RelativeToolTip": "DoAnXinViec\\DAO\\UserDAO.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T09:15:15.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UngVienDAO.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\UngVienDAO.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\DAO\\UngVienDAO.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\UngVienDAO.cs",
-              "RelativeToolTip": "DoAnXinViec\\DAO\\UngVienDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T09:15:13.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UCViecDaUngTuyen.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCViecDaUngTuyen.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCViecDaUngTuyen.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCViecDaUngTuyen.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\UCViecDaUngTuyen.xaml.cs",
-              "ViewState": "AQIAALIAAAAAAAAAAAA8wMAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T08:55:51.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UCViecDaUngTuyen.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCViecDaUngTuyen.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCViecDaUngTuyen.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCViecDaUngTuyen.xaml",
-              "RelativeToolTip": "DoAnXinViec\\UCViecDaUngTuyen.xaml",
+              "Title": "WTrangChinhUngVien.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChinhUngVien.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\WTrangChinhUngVien.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChinhUngVien.xaml",
+              "RelativeToolTip": "DoAnXinViec\\WTrangChinhUngVien.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:55:42.911Z",
+              "WhenOpened": "2024-05-09T14:07:46.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 1,
               "Title": "WTrangChinhCty.xaml",
               "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChinhCty.xaml",
               "RelativeDocumentMoniker": "DoAnXinViec\\WTrangChinhCty.xaml",
               "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChinhCty.xaml",
               "RelativeToolTip": "DoAnXinViec\\WTrangChinhCty.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:55:06.763Z",
+              "WhenOpened": "2024-05-09T14:07:06.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "WDanhSachUVTheoDon.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WDanhSachUVTheoDon.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WDanhSachUVTheoDon.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WDanhSachUVTheoDon.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WDanhSachUVTheoDon.xaml",
+              "DocumentIndex": 3,
+              "Title": "UCChinhSuaThongTinCaNhan.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCChinhSuaThongTinCaNhan.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\UCChinhSuaThongTinCaNhan.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCChinhSuaThongTinCaNhan.xaml",
+              "RelativeToolTip": "DoAnXinViec\\UCChinhSuaThongTinCaNhan.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:54:55.508Z",
+              "WhenOpened": "2024-05-09T14:05:18.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WHenLich.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WHenLich.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WHenLich.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WHenLich.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WHenLich.xaml",
+              "DocumentIndex": 4,
+              "Title": "UCCapNhatThongTinCty.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCCapNhatThongTinCty.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\UCCapNhatThongTinCty.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCCapNhatThongTinCty.xaml",
+              "RelativeToolTip": "DoAnXinViec\\UCCapNhatThongTinCty.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:46:19.742Z",
+              "WhenOpened": "2024-05-09T14:05:15.822Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "WDoiMatKhau.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WDoiMatKhau.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WDoiMatKhau.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WDoiMatKhau.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WDoiMatKhau.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:41:07.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "UCHoSoUngTuyen.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAcwHsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T08:35:36.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UCHoSoUngTuyen.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCHoSoUngTuyen.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCHoSoUngTuyen.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCHoSoUngTuyen.xaml",
-              "RelativeToolTip": "DoAnXinViec\\UCHoSoUngTuyen.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:35:34.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WThongTinBuoiPhongVan.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WThongTinBuoiPhongVan.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WThongTinBuoiPhongVan.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WThongTinBuoiPhongVan.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\WThongTinBuoiPhongVan.xaml.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAmwCIAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T08:34:30.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UCDon.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCDon.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCDon.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCDon.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\UCDon.xaml.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T08:26:27.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WThongTinBuoiPhongVan.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WThongTinBuoiPhongVan.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WThongTinBuoiPhongVan.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WThongTinBuoiPhongVan.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WThongTinBuoiPhongVan.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:26:26.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UCLich.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLich.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCLich.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLich.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\UCLich.xaml.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAqwCUAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T08:22:24.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "WLichPhongVan.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLichPhongVan.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WLichPhongVan.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLichPhongVan.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\WLichPhongVan.xaml.cs",
-              "ViewState": "AQIAAGwAAAAAAAAAAAApwHMAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T08:20:01.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WLichPhongVan.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLichPhongVan.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WLichPhongVan.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLichPhongVan.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WLichPhongVan.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:13:44.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 9,
               "Title": "WDonChiTiet.xaml",
               "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WDonChiTiet.xaml",
               "RelativeDocumentMoniker": "DoAnXinViec\\WDonChiTiet.xaml",
               "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WDonChiTiet.xaml",
               "RelativeToolTip": "DoAnXinViec\\WDonChiTiet.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:12:28.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-09T06:41:27.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UCTrangTimViec.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCTrangTimViec.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCTrangTimViec.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCTrangTimViec.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\UCTrangTimViec.xaml.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAApwEgAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T07:45:31.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UCTrangTimViec.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCTrangTimViec.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCTrangTimViec.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCTrangTimViec.xaml",
-              "RelativeToolTip": "DoAnXinViec\\UCTrangTimViec.xaml",
+              "DocumentIndex": 10,
+              "Title": "WHenLich.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WHenLich.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\WHenLich.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WHenLich.xaml",
+              "RelativeToolTip": "DoAnXinViec\\WHenLich.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:11:17.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-09T06:41:24.765Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "WThongTinCongTy.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WThongTinCongTy.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WThongTinCongTy.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WThongTinCongTy.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WThongTinCongTy.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:08:44.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UCLich.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLich.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCLich.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLich.xaml",
-              "RelativeToolTip": "DoAnXinViec\\UCLich.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:59:04.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "UCLichSuDangDon.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLichSuDangDon.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\UCLichSuDangDon.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLichSuDangDon.xaml",
-              "RelativeToolTip": "DoAnXinViec\\UCLichSuDangDon.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T08:03:08.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "WTrangXemDon.xaml.cs",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml.cs",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WTrangXemDon.xaml.cs",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml.cs",
-              "RelativeToolTip": "DoAnXinViec\\WTrangXemDon.xaml.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAlwDcAAAAAAAAA",
+              "Title": "UCCapNhatThongTinCty.xaml.cs",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCCapNhatThongTinCty.xaml.cs",
+              "RelativeDocumentMoniker": "DoAnXinViec\\UCCapNhatThongTinCty.xaml.cs",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCCapNhatThongTinCty.xaml.cs",
+              "RelativeToolTip": "DoAnXinViec\\UCCapNhatThongTinCty.xaml.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAswEwAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T07:40:52.993Z",
+              "WhenOpened": "2024-05-09T04:35:56.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "WTrangXemDon.xaml",
-              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml",
-              "RelativeDocumentMoniker": "DoAnXinViec\\WTrangXemDon.xaml",
-              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml",
-              "RelativeToolTip": "DoAnXinViec\\WTrangXemDon.xaml",
+              "DocumentIndex": 7,
+              "Title": "WLargeImage.xaml.cs",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLargeImage.xaml.cs",
+              "RelativeDocumentMoniker": "DoAnXinViec\\WLargeImage.xaml.cs",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLargeImage.xaml.cs",
+              "RelativeToolTip": "DoAnXinViec\\WLargeImage.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAUwCcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T03:47:52.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WLargeImage.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLargeImage.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\WLargeImage.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WLargeImage.xaml",
+              "RelativeToolTip": "DoAnXinViec\\WLargeImage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T07:40:50.741Z",
+              "WhenOpened": "2024-05-09T03:46:46.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 6,
               "Title": "WTrangChuCty.xaml.cs",
               "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChuCty.xaml.cs",
               "RelativeDocumentMoniker": "DoAnXinViec\\WTrangChuCty.xaml.cs",
               "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChuCty.xaml.cs",
               "RelativeToolTip": "DoAnXinViec\\WTrangChuCty.xaml.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAqwEcAAAAJAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAFAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T07:35:33.11Z",
+              "WhenOpened": "2024-05-09T02:54:21.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 2,
               "Title": "WTrangChuCty.xaml",
               "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChuCty.xaml",
               "RelativeDocumentMoniker": "DoAnXinViec\\WTrangChuCty.xaml",
               "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangChuCty.xaml",
               "RelativeToolTip": "DoAnXinViec\\WTrangChuCty.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-05T07:28:47.252Z",
+              "WhenOpened": "2024-05-09T02:53:23.739Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UCLichSuDangDon.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLichSuDangDon.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\UCLichSuDangDon.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCLichSuDangDon.xaml",
+              "RelativeToolTip": "DoAnXinViec\\UCLichSuDangDon.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-07T06:24:53.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UCTrangTimViec.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCTrangTimViec.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\UCTrangTimViec.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCTrangTimViec.xaml",
+              "RelativeToolTip": "DoAnXinViec\\UCTrangTimViec.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-07T06:11:55.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WTrangXemDon.xaml.cs",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml.cs",
+              "RelativeDocumentMoniker": "DoAnXinViec\\WTrangXemDon.xaml.cs",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml.cs",
+              "RelativeToolTip": "DoAnXinViec\\WTrangXemDon.xaml.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T06:10:27.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WTrangXemDon.xaml",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml",
+              "RelativeDocumentMoniker": "DoAnXinViec\\WTrangXemDon.xaml",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\WTrangXemDon.xaml",
+              "RelativeToolTip": "DoAnXinViec\\WTrangXemDon.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-07T06:10:07.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PhongVan.cs",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\DTO\\PhongVan.cs",
+              "RelativeDocumentMoniker": "DoAnXinViec\\DAO\\DTO\\PhongVan.cs",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\DTO\\PhongVan.cs",
+              "RelativeToolTip": "DoAnXinViec\\DAO\\DTO\\PhongVan.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T06:00:44.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UCHoSoUngTuyen.xaml.cs",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
+              "RelativeDocumentMoniker": "DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
+              "RelativeToolTip": "DoAnXinViec\\UCHoSoUngTuyen.xaml.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAA8wIYAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T05:56:17.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PhongVanDAO.cs",
+              "DocumentMoniker": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\PhongVanDAO.cs",
+              "RelativeDocumentMoniker": "DoAnXinViec\\DAO\\PhongVanDAO.cs",
+              "ToolTip": "D:\\DSNVTT\\DoAnXinViec\\DoAnXinViec\\DoAnXinViec\\DAO\\PhongVanDAO.cs",
+              "RelativeToolTip": "DoAnXinViec\\DAO\\PhongVanDAO.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAgwC0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T05:56:12.682Z"
             }
           ]
         }

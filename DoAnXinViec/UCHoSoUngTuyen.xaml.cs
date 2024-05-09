@@ -52,7 +52,7 @@ namespace DoAnXinViec
             listHienThi.Clear();
             foreach (HoSo hs in listHoSo)
             {
-                if (Filter.CheckNgay(hs.NgayNop,header,dtpNgayNop.SelectedDate) && CheckTrangThai(hs) && CheckBoLoc(hs) &&  CheckTimKiem(hs))
+                if (Filter.CheckNgay(hs.NgayNop,header,dtpNgayNop.SelectedDate) && CheckTrangThai(hs) && CheckBoLoc(hs) &&  CheckTimKiem(hs) )
                     listHienThi.Add(hs);
             }
             SapXep();

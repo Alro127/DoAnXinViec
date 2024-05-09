@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Controls.Primitives;
+using System.IO;
 
 namespace DoAnXinViec
 {
@@ -25,6 +26,8 @@ namespace DoAnXinViec
         DonDAO donDAO = new DonDAO();
         YeuThichDAO yeuThichDAO = new YeuThichDAO();
         List<Don> donList = new List<Don>();
+        Dictionary<Image, string> imagePaths = new Dictionary<Image, string>();
+        string[] DanhSachAnh;
         public WTrangChuCTy(CongTy congTy, UngVien ungVien)
         {
             InitializeComponent();
@@ -62,14 +65,32 @@ namespace DoAnXinViec
         }
         void LoadAnh()
         {
-            string[] DanhSachAnh = MediaHandler.GetImagesFromFolder(congTy.Id);
+            DanhSachAnh = MediaHandler.GetImagesFromFolder(congTy.Id);
             for (int i = 0; i < DanhSachAnh.Length; i++)
             {
                 Image anh = new Image() { Width = 100, Height = 100, Margin = new Thickness(10, 9, 0, 9) };
-                anh.Source = MediaHandler.SetImage(DanhSachAnh[i], congTy.Id);
+                BitmapImage bitmap = MediaHandler.SetImage(DanhSachAnh[i], congTy.Id);
+                imagePaths.Add(anh, DanhSachAnh[i]);
+                anh.Source = bitmap;
+                anh.MouseLeftButtonDown += Image_MouseLeftButtonDown;
                 wpAnh.Children.Add(anh);
             }
         }
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is Image clickedImage)
+            {
+                BitmapImage bitmap = clickedImage.Source as BitmapImage;
+                if (bitmap != null)
+                {
+                    string imagePath = imagePaths[clickedImage];
+                    int viTri = Array.IndexOf(DanhSachAnh,imagePath);
+                    WLargeImage largeImage = new WLargeImage(congTy.Id,viTri,DanhSachAnh);
+                    largeImage.ShowDialog();
+                }
+            }
+        }
+
         private void btnXem_Click(object sender, RoutedEventArgs e)
         {
             Don don = (Don)(sender as Button).DataContext;
